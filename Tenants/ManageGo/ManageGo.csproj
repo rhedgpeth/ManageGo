@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Services\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />
+    <ProjectReference Include="..\ManageGo.Core.Tenants\ManageGo.Core.Tenants.csproj" />
+    <ProjectReference Include="..\..\ManageGo.UI\ManageGo.UI.csproj" />
+  </ItemGroup>
+</Project>
