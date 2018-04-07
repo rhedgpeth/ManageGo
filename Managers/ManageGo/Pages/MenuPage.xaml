@@ -2,10 +2,45 @@
 <local:BaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     x:Class="ManageGo.Pages.MenuPage"
-    x:TypeArguments="vm:MenuViewModel">
+    x:TypeArguments="vm:MenuViewModel"
+    Title="Menu">
     <ContentPage.Content>
+
+    <StackLayout>
+
+        <controls:ListView ItemsSource="{Binding MenuItems}" ItemTappedCommand="{Binding MenutItemSelectedCommand}" SeparatorVisibility="None" HasUnevenRows="true" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+                        <Grid RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="75" />
+                                <RowDefinition Height="1" />
+                            </Grid.RowDefinitions>
+
+
+                            <Label Grid.Row="0" Text="{Binding .}" VerticalOptions="CenterAndExpand"
+                                    Margin="10,0,0,0" FontSize="24" />
+                                
+                            <BoxView Grid.Row="1" BackgroundColor="Gray" 
+                                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" /> 
+                                    
+                        </Grid>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </controls:ListView>
+            
+    </StackLayout>
+        
     </ContentPage.Content>
 </local:BaseContentPage>

@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using ManageGo.Core.Services;
 using ManageGo.Core.ViewModels;
+using System.Reflection;
+using ManageGo.Core;
 
 namespace ManageGo.UI.Navigation
 {
@@ -20,6 +22,15 @@ namespace ManageGo.UI.Navigation
 
     public class NavigationService : INavigationService
     {
+        public static INavigationService Initialize(Assembly asm)
+        {
+            var navService = new NavigationService();
+            navService.RegisterViewModels(asm);
+
+            ServiceContainer.Register<INavigationService>(() => navService);
+
+            return navService;
+        }
 
         INavigation FormsNavigation
         {
@@ -48,14 +59,11 @@ namespace ManageGo.UI.Navigation
             get
             {
                 var masterController = Application.Current.MainPage as MasterDetailPage;
-
                 return masterController?.Detail ?? Application.Current.MainPage;
             }
             set
             {
-                var masterController = Application.Current.MainPage as MasterDetailPage;
-
-                if (masterController != null)
+                if (Application.Current.MainPage is MasterDetailPage masterController)
                 {
                     masterController.Detail = value;
                     masterController.IsPresented = false;
@@ -67,7 +75,7 @@ namespace ManageGo.UI.Navigation
             }
         }
 
-        public void SwitchDetailPage(BaseNavigationViewModel viewModel)
+        public void SetDetailView(BaseNavigationViewModel viewModel)
         {
             var view = InstantiateView(viewModel);
 
@@ -82,7 +90,7 @@ namespace ManageGo.UI.Navigation
             DetailPage = newDetailPage;
         }
 
-        public void SwitchDetailPage<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
+        public void SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
         {
             T viewModel;
 
@@ -91,16 +99,27 @@ namespace ManageGo.UI.Navigation
             initialize?.Invoke(viewModel);
 
             // Actually switch the page
-            SwitchDetailPage(viewModel);
+            SetDetailView(viewModel);
+        }
+
+        public void SetRootView(BaseNavigationViewModel viewModel, bool withNavigationEnabled = true)
+        {
+            if (InstantiateView(viewModel) is Page view)
+            {
+                if (withNavigationEnabled)
+                    Application.Current.MainPage = new NavigationPage(view);
+                else
+                    Application.Current.MainPage = view;
+            }
         }
 
         #endregion
 
         #region Registration
 
-        public void RegisterViewModels(System.Reflection.Assembly asm)
+        public void RegisterViewModels(Assembly asm)
         {
-            // Loop through everything in the assembley that implements IViewFor<T>
+            // Loop through everything in the assembly that implements IViewFor<T>
             foreach (var type in asm.DefinedTypes.Where(dt => !dt.IsAbstract &&
                 dt.ImplementedInterfaces.Any(ii => ii == typeof(IViewFor))))
             {

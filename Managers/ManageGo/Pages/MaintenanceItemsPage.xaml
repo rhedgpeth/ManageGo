@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <local:BaseSearchContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
-    x:Class="ManageGo.Pages.TenantsPage"
-    x:TypeArguments="vm:TenantsViewModel">
+    x:Class="ManageGo.Pages.MaintenanceItemsPage"
+    x:TypeArguments="vm:MaintenanceItemsViewModel">
     <ContentPage.Content>
-        <Label Text="Tenants Page" Margin="20,35,0,0" />
+        <Label Text="Maintenance Items Page" Margin="20,35,0,0" />
     </ContentPage.Content>
 </local:BaseSearchContentPage>

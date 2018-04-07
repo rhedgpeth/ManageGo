@@ -49,5 +49,11 @@
     <Compile Update="Pages\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\MaintenanceItemsPage.xaml.cs">
+      <DependentUpon>MaintenanceItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MaintenanceItemPage.xaml.cs">
+      <DependentUpon>MaintenanceItemPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

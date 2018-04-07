@@ -7,5 +7,6 @@
     x:Class="ManageGo.Pages.BuildingsPage"
     x:TypeArguments="vm:BuildingsViewModel">
     <ContentPage.Content>
+        <Label Text="Buildings Page" Margin="20,35,0,0" />
     </ContentPage.Content>
 </local:BaseSearchContentPage>

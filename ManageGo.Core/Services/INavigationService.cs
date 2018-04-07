@@ -17,7 +17,9 @@ namespace ManageGo.Core.Services
         Task PushModalAsync(BaseNavigationViewModel viewModel);
         Task PopToRootAsync(bool animate);
 
-        void SwitchDetailPage<T>(Action<T> initialize = null) where T : BaseNavigationViewModel;
-        void SwitchDetailPage(BaseNavigationViewModel viewModel);
+        void SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel;
+        void SetDetailView(BaseNavigationViewModel viewModel);
+
+        void SetRootView(BaseNavigationViewModel viewModel, bool withNavigationEnabled = true);
     }
 }

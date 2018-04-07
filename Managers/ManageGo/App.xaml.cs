@@ -1,4 +1,5 @@
-﻿using ManageGo.Pages;
+﻿using System.Reflection;
+using ManageGo.Pages;
 using Xamarin.Forms;
 
 namespace ManageGo
@@ -9,22 +10,30 @@ namespace ManageGo
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            UI.Navigation.NavigationService.Initialize(typeof(WelcomePage).Assembly);
+
+            SetRootPage();
+        }
+
+        // TODO: Implement functionality
+        bool loggedIn = true;
+
+        void SetRootPage()
+        {
+            // Mocked data
+            if (loggedIn)
+                MainPage = new RootPage(new DashboardPage());
+            else
+                MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
+        { }
 
         protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
+        { }
 
         protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
+        { }
     }
 }

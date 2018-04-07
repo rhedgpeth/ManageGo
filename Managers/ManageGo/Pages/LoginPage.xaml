@@ -7,6 +7,6 @@
     x:Class="ManageGo.Pages.LoginPage"
     x:TypeArguments="vm:LoginViewModel">
     <ContentPage.Content>
-        <Label Text="Hi, Managers." Margin="20,75,0,0" />
+        <Label Text="Login Page" Margin="20,75,0,0" />
     </ContentPage.Content>
 </local:BaseContentPage>

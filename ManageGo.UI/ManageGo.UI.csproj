@@ -10,6 +10,7 @@
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="Navigation\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo.Core\ManageGo.Core.csproj" />

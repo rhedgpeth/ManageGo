@@ -7,5 +7,6 @@
     x:Class="ManageGo.Pages.CalendarPage"
     x:TypeArguments="vm:CalendarViewModel">
     <ContentPage.Content>
+        <Label Text="Calendar Page" Margin="20,35,0,0" />
     </ContentPage.Content>
 </local:BaseContentPage>

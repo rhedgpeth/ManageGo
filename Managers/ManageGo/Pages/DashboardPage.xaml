@@ -7,5 +7,6 @@
     x:Class="ManageGo.Pages.DashboardPage"
     x:TypeArguments="vm:DashboardViewModel">
     <ContentPage.Content>
+        <Label Text="Dashboard Page" Margin="20,35,0,0" />
     </ContentPage.Content>
 </local:BaseSearchContentPage>
