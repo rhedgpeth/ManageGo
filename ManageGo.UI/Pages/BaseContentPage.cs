@@ -39,7 +39,7 @@ namespace ManageGo.UI.Pages
 
         async void Init()
         {
-            //await ViewModel.InitAsync();
+            await ViewModel.InitAsync();
         }
     }
 }

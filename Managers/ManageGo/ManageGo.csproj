@@ -15,4 +15,39 @@
   <ItemGroup>
     <Folder Include="Pages\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\SettingsPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\PaymentsPage.xaml.cs">
+      <DependentUpon>PaymentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TransactionsPage.xaml.cs">
+      <DependentUpon>TransactionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CalendarPage.xaml.cs">
+      <DependentUpon>CalendarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\BuildingsPage.xaml.cs">
+      <DependentUpon>BuildingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TenantsPage.xaml.cs">
+      <DependentUpon>TenantsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\NotificationsPage.xaml.cs">
+      <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ResetPasswordPage.xaml.cs">
+      <DependentUpon>ResetPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

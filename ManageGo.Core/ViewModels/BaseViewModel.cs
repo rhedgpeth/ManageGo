@@ -1,10 +1,9 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 
 namespace ManageGo.Core.ViewModels
 {
-    public abstract class BaseViewModel
+    public abstract class BaseViewModel : BaseNotify
     {
-        public BaseViewModel()
-        { }
+        public virtual Task InitAsync() => Task.FromResult(true);
     }
 }

@@ -4,9 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
-    x:Class="ManageGo.Pages.LoginPage"
-    x:TypeArguments="vm:LoginViewModel">
+    x:Class="ManageGo.Pages.CalendarPage"
+    x:TypeArguments="vm:CalendarViewModel">
     <ContentPage.Content>
-        <Label Text="Hi, Managers." Margin="20,75,0,0" />
     </ContentPage.Content>
 </local:BaseContentPage>

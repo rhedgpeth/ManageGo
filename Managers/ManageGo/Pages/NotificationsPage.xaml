@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local:BaseContentPage 
+<local:BaseSearchContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
-    x:Class="ManageGo.Pages.LoginPage"
-    x:TypeArguments="vm:LoginViewModel">
+    x:Class="ManageGo.Pages.NotificationsPage"
+    x:TypeArguments="vm:NotificationsViewModel">
     <ContentPage.Content>
-        <Label Text="Hi, Managers." Margin="20,75,0,0" />
     </ContentPage.Content>
-</local:BaseContentPage>
+</local:BaseSearchContentPage>

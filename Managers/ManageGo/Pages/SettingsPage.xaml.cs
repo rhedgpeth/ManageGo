@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
+using Xamarin.Forms;
 
 namespace ManageGo.Pages
 {
-    public partial class LoginPage : BaseContentPage<LoginViewModel>
+    public partial class SettingsPage : BaseContentPage<SettingsViewModel>
     {
-        public LoginPage()
+        public SettingsPage()
         {
             InitializeComponent();
         }

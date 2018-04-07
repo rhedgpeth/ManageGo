@@ -162,9 +162,8 @@ namespace ManageGo.Core.Services
             {
                 result = await SendAndDeserialize<T>(requestType, requestUri, cancellationToken, modifyRequest, jsonRequest);
             }
-            catch (Exception exc)
+            catch
             {
-                //Logger.Warn(exc);
                 throw;
             }
 

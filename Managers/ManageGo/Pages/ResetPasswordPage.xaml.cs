@@ -6,9 +6,9 @@ using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
 {
-    public partial class LoginPage : BaseContentPage<LoginViewModel>
+    public partial class ResetPasswordPage : BaseContentPage<ResetPasswordViewModel>
     {
-        public LoginPage()
+        public ResetPasswordPage()
         {
             InitializeComponent();
         }
