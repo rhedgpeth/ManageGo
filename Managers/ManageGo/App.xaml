@@ -1,6 +1,57 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ManageGo.App">
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ManageGo.App">
     <Application.Resources>
-        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Color x:Key="Primary">#3E90F4</Color>
+            <Color x:Key="Secondary">#60A6F5</Color>
+            <Color x:Key="Tertiary">#FFFFFF</Color>
+
+            <!--
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Gray" />
+            </Style>
+            -->
+
+            <Style x:Key="tertiaryTitleLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Tertiary}"/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style x:Key="mainButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="CornerRadius" Value="5" /> 
+            </Style>
+            
+            <Style x:Key="tertiaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            </Style>
+
+            <Style x:Key="secondaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+                <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
+            </Style>
+            
+            <Style TargetType="Button" BasedOn="{StaticResource mainButtonStyle}" />            
+
+            <!--
+            <Style x:Key="buttonSelected" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="LightGray" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderColor" Value="LightGray" />
+            </Style>
+            -->
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

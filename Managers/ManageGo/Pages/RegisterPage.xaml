@@ -7,5 +7,6 @@
     x:Class="ManageGo.Pages.RegisterPage"
     x:TypeArguments="vm:RegisterViewModel">
     <ContentPage.Content>
+        <Label Text="Register Page" Margin="20,75,0,0" />
     </ContentPage.Content>
 </local:BaseContentPage>

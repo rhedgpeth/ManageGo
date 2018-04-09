@@ -9,7 +9,7 @@
     x:TypeArguments="vm:MenuViewModel"
     Title="Menu">
     <ContentPage.Content>
-
+        
     <StackLayout>
 
         <controls:ListView ItemsSource="{Binding MenuItems}" ItemTappedCommand="{Binding MenutItemSelectedCommand}" SeparatorVisibility="None" HasUnevenRows="true" >

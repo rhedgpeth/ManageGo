@@ -16,7 +16,8 @@ namespace ManageGo
         }
 
         // TODO: Implement functionality
-        bool loggedIn = true;
+        //bool loggedIn = true;
+		bool loggedIn = false;
 
         void SetRootPage()
         {

@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using ManageGo.Core.ViewModels;
 using ManageGo.UI.Navigation;
 using Xamarin.Forms;
 
 namespace ManageGo.UI.Pages
 {
-    public abstract class BaseContentPage<T> : ContentPage, IViewFor<T> where T : BaseNavigationViewModel, new()
+	public abstract class BaseContentPage : ContentPage
+	{ }
+
+    public abstract class BaseContentPage<T> : BaseContentPage, IViewFor<T> where T : BaseNavigationViewModel, new()
     {
         T _viewModel;
 
@@ -13,15 +18,14 @@ namespace ManageGo.UI.Pages
         {
             get
             {
+				if (_viewModel == null)
+					_viewModel = Activator.CreateInstance<T>();
+
                 return _viewModel;
             }
             set
             {
                 _viewModel = value;
-
-                BindingContext = _viewModel;
-
-                Init();
             }
         }
 
@@ -33,9 +37,23 @@ namespace ManageGo.UI.Pages
                 ViewModel = (T)value;
             }
         }
-
+        
         protected BaseContentPage()
-        { }
+        {
+			BindingContext = ViewModel;
+
+            Task.Run(async () =>
+            {
+                try
+                {
+                    await ViewModel.InitAsync();
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                }
+            }); 
+		}
 
         async void Init()
         {

@@ -7,10 +7,11 @@ using Xamarin.Forms;
 namespace ManageGo.Pages
 {
     public partial class WelcomePage : BaseContentPage<WelcomeViewModel>
-    {
+	{
         public WelcomePage()
         {
             InitializeComponent();
+            
         }
     }
 }
