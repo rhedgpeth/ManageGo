@@ -9,6 +9,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
     <Folder Include="Input\" />
+    <Folder Include="Enumerations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

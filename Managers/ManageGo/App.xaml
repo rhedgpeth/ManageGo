@@ -8,6 +8,10 @@
             <Color x:Key="Primary">#3E90F4</Color>
             <Color x:Key="Secondary">#60A6F5</Color>
             <Color x:Key="Tertiary">#FFFFFF</Color>
+            <Color x:Key="Grey-Mid-1">#5D5E60</Color>
+            <Color x:Key="Grey-Light-1">#ACAEB1</Color>
+            <Color x:Key="Grey-Mid-2">#DFDFE0</Color>
+            <Color x:Key="Grey-Dark-1">#424242</Color>
 
             <!--
             <Style TargetType="NavigationPage">
@@ -27,6 +31,31 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             </Style>
 
+            <Style x:Key="descriptionLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Grey-Dark-1}"/>
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            
+            <Style x:Key="entryDescriptionLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Grey-Mid-1}"/>
+                <Setter Property="FontSize" Value="11" />
+            </Style>
+
+            <Style x:Key="entryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource entryDescriptionLabel}">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style x:Key="lightGreyEntryDescriptionLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Grey-Light-1}"/>
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+            <Style x:Key="lightGreyEntryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource lightGreyEntryDescriptionLabel}">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
             <Style x:Key="mainButtonStyle" TargetType="Button">
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="CornerRadius" Value="5" /> 
@@ -37,8 +66,23 @@
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
             </Style>
 
+            <Style x:Key="tertiaryBackgroundButton-small" TargetType="Button" BasedOn="{StaticResource tertiaryBackgroundButton}">
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+            <Style x:Key="redTextTertiaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
             <Style x:Key="secondaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
                 <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+                <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
+            </Style>
+
+            <Style x:Key="primaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
             </Style>
             
@@ -51,6 +95,14 @@
                 <Setter Property="BorderColor" Value="LightGray" />
             </Style>
             -->
+
+            <ControlTemplate x:Key="HeaderPageTemplate">
+                <StackLayout HorizontalOptions="CenterAndExpand" Padding="0,15,0,0" WidthRequest="400">
+                    <Label Text="{TemplateBinding BindingContext.Title}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
+                    <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" />
+                    <ContentPresenter />
+                </StackLayout>
+            </ControlTemplate>
             
         </ResourceDictionary>
     </Application.Resources>

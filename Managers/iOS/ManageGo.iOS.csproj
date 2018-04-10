@@ -64,7 +64,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Robert Hedgpeth (UY3G5ZHD2W)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -76,6 +76,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>ManageGo-Dev</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -132,6 +133,10 @@
     <ProjectReference Include="..\..\ManageGo.UI\ManageGo.UI.csproj">
       <Project>{BCD8C04A-F651-4B0B-B354-9EADB388A5CA}</Project>
       <Name>ManageGo.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ManageGo.Core.iOS\ManageGo.Core.iOS.csproj">
+      <Project>{529CF9F9-CC97-4330-9DCD-0149D761C00A}</Project>
+      <Name>ManageGo.Core.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

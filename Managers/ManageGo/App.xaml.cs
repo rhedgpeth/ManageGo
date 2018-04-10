@@ -16,14 +16,14 @@ namespace ManageGo
         }
 
         // TODO: Implement functionality
-        //bool loggedIn = true;
-		bool loggedIn = false;
+        bool loggedIn = true;
+		//bool loggedIn = false;
 
         void SetRootPage()
         {
             // Mocked data
             if (loggedIn)
-                MainPage = new RootPage(new DashboardPage());
+                MainPage = new RootPage();
             else
                 MainPage = new NavigationPage(new WelcomePage());
         }

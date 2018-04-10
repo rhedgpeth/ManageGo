@@ -5,8 +5,9 @@
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.MaintenanceItemsPage"
-    x:TypeArguments="vm:MaintenanceItemsViewModel">
+    x:TypeArguments="vm:MaintenanceItemsViewModel"
+    ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <Label Text="Maintenance Items Page" Margin="20,35,0,0" />
+        
     </ContentPage.Content>
 </local:BaseSearchContentPage>

@@ -1,19 +1,57 @@
 ﻿using System;
 using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
+using ManageGo.UI.Navigation;
 
 namespace ManageGo.Pages
 {
-    public class RootPage : MasterDetailPage
+	public class RootPage : MasterDetailPage, IViewFor<RootViewModel> 
     {
-        public RootPage(Page page)
+		RootViewModel _viewModel;
+
+		public RootViewModel ViewModel
         {
-            Master = new MenuPage()
+            get
+            {
+                if (_viewModel == null)
+					_viewModel = new RootViewModel();
+
+                return _viewModel;
+            }
+            set
+            {
+                _viewModel = value;
+            }
+        }
+
+        object IViewFor.ViewModel
+        {
+            get { return _viewModel; }
+            set
+            {
+				ViewModel = (RootViewModel)value;
+            }
+        }
+              
+        public RootPage()
+        {
+            Master = new MenuPage
             {
                 ViewModel = new MenuViewModel()
             };
 
-            Detail = new NavigationPage(page);
+			/*
+			var dashboardPage = new DashboardPage
+			{
+                ViewModel = new DashboardViewModel()
+			};*/
+
+			var dashboardPage = new MaintenanceItemsPage
+			{
+				ViewModel = new MaintenanceItemsViewModel()
+			};
+
+			Detail = new NavigationPage(dashboardPage);
         }
     }
 }

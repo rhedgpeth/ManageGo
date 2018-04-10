@@ -7,6 +7,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using ManageGo.Core;
+using ManageGo.Core.Services;
+using ManageGo.Core.Droid.Services;
 
 namespace ManageGo.Droid
 {
@@ -22,7 +25,14 @@ namespace ManageGo.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
+			RegisterServices();
+
             LoadApplication(new App());
         }
+        
+        void RegisterServices()
+		{
+			ServiceContainer.Register<IExternalAppService>(() => new ExternalAppService());
+		}
     }
 }

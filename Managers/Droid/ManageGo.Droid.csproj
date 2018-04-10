@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ManageGo.Droid</RootNamespace>
     <AssemblyName>ManageGo.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -147,6 +147,10 @@
     <ProjectReference Include="..\..\ManageGo.UI\ManageGo.UI.csproj">
       <Project>{BCD8C04A-F651-4B0B-B354-9EADB388A5CA}</Project>
       <Name>ManageGo.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ManageGo.Core.Droid\ManageGo.Core.Droid.csproj">
+      <Project>{0373CA23-DC53-4773-973D-8D30AEDCEEA1}</Project>
+      <Name>ManageGo.Core.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

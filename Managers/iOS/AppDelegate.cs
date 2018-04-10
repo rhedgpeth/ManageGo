@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ManageGo.Core;
+using ManageGo.Core.iOS.Services;
+using ManageGo.Core.Services;
 using UIKit;
 
 namespace ManageGo.iOS
@@ -14,9 +17,16 @@ namespace ManageGo.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+			RegisterServices();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+		void RegisterServices()
+        {
+            ServiceContainer.Register<IExternalAppService>(() => new ExternalAppService());
         }
     }
 }

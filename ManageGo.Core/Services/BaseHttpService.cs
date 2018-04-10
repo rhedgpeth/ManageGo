@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace ManageGo.Core.Services
 {
-    public class BaseHttpService
+    public abstract class BaseHttpService
     {
         string _baseApiUri;
 

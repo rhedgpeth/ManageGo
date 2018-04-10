@@ -29,7 +29,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			{
 				if (_loginCommand == null)
 				{
-					_loginCommand = new Command(async () => await OnLoginCommand());
+					_loginCommand = new Command(OnLoginCommand);
 				}
 
 				return _loginCommand;
@@ -65,16 +65,11 @@ namespace ManageGo.Core.Managers.ViewModels
         }
 
 		public LoginViewModel()
-        { }
-
-        Task OnLoginCommand()
-		{
-			// TODO: Auth functionality
-
-			// TODO: Set RootPage as the root view
-
-			return Task.Run(() => { });
+        {
+			Title = "Welcome";
 		}
+
+		void OnLoginCommand() => Navigation.SetRootView(new RootViewModel());
 
 		Task OnResetPasswordCommand() => Navigation.PushAsync(new ResetPasswordViewModel());
 

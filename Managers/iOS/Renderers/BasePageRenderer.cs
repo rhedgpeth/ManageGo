@@ -20,10 +20,13 @@ namespace ManageGo.iOS.Renderers
         {
             base.ViewWillAppear(animated);
 
-            ParentViewController.NavigationItem.TitleView = new UIImageView(UIImage.FromFile("logo.png"))
-            {
-                ContentMode = UIViewContentMode.ScaleAspectFit
-            };       
+			if (ParentViewController?.NavigationItem != null)
+			{
+				ParentViewController.NavigationItem.TitleView = new UIImageView(UIImage.FromFile("logo.png"))
+				{
+					ContentMode = UIViewContentMode.ScaleAspectFit
+				};
+			}
         }
 	}
 }

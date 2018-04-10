@@ -2,17 +2,48 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
     public class MenuViewModel : BaseNavigationViewModel
     {
+		IExternalAppService _externalAppService;
+		IExternalAppService ExternalAppService
+		{
+			get
+			{
+				if (_externalAppService == null)
+				{
+					_externalAppService = ServiceContainer.Resolve<IExternalAppService>();
+				}
+
+				return _externalAppService;
+			}
+		}
+
+        public string Email 
+		{
+			get
+			{
+				return "support@managegocom";
+			}
+		}
+
+        public string PhoneNumber
+		{
+			get
+			{
+				return "212-300-7950";
+			}
+		}
+
         public IList<string> MenuItems
-        {
-            get;
-            set;
-        }
+		{
+			get;
+			set;
+		}
 
         ICommand _menuItemSelectedCommand;
         public ICommand MenutItemSelectedCommand
@@ -28,8 +59,38 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
+		ICommand _emailCommand;
+		public ICommand EmailCommand
+        {
+            get
+            {
+				if (_emailCommand == null)
+                {
+					_emailCommand = new Command(OpenEmailApp);
+                }
+
+				return _emailCommand;
+            }
+        }
+        
+		ICommand _phoneCommand;
+        public ICommand PhoneCommand
+        {
+            get
+            {
+                if (_phoneCommand == null)
+                {
+                    _phoneCommand = new Command(CallPhoneNumber);
+                }
+
+                return _phoneCommand;
+            }
+        }
+
         public MenuViewModel()
         {
+
+
             LoadMenuItems();
         }
 
@@ -93,5 +154,9 @@ namespace ManageGo.Core.Managers.ViewModels
 
             Navigation.SetRootView(new LoginViewModel());
         }
+
+		void CallPhoneNumber() => ExternalAppService.CallPhoneNumber(PhoneNumber);
+
+		void OpenEmailApp() => ExternalAppService.Open(new Uri($"mailto:{Email}"));
     }
 }
