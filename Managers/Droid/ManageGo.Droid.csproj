@@ -134,6 +134,10 @@
     <AndroidResource Include="Resources\drawable\logo.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\welcome_page_image.jpg" />
     <AndroidResource Include="Resources\drawable-xxhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\nav_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\nav_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\nav_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable\nav_menu_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
