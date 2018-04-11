@@ -37,9 +37,14 @@ namespace ManageGo.UI.Pages
                 ViewModel = (T)value;
             }
         }
-        
-        protected BaseContentPage()
+
+        protected BaseContentPage() : this(Color.FromHex("#F9FAFB"))
+        { }
+
+        protected BaseContentPage(Color backgroundColor)
         {
+            BackgroundColor = backgroundColor;
+
 			BindingContext = ViewModel;
 
             Task.Run(async () =>

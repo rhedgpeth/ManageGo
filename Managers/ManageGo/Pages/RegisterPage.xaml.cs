@@ -8,7 +8,7 @@ namespace ManageGo.Pages
 {
     public partial class RegisterPage : BaseContentPage<RegisterViewModel>
     {
-        public RegisterPage()
+        public RegisterPage() : base(Color.White)
         {
             InitializeComponent();
         }

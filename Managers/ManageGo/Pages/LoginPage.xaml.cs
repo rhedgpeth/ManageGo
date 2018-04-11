@@ -8,7 +8,7 @@ namespace ManageGo.Pages
 {
     public partial class LoginPage : BaseContentPage<LoginViewModel>
     {
-        public LoginPage()
+        public LoginPage() : base(Color.White)
         {
             InitializeComponent();
         }

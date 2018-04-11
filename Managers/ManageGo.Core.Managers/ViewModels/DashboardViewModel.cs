@@ -7,6 +7,7 @@ namespace ManageGo.Core.Managers.ViewModels
     {
         public DashboardViewModel()
         {
+            Title = "Welcome";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace ManageGo.Pages
 {
     public partial class SettingsPage : BaseContentPage<SettingsViewModel>
     {
-        public SettingsPage()
+        public SettingsPage() : base(Color.White)
         {
             InitializeComponent();
         }

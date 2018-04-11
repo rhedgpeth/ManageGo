@@ -8,7 +8,7 @@ namespace ManageGo.Pages
 {
     public partial class ResetPasswordPage : BaseContentPage<ResetPasswordViewModel>
     {
-        public ResetPasswordPage()
+        public ResetPasswordPage() : base(Color.White)
         {
             InitializeComponent();
         }

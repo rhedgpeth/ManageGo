@@ -8,7 +8,7 @@ namespace ManageGo.Pages
 {
     public partial class MenuPage : BaseContentPage<MenuViewModel>
     {
-        public MenuPage()
+        public MenuPage() : base(Color.White)
         {
             InitializeComponent();
         }

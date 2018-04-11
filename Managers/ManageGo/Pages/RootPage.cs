@@ -40,16 +40,17 @@ namespace ManageGo.Pages
                 ViewModel = new MenuViewModel()
             };
 
-			/*
 			var dashboardPage = new DashboardPage
 			{
                 ViewModel = new DashboardViewModel()
-			};*/
+			};
 
+            /*
 			var dashboardPage = new MaintenanceItemsPage
 			{
 				ViewModel = new MaintenanceItemsViewModel()
 			};
+			*/
 
 			Detail = new NavigationPage(dashboardPage);
         }

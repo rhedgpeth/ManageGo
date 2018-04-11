@@ -97,9 +97,16 @@
             -->
 
             <ControlTemplate x:Key="HeaderPageTemplate">
-                <StackLayout HorizontalOptions="CenterAndExpand" Padding="0,15,0,0" WidthRequest="400">
+                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,0" WidthRequest="400">
                     <Label Text="{TemplateBinding BindingContext.Title}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" />
+                    <ContentPresenter />
+                </StackLayout>
+            </ControlTemplate>
+
+            <ControlTemplate x:Key="HeaderNoBorderPageTemplate">
+                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,10" WidthRequest="400">
+                    <Label Text="{TemplateBinding BindingContext.Title}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <ContentPresenter />
                 </StackLayout>
             </ControlTemplate>
