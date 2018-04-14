@@ -44,6 +44,8 @@
             <Style x:Key="entryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource entryDescriptionLabel}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
 
             <Style x:Key="lightGreyEntryDescriptionLabel" TargetType="Label">
@@ -97,7 +99,7 @@
             -->
 
             <ControlTemplate x:Key="HeaderPageTemplate">
-                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,0" WidthRequest="400">
+                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,0" WidthRequest="400" Margin="0">
                     <Label Text="{TemplateBinding BindingContext.Title}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" />
                     <ContentPresenter />

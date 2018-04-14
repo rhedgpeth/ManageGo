@@ -14,6 +14,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
+    <Folder Include="Controls\" />
+    <Folder Include="DataTemplates\" />
+    <Folder Include="DataTemplates\Selectors\" />
+    <Folder Include="DataTemplates\ViewCells\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />

@@ -3,10 +3,40 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:local-controls="clr-namespace:ManageGo.Controls"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.PaymentsPage"
-    x:TypeArguments="vm:PaymentsViewModel">
+    x:TypeArguments="vm:PaymentsViewModel"
+    ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <Label Text="Payments Page" Margin="20,35,0,0" />
+
+        <StackLayout Spacing="0" Margin="0" HorizontalOptions="FillAndExpand">
+
+            <Grid RowSpacing="0" Margin="0" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width=".5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="1" />
+                </Grid.RowDefinitions>
+
+                <controls:TappableLabel Grid.Row="0" Grid.Column="0" Text="Jan 8-15" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" />
+                <BoxView Grid.Row="0" Grid.Column="1" HeightRequest="75" WidthRequest="1" BackgroundColor="#DFDFE0" />
+                <controls:TappableLabel Grid.Row="0" Grid.Column="2" Text="Filter" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
+                <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+
+            </Grid>
+
+            <ListView   
+                x:Name="listView"
+                SeparatorVisibility="None" 
+                HasUnevenRows="true" />
+
+        </StackLayout>
+
     </ContentPage.Content>
 </local:BaseSearchContentPage>
