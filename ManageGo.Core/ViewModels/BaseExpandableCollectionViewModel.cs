@@ -17,23 +17,23 @@ namespace ManageGo.Core.ViewModels
         { }
 
 		public void OnSectionHeaderSelected(T section)
-        {            
+        {         
 			if (section.IsExpanded)
 			{
 				RemoveExpandedItems(section);
 			}
 			else
-			{            
-				if (_items.FirstOrDefault(s => s != section && s.GetType() == typeof(T) 
-				                          && ((T)s).IsExpanded) is T expandedSection)
-				{
-					RemoveExpandedItems(expandedSection);
-					expandedSection.IsExpanded = false;
-				}
-
+			{
 				for (int i = _items.IndexOf(section) + 1, j = 0; j < section.Children.Count; i++, j++)
 				{
 					_items.Insert(i, section.Children[j]);
+				}
+
+				if (_items.FirstOrDefault(s => s != section && s.GetType() == typeof(T)
+															&& ((T)s).IsExpanded) is T expandedSection)
+				{
+					RemoveExpandedItems(expandedSection);
+					expandedSection.IsExpanded = false;
 				}
 			}
 

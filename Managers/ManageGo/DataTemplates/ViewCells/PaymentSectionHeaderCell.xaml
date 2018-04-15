@@ -2,11 +2,23 @@
 <ViewCell 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:converters="clr-namespace:ManageGo.Converters"
     x:Class="ManageGo.DataTemplates.ViewCells.PaymentSectionHeaderCell">
 
-    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-        <Label Text="{Binding Title}" HorizontalOptions="StartAndExpand" />
+    <!--
+    <ViewCell.BindingContext>
+        <converters:IsExpandRotationConverter x:Key="cnvExpandedRotation" />
+    </ViewCell.BindingContext>
+    -->
+    
+    <StackLayout Orientation="Horizontal">
+        <Label Text="{Binding Title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+        
+        <Image x:Name="chevronImage" Source="chevron_down" Rotation="90"
+               HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+        <!--
         <Button x:Name="toggleButton" Text="Close" IsVisible="{Binding IsExpanded}" HorizontalOptions="EndAndExpand" />
+        -->
     </StackLayout>
             
 </ViewCell>

@@ -17,11 +17,18 @@ namespace ManageGo.DataTemplates.ViewCells
 		protected override void OnTapped()
         {
             base.OnTapped();
-            
-            /*
+
 			if (BindingContext is PaymentSectionHeaderViewModel section)
-				toggleButton.Text = section.IsExpanded ? "Close" : "Open";
-			*/
+			{
+				//if (section.IsExpanded)
+				//{
+					chevronImage.RotateTo(180);
+				//}
+				//else
+				//{
+					//chevronImage.RotateTo(-180);
+				//}
+			}
 		}
     }
 }
