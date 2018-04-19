@@ -15,4 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ManageGo.Core\ManageGo.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controls\BaseViewCell.cs" />
+  </ItemGroup>
 </Project>

@@ -14,14 +14,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
-    <Folder Include="Controls\" />
     <Folder Include="DataTemplates\" />
     <Folder Include="DataTemplates\Selectors\" />
     <Folder Include="DataTemplates\ViewCells\" />
     <Folder Include="Converters\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />
+    <Compile Remove="Controls\ExpandableViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\MenuPage.xaml.cs">

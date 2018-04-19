@@ -6,6 +6,8 @@ namespace ManageGo.UI.Controls
 {
 	public class TappableLabel : Label
     {
+		public EventHandler Tapped;
+
 		public static readonly BindableProperty TappedCommandProperty =
             BindableProperty.Create(nameof(TappedCommand), typeof(ICommand), typeof(ListView));
         
@@ -14,13 +16,17 @@ namespace ManageGo.UI.Controls
             get { return (ICommand)GetValue(TappedCommandProperty); }
             set { SetValue(TappedCommandProperty, value); }
         }
-
+        
         public TappableLabel()
-        {         
-            GestureRecognizers.Add(new TapGestureRecognizer
-            {
-                Command = new Command(OnLabelTapped)
-            });
+        {
+			var tappedGesture = new TapGestureRecognizer
+			{
+				Command = new Command(OnLabelTapped)               
+			};
+
+			tappedGesture.Tapped += TappedGesture_Tapped;
+
+            GestureRecognizers.Add(tappedGesture);
         }
 
 		void OnLabelTapped()
@@ -30,5 +36,7 @@ namespace ManageGo.UI.Controls
                 TappedCommand.Execute(null);
             }
         }
+
+		void TappedGesture_Tapped(object sender, EventArgs e) => Tapped?.Invoke(sender, e);
     }
 }

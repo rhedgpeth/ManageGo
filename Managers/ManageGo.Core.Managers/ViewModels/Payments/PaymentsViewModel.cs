@@ -21,7 +21,10 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 items.Add(new PaymentSectionHeaderViewModel 
 				              { 
-					                Title = $"Payment {i}", 
+					                Amount = string.Format("${0:#.00}", Convert.ToDecimal(RandomNumberBetween(1,10000) / 100)), 
+					                PaymentDateTime = DateTime.Now.AddDays(-10).AddDays(i).ToShortDateString() + " 8:00 AM",
+					                Name = $"Person {i}",
+					                Address = $"1234 Main St. Apt. #{i}",
 					                Children = new List<object> 
 					                { 
 						                new PaymentDetailsViewModel 
@@ -34,5 +37,14 @@ namespace ManageGo.Core.Managers.ViewModels
 
 			Items = new ObservableCollection<object>(items);
 		}
+
+		readonly Random random = new Random();
+        
+        double RandomNumberBetween(double minValue, double maxValue)
+        {
+            var next = random.NextDouble();
+
+            return minValue + (next * (maxValue - minValue));
+        }
 	}
 }

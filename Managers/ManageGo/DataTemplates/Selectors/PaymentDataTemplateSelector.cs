@@ -6,10 +6,7 @@ using Xamarin.Forms;
 namespace ManageGo.DataTemplates.Selectors
 {
 	public class PaymentDataTemplateSelector : DataTemplateSelector
-    {
-        public PaymentDataTemplateSelector()
-        { }
-
+    {      
 		protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             switch (item)

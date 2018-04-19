@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    RowSpacing="0" 
+    Margin="0,-6,0,0" 
+    BackgroundColor="White" 
+    HorizontalOptions="FillAndExpand"
+    x:Class="ManageGo.Controls.FilterView">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width=".5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Buttons -->
+        <controls:TappableLabel x:Name="CalendarTappableLabel" Grid.Row="0" Grid.Column="0" Text="Jan 8-15" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" />
+        <BoxView Grid.Row="0" Grid.Column="1" x:Name="SeparatorBoxView" HeightRequest="75" WidthRequest="1" BackgroundColor="#DFDFE0" />
+        <controls:TappableLabel x:Name="FilterTappableLabel" Grid.Row="0" Grid.Column="2" Text="Filter" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
+        <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+
+        <!-- Expand/collapse panel -->
+        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" x:Name="ExpandableLayoutRegion" IsVisible="false" />
+
+</Grid>

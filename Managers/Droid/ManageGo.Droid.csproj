@@ -115,6 +115,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\CustomNavigationRenderer.cs" />
+    <Compile Include="Renderers\CustomViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -138,6 +139,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\nav_menu_icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\nav_menu_icon.png" />
     <AndroidResource Include="Resources\drawable\nav_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable\chevron_down.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chevron_down.png" />
+    <AndroidResource Include="Resources\drawable\dashboard_1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_1.jpg" />
+    <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

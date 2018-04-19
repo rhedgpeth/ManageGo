@@ -3,10 +3,59 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:controls="clr-namespace:ManageGo.Controls"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.TenantsPage"
-    x:TypeArguments="vm:TenantsViewModel">
+    x:TypeArguments="vm:TenantsViewModel"
+    ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <Label Text="Tenants Page" Margin="20,35,0,0" />
+        <StackLayout BackgroundColor="#F9FAFB">
+
+            <controls:FilterView ShowCalendar="false">
+                <controls:FilterView.ExpandableLayout>
+                    <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
+                        
+                        <controls:ExpandablePicker Descriptor="Building" SelectedText="899 Amsterdam Avenue">
+                            <controls:ExpandablePicker.ExpandableLayout>
+                                <StackLayout>
+                                    <Label Text="This is a filter option." />
+                                    <Label Text="This is a filter option." />
+                                    <Label Text="This is a filter option." />
+                                </StackLayout>
+                            </controls:ExpandablePicker.ExpandableLayout>
+                        </controls:ExpandablePicker>
+                        
+                        <controls:ExpandablePicker Descriptor="Unit" SelectedText="All">
+                            <controls:ExpandablePicker.ExpandableLayout>
+                                <StackLayout>
+                                    <Label Text="This is a filter option." />
+                                    <Label Text="This is a filter option." />
+                                    <Label Text="This is a filter option." />
+                                </StackLayout>
+                            </controls:ExpandablePicker.ExpandableLayout>
+                        </controls:ExpandablePicker>
+
+                        <controls:ExpandablePicker Descriptor="Status" SelectedText="Active">
+                            <controls:ExpandablePicker.ExpandableLayout>
+                                <StackLayout>
+                                    <Label Text="This is a filter option." />
+                                    <Label Text="This is a filter option." />
+                                    <Label Text="This is a filter option." />
+                                </StackLayout>
+                            </controls:ExpandablePicker.ExpandableLayout>
+                        </controls:ExpandablePicker>
+
+                    </StackLayout>
+                </controls:FilterView.ExpandableLayout>
+            </controls:FilterView>
+
+            <ListView   
+                x:Name="listView"
+                ItemsSource="{Binding Items}"
+                SeparatorVisibility="None" 
+                HasUnevenRows="true"
+                BackgroundColor="#F9FAFB" />
+           
+        </StackLayout>
     </ContentPage.Content>
 </local:BaseSearchContentPage>

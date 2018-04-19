@@ -120,6 +120,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\CustomNavigationRenderer.cs" />
     <Compile Include="Renderers\BasePageRenderer.cs" />
+    <Compile Include="Renderers\CustomViewCellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

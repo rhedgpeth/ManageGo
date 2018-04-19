@@ -5,7 +5,10 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class PaymentSectionHeaderViewModel : BaseCollectionSectionViewModel
     {
-		public string Title { get; set; }
+		public string Amount { get; set; }
+		public string PaymentDateTime { get; set; }
+		public string Name { get; set; }
+		public string Address { get; set; }
 
         public PaymentSectionHeaderViewModel()
         { }

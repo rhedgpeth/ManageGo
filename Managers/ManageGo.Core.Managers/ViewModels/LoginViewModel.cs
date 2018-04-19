@@ -69,7 +69,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			Title = "Welcome";
 		}
 
-		void OnLoginCommand() => Navigation.SetRootView(new RootViewModel());
+		void OnLoginCommand() => Navigation.SetRootView(new RootViewModel(), false);
 
 		Task OnResetPasswordCommand() => Navigation.PushAsync(new ResetPasswordViewModel());
 
