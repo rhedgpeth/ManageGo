@@ -3,9 +3,9 @@ using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class MaintenanceItemViewModel : BaseSearchViewModel
+    public class MaintenanceTicketViewModel : BaseSearchViewModel
     {
-        public MaintenanceItemViewModel()
+        public MaintenanceTicketViewModel()
         {
         }
     }

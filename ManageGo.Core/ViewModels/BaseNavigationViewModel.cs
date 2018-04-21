@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Threading.Tasks;
+using ManageGo.Core.Enumerations;
 using ManageGo.Core.Services;
 
 namespace ManageGo.Core.ViewModels
 {
     public class BaseNavigationViewModel : BaseViewModel
     {
-        public bool IsModal { get; set; }
+		public ViewModelType Type { get; set; } = ViewModelType.Default;
 
         INavigationService _navigationService;
 
@@ -15,17 +17,23 @@ namespace ManageGo.Core.ViewModels
             {
                 if (_navigationService == null)
                     _navigationService = ServiceContainer.Resolve<INavigationService>();
-
+                
                 return _navigationService;
             }
         }
-
-        public virtual System.Threading.Tasks.Task Dismiss()
+              
+        public virtual Task Dismiss()
         {
-            if (IsModal)
-                return Navigation.PopModalAsync();
+			Task task;
 
-            return Navigation.PopAsync();
+			if (Type == ViewModelType.Modal)
+				task = Navigation.PopModalAsync();
+			else if (Type == ViewModelType.Popup)
+				task = Navigation.PopPopupAsync();
+			else
+				task = Navigation.PopAsync();
+
+			return task;
         }   
     }
 }

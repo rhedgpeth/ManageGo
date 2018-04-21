@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    x:Class="ManageGo.Pages.CreateWorkOrderPage"
+    x:TypeArguments="vm:CreateWorkOrderViewModel">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame Padding="15,10,15,10"  VerticalOptions="Center" Margin="35,0,35,0"
+           IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
+           BackgroundColor="White" HorizontalOptions="FillAndExpand">
+        
+           <StackLayout 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="White"
+                Padding="0">
+
+                <Image Source="close-grey" Margin="0,-18,-22,0" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CancelCommand}" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+             
+                <Label Text="Create work order:" TextColor="#5D5E60"/>
+
+                <Label Text="Summary:" TextColor="#ADAEB1" Margin="0,15,0,0" FontSize="14" />
+                <Entry Text="399 Amsterdam Ave, #2-A" />
+
+                <Label Text="Details:" TextColor="#ADAEB1" Margin="0,15,0,0" FontSize="14" />
+                <Editor HorizontalOptions="FillAndExpand" HeightRequest="50"  />
+
+                <Label Text="Send to user" TextColor="#3E90F4" Margin="0,15,0,0" /> 
+            
+                <Button Text="Create work order" BackgroundColor="#55C433" Command="{Binding SaveCommand}"
+                        TextColor="White" HorizontalOptions="FillAndExpand" Margin="0,15,0,0" />
+            
+            </StackLayout>
+        
+    </Frame>
+
+</local:BasePopupPage>

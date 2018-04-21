@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.0.4" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />
@@ -56,10 +57,10 @@
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\MaintenanceItemsPage.xaml.cs">
-      <DependentUpon>MaintenanceItemsPage.xaml</DependentUpon>
+      <DependentUpon>MaintenanceTicketsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\MaintenanceItemPage.xaml.cs">
-      <DependentUpon>MaintenanceItemPage.xaml</DependentUpon>
+      <DependentUpon>MaintenanceTicketPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

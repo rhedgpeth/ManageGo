@@ -8,6 +8,9 @@ using ManageGo.Core.ViewModels;
 using System.Reflection;
 using ManageGo.Core;
 
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Pages;
+
 namespace ManageGo.UI.Navigation
 {
     public interface IViewFor
@@ -144,67 +147,68 @@ namespace ManageGo.UI.Navigation
 
         #region Pop
 
-        public async Task PopAsync()
-        {
-            await FormsNavigation.PopAsync(true);
-        }
+        public Task PopAsync() => FormsNavigation.PopAsync(true);
 
-        public async Task PopModalAsync()
-        {
-            await FormsNavigation.PopModalAsync(true);
-        }
+        public Task PopModalAsync() => FormsNavigation.PopModalAsync(true);
 
-        public async Task PopToRootAsync(bool animate)
-        {
-            await FormsNavigation.PopToRootAsync(animate);
-        }
+		public Task PopPopupAsync(bool animate = true) => FormsNavigation.PopPopupAsync(animate);
+
+        public Task PopToRootAsync(bool animate) => FormsNavigation.PopToRootAsync(animate);
 
         #endregion
 
         #region Push
 
-        public async Task PushAsync(BaseNavigationViewModel viewModel)
+        public Task PushAsync(BaseNavigationViewModel viewModel)
         {
             var view = InstantiateView(viewModel);
-
-            await FormsNavigation.PushAsync((Page)view);
+            return FormsNavigation.PushAsync((Page)view);
         }
 
-        public async Task PushModalAsync(BaseNavigationViewModel viewModel)
+        public Task PushModalAsync(BaseNavigationViewModel viewModel)
         {
-            viewModel.IsModal = true;
+            viewModel.Type = Core.Enumerations.ViewModelType.Modal;
 
             var view = InstantiateView(viewModel);
 
             // Most likely we're going to want to put this into a navigation page so we can have a title bar on it
             var nv = new NavigationPage((Page)view);
 
-            await FormsNavigation.PushModalAsync(nv);
+            return FormsNavigation.PushModalAsync(nv);
         }
 
-        public async Task PushAsync<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
+		public Task PushPopupAsync(BaseNavigationViewModel viewModel, bool animate = true)
+        {
+			viewModel.Type = Core.Enumerations.ViewModelType.Popup;
+
+			var view = InstantiateView(viewModel);
+
+			return FormsNavigation.PushPopupAsync((PopupPage)view);
+        } 
+
+        public Task PushAsync<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
+        {
+            T viewModel;
+            
+            // Instantiate the view model & invoke the initialize method, if any
+            viewModel = Activator.CreateInstance<T>();
+            initialize?.Invoke(viewModel);
+
+            return PushAsync(viewModel);
+        }
+
+        public Task PushModalAsync<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
         {
             T viewModel;
 
             // Instantiate the view model & invoke the initialize method, if any
             viewModel = Activator.CreateInstance<T>();
-            initialize?.Invoke(viewModel);
 
-            await PushAsync(viewModel);
-        }
-
-        public async Task PushModalAsync<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
-        {
-            T viewModel;
-
-            // Instantiate the view model & invoke the initialize method, if any
-            viewModel = Activator.CreateInstance<T>();
-
-            viewModel.IsModal = true;
+			viewModel.Type = Core.Enumerations.ViewModelType.Modal;
 
             initialize?.Invoke(viewModel);
 
-            await PushModalAsync(viewModel);
+            return PushModalAsync(viewModel);
         }
 
         #endregion

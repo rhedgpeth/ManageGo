@@ -121,7 +121,7 @@ namespace ManageGo.Core.Managers.ViewModels
                     SetDetailViewModel(new TransactionsViewModel());
                     break;
                 case "Maintenance":
-                    SetDetailViewModel(new MaintenanceItemsViewModel());
+                    SetDetailViewModel(new MaintenanceTicketsViewModel());
                     break;
                 case "Calendar":
                     SetDetailViewModel(new CalendarViewModel());

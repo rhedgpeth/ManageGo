@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
+using Xamarin.Forms;
 
 namespace ManageGo.Pages
 {
-    public partial class MaintenanceItemPage : BaseSearchContentPage<MaintenanceItemViewModel>
+	public partial class CreateEventPage : BasePopupPage<CreateEventViewModel>
     {
-        public MaintenanceItemPage()
+        public CreateEventPage()
         {
             InitializeComponent();
         }

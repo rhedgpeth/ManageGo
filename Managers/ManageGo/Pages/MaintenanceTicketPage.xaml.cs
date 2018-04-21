@@ -6,9 +6,9 @@ using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
 {
-    public partial class MaintenanceItemsPage : BaseSearchContentPage<MaintenanceItemsViewModel>
+    public partial class MaintenanceTicketPage : BaseSearchContentPage<MaintenanceTicketViewModel>
     {
-        public MaintenanceItemsPage()
+        public MaintenanceTicketPage()
         {
             InitializeComponent();
         }

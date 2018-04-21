@@ -10,6 +10,7 @@
     <Folder Include="Services\" />
     <Folder Include="ViewModels\Payments\" />
     <Folder Include="ViewModels\Tenants\" />
+    <Folder Include="ViewModels\Maintenance\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />
