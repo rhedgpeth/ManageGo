@@ -11,8 +11,8 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView ShowCalendar="false">
-                <controls:FilterView.ExpandableLayout>
+            <controls:FilterView LeftFilterText="All dates" RightFilterText="Filter">
+                <controls:FilterView.RightExpandableLayout>
                     <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                         
                         <controls:ExpandablePicker Descriptor="Date" SelectedText="All dates">
@@ -24,7 +24,7 @@
                                 </StackLayout>
                             </controls:ExpandablePicker.ExpandableLayout>
                         </controls:ExpandablePicker>
-                        
+
                         <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
                             <controls:ExpandablePicker.ExpandableLayout>
                                 <StackLayout>
@@ -96,13 +96,9 @@
                         </controls:ExpandablePicker>
 
                     </StackLayout>
-                </controls:FilterView.ExpandableLayout>
+                </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
 
-            <Button Text="Create Event" Command="{Binding CreateEventCommand}" />
-
-            <Button Text="Create Work Order" Command="{Binding CreateWorkorderCommand}" />
-            
             <ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"

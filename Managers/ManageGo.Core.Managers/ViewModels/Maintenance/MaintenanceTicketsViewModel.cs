@@ -1,48 +1,53 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
     public class MaintenanceTicketsViewModel : BaseExpandableCollectionViewModel<MaintenanceTicketSectionHeaderViewModel>
-    {
-		ICommand _createEventCommand;
-		public ICommand CreateEventCommand
-		{
-			get
-			{
-			    if (_createEventCommand == null)
-				{
-					_createEventCommand = new Command(async () => await OpenCreateEvent());
-				}
-
-				return _createEventCommand;
-			}	
-		}
-        
-		ICommand _createWorkorderCommand;
-        public ICommand CreateWorkorderCommand
-        {
-            get
-            {
-				if (_createWorkorderCommand == null)
-                {
-					_createWorkorderCommand = new Command(async () => await OpenCreateWorkOrder());
-                }
-
-				return _createWorkorderCommand;
-            }
-        }
-
+    {    
         public MaintenanceTicketsViewModel()
         {
 			Title = "Tickets";
         }
 
-		Task OpenCreateEvent() => Navigation.PushPopupAsync(new CreateEventViewModel());
+		public override Task InitAsync()
+		{
+			var sectionHeaders = new List<MaintenanceTicketSectionHeaderViewModel>();
 
-		Task OpenCreateWorkOrder() => Navigation.PushPopupAsync(new CreateWorkOrderViewModel());
+			for (int i = 1; i < 11; i++)
+			{
+				var ticket = new MaintenanceTicket
+				{
+					TicketId = i,
+					Title = $"Maintenance Ticket #{i}",
+					Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+						"Sed vel dolor leo. Aliquam erat volutpat. Cras turpis sem, tempus eu " +
+						"turpis nec, fringilla sollicitudin quam. Maecenas quis auctor orci.",
+					CreatedDateTime = DateTime.Now.AddDays(i).AddHours(i),
+					Category = $"Category {i}",
+                    Tenant = new Tenant
+					{
+						Name = $"Tenant Name {i}",
+						Building = new Building
+						{
+							Name = "Building {i}",
+							Address = $"{i} Main St."
+						},
+						Unit = $"{i}B"
+					}
+				};
+
+				sectionHeaders.Add(new MaintenanceTicketSectionHeaderViewModel(ticket));
+			}
+
+			Items = new System.Collections.ObjectModel.ObservableCollection<object>(sectionHeaders);
+                     
+			return base.InitAsync();
+		}
     }
 }

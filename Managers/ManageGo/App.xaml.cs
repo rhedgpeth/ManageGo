@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using ManageGo.Core.Managers.ViewModels;
 using ManageGo.Pages;
 using Xamarin.Forms;
 
@@ -21,11 +22,11 @@ namespace ManageGo
 
         void SetRootPage()
         {
-            // Mocked data
-            if (loggedIn)
-                MainPage = new RootPage();
+			// Mocked data
+			if (loggedIn)
+				MainPage = new RootPage { ViewModel = new RootViewModel() };
             else
-                MainPage = new NavigationPage(new WelcomePage());
+				MainPage = new NavigationPage(new WelcomePage { ViewModel = new WelcomeViewModel() });
         }
 
         protected override void OnStart()

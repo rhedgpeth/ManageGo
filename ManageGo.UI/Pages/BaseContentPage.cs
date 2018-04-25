@@ -10,7 +10,7 @@ namespace ManageGo.UI.Pages
 	public abstract class BaseContentPage : ContentPage
 	{ }
 
-    public abstract class BaseContentPage<T> : BaseContentPage, IViewFor<T> where T : BaseNavigationViewModel, new()
+    public abstract class BaseContentPage<T> : BaseContentPage, IViewFor<T> where T : BaseNavigationViewModel //, new()
     {
         T _viewModel;
 
@@ -18,15 +18,31 @@ namespace ManageGo.UI.Pages
         {
             get
             {
-				if (_viewModel == null)
-					_viewModel = Activator.CreateInstance<T>();
+				//if (_viewModel == null)
+					//_viewModel = Activator.CreateInstance<T>();
 
                 return _viewModel;
             }
             set
-            {
-                _viewModel = value;
-            }
+			{
+				BindingContext = _viewModel = value;
+
+				if (_viewModel != null)
+				{
+					Task.Run(async () =>
+					{
+						try
+						{
+							await _viewModel.InitAsync();
+						}
+						catch (Exception ex)
+						{
+							Debug.WriteLine(ex.Message);
+						}
+					});
+
+				}
+			}
         }
 
         object IViewFor.ViewModel
@@ -44,20 +60,6 @@ namespace ManageGo.UI.Pages
         protected BaseContentPage(Color backgroundColor)
         {
             BackgroundColor = backgroundColor;
-
-			BindingContext = ViewModel;
-
-            Task.Run(async () =>
-            {
-                try
-                {
-                    await ViewModel.InitAsync();
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.Message);
-                }
-            }); 
 		}
 
         async void Init()

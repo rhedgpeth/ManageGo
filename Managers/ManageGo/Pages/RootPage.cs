@@ -13,9 +13,6 @@ namespace ManageGo.Pages
         {
             get
             {
-                if (_viewModel == null)
-					_viewModel = new RootViewModel();
-
                 return _viewModel;
             }
             set
@@ -44,14 +41,7 @@ namespace ManageGo.Pages
 			{
                 ViewModel = new DashboardViewModel()
 			};
-
-            /*
-			var dashboardPage = new MaintenanceItemsPage
-			{
-				ViewModel = new MaintenanceItemsViewModel()
-			};
-			*/
-
+         
 			Detail = new NavigationPage(dashboardPage);
         }
     }

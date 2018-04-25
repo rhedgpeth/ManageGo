@@ -11,8 +11,8 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView ShowCalendar="false">
-                <controls:FilterView.ExpandableLayout>
+            <controls:FilterView LeftFilterText="Filter" ShowRightFilter="false">
+                <controls:FilterView.LeftExpandableLayout>
                     <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                         
                         <controls:ExpandablePicker Descriptor="Building" SelectedText="899 Amsterdam Avenue">
@@ -46,7 +46,7 @@
                         </controls:ExpandablePicker>
 
                     </StackLayout>
-                </controls:FilterView.ExpandableLayout>
+                </controls:FilterView.LeftExpandableLayout>
             </controls:FilterView>
 
             <ListView   

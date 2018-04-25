@@ -18,15 +18,16 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="1" />
             <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!-- Buttons -->
-        <controls:TappableLabel x:Name="CalendarTappableLabel" Grid.Row="0" Grid.Column="0" Text="Jan 8-15" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" />
+        <controls:TappableLabel x:Name="LeftFilterTappableLabel" Grid.Row="0" Grid.Column="0" Text="{Binding LeftFilterTitle}" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" />
         <BoxView Grid.Row="0" Grid.Column="1" x:Name="SeparatorBoxView" HeightRequest="75" WidthRequest="1" BackgroundColor="#DFDFE0" />
-        <controls:TappableLabel x:Name="FilterTappableLabel" Grid.Row="0" Grid.Column="2" Text="Filter" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
+        <controls:TappableLabel x:Name="RightFilterTappableLabel" Grid.Row="0" Grid.Column="2" Text="{Binding RightFilterTitle}" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
         <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 
-        <!-- Expand/collapse panel -->
-        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" x:Name="ExpandableLayoutRegion" IsVisible="false" />
-
+        <!-- Expand/collapse panels -->
+        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" x:Name="LeftExpandableLayoutRegion" IsVisible="false" />
+        <StackLayout Grid.Row="3" Grid.ColumnSpan="3" x:Name="RightExpandableLayoutRegion" IsVisible="false" />
 </Grid>
