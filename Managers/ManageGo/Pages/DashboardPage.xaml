@@ -9,27 +9,27 @@
     ControlTemplate="{StaticResource HeaderNoBorderPageTemplate}">
     <ContentPage.Content>
 
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Margin="0" Padding="0">
 
-            <Image Source="dashboard_1.jpg" />
+            <Image Source="dashboard_1.jpg" HorizontalOptions="FillAndExpand" Margin="0" />
 
-            <StackLayout BackgroundColor="#F9FAFB" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,20,10,0">
+            <StackLayout BackgroundColor="#F9FAFB" Padding="10,20,10,0" Margin="0">
             
                 <Frame Padding="0" IsClippedToBounds="False" HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
                     <StackLayout HorizontalOptions="FillAndExpand">
                         <BoxView HeightRequest="3" BackgroundColor="#55C433" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
 
-                        <Label Text="Payments" Margin="15,15,0,0" FontSize="16" FontAttributes="Bold" />
+                        <Label Text="Payments" Margin="20,10,0,0" TextColor="#323232" FontSize="16" FontAttributes="Bold" />
 
-                        <Grid RowSpacing="0" Margin="15,15,0,0">
+                        <Grid RowSpacing="0" Margin="20,10,0,20">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="25" />
-                                <RowDefinition Height="25" />
+                                <RowDefinition Height="15" />
+                                <RowDefinition Height="15" />
                             </Grid.RowDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0" Text="Total this week" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
@@ -49,17 +49,17 @@
                     <StackLayout HorizontalOptions="FillAndExpand">
                         <BoxView HeightRequest="3" BackgroundColor="#3E90F4" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
 
-                        <Label Text="Maintenance tickets" Margin="15,15,0,0" FontSize="16" FontAttributes="Bold" />
+                        <Label Text="Maintenance tickets" Margin="20,10,0,0" TextColor="#323232" FontSize="16" FontAttributes="Bold" />
 
-                        <Grid RowSpacing="0" Margin="15,15,0,0">
+                        <Grid RowSpacing="0" Margin="20,10,0,20">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="25" />
-                                <RowDefinition Height="25" />
+                                <RowDefinition Height="15" />
+                                <RowDefinition Height="15" />
                             </Grid.RowDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0" Text="Total tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
@@ -75,9 +75,11 @@
                     </StackLayout>
                 </Frame>
 
-                <StackLayout Margin="0,10,0,0" Spacing="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <Label Text="Highview Management" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" />
-                    <Label Text="Open the menu to get started" FontSize="11" HorizontalTextAlignment="Center"/>
+                <StackLayout Margin="0,10,0,0" Spacing="0">
+                    <Label Text="Highview Management" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" 
+                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="#323232" />
+                    <Label Text="Open the menu to get started" FontSize="11" HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="#5D5E60"/>
                 </StackLayout>
                
             </StackLayout>

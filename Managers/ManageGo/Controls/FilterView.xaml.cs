@@ -51,30 +51,68 @@ namespace ManageGo.Controls
 
 			if (!(bool)newValue)
 			{
-				filter.RightFilterTappableLabel.IsVisible = false;
+				filter.RightFilterOption.IsVisible = false;
 				filter.SeparatorBoxView.IsVisible = false;
-
-				SetColumnSpan(filter.LeftFilterTappableLabel, 3);
+                
+				SetColumnSpan(filter.LeftFilterOption, 3);
 			}
         }
         
-		public static readonly BindableProperty RightFilterTextProperty = BindableProperty.Create(nameof(RightFilterText),
+		public static readonly BindableProperty RightFilterIconProperty = BindableProperty.Create(nameof(RightFilterIcon),
                                                                                         typeof(string),
 		                                                                                          typeof(FilterView),
+                                                                                        string.Empty,
+		                                                                                          propertyChanged: HandleRightFilterIconPropertyChanged);
+
+        
+        public bool RightFilterIcon
+        {
+			get { return (bool)GetValue(RightFilterIconProperty); }
+			set { SetValue(RightFilterIconProperty, value); }
+        }
+        
+        static void HandleRightFilterIconPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var filter = bindable as FilterView;
+            filter.RightFilterImage.Source = (string)newValue;
+        }
+
+		public static readonly BindableProperty RightFilterTextProperty = BindableProperty.Create(nameof(RightFilterText),
+                                                                                        typeof(string),
+                                                                                                  typeof(FilterView),
                                                                                         string.Empty,
                                                                                         propertyChanged: HandleRightFilterTextPropertyChanged);
 
 
         public bool RightFilterText
         {
-            get { return (bool)GetValue(ShowRightFilterProperty); }
-            set { SetValue(ShowRightFilterProperty, value); }
+			get { return (bool)GetValue(RightFilterTextProperty); }
+			set { SetValue(RightFilterTextProperty, value); }
         }
-        
+
         static void HandleRightFilterTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var filter = bindable as FilterView;
-            filter.RightFilterTappableLabel.Text = (string)newValue;
+            filter.RightFilterLabel.Text = (string)newValue;
+        }
+
+		public static readonly BindableProperty LeftFilterIconProperty = BindableProperty.Create(nameof(LeftFilterIcon),
+																						typeof(string),
+																								  typeof(FilterView),
+																								 string.Empty,
+                                                                                                  propertyChanged: HandleLeftFilterIconPropertyChanged);
+
+
+        public bool LeftFilterIcon
+        {
+            get { return (bool)GetValue(LeftFilterIconProperty); }
+            set { SetValue(LeftFilterIconProperty, value); }
+        }
+
+        static void HandleLeftFilterIconPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var filter = bindable as FilterView;
+            filter.LeftFilterImage.Source = (string)newValue;
         }
 
 		public static readonly BindableProperty LeftFilterTextProperty = BindableProperty.Create(nameof(LeftFilterText),
@@ -93,36 +131,30 @@ namespace ManageGo.Controls
         static void HandleLeftFilterTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var filter = bindable as FilterView;
-            filter.LeftFilterTappableLabel.Text = (string)newValue;
+            filter.LeftFilterLabel.Text = (string)newValue;
         }
       
         public FilterView()
         {
             InitializeComponent();
-                     
-			SubscribeToGuestureHandlers();
         }
+
+		void Handle_LeftFilterOption_Tapped(object sender, EventArgs e) => ToggleLayouts(LeftExpandableLayoutRegion, RightExpandableLayoutRegion, LeftFilterOption, RightFilterOption);
+
+		void Handle_RightFilterOption_Tapped(object sender, EventArgs e) => ToggleLayouts(RightExpandableLayoutRegion, LeftExpandableLayoutRegion, RightFilterOption, LeftFilterOption);
         
-		void SubscribeToGuestureHandlers()
-        {
-			LeftFilterTappableLabel.Tapped += LeftFilterLabel_Tapped;
-			RightFilterTappableLabel.Tapped += RightFilterLabel_Tapped;
-        }
-
-		void LeftFilterLabel_Tapped(object sender, EventArgs e) => ToggleLayouts(LeftExpandableLayoutRegion, RightExpandableLayoutRegion);
-
-		void RightFilterLabel_Tapped(object sender, EventArgs e) => ToggleLayouts(RightExpandableLayoutRegion, LeftExpandableLayoutRegion);
-
-		void ToggleLayouts(StackLayout l1, StackLayout l2)
+		void ToggleLayouts(StackLayout expandableLayout1, StackLayout expandableLayout2, StackLayout filterLayout1, StackLayout filterLayout2)
 		{
-			if (l1 != null)
+			if (expandableLayout1 != null)
 			{
-				l1.IsVisible = !l1.IsVisible;
+				filterLayout1.Opacity = 1;               
+				expandableLayout1.IsVisible = !expandableLayout1.IsVisible;
 			}
 
-			if (l2 != null)
+			if (expandableLayout2?.Children?.Count > 1)
 			{
-				l2.IsVisible = false;
+                filterLayout2.Opacity = expandableLayout1.IsVisible ? .5 : 1;
+				expandableLayout2.IsVisible = false;
 			}
         }
     }

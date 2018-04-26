@@ -9,25 +9,25 @@
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
         
-        <StackLayout Spacing="0" HorizontalOptions="Center" Margin="0,50,0,0" WidthRequest="200">
+        <StackLayout Spacing="0" Margin="0,50,0,0">
 
-            <Label Text="Your name:" Style="{StaticResource entryDescriptionLabel}" Margin="0,0,0,5" />
-            <Entry Text="{Binding Name}" MinimumWidthRequest="200"/>
+            <Label Text="Your name:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,0,0,5" />
+            <Entry Text="{Binding Name}" Style="{StaticResource defaultEntryCentered}" />
 
-            <Label Text="Company name:" Style="{StaticResource entryDescriptionLabel}" Margin="0,10,0,5" />
-            <Entry Text="{Binding CompanyName}" WidthRequest="200" />
+            <Label Text="Company name:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
+            <Entry Text="{Binding CompanyName}" Style="{StaticResource defaultEntryCentered}" />
 
-            <Label Text="Email address:" Style="{StaticResource entryDescriptionLabel}" Margin="0,0,0,5" />
-            <Entry Text="{Binding Email}" MinimumWidthRequest="200"/>
+            <Label Text="Email address:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
+            <Entry Text="{Binding Email}" Style="{StaticResource defaultEntryCentered}" />
 
-            <Label Text="Phone number:" Style="{StaticResource entryDescriptionLabel}" Margin="0,10,0,5" />
-            <Entry Text="{Binding PhoneNumber}" WidthRequest="200" />
+            <Label Text="Phone number:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
+            <Entry Text="{Binding PhoneNumber}" Style="{StaticResource defaultEntryCentered}" />
 
-            <Label Text="# of units under management:" Style="{StaticResource entryDescriptionLabel}" Margin="0,0,0,5" />
-            <Entry Text="{Binding UnitCount}" MinimumWidthRequest="200"/>
+            <Label Text="# of units under management:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
+            <Entry Text="{Binding UnitCount}" Style="{StaticResource defaultEntryCentered}" />
 
             <Button Text="Submit" Command="{Binding SubmitCommand}" Style="{StaticResource primaryBackgroundButton}" 
-                    Margin="0,10,0,0" WidthRequest="20" />
+                    Margin="0,25,0,0" WidthRequest="125" HorizontalOptions="Center" />
             
        </StackLayout>
         

@@ -9,7 +9,8 @@ namespace ManageGo.UI.Pages
     {
         public BaseSearchContentPage()
         {
-            
+			ToolbarItems.Add(new ToolbarItem("Search", "search-grey",
+			                                  () => { }));
         }
     }
 }

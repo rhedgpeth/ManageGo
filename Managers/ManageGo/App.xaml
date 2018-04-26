@@ -9,7 +9,7 @@
             <Color x:Key="Primary">#3E90F4</Color>
             <Color x:Key="Secondary">#60A6F5</Color>
             <Color x:Key="Tertiary">#FFFFFF</Color>
-            <Color x:Key="Grey-Mid-1">#5D5E60</Color>
+            <Color x:Key="Grey-Mid-1">#58595B</Color>
             <Color x:Key="Grey-Light-1">#ACAEB1</Color>
             <Color x:Key="Grey-Mid-2">#DFDFE0</Color>
             <Color x:Key="Grey-Dark-1">#424242</Color>
@@ -27,7 +27,7 @@
 
             <Style x:Key="tertiaryTitleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}"/>
-                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontSize" Value="16" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             </Style>
@@ -39,7 +39,7 @@
             
             <Style x:Key="entryDescriptionLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Grey-Mid-1}"/>
-                <Setter Property="FontSize" Value="11" />
+                <Setter Property="FontSize" Value="13" />
             </Style>
 
             <Style x:Key="entryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource entryDescriptionLabel}">
@@ -51,7 +51,7 @@
 
             <Style x:Key="lightGreyEntryDescriptionLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Grey-Light-1}"/>
-                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontSize" Value="13" />
             </Style>
 
             <Style x:Key="lightGreyEntryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource lightGreyEntryDescriptionLabel}">
@@ -60,7 +60,7 @@
             </Style>
 
             <Style x:Key="mainButtonStyle" TargetType="Button">
-                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="HeightRequest" Value="35" />
                 <Setter Property="CornerRadius" Value="5" /> 
             </Style>
             
@@ -87,10 +87,24 @@
             <Style x:Key="primaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
                 <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
             
             <Style TargetType="Button" BasedOn="{StaticResource mainButtonStyle}" />            
 
+            <Style x:Key="mainEntryStyle" TargetType="Entry">
+                <!--
+                <Setter Property="HeightRequest" Value="35" />
+                -->
+            </Style>
+            
+            <Style TargetType="Entry" BasedOn="{StaticResource mainEntryStyle}" />
+
+            <Style x:Key="defaultEntryCentered" TargetType="Entry" BasedOn="{StaticResource mainEntryStyle}">
+                <Setter Property="WidthRequest" Value="275" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            
             <!--
             <Style x:Key="buttonSelected" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
                 <Setter Property="BackgroundColor" Value="LightGray" />
@@ -100,16 +114,16 @@
             -->
 
             <ControlTemplate x:Key="HeaderPageTemplate">
-                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,0" WidthRequest="400" Margin="0">
-                    <Label Text="{TemplateBinding BindingContext.Title}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
-                    <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" />
+                <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Padding="0,15,0,0" WidthRequest="400" Margin="0">
+                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
+                    <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" HorizontalOptions="FillAndExpand" />
                     <ContentPresenter />
                 </StackLayout>
             </ControlTemplate>
 
             <ControlTemplate x:Key="HeaderNoBorderPageTemplate">
                 <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,10" WidthRequest="400">
-                    <Label Text="{TemplateBinding BindingContext.Title}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
+                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <ContentPresenter />
                 </StackLayout>
             </ControlTemplate>

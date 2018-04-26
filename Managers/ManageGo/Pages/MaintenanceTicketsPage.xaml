@@ -11,91 +11,101 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="All dates" RightFilterText="Filter">
+            <controls:FilterView LeftFilterText="All dates" LeftFilterIcon="calendar-blue" 
+                                 RightFilterText="Filter" RightFilterIcon="filter-blue">
+                
                 <controls:FilterView.RightExpandableLayout>
-                    <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
-                        
-                        <controls:ExpandablePicker Descriptor="Date" SelectedText="All dates">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
 
-                        <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                    <StackLayout>
 
-                        <controls:ExpandablePicker Descriptor="Priority" SelectedText="All">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                        <controls:SearchView />
 
-                        <controls:ExpandablePicker Descriptor="Category" SelectedText="Electricity">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                        <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
+                            
+                            <controls:ExpandablePicker Descriptor="Date" SelectedText="All dates">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
 
-                        <controls:ExpandablePicker Descriptor="Tags" SelectedText="Access Granted, Forward to Super">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                            <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
 
-                        <controls:ExpandablePicker Descriptor="Status" SelectedText="Open">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                            <controls:ExpandablePicker Descriptor="Priority" SelectedText="All">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
 
-                        <controls:ExpandablePicker Descriptor="Due date" SelectedText="1/10/2018">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                            <controls:ExpandablePicker Descriptor="Category" SelectedText="Electricity">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
 
-                        <controls:ExpandablePicker Descriptor="Assigned" SelectedText="Boris Gursky">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
+                            <controls:ExpandablePicker Descriptor="Tags" SelectedText="Access Granted, Forward to Super">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <controls:ExpandablePicker Descriptor="Status" SelectedText="Open">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <controls:ExpandablePicker Descriptor="Due date" SelectedText="1/10/2018">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <controls:ExpandablePicker Descriptor="Assigned" SelectedText="Boris Gursky">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                        </StackLayout>
 
                     </StackLayout>
+                        
                 </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
 

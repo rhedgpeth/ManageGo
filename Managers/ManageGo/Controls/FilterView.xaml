@@ -22,9 +22,35 @@
         </Grid.RowDefinitions>
 
         <!-- Buttons -->
-        <controls:TappableLabel x:Name="LeftFilterTappableLabel" Grid.Row="0" Grid.Column="0" Text="{Binding LeftFilterTitle}" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" />
+
+        <StackLayout x:Name="LeftFilterOption" Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_LeftFilterOption_Tapped" NumberOfTapsRequired="1" />
+            </StackLayout.GestureRecognizers>   
+        
+            <Image x:Name="LeftFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
+        
+            <Label x:Name="LeftFilterLabel" Style="{StaticResource entryDescriptionLabelCentered}" 
+                   FontSize="14" HorizontalOptions="StartAndExpand" />
+        
+        </StackLayout>
+    
         <BoxView Grid.Row="0" Grid.Column="1" x:Name="SeparatorBoxView" HeightRequest="75" WidthRequest="1" BackgroundColor="#DFDFE0" />
-        <controls:TappableLabel x:Name="RightFilterTappableLabel" Grid.Row="0" Grid.Column="2" Text="{Binding RightFilterTitle}" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
+
+        <StackLayout x:Name="RightFilterOption" Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_RightFilterOption_Tapped" NumberOfTapsRequired="1" />
+            </StackLayout.GestureRecognizers>  
+        
+            <Image x:Name="RightFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
+        
+            <Label x:Name="RightFilterLabel" HorizontalOptions="StartAndExpand"
+                   Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
+        
+        </StackLayout>
+    
         <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 
         <!-- Expand/collapse panels -->

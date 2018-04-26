@@ -7,7 +7,7 @@
     <Frame Padding="0" Margin="15,0,15,0" IsClippedToBounds="False" 
            HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
 
-        <StackLayout Padding="0,0,0,0">
+        <StackLayout Padding="0,0,0,10">
 
             <BoxView HeightRequest="1" BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
 
@@ -42,8 +42,11 @@
                 <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" VerticalOptions="Center"
                          BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
 
-                <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="JPMORGAN CHASE BANK **** 8730" 
-                       TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" /> 
+                <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+                    <Image Source="bank-blue" Aspect="AspectFit" />
+                    <Label Text="JPMORGAN CHASE BANK **** 8730" 
+                           TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" /> 
+                </StackLayout>
 
                 <Label Grid.Row="5" Grid.Column="0" Text="Transaction" TextColor="#A7A9AC" Font="12" />
                 <Label Grid.Row="5" Grid.Column="1" Text="Bank transaction" TextColor="#A7A9AC" Font="12" />
@@ -54,8 +57,11 @@
                 <BoxView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" VerticalOptions="Center" 
                          BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
 
-                <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="Reversed (Insufficient funds)" 
-                       TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" />
+                <StackLayout Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+                    <Image Source="dot-red" Aspect="AspectFit" />
+                    <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="Reversed (Insufficient funds)" 
+                           TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" />
+                </StackLayout>
 
                 <StackLayout Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"  Orientation="Horizontal">
                     <Label Text="Payment note: " TextColor="#A7A9AC" Font="12" />

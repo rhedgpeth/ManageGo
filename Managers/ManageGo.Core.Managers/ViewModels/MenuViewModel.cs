@@ -27,7 +27,7 @@ namespace ManageGo.Core.Managers.ViewModels
 		{
 			get
 			{
-				return "support@managegocom";
+				return "support@managego.com";
 			}
 		}
 

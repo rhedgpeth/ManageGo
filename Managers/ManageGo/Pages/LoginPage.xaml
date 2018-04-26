@@ -3,30 +3,31 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.LoginPage"
     x:TypeArguments="vm:LoginViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
         
-        <StackLayout Spacing="0" HorizontalOptions="Center" Margin="0,50,0,0" WidthRequest="200">
+        <StackLayout Spacing="0"  Margin="0,50,0,0" >
 
             <Label Text="Email address:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,0,0,5" />
-            <Entry Text="{Binding Username}" MinimumWidthRequest="200"/>
+            <Entry Text="{Binding Username}" Style="{StaticResource defaultEntryCentered}" />
 
             <Label Text="Password:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,10,0,5" />
-            <Entry Text="{Binding Password}" WidthRequest="200" />
+            <Entry Text="{Binding Password}" Style="{StaticResource defaultEntryCentered}" />
 
-            <Button Text="Login" Command="{Binding LoginCommand}" Style="{StaticResource primaryBackgroundButton}" 
-                    Margin="0,10,0,0" WidthRequest="20" />
+            <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="Center" WidthRequest="125"
+                   Style="{StaticResource primaryBackgroundButton}" Margin="0,20,0,0" />
 
-            <Label Text="Forgot you password?" Style="{StaticResource lightGreyEntryDescriptionLabelCentered}" Margin="0,20,0,0" />
-            <Button Text="Reset password" Command="{Binding ResetPasswordCommand}" HeightRequest="25"
-                    Style="{StaticResource redTextTertiaryBackgroundButton}" WidthRequest="75" />    
+            <Label Text="Forgot you password?" Style="{StaticResource lightGreyEntryDescriptionLabelCentered}" Margin="0,25,0,0" />
+            <controls:TappableLabel Text="Reset password" TappedCommand="{Binding ResetPasswordCommand}" HorizontalOptions="Center"
+                        Margin="0,5,0,0" TextColor="#E13D40" Style="{StaticResource entryDescriptionLabel}" />
 
-            <Label Text="Don't have an account yet?" Style="{StaticResource lightGreyEntryDescriptionLabelCentered}" Margin="0,10,0,0" />
-            <Button Text="Contact us to sign up" Command="{Binding SignUpCommand}" HeightRequest="25"
-                    Style="{StaticResource tertiaryBackgroundButton-small}" WidthRequest="75" /> 
+            <Label Text="Don't have an account yet?" Style="{StaticResource lightGreyEntryDescriptionLabelCentered}" Margin="0,20,0,0" />
+            <controls:TappableLabel Text="Contact us to sign up" TappedCommand="{Binding SignUpCommand}" HorizontalOptions="Center"
+                        Margin="0,5,0,0" TextColor="#4896F4" Style="{StaticResource entryDescriptionLabel}" />
             
        </StackLayout>
                 
