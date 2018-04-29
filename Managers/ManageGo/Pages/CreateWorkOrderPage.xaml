@@ -21,6 +21,10 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
 
+    <!--
+    <StackLayout Padding="20,20,20,20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+    -->
+    
     <Frame Padding="15,10,15,10"  VerticalOptions="Center" Margin="35,0,35,0"
            IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
            BackgroundColor="White" HorizontalOptions="FillAndExpand">
@@ -31,7 +35,7 @@
                 BackgroundColor="White"
                 Padding="0">
 
-                <Image Source="close-grey" Margin="0,-18,-22,0" HorizontalOptions="End">
+                <Image Source="close_grey" Margin="0,-18,-22,0" HorizontalOptions="End">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding CancelCommand}" NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
@@ -39,19 +43,24 @@
              
                 <Label Text="Create work order:" TextColor="#5D5E60"/>
 
-                <Label Text="Summary:" TextColor="#ADAEB1" Margin="0,15,0,0" FontSize="14" />
-                <Entry Text="399 Amsterdam Ave, #2-A" />
+                <Label Text="Summary:" TextColor="#ADAEB1" Margin="0,10,0,0" FontSize="14" />
+                <Entry Text="399 Amsterdam Ave, #2-A" FontSize="Micro" />
 
                 <Label Text="Details:" TextColor="#ADAEB1" Margin="0,15,0,0" FontSize="14" />
                 <Editor HorizontalOptions="FillAndExpand" HeightRequest="50"  />
 
-                <Label Text="Send to user" TextColor="#3E90F4" Margin="0,15,0,0" /> 
+                <Button Text="Send to user" Image="profile_blue.png" BackgroundColor="#F9FAFB" 
+                        TextColor="#3E90F4" Margin="0,15,0,0" WidthRequest="100" />
             
                 <Button Text="Create work order" BackgroundColor="#55C433" Command="{Binding SaveCommand}"
-                        TextColor="White" HorizontalOptions="FillAndExpand" Margin="0,15,0,0" />
+                        TextColor="White" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Margin="0,15,0,0" />
             
             </StackLayout>
         
     </Frame>
 
+    <!--
+    </StackLayout>
+    -->
+        
 </local:BasePopupPage>

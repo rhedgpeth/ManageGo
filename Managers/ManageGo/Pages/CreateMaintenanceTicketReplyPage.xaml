@@ -33,22 +33,25 @@
                 BackgroundColor="White"
                 Padding="0">
 
-                <Image Source="close-grey" Margin="0,-18,-22,0" HorizontalOptions="End">
+                <Image Source="close_grey" Margin="0,-18,-22,0" HorizontalOptions="End">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding CancelCommand}" NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
              
-                <Label Text="Type your reply:" TextColor="#BDBEC0" Margin="0,15,0,0" FontSize="14" />
-                <Editor HorizontalOptions="FillAndExpand" HeightRequest="50"  />
+                <Label Text="Type your reply:" TextColor="#BDBEC0" Margin="0,5,0,0" FontSize="14" />
+                <Editor HorizontalOptions="FillAndExpand" HeightRequest="100"  />
 
-                <Label Text="Invite" TextColor="#3E90F4" Margin="0,15,0,0" /> 
+                <Grid ColumnSpacing="10"> 
+                    <Button Grid.Column="0" Text="Take picture" BackgroundColor="#F9FAFB" TextColor="#3E90F4" />
+                    <Button Grid.Column="1" Text="Upload file" BackgroundColor="#F9FAFB" TextColor="#3E90F4" />
+                </Grid>
             
-                <Button Text="Reply" BackgroundColor="#55C433" Command="{Binding SaveCommand}"
+                <Button Text="Reply" BackgroundColor="#55C433" Command="{Binding SaveCommand}" FontAttributes="Bold"
                         TextColor="White" HorizontalOptions="FillAndExpand" Margin="0,15,0,0" />
 
-                <Button Text="Reply to staff only" BackgroundColor="#E13D40" Command="{Binding SaveCommand}"
-                        TextColor="White" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
+                <Button Text="Reply to staff only" Image="lock_white.png" BackgroundColor="#E13D40" Command="{Binding SaveCommand}"
+                        TextColor="White" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
             
             </StackLayout>
         

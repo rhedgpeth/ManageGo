@@ -8,7 +8,7 @@
     x:Class="ManageGo.Pages.MenuPage"
     x:TypeArguments="vm:MenuViewModel"
     Title="Menu"
-    Icon="nav_menu_icon">
+    Icon="nav_menu_icon.png">
     <ContentPage.Content>
         
     <StackLayout>

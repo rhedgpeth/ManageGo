@@ -11,6 +11,7 @@
     <Folder Include="ViewModels\Payments\" />
     <Folder Include="ViewModels\Tenants\" />
     <Folder Include="ViewModels\Maintenance\" />
+    <Folder Include="ViewModels\Transactions\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />

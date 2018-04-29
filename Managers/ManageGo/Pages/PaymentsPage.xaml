@@ -13,8 +13,8 @@
 
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="May 5 - May 15" LeftFilterIcon="calendar-blue" 
-                                 RightFilterText="Filter" RightFilterIcon="filter-blue"> 
+            <controls:FilterView LeftFilterText="May 5 - May 15" LeftFilterIcon="calendar_blue" 
+                                 RightFilterText="Filter" RightFilterIcon="filter_blue"> 
                 
                 <controls:FilterView.RightExpandableLayout>
 

@@ -139,20 +139,32 @@
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\welcome_page_image.jpg" />
     <AndroidResource Include="Resources\drawable\logo.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\welcome_page_image.jpg" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\logo.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\nav_menu_icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\nav_menu_icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\nav_menu_icon.png" />
     <AndroidResource Include="Resources\drawable\nav_menu_icon.png" />
     <AndroidResource Include="Resources\drawable\chevron_down.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\chevron_down.png" />
     <AndroidResource Include="Resources\drawable\dashboard_1.jpg" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_1.jpg" />
     <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bank_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\calendar_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chevron_down.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\close_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dot_red.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\filter_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\lock_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nav_back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nav_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\welcome_page_image.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bank_grey.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
@@ -174,6 +186,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />

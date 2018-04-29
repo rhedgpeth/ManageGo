@@ -150,31 +150,37 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\welcome_page_image.jpg" />
+    <BundleResource Include="Resources\bank_blue%402x.png" />
+    <BundleResource Include="Resources\bank_blue%403x.png" />
+    <BundleResource Include="Resources\calendar_blue%402x.png" />
+    <BundleResource Include="Resources\calendar_blue%403x.png" />
+    <BundleResource Include="Resources\chat_green%402x.png" />
+    <BundleResource Include="Resources\chat_green%403x.png" />
+    <BundleResource Include="Resources\chat_grey%402x.png" />
+    <BundleResource Include="Resources\chat_grey%403x.png" />
+    <BundleResource Include="Resources\chevron_down%403x.png" />
+    <BundleResource Include="Resources\close_grey%403x.png" />
+    <BundleResource Include="Resources\dashboard_1%403x.jpg" />
+    <BundleResource Include="Resources\dot_red%402x.png" />
+    <BundleResource Include="Resources\dot_red%403x.png" />
+    <BundleResource Include="Resources\filter_blue%402x.png" />
+    <BundleResource Include="Resources\filter_blue%403x.png" />
+    <BundleResource Include="Resources\lock_white%402x.png" />
+    <BundleResource Include="Resources\lock_white%403x.png" />
+    <BundleResource Include="Resources\logo%403x.png" />
     <BundleResource Include="Resources\nav_back_icon%402x.png" />
     <BundleResource Include="Resources\nav_back_icon%403x.png" />
     <BundleResource Include="Resources\nav_menu_icon%402x.png" />
     <BundleResource Include="Resources\nav_menu_icon%403x.png" />
-    <BundleResource Include="Resources\chevron_down%403x.png" />
-    <BundleResource Include="Resources\close-grey%403x.png" />
-    <BundleResource Include="Resources\logo%403x.png" />
-    <BundleResource Include="Resources\dashboard_1%403x.jpg" />
-    <BundleResource Include="Resources\profile-grey%402x.png" />
-    <BundleResource Include="Resources\profile-grey%403x.png" />
-    <BundleResource Include="Resources\filter-blue%402x.png" />
-    <BundleResource Include="Resources\filter-blue%403x.png" />
-    <BundleResource Include="Resources\calendar-blue%402x.png" />
-    <BundleResource Include="Resources\calendar-blue%403x.png" />
-    <BundleResource Include="Resources\search-grey%402x.png" />
-    <BundleResource Include="Resources\search-grey%403x.png" />
-    <BundleResource Include="Resources\dot-red%402x.png" />
-    <BundleResource Include="Resources\dot-red%403x.png" />
-    <BundleResource Include="Resources\chat-grey%402x.png" />
-    <BundleResource Include="Resources\chat-grey%403x.png" />
-    <BundleResource Include="Resources\bank-blue%402x.png" />
-    <BundleResource Include="Resources\bank-blue%403x.png" />
-    <BundleResource Include="Resources\chat-green%402x.png" />
-    <BundleResource Include="Resources\chat-green%403x.png" />
+    <BundleResource Include="Resources\profile_blue%402x.png" />
+    <BundleResource Include="Resources\profile_blue%403x.png" />
+    <BundleResource Include="Resources\profile_grey%402x.png" />
+    <BundleResource Include="Resources\profile_grey%403x.png" />
+    <BundleResource Include="Resources\search_grey%402x.png" />
+    <BundleResource Include="Resources\search_grey%403x.png" />
+    <BundleResource Include="Resources\welcome_page_image.jpg" />
+    <BundleResource Include="Resources\bank_grey%402x.png" />
+    <BundleResource Include="Resources\bank_grey%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets')" />

@@ -43,7 +43,7 @@
                          BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
 
                 <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
-                    <Image Source="bank-blue" Aspect="AspectFit" />
+                    <Image Source="bank_blue" Aspect="AspectFit" />
                     <Label Text="JPMORGAN CHASE BANK **** 8730" 
                            TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" /> 
                 </StackLayout>
@@ -58,7 +58,7 @@
                          BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
 
                 <StackLayout Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
-                    <Image Source="dot-red" Aspect="AspectFit" />
+                    <Image Source="dot_red" Aspect="AspectFit" />
                     <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="Reversed (Insufficient funds)" 
                            TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" />
                 </StackLayout>

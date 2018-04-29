@@ -150,8 +150,8 @@ namespace ManageGo.Controls
 				filterLayout1.Opacity = 1;               
 				expandableLayout1.IsVisible = !expandableLayout1.IsVisible;
 			}
-
-			if (expandableLayout2?.Children?.Count > 1)
+            
+			if (expandableLayout2 != null)
 			{
                 filterLayout2.Opacity = expandableLayout1.IsVisible ? .5 : 1;
 				expandableLayout2.IsVisible = false;

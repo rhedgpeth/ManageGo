@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="Filter" LeftFilterIcon="filter-blue" ShowRightFilter="false">
+            <controls:FilterView LeftFilterText="Filter" LeftFilterIcon="filter_blue" ShowRightFilter="false">
                 <controls:FilterView.LeftExpandableLayout>
                     <StackLayout>
                         

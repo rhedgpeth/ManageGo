@@ -21,7 +21,7 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
-              <Image Source="profile-grey" Aspect="AspectFit" />
+              <Image Source="profile_grey" Aspect="AspectFit" />
             </StackLayout>
             
             <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" />
