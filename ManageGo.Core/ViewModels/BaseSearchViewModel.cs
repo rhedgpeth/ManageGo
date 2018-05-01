@@ -6,5 +6,14 @@ namespace ManageGo.Core.ViewModels
     {
         public BaseSearchViewModel()
         { }
+
+		protected  Random random = new Random();
+
+        protected double RandomNumberBetween(double minValue, double maxValue)
+        {
+            var next = random.NextDouble();
+
+            return minValue + (next * (maxValue - minValue));
+        }
     }
 }

@@ -36,15 +36,6 @@ namespace ManageGo.Core.Managers.ViewModels
             }
 
 			Items = new ObservableCollection<object>(items);
-		}
-
-		readonly Random random = new Random();
-        
-        double RandomNumberBetween(double minValue, double maxValue)
-        {
-            var next = random.NextDouble();
-
-            return minValue + (next * (maxValue - minValue));
-        }
+		}      
 	}
 }

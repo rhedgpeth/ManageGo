@@ -5,8 +5,75 @@
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.BuildingsPage"
-    x:TypeArguments="vm:BuildingsViewModel">
+    x:TypeArguments="vm:BuildingsViewModel"
+    ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <Label Text="Buildings Page" Margin="20,35,0,0" />
+
+        <ListView   
+            ItemsSource="{Binding Buildings}"
+            SeparatorVisibility="None" 
+            HasUnevenRows="true"
+            BackgroundColor="#F9FAFB">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <Frame Padding="10,10,15,10" Margin="15,15,15,0" 
+                               IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
+                               BackgroundColor="White" HorizontalOptions="FillAndExpand">
+
+                            <Grid RowSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width=".25*"/>
+                                    <ColumnDefinition Width="1"/>
+                                    <ColumnDefinition Width=".35*"/>
+                                    <ColumnDefinition Width="1"/>
+                                    <ColumnDefinition Width=".4*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="1" />
+                                    <RowDefinition Height="25" />
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
+                                  <Image Source="profile_grey" Aspect="AspectFit" />
+                                </StackLayout>
+                                
+                                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding Name}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" />
+
+                                <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" HeightRequest="1" 
+                                         BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+
+                                <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                    <Label Text="Units:" FontSize="12" TextColor="#68696B"  />
+                                    <Label Text="{Binding UnitCount}" FontSize="12" TextColor="{StaticResourc Primary}" />
+                                </StackLayout>
+
+                                <BoxView Grid.Row="2" Grid.Column="2" WidthRequest="1" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
+
+                                <StackLayout Grid.Row="2" Grid.Column="3" Orientation="Horizontal">
+                                    <Label Text="Tenants:" FontSize="12" TextColor="#68696B" />
+                                    <Label Text="{Binding TenantCount}" FontSize="12" TextColor="{StaticResource Primary}" />
+                                </StackLayout>
+
+                                <BoxView Grid.Row="2" Grid.Column="4" WidthRequest="1" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
+
+                                <StackLayout Grid.Row="2" Grid.Column="5" Orientation="Horizontal">
+                                    <Label Text="Open tickets:" FontSize="12" TextColor="#68696B" />
+                                    <Label Text="{Binding TicketCount}" FontSize="12" TextColor="{StaticResource Primary}" />
+                                </StackLayout>
+                                
+                            </Grid>
+
+                        </Frame>
+
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
     </ContentPage.Content>
 </local:BaseSearchContentPage>
