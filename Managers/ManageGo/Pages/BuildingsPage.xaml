@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.BuildingsPage"
     x:TypeArguments="vm:BuildingsViewModel"
@@ -25,20 +26,20 @@
                             <Grid RowSpacing="10">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="35"/>
-                                    <ColumnDefinition Width=".25*"/>
+                                    <ColumnDefinition Width=".27*"/>
                                     <ColumnDefinition Width="1"/>
-                                    <ColumnDefinition Width=".35*"/>
+                                    <ColumnDefinition Width=".32*"/>
                                     <ColumnDefinition Width="1"/>
                                     <ColumnDefinition Width=".4*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="1" />
-                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="15" />
                                 </Grid.RowDefinitions>
 
                                 <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
-                                  <Image Source="profile_grey" Aspect="AspectFit" />
+                                  <Image Source="building_grey" Aspect="AspectFit" />
                                 </StackLayout>
                                 
                                 <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding Name}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" />
@@ -46,29 +47,31 @@
                                 <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" HeightRequest="1" 
                                          BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
 
-                                <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center">
                                     <Label Text="Units:" FontSize="12" TextColor="#68696B"  />
-                                    <Label Text="{Binding UnitCount}" FontSize="12" TextColor="{StaticResourc Primary}" />
+                                    <controls:TappableLabel Text="{Binding UnitCount}" TappedCommand="{Binding UnitsCommand}" 
+                                                            FontSize="12" TextColor="{StaticResource Primary}" />
                                 </StackLayout>
 
                                 <BoxView Grid.Row="2" Grid.Column="2" WidthRequest="1" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
 
-                                <StackLayout Grid.Row="2" Grid.Column="3" Orientation="Horizontal">
+                                <StackLayout Grid.Row="2" Grid.Column="3" Orientation="Horizontal" HorizontalOptions="Center">
                                     <Label Text="Tenants:" FontSize="12" TextColor="#68696B" />
-                                    <Label Text="{Binding TenantCount}" FontSize="12" TextColor="{StaticResource Primary}" />
+                                    <controls:TappableLabel Text="{Binding TenantCount}" TappedCommand="{Binding TenantsCommand}" 
+                                                            FontSize="12" TextColor="{StaticResource Primary}" />
                                 </StackLayout>
 
                                 <BoxView Grid.Row="2" Grid.Column="4" WidthRequest="1" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
 
-                                <StackLayout Grid.Row="2" Grid.Column="5" Orientation="Horizontal">
+                                <StackLayout Grid.Row="2" Grid.Column="5" Orientation="Horizontal" HorizontalOptions="Center">
                                     <Label Text="Open tickets:" FontSize="12" TextColor="#68696B" />
-                                    <Label Text="{Binding TicketCount}" FontSize="12" TextColor="{StaticResource Primary}" />
+                                    <controls:TappableLabel Text="{Binding TicketCount}" TappedCommand="{Binding TicketsCommand}" 
+                                                            FontSize="12" TextColor="{StaticResource Primary}" />
                                 </StackLayout>
                                 
                             </Grid>
 
                         </Frame>
-
                         
                     </ViewCell>
                 </DataTemplate>
