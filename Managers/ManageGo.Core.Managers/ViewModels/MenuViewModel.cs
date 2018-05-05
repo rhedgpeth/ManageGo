@@ -88,9 +88,7 @@ namespace ManageGo.Core.Managers.ViewModels
         }
 
         public MenuViewModel()
-        {
-
-
+        {         
             LoadMenuItems();
         }
 
@@ -98,12 +96,14 @@ namespace ManageGo.Core.Managers.ViewModels
         {
             MenuItems = new List<string>
             {
+				"Home",
                 "Payments",
                 "Bank transactions",
                 "Maintenance",
                 "Calendar",
                 "Buildings",
                 "Tenants",
+                "Notifications",
                 "Settings",
                 "Feedback",
                 "Logout"
@@ -114,6 +114,9 @@ namespace ManageGo.Core.Managers.ViewModels
         {
             switch(item)
             {
+				case "Home":
+					SetDetailViewModel(new DashboardViewModel());
+					break;
                 case "Payments":
                     SetDetailViewModel(new PaymentsViewModel());
                     break;
@@ -132,11 +135,14 @@ namespace ManageGo.Core.Managers.ViewModels
                 case "Tenants":
                     SetDetailViewModel(new TenantsViewModel());
                     break;
+				case "Notifications":
+                    SetDetailViewModel(new NotificationsViewModel());
+                    break;
                 case "Settings":
                     SetDetailViewModel(new SettingsViewModel());
                     break;
                 case "Feedback":
-                    // TODO: Do something here
+					SetDetailViewModel(new FeedbackViewModel());
                     break;
                 case "Logout":
                     Logout();

@@ -13,7 +13,7 @@ namespace ManageGo.DataTemplates.Selectors
 			{
 				case TransactionSectionHeaderViewModel _:
 					return TransactionSectionHeaderCell.Template;
-				case TenantDetailsViewModel _:
+				case TransactionDetailsViewModel _:
 					return TransactionDetailsCell.Template;
 				default:
 					throw new ArgumentException($"Unknown item type '{item?.GetType()}'", nameof(item));

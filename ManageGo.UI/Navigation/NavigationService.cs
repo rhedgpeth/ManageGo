@@ -10,6 +10,7 @@ using ManageGo.Core;
 
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
+using ManageGo.UI.Pages;
 
 namespace ManageGo.UI.Navigation
 {
@@ -77,32 +78,39 @@ namespace ManageGo.UI.Navigation
                 }
             }
         }
-
-        public void SetDetailView(BaseNavigationViewModel viewModel)
+        
+        public async Task SetDetailView(BaseNavigationViewModel viewModel)
         {
-            var view = InstantiateView(viewModel);
+			Page newDetailPage = await Task.Run(() =>
+			{
+				var view = InstantiateView(viewModel);
+                            
+				// Tab pages shouldn't go into navigation pages
+				if (view is TabbedPage)
+					newDetailPage = (Page)view;
+				else
+					newDetailPage = new NavigationPage((Page)view);
 
-            Page newDetailPage;
-
-            // Tab pages shouldn't go into navigation pages
-            if (view is TabbedPage)
-                newDetailPage = (Page)view;
-            else
-                newDetailPage = new NavigationPage((Page)view);
+				return newDetailPage;
+			});
 
             DetailPage = newDetailPage;
         }
-
-        public void SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
+              
+        public async Task SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel
         {
-            T viewModel;
+			T viewModel = await Task.Run(() =>
+			{
+				// First instantiate the view model
+				viewModel = Activator.CreateInstance<T>();
+                
+				initialize?.Invoke(viewModel);
 
-            // First instantiate the view model
-            viewModel = Activator.CreateInstance<T>();
-            initialize?.Invoke(viewModel);
+				return viewModel;
+			}).ConfigureAwait(false);
 
             // Actually switch the page
-            SetDetailView(viewModel);
+            await SetDetailView(viewModel);
         }
 
         public void SetRootView(BaseNavigationViewModel viewModel, bool withNavigationEnabled = true)

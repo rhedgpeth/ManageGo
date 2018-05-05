@@ -12,10 +12,7 @@ namespace ManageGo.Core.ViewModels
             get => _items;
             set => SetPropertyChanged(ref _items, value);
         }
-
-        public BaseExpandableCollectionViewModel()
-        { }
-
+       
 		public void OnSectionHeaderSelected(T section)
         {         
 			if (section.IsExpanded)

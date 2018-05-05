@@ -40,7 +40,7 @@
                 </Image>
              
                 <Label Text="Type your reply:" TextColor="#BDBEC0" Margin="0,5,0,0" FontSize="14" />
-                <Editor HorizontalOptions="FillAndExpand" HeightRequest="100"  />
+                <Editor HorizontalOptions="FillAndExpand" HeightRequest="300"  />
 
                 <Grid ColumnSpacing="10"> 
                     <Button Grid.Column="0" Text="Take picture" BackgroundColor="#F9FAFB" TextColor="#3E90F4" />

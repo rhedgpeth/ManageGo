@@ -22,7 +22,7 @@
 
                         <controls:SearchView />
                     
-                        <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
+                        <StackLayout Margin="35,0,35,0" Padding="0,0,0,15" Orientation="Vertical">
                             
                             <controls:ExpandablePicker Descriptor="Date" SelectedText="All Dates">
                                 <controls:ExpandablePicker.ExpandableLayout>

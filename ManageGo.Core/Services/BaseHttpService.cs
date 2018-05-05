@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace ManageGo.Core.Services
-{
-    public abstract class BaseHttpService
-    {
+{   
+	public abstract class BaseHttpService 
+    {      
         string _baseApiUri;
 
         /// <summary>
@@ -223,6 +223,15 @@ namespace ManageGo.Core.Services
             modifyRequest?.Invoke(request);
 
             return _client.SendAsync(request, cancellationToken);
+        }
+
+		// TODO: Delete this - mock only
+		protected Random random = new Random();
+
+        protected double RandomNumberBetween(double minValue, double maxValue)
+        {
+            var next = random.NextDouble();
+            return minValue + (next * (maxValue - minValue));
         }
     }
 }

@@ -33,6 +33,7 @@ namespace ManageGo.UI.Pages
 					{
 						try
 						{
+							//await Task.Delay(5000);
 							await _viewModel.InitAsync();
 						}
 						catch (Exception ex)
@@ -40,7 +41,6 @@ namespace ManageGo.UI.Pages
 							Debug.WriteLine(ex.Message);
 						}
 					});
-
 				}
 			}
         }

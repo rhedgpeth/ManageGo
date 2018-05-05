@@ -129,6 +129,8 @@
             </ControlTemplate>
 
             <converters:IsExpandedRotationConverter x:Key="cnvExpandedRotation"></converters:IsExpandedRotationConverter>
+            <converters:ListToCommaSeparatedStringConverter x:Key="cnvListToCommaSeparatedString"></converters:ListToCommaSeparatedStringConverter>
+            <converters:TransactionSourceTypeToImageConverter x:Key="cnvTransactionSourceTypeToImage"></converters:TransactionSourceTypeToImageConverter>
             
         </ResourceDictionary>
     </Application.Resources>

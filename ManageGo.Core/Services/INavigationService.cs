@@ -20,8 +20,8 @@ namespace ManageGo.Core.Services
 		Task PushPopupAsync(BaseNavigationViewModel viewModel, bool animate = true);
         Task PopToRootAsync(bool animate);
       
-        void SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel;
-        void SetDetailView(BaseNavigationViewModel viewModel);
+        Task SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel;
+        Task SetDetailView(BaseNavigationViewModel viewModel);
 
         void SetRootView(BaseNavigationViewModel viewModel, bool withNavigationEnabled = true);      
     }

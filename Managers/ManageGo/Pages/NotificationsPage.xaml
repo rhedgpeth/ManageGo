@@ -5,8 +5,9 @@
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.NotificationsPage"
-    x:TypeArguments="vm:NotificationsViewModel">
+    x:TypeArguments="vm:NotificationsViewModel"
+    ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <Label Text="Notifications Page" Margin="20,35,0,0" />
+        
     </ContentPage.Content>
 </local:BaseSearchContentPage>
