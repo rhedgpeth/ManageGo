@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ManageGo.Controls"
+    x:Class="ManageGo.Controls.CalendarView">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="25" />
+        <RowDefinition Height="1" />
+        <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="0" Grid.Column="1" Text="{Binding CurrentMonthYearDescription}" HorizontalTextAlignment="Center" />
+
+    <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+
+    <controls:Calendar Grid.Row="2" Grid.ColumnSpan="3" 
+                       CurrentMonthYear="{Binding CurrentMonthYear}"
+                       HeightRequest="200" WidthRequest="400" 
+                       HorizontalOptions="Center" />
+    
+</Grid>

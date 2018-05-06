@@ -26,6 +26,1417 @@ namespace ManageGo.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::CustomCalendar.Droid.Resource.Animation.abc_fade_in = global::ManageGo.Droid.Resource.Animation.abc_fade_in;
+			global::CustomCalendar.Droid.Resource.Animation.abc_fade_out = global::ManageGo.Droid.Resource.Animation.abc_fade_out;
+			global::CustomCalendar.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::ManageGo.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::CustomCalendar.Droid.Resource.Animation.abc_popup_enter = global::ManageGo.Droid.Resource.Animation.abc_popup_enter;
+			global::CustomCalendar.Droid.Resource.Animation.abc_popup_exit = global::ManageGo.Droid.Resource.Animation.abc_popup_exit;
+			global::CustomCalendar.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::ManageGo.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::CustomCalendar.Droid.Resource.Animation.abc_slide_in_bottom = global::ManageGo.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::CustomCalendar.Droid.Resource.Animation.abc_slide_in_top = global::ManageGo.Droid.Resource.Animation.abc_slide_in_top;
+			global::CustomCalendar.Droid.Resource.Animation.abc_slide_out_bottom = global::ManageGo.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::CustomCalendar.Droid.Resource.Animation.abc_slide_out_top = global::ManageGo.Droid.Resource.Animation.abc_slide_out_top;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarDivider = global::ManageGo.Droid.Resource.Attribute.actionBarDivider;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarItemBackground = global::ManageGo.Droid.Resource.Attribute.actionBarItemBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarPopupTheme = global::ManageGo.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarSize = global::ManageGo.Droid.Resource.Attribute.actionBarSize;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarSplitStyle = global::ManageGo.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarStyle = global::ManageGo.Droid.Resource.Attribute.actionBarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarTabBarStyle = global::ManageGo.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarTabStyle = global::ManageGo.Droid.Resource.Attribute.actionBarTabStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarTabTextStyle = global::ManageGo.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarTheme = global::ManageGo.Droid.Resource.Attribute.actionBarTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.actionBarWidgetTheme = global::ManageGo.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.actionButtonStyle = global::ManageGo.Droid.Resource.Attribute.actionButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionDropDownStyle = global::ManageGo.Droid.Resource.Attribute.actionDropDownStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionLayout = global::ManageGo.Droid.Resource.Attribute.actionLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.actionMenuTextAppearance = global::ManageGo.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::CustomCalendar.Droid.Resource.Attribute.actionMenuTextColor = global::ManageGo.Droid.Resource.Attribute.actionMenuTextColor;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeBackground = global::ManageGo.Droid.Resource.Attribute.actionModeBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::ManageGo.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeCloseDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeCopyDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeCutDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeFindDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModePasteDrawable = global::ManageGo.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModePopupWindowStyle = global::ManageGo.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeShareDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeSplitBackground = global::ManageGo.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeStyle = global::ManageGo.Droid.Resource.Attribute.actionModeStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::ManageGo.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.actionOverflowButtonStyle = global::ManageGo.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionOverflowMenuStyle = global::ManageGo.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.actionProviderClass = global::ManageGo.Droid.Resource.Attribute.actionProviderClass;
+			global::CustomCalendar.Droid.Resource.Attribute.actionViewClass = global::ManageGo.Droid.Resource.Attribute.actionViewClass;
+			global::CustomCalendar.Droid.Resource.Attribute.activityChooserViewStyle = global::ManageGo.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::ManageGo.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.alertDialogCenterButtons = global::ManageGo.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::CustomCalendar.Droid.Resource.Attribute.alertDialogStyle = global::ManageGo.Droid.Resource.Attribute.alertDialogStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.alertDialogTheme = global::ManageGo.Droid.Resource.Attribute.alertDialogTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.allowStacking = global::ManageGo.Droid.Resource.Attribute.allowStacking;
+			global::CustomCalendar.Droid.Resource.Attribute.alpha = global::ManageGo.Droid.Resource.Attribute.alpha;
+			global::CustomCalendar.Droid.Resource.Attribute.arrowHeadLength = global::ManageGo.Droid.Resource.Attribute.arrowHeadLength;
+			global::CustomCalendar.Droid.Resource.Attribute.arrowShaftLength = global::ManageGo.Droid.Resource.Attribute.arrowShaftLength;
+			global::CustomCalendar.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::ManageGo.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.background = global::ManageGo.Droid.Resource.Attribute.background;
+			global::CustomCalendar.Droid.Resource.Attribute.backgroundSplit = global::ManageGo.Droid.Resource.Attribute.backgroundSplit;
+			global::CustomCalendar.Droid.Resource.Attribute.backgroundStacked = global::ManageGo.Droid.Resource.Attribute.backgroundStacked;
+			global::CustomCalendar.Droid.Resource.Attribute.backgroundTint = global::ManageGo.Droid.Resource.Attribute.backgroundTint;
+			global::CustomCalendar.Droid.Resource.Attribute.backgroundTintMode = global::ManageGo.Droid.Resource.Attribute.backgroundTintMode;
+			global::CustomCalendar.Droid.Resource.Attribute.barLength = global::ManageGo.Droid.Resource.Attribute.barLength;
+			global::CustomCalendar.Droid.Resource.Attribute.borderlessButtonStyle = global::ManageGo.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonBarButtonStyle = global::ManageGo.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::ManageGo.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::ManageGo.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::ManageGo.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonBarStyle = global::ManageGo.Droid.Resource.Attribute.buttonBarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonGravity = global::ManageGo.Droid.Resource.Attribute.buttonGravity;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonPanelSideLayout = global::ManageGo.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonStyle = global::ManageGo.Droid.Resource.Attribute.buttonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonStyleSmall = global::ManageGo.Droid.Resource.Attribute.buttonStyleSmall;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonTint = global::ManageGo.Droid.Resource.Attribute.buttonTint;
+			global::CustomCalendar.Droid.Resource.Attribute.buttonTintMode = global::ManageGo.Droid.Resource.Attribute.buttonTintMode;
+			global::CustomCalendar.Droid.Resource.Attribute.checkboxStyle = global::ManageGo.Droid.Resource.Attribute.checkboxStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.checkedTextViewStyle = global::ManageGo.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.closeIcon = global::ManageGo.Droid.Resource.Attribute.closeIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.closeItemLayout = global::ManageGo.Droid.Resource.Attribute.closeItemLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.collapseContentDescription = global::ManageGo.Droid.Resource.Attribute.collapseContentDescription;
+			global::CustomCalendar.Droid.Resource.Attribute.collapseIcon = global::ManageGo.Droid.Resource.Attribute.collapseIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.color = global::ManageGo.Droid.Resource.Attribute.color;
+			global::CustomCalendar.Droid.Resource.Attribute.colorAccent = global::ManageGo.Droid.Resource.Attribute.colorAccent;
+			global::CustomCalendar.Droid.Resource.Attribute.colorBackgroundFloating = global::ManageGo.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::CustomCalendar.Droid.Resource.Attribute.colorButtonNormal = global::ManageGo.Droid.Resource.Attribute.colorButtonNormal;
+			global::CustomCalendar.Droid.Resource.Attribute.colorControlActivated = global::ManageGo.Droid.Resource.Attribute.colorControlActivated;
+			global::CustomCalendar.Droid.Resource.Attribute.colorControlHighlight = global::ManageGo.Droid.Resource.Attribute.colorControlHighlight;
+			global::CustomCalendar.Droid.Resource.Attribute.colorControlNormal = global::ManageGo.Droid.Resource.Attribute.colorControlNormal;
+			global::CustomCalendar.Droid.Resource.Attribute.colorPrimary = global::ManageGo.Droid.Resource.Attribute.colorPrimary;
+			global::CustomCalendar.Droid.Resource.Attribute.colorPrimaryDark = global::ManageGo.Droid.Resource.Attribute.colorPrimaryDark;
+			global::CustomCalendar.Droid.Resource.Attribute.colorSwitchThumbNormal = global::ManageGo.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::CustomCalendar.Droid.Resource.Attribute.commitIcon = global::ManageGo.Droid.Resource.Attribute.commitIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.contentInsetEnd = global::ManageGo.Droid.Resource.Attribute.contentInsetEnd;
+			global::CustomCalendar.Droid.Resource.Attribute.contentInsetEndWithActions = global::ManageGo.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::CustomCalendar.Droid.Resource.Attribute.contentInsetLeft = global::ManageGo.Droid.Resource.Attribute.contentInsetLeft;
+			global::CustomCalendar.Droid.Resource.Attribute.contentInsetRight = global::ManageGo.Droid.Resource.Attribute.contentInsetRight;
+			global::CustomCalendar.Droid.Resource.Attribute.contentInsetStart = global::ManageGo.Droid.Resource.Attribute.contentInsetStart;
+			global::CustomCalendar.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::ManageGo.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::CustomCalendar.Droid.Resource.Attribute.controlBackground = global::ManageGo.Droid.Resource.Attribute.controlBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.customNavigationLayout = global::ManageGo.Droid.Resource.Attribute.customNavigationLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.defaultQueryHint = global::ManageGo.Droid.Resource.Attribute.defaultQueryHint;
+			global::CustomCalendar.Droid.Resource.Attribute.dialogPreferredPadding = global::ManageGo.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::CustomCalendar.Droid.Resource.Attribute.dialogTheme = global::ManageGo.Droid.Resource.Attribute.dialogTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.displayOptions = global::ManageGo.Droid.Resource.Attribute.displayOptions;
+			global::CustomCalendar.Droid.Resource.Attribute.divider = global::ManageGo.Droid.Resource.Attribute.divider;
+			global::CustomCalendar.Droid.Resource.Attribute.dividerHorizontal = global::ManageGo.Droid.Resource.Attribute.dividerHorizontal;
+			global::CustomCalendar.Droid.Resource.Attribute.dividerPadding = global::ManageGo.Droid.Resource.Attribute.dividerPadding;
+			global::CustomCalendar.Droid.Resource.Attribute.dividerVertical = global::ManageGo.Droid.Resource.Attribute.dividerVertical;
+			global::CustomCalendar.Droid.Resource.Attribute.drawableSize = global::ManageGo.Droid.Resource.Attribute.drawableSize;
+			global::CustomCalendar.Droid.Resource.Attribute.drawerArrowStyle = global::ManageGo.Droid.Resource.Attribute.drawerArrowStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.dropDownListViewStyle = global::ManageGo.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::ManageGo.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::CustomCalendar.Droid.Resource.Attribute.editTextBackground = global::ManageGo.Droid.Resource.Attribute.editTextBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.editTextColor = global::ManageGo.Droid.Resource.Attribute.editTextColor;
+			global::CustomCalendar.Droid.Resource.Attribute.editTextStyle = global::ManageGo.Droid.Resource.Attribute.editTextStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.elevation = global::ManageGo.Droid.Resource.Attribute.elevation;
+			global::CustomCalendar.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::ManageGo.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::CustomCalendar.Droid.Resource.Attribute.gapBetweenBars = global::ManageGo.Droid.Resource.Attribute.gapBetweenBars;
+			global::CustomCalendar.Droid.Resource.Attribute.goIcon = global::ManageGo.Droid.Resource.Attribute.goIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.height = global::ManageGo.Droid.Resource.Attribute.height;
+			global::CustomCalendar.Droid.Resource.Attribute.hideOnContentScroll = global::ManageGo.Droid.Resource.Attribute.hideOnContentScroll;
+			global::CustomCalendar.Droid.Resource.Attribute.homeAsUpIndicator = global::ManageGo.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::CustomCalendar.Droid.Resource.Attribute.homeLayout = global::ManageGo.Droid.Resource.Attribute.homeLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.icon = global::ManageGo.Droid.Resource.Attribute.icon;
+			global::CustomCalendar.Droid.Resource.Attribute.iconifiedByDefault = global::ManageGo.Droid.Resource.Attribute.iconifiedByDefault;
+			global::CustomCalendar.Droid.Resource.Attribute.imageButtonStyle = global::ManageGo.Droid.Resource.Attribute.imageButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.indeterminateProgressStyle = global::ManageGo.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.initialActivityCount = global::ManageGo.Droid.Resource.Attribute.initialActivityCount;
+			global::CustomCalendar.Droid.Resource.Attribute.isLightTheme = global::ManageGo.Droid.Resource.Attribute.isLightTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.itemPadding = global::ManageGo.Droid.Resource.Attribute.itemPadding;
+			global::CustomCalendar.Droid.Resource.Attribute.layout = global::ManageGo.Droid.Resource.Attribute.layout;
+			global::CustomCalendar.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::ManageGo.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::CustomCalendar.Droid.Resource.Attribute.listDividerAlertDialog = global::ManageGo.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::CustomCalendar.Droid.Resource.Attribute.listItemLayout = global::ManageGo.Droid.Resource.Attribute.listItemLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.listLayout = global::ManageGo.Droid.Resource.Attribute.listLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.listMenuViewStyle = global::ManageGo.Droid.Resource.Attribute.listMenuViewStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.listPopupWindowStyle = global::ManageGo.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.listPreferredItemHeight = global::ManageGo.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::CustomCalendar.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::ManageGo.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::CustomCalendar.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::ManageGo.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::CustomCalendar.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::ManageGo.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::CustomCalendar.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::ManageGo.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::CustomCalendar.Droid.Resource.Attribute.logo = global::ManageGo.Droid.Resource.Attribute.logo;
+			global::CustomCalendar.Droid.Resource.Attribute.logoDescription = global::ManageGo.Droid.Resource.Attribute.logoDescription;
+			global::CustomCalendar.Droid.Resource.Attribute.maxButtonHeight = global::ManageGo.Droid.Resource.Attribute.maxButtonHeight;
+			global::CustomCalendar.Droid.Resource.Attribute.measureWithLargestChild = global::ManageGo.Droid.Resource.Attribute.measureWithLargestChild;
+			global::CustomCalendar.Droid.Resource.Attribute.multiChoiceItemLayout = global::ManageGo.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.navigationContentDescription = global::ManageGo.Droid.Resource.Attribute.navigationContentDescription;
+			global::CustomCalendar.Droid.Resource.Attribute.navigationIcon = global::ManageGo.Droid.Resource.Attribute.navigationIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.navigationMode = global::ManageGo.Droid.Resource.Attribute.navigationMode;
+			global::CustomCalendar.Droid.Resource.Attribute.overlapAnchor = global::ManageGo.Droid.Resource.Attribute.overlapAnchor;
+			global::CustomCalendar.Droid.Resource.Attribute.paddingBottomNoButtons = global::ManageGo.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::CustomCalendar.Droid.Resource.Attribute.paddingEnd = global::ManageGo.Droid.Resource.Attribute.paddingEnd;
+			global::CustomCalendar.Droid.Resource.Attribute.paddingStart = global::ManageGo.Droid.Resource.Attribute.paddingStart;
+			global::CustomCalendar.Droid.Resource.Attribute.paddingTopNoTitle = global::ManageGo.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::CustomCalendar.Droid.Resource.Attribute.panelBackground = global::ManageGo.Droid.Resource.Attribute.panelBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.panelMenuListTheme = global::ManageGo.Droid.Resource.Attribute.panelMenuListTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.panelMenuListWidth = global::ManageGo.Droid.Resource.Attribute.panelMenuListWidth;
+			global::CustomCalendar.Droid.Resource.Attribute.popupMenuStyle = global::ManageGo.Droid.Resource.Attribute.popupMenuStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.popupTheme = global::ManageGo.Droid.Resource.Attribute.popupTheme;
+			global::CustomCalendar.Droid.Resource.Attribute.popupWindowStyle = global::ManageGo.Droid.Resource.Attribute.popupWindowStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.preserveIconSpacing = global::ManageGo.Droid.Resource.Attribute.preserveIconSpacing;
+			global::CustomCalendar.Droid.Resource.Attribute.progressBarPadding = global::ManageGo.Droid.Resource.Attribute.progressBarPadding;
+			global::CustomCalendar.Droid.Resource.Attribute.progressBarStyle = global::ManageGo.Droid.Resource.Attribute.progressBarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.queryBackground = global::ManageGo.Droid.Resource.Attribute.queryBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.queryHint = global::ManageGo.Droid.Resource.Attribute.queryHint;
+			global::CustomCalendar.Droid.Resource.Attribute.radioButtonStyle = global::ManageGo.Droid.Resource.Attribute.radioButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.ratingBarStyle = global::ManageGo.Droid.Resource.Attribute.ratingBarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.ratingBarStyleIndicator = global::ManageGo.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::CustomCalendar.Droid.Resource.Attribute.ratingBarStyleSmall = global::ManageGo.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::CustomCalendar.Droid.Resource.Attribute.searchHintIcon = global::ManageGo.Droid.Resource.Attribute.searchHintIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.searchIcon = global::ManageGo.Droid.Resource.Attribute.searchIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.searchViewStyle = global::ManageGo.Droid.Resource.Attribute.searchViewStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.seekBarStyle = global::ManageGo.Droid.Resource.Attribute.seekBarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.selectableItemBackground = global::ManageGo.Droid.Resource.Attribute.selectableItemBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::ManageGo.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::CustomCalendar.Droid.Resource.Attribute.showAsAction = global::ManageGo.Droid.Resource.Attribute.showAsAction;
+			global::CustomCalendar.Droid.Resource.Attribute.showDividers = global::ManageGo.Droid.Resource.Attribute.showDividers;
+			global::CustomCalendar.Droid.Resource.Attribute.showText = global::ManageGo.Droid.Resource.Attribute.showText;
+			global::CustomCalendar.Droid.Resource.Attribute.showTitle = global::ManageGo.Droid.Resource.Attribute.showTitle;
+			global::CustomCalendar.Droid.Resource.Attribute.singleChoiceItemLayout = global::ManageGo.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.spinBars = global::ManageGo.Droid.Resource.Attribute.spinBars;
+			global::CustomCalendar.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::ManageGo.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.spinnerStyle = global::ManageGo.Droid.Resource.Attribute.spinnerStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.splitTrack = global::ManageGo.Droid.Resource.Attribute.splitTrack;
+			global::CustomCalendar.Droid.Resource.Attribute.srcCompat = global::ManageGo.Droid.Resource.Attribute.srcCompat;
+			global::CustomCalendar.Droid.Resource.Attribute.state_above_anchor = global::ManageGo.Droid.Resource.Attribute.state_above_anchor;
+			global::CustomCalendar.Droid.Resource.Attribute.subMenuArrow = global::ManageGo.Droid.Resource.Attribute.subMenuArrow;
+			global::CustomCalendar.Droid.Resource.Attribute.submitBackground = global::ManageGo.Droid.Resource.Attribute.submitBackground;
+			global::CustomCalendar.Droid.Resource.Attribute.subtitle = global::ManageGo.Droid.Resource.Attribute.subtitle;
+			global::CustomCalendar.Droid.Resource.Attribute.subtitleTextAppearance = global::ManageGo.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::CustomCalendar.Droid.Resource.Attribute.subtitleTextColor = global::ManageGo.Droid.Resource.Attribute.subtitleTextColor;
+			global::CustomCalendar.Droid.Resource.Attribute.subtitleTextStyle = global::ManageGo.Droid.Resource.Attribute.subtitleTextStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.suggestionRowLayout = global::ManageGo.Droid.Resource.Attribute.suggestionRowLayout;
+			global::CustomCalendar.Droid.Resource.Attribute.switchMinWidth = global::ManageGo.Droid.Resource.Attribute.switchMinWidth;
+			global::CustomCalendar.Droid.Resource.Attribute.switchPadding = global::ManageGo.Droid.Resource.Attribute.switchPadding;
+			global::CustomCalendar.Droid.Resource.Attribute.switchStyle = global::ManageGo.Droid.Resource.Attribute.switchStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.switchTextAppearance = global::ManageGo.Droid.Resource.Attribute.switchTextAppearance;
+			global::CustomCalendar.Droid.Resource.Attribute.textAllCaps = global::ManageGo.Droid.Resource.Attribute.textAllCaps;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::ManageGo.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceListItem = global::ManageGo.Droid.Resource.Attribute.textAppearanceListItem;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::ManageGo.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceListItemSmall = global::ManageGo.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::ManageGo.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::ManageGo.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::ManageGo.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::CustomCalendar.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::ManageGo.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::CustomCalendar.Droid.Resource.Attribute.textColorAlertDialogListItem = global::ManageGo.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::CustomCalendar.Droid.Resource.Attribute.textColorSearchUrl = global::ManageGo.Droid.Resource.Attribute.textColorSearchUrl;
+			global::CustomCalendar.Droid.Resource.Attribute.theme = global::ManageGo.Droid.Resource.Attribute.theme;
+			global::CustomCalendar.Droid.Resource.Attribute.thickness = global::ManageGo.Droid.Resource.Attribute.thickness;
+			global::CustomCalendar.Droid.Resource.Attribute.thumbTextPadding = global::ManageGo.Droid.Resource.Attribute.thumbTextPadding;
+			global::CustomCalendar.Droid.Resource.Attribute.thumbTint = global::ManageGo.Droid.Resource.Attribute.thumbTint;
+			global::CustomCalendar.Droid.Resource.Attribute.thumbTintMode = global::ManageGo.Droid.Resource.Attribute.thumbTintMode;
+			global::CustomCalendar.Droid.Resource.Attribute.tickMark = global::ManageGo.Droid.Resource.Attribute.tickMark;
+			global::CustomCalendar.Droid.Resource.Attribute.tickMarkTint = global::ManageGo.Droid.Resource.Attribute.tickMarkTint;
+			global::CustomCalendar.Droid.Resource.Attribute.tickMarkTintMode = global::ManageGo.Droid.Resource.Attribute.tickMarkTintMode;
+			global::CustomCalendar.Droid.Resource.Attribute.tint = global::ManageGo.Droid.Resource.Attribute.tint;
+			global::CustomCalendar.Droid.Resource.Attribute.tintMode = global::ManageGo.Droid.Resource.Attribute.tintMode;
+			global::CustomCalendar.Droid.Resource.Attribute.title = global::ManageGo.Droid.Resource.Attribute.title;
+			global::CustomCalendar.Droid.Resource.Attribute.titleMargin = global::ManageGo.Droid.Resource.Attribute.titleMargin;
+			global::CustomCalendar.Droid.Resource.Attribute.titleMarginBottom = global::ManageGo.Droid.Resource.Attribute.titleMarginBottom;
+			global::CustomCalendar.Droid.Resource.Attribute.titleMarginEnd = global::ManageGo.Droid.Resource.Attribute.titleMarginEnd;
+			global::CustomCalendar.Droid.Resource.Attribute.titleMarginStart = global::ManageGo.Droid.Resource.Attribute.titleMarginStart;
+			global::CustomCalendar.Droid.Resource.Attribute.titleMarginTop = global::ManageGo.Droid.Resource.Attribute.titleMarginTop;
+			global::CustomCalendar.Droid.Resource.Attribute.titleMargins = global::ManageGo.Droid.Resource.Attribute.titleMargins;
+			global::CustomCalendar.Droid.Resource.Attribute.titleTextAppearance = global::ManageGo.Droid.Resource.Attribute.titleTextAppearance;
+			global::CustomCalendar.Droid.Resource.Attribute.titleTextColor = global::ManageGo.Droid.Resource.Attribute.titleTextColor;
+			global::CustomCalendar.Droid.Resource.Attribute.titleTextStyle = global::ManageGo.Droid.Resource.Attribute.titleTextStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::ManageGo.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.toolbarStyle = global::ManageGo.Droid.Resource.Attribute.toolbarStyle;
+			global::CustomCalendar.Droid.Resource.Attribute.track = global::ManageGo.Droid.Resource.Attribute.track;
+			global::CustomCalendar.Droid.Resource.Attribute.trackTint = global::ManageGo.Droid.Resource.Attribute.trackTint;
+			global::CustomCalendar.Droid.Resource.Attribute.trackTintMode = global::ManageGo.Droid.Resource.Attribute.trackTintMode;
+			global::CustomCalendar.Droid.Resource.Attribute.voiceIcon = global::ManageGo.Droid.Resource.Attribute.voiceIcon;
+			global::CustomCalendar.Droid.Resource.Attribute.windowActionBar = global::ManageGo.Droid.Resource.Attribute.windowActionBar;
+			global::CustomCalendar.Droid.Resource.Attribute.windowActionBarOverlay = global::ManageGo.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::CustomCalendar.Droid.Resource.Attribute.windowActionModeOverlay = global::ManageGo.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::CustomCalendar.Droid.Resource.Attribute.windowFixedHeightMajor = global::ManageGo.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::CustomCalendar.Droid.Resource.Attribute.windowFixedHeightMinor = global::ManageGo.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::CustomCalendar.Droid.Resource.Attribute.windowFixedWidthMajor = global::ManageGo.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::CustomCalendar.Droid.Resource.Attribute.windowFixedWidthMinor = global::ManageGo.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::CustomCalendar.Droid.Resource.Attribute.windowMinWidthMajor = global::ManageGo.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::CustomCalendar.Droid.Resource.Attribute.windowMinWidthMinor = global::ManageGo.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::CustomCalendar.Droid.Resource.Attribute.windowNoTitle = global::ManageGo.Droid.Resource.Attribute.windowNoTitle;
+			global::CustomCalendar.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::ManageGo.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::CustomCalendar.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::ManageGo.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::CustomCalendar.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ManageGo.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::CustomCalendar.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::ManageGo.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::CustomCalendar.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::ManageGo.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::CustomCalendar.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ManageGo.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::ManageGo.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::CustomCalendar.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::ManageGo.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::CustomCalendar.Droid.Resource.Color.abc_btn_colored_text_material = global::ManageGo.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::CustomCalendar.Droid.Resource.Color.abc_color_highlight_material = global::ManageGo.Droid.Resource.Color.abc_color_highlight_material;
+			global::CustomCalendar.Droid.Resource.Color.abc_hint_foreground_material_dark = global::ManageGo.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.abc_hint_foreground_material_light = global::ManageGo.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::CustomCalendar.Droid.Resource.Color.abc_input_method_navigation_guard = global::ManageGo.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::CustomCalendar.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::ManageGo.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::ManageGo.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::CustomCalendar.Droid.Resource.Color.abc_primary_text_material_dark = global::ManageGo.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.abc_primary_text_material_light = global::ManageGo.Droid.Resource.Color.abc_primary_text_material_light;
+			global::CustomCalendar.Droid.Resource.Color.abc_search_url_text = global::ManageGo.Droid.Resource.Color.abc_search_url_text;
+			global::CustomCalendar.Droid.Resource.Color.abc_search_url_text_normal = global::ManageGo.Droid.Resource.Color.abc_search_url_text_normal;
+			global::CustomCalendar.Droid.Resource.Color.abc_search_url_text_pressed = global::ManageGo.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::CustomCalendar.Droid.Resource.Color.abc_search_url_text_selected = global::ManageGo.Droid.Resource.Color.abc_search_url_text_selected;
+			global::CustomCalendar.Droid.Resource.Color.abc_secondary_text_material_dark = global::ManageGo.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.abc_secondary_text_material_light = global::ManageGo.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::CustomCalendar.Droid.Resource.Color.abc_tint_btn_checkable = global::ManageGo.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::CustomCalendar.Droid.Resource.Color.abc_tint_default = global::ManageGo.Droid.Resource.Color.abc_tint_default;
+			global::CustomCalendar.Droid.Resource.Color.abc_tint_edittext = global::ManageGo.Droid.Resource.Color.abc_tint_edittext;
+			global::CustomCalendar.Droid.Resource.Color.abc_tint_seek_thumb = global::ManageGo.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::CustomCalendar.Droid.Resource.Color.abc_tint_spinner = global::ManageGo.Droid.Resource.Color.abc_tint_spinner;
+			global::CustomCalendar.Droid.Resource.Color.abc_tint_switch_track = global::ManageGo.Droid.Resource.Color.abc_tint_switch_track;
+			global::CustomCalendar.Droid.Resource.Color.accent_material_dark = global::ManageGo.Droid.Resource.Color.accent_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.accent_material_light = global::ManageGo.Droid.Resource.Color.accent_material_light;
+			global::CustomCalendar.Droid.Resource.Color.background_floating_material_dark = global::ManageGo.Droid.Resource.Color.background_floating_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.background_floating_material_light = global::ManageGo.Droid.Resource.Color.background_floating_material_light;
+			global::CustomCalendar.Droid.Resource.Color.background_material_dark = global::ManageGo.Droid.Resource.Color.background_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.background_material_light = global::ManageGo.Droid.Resource.Color.background_material_light;
+			global::CustomCalendar.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::ManageGo.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.bright_foreground_disabled_material_light = global::ManageGo.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::CustomCalendar.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::ManageGo.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.bright_foreground_inverse_material_light = global::ManageGo.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::CustomCalendar.Droid.Resource.Color.bright_foreground_material_dark = global::ManageGo.Droid.Resource.Color.bright_foreground_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.bright_foreground_material_light = global::ManageGo.Droid.Resource.Color.bright_foreground_material_light;
+			global::CustomCalendar.Droid.Resource.Color.button_material_dark = global::ManageGo.Droid.Resource.Color.button_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.button_material_light = global::ManageGo.Droid.Resource.Color.button_material_light;
+			global::CustomCalendar.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::ManageGo.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.dim_foreground_disabled_material_light = global::ManageGo.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::CustomCalendar.Droid.Resource.Color.dim_foreground_material_dark = global::ManageGo.Droid.Resource.Color.dim_foreground_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.dim_foreground_material_light = global::ManageGo.Droid.Resource.Color.dim_foreground_material_light;
+			global::CustomCalendar.Droid.Resource.Color.foreground_material_dark = global::ManageGo.Droid.Resource.Color.foreground_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.foreground_material_light = global::ManageGo.Droid.Resource.Color.foreground_material_light;
+			global::CustomCalendar.Droid.Resource.Color.highlighted_text_material_dark = global::ManageGo.Droid.Resource.Color.highlighted_text_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.highlighted_text_material_light = global::ManageGo.Droid.Resource.Color.highlighted_text_material_light;
+			global::CustomCalendar.Droid.Resource.Color.material_blue_grey_800 = global::ManageGo.Droid.Resource.Color.material_blue_grey_800;
+			global::CustomCalendar.Droid.Resource.Color.material_blue_grey_900 = global::ManageGo.Droid.Resource.Color.material_blue_grey_900;
+			global::CustomCalendar.Droid.Resource.Color.material_blue_grey_950 = global::ManageGo.Droid.Resource.Color.material_blue_grey_950;
+			global::CustomCalendar.Droid.Resource.Color.material_deep_teal_200 = global::ManageGo.Droid.Resource.Color.material_deep_teal_200;
+			global::CustomCalendar.Droid.Resource.Color.material_deep_teal_500 = global::ManageGo.Droid.Resource.Color.material_deep_teal_500;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_100 = global::ManageGo.Droid.Resource.Color.material_grey_100;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_300 = global::ManageGo.Droid.Resource.Color.material_grey_300;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_50 = global::ManageGo.Droid.Resource.Color.material_grey_50;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_600 = global::ManageGo.Droid.Resource.Color.material_grey_600;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_800 = global::ManageGo.Droid.Resource.Color.material_grey_800;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_850 = global::ManageGo.Droid.Resource.Color.material_grey_850;
+			global::CustomCalendar.Droid.Resource.Color.material_grey_900 = global::ManageGo.Droid.Resource.Color.material_grey_900;
+			global::CustomCalendar.Droid.Resource.Color.notification_action_color_filter = global::ManageGo.Droid.Resource.Color.notification_action_color_filter;
+			global::CustomCalendar.Droid.Resource.Color.notification_icon_bg_color = global::ManageGo.Droid.Resource.Color.notification_icon_bg_color;
+			global::CustomCalendar.Droid.Resource.Color.notification_material_background_media_default_color = global::ManageGo.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::CustomCalendar.Droid.Resource.Color.primary_dark_material_dark = global::ManageGo.Droid.Resource.Color.primary_dark_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.primary_dark_material_light = global::ManageGo.Droid.Resource.Color.primary_dark_material_light;
+			global::CustomCalendar.Droid.Resource.Color.primary_material_dark = global::ManageGo.Droid.Resource.Color.primary_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.primary_material_light = global::ManageGo.Droid.Resource.Color.primary_material_light;
+			global::CustomCalendar.Droid.Resource.Color.primary_text_default_material_dark = global::ManageGo.Droid.Resource.Color.primary_text_default_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.primary_text_default_material_light = global::ManageGo.Droid.Resource.Color.primary_text_default_material_light;
+			global::CustomCalendar.Droid.Resource.Color.primary_text_disabled_material_dark = global::ManageGo.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.primary_text_disabled_material_light = global::ManageGo.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::CustomCalendar.Droid.Resource.Color.ripple_material_dark = global::ManageGo.Droid.Resource.Color.ripple_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.ripple_material_light = global::ManageGo.Droid.Resource.Color.ripple_material_light;
+			global::CustomCalendar.Droid.Resource.Color.secondary_text_default_material_dark = global::ManageGo.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.secondary_text_default_material_light = global::ManageGo.Droid.Resource.Color.secondary_text_default_material_light;
+			global::CustomCalendar.Droid.Resource.Color.secondary_text_disabled_material_dark = global::ManageGo.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.secondary_text_disabled_material_light = global::ManageGo.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::CustomCalendar.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::ManageGo.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.switch_thumb_disabled_material_light = global::ManageGo.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::CustomCalendar.Droid.Resource.Color.switch_thumb_material_dark = global::ManageGo.Droid.Resource.Color.switch_thumb_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.switch_thumb_material_light = global::ManageGo.Droid.Resource.Color.switch_thumb_material_light;
+			global::CustomCalendar.Droid.Resource.Color.switch_thumb_normal_material_dark = global::ManageGo.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::CustomCalendar.Droid.Resource.Color.switch_thumb_normal_material_light = global::ManageGo.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::ManageGo.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_button_min_height_material = global::ManageGo.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_button_min_width_material = global::ManageGo.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::ManageGo.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::ManageGo.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::ManageGo.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::ManageGo.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::ManageGo.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::ManageGo.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::ManageGo.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::ManageGo.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_control_corner_material = global::ManageGo.Droid.Resource.Dimension.abc_control_corner_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_control_inset_material = global::ManageGo.Droid.Resource.Dimension.abc_control_inset_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_control_padding_material = global::ManageGo.Droid.Resource.Dimension.abc_control_padding_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::ManageGo.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::ManageGo.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::ManageGo.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::ManageGo.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::ManageGo.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::ManageGo.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_min_width_major = global::ManageGo.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::ManageGo.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_padding_material = global::ManageGo.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::ManageGo.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::ManageGo.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::ManageGo.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::ManageGo.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::ManageGo.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::ManageGo.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::ManageGo.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::ManageGo.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::ManageGo.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::ManageGo.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_floating_window_z = global::ManageGo.Droid.Resource.Dimension.abc_floating_window_z;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::ManageGo.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_panel_menu_list_width = global::ManageGo.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_progress_bar_height_material = global::ManageGo.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_search_view_preferred_height = global::ManageGo.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_search_view_preferred_width = global::ManageGo.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::ManageGo.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::ManageGo.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::ManageGo.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_switch_padding = global::ManageGo.Droid.Resource.Dimension.abc_switch_padding;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_body_1_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_body_2_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_button_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_caption_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_display_1_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_display_2_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_display_3_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_display_4_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_headline_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_large_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_medium_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_menu_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_small_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_subhead_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::ManageGo.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_title_material = global::ManageGo.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::CustomCalendar.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::ManageGo.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::CustomCalendar.Droid.Resource.Dimension.disabled_alpha_material_dark = global::ManageGo.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::CustomCalendar.Droid.Resource.Dimension.disabled_alpha_material_light = global::ManageGo.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::CustomCalendar.Droid.Resource.Dimension.highlight_alpha_material_colored = global::ManageGo.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::CustomCalendar.Droid.Resource.Dimension.highlight_alpha_material_dark = global::ManageGo.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::CustomCalendar.Droid.Resource.Dimension.highlight_alpha_material_light = global::ManageGo.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::CustomCalendar.Droid.Resource.Dimension.hint_alpha_material_dark = global::ManageGo.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::CustomCalendar.Droid.Resource.Dimension.hint_alpha_material_light = global::ManageGo.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::CustomCalendar.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::ManageGo.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::CustomCalendar.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::ManageGo.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_action_icon_size = global::ManageGo.Droid.Resource.Dimension.notification_action_icon_size;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_action_text_size = global::ManageGo.Droid.Resource.Dimension.notification_action_text_size;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_big_circle_margin = global::ManageGo.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_content_margin_start = global::ManageGo.Droid.Resource.Dimension.notification_content_margin_start;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_large_icon_height = global::ManageGo.Droid.Resource.Dimension.notification_large_icon_height;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_large_icon_width = global::ManageGo.Droid.Resource.Dimension.notification_large_icon_width;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_main_column_padding_top = global::ManageGo.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_media_narrow_margin = global::ManageGo.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_right_icon_size = global::ManageGo.Droid.Resource.Dimension.notification_right_icon_size;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_right_side_padding_top = global::ManageGo.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_small_icon_background_padding = global::ManageGo.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::ManageGo.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_subtext_size = global::ManageGo.Droid.Resource.Dimension.notification_subtext_size;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_top_pad = global::ManageGo.Droid.Resource.Dimension.notification_top_pad;
+			global::CustomCalendar.Droid.Resource.Dimension.notification_top_pad_large_text = global::ManageGo.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::ManageGo.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_borderless_material = global::ManageGo.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_check_material = global::ManageGo.Droid.Resource.Drawable.abc_btn_check_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::ManageGo.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::ManageGo.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_colored_material = global::ManageGo.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::ManageGo.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_radio_material = global::ManageGo.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::ManageGo.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::ManageGo.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::ManageGo.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::ManageGo.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::ManageGo.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_cab_background_top_material = global::ManageGo.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_control_background_material = global::ManageGo.Droid.Resource.Drawable.abc_control_background_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_dialog_material_background = global::ManageGo.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_edit_text_material = global::ManageGo.Droid.Resource.Drawable.abc_edit_text_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_ab_back_material = global::ManageGo.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_clear_material = global::ManageGo.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::ManageGo.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::ManageGo.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_search_api_material = global::ManageGo.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::ManageGo.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::ManageGo.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_item_background_holo_dark = global::ManageGo.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_item_background_holo_light = global::ManageGo.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_focused_holo = global::ManageGo.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_longpressed_holo = global::ManageGo.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::ManageGo.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::ManageGo.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::ManageGo.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::ManageGo.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::ManageGo.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::ManageGo.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::ManageGo.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_list_selector_holo_light = global::ManageGo.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::ManageGo.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::ManageGo.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::ManageGo.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ratingbar_material = global::ManageGo.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_ratingbar_small_material = global::ManageGo.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::ManageGo.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::ManageGo.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::ManageGo.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::ManageGo.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_seekbar_track_material = global::ManageGo.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::ManageGo.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::ManageGo.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_switch_thumb_material = global::ManageGo.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_tab_indicator_material = global::ManageGo.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_cursor_material = global::ManageGo.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::ManageGo.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::ManageGo.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::ManageGo.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::ManageGo.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::ManageGo.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::ManageGo.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::ManageGo.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_textfield_search_material = global::ManageGo.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::CustomCalendar.Droid.Resource.Drawable.abc_vector_test = global::ManageGo.Droid.Resource.Drawable.abc_vector_test;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_action_background = global::ManageGo.Droid.Resource.Drawable.notification_action_background;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_bg = global::ManageGo.Droid.Resource.Drawable.notification_bg;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_bg_low = global::ManageGo.Droid.Resource.Drawable.notification_bg_low;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_bg_low_normal = global::ManageGo.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_bg_low_pressed = global::ManageGo.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_bg_normal = global::ManageGo.Droid.Resource.Drawable.notification_bg_normal;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_bg_normal_pressed = global::ManageGo.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_icon_background = global::ManageGo.Droid.Resource.Drawable.notification_icon_background;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_template_icon_bg = global::ManageGo.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_template_icon_low_bg = global::ManageGo.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::CustomCalendar.Droid.Resource.Drawable.notification_tile_bg = global::ManageGo.Droid.Resource.Drawable.notification_tile_bg;
+			global::CustomCalendar.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::ManageGo.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::CustomCalendar.Droid.Resource.Id.action0 = global::ManageGo.Droid.Resource.Id.action0;
+			global::CustomCalendar.Droid.Resource.Id.action_bar = global::ManageGo.Droid.Resource.Id.action_bar;
+			global::CustomCalendar.Droid.Resource.Id.action_bar_activity_content = global::ManageGo.Droid.Resource.Id.action_bar_activity_content;
+			global::CustomCalendar.Droid.Resource.Id.action_bar_container = global::ManageGo.Droid.Resource.Id.action_bar_container;
+			global::CustomCalendar.Droid.Resource.Id.action_bar_root = global::ManageGo.Droid.Resource.Id.action_bar_root;
+			global::CustomCalendar.Droid.Resource.Id.action_bar_spinner = global::ManageGo.Droid.Resource.Id.action_bar_spinner;
+			global::CustomCalendar.Droid.Resource.Id.action_bar_subtitle = global::ManageGo.Droid.Resource.Id.action_bar_subtitle;
+			global::CustomCalendar.Droid.Resource.Id.action_bar_title = global::ManageGo.Droid.Resource.Id.action_bar_title;
+			global::CustomCalendar.Droid.Resource.Id.action_container = global::ManageGo.Droid.Resource.Id.action_container;
+			global::CustomCalendar.Droid.Resource.Id.action_context_bar = global::ManageGo.Droid.Resource.Id.action_context_bar;
+			global::CustomCalendar.Droid.Resource.Id.action_divider = global::ManageGo.Droid.Resource.Id.action_divider;
+			global::CustomCalendar.Droid.Resource.Id.action_image = global::ManageGo.Droid.Resource.Id.action_image;
+			global::CustomCalendar.Droid.Resource.Id.action_menu_divider = global::ManageGo.Droid.Resource.Id.action_menu_divider;
+			global::CustomCalendar.Droid.Resource.Id.action_menu_presenter = global::ManageGo.Droid.Resource.Id.action_menu_presenter;
+			global::CustomCalendar.Droid.Resource.Id.action_mode_bar = global::ManageGo.Droid.Resource.Id.action_mode_bar;
+			global::CustomCalendar.Droid.Resource.Id.action_mode_bar_stub = global::ManageGo.Droid.Resource.Id.action_mode_bar_stub;
+			global::CustomCalendar.Droid.Resource.Id.action_mode_close_button = global::ManageGo.Droid.Resource.Id.action_mode_close_button;
+			global::CustomCalendar.Droid.Resource.Id.action_text = global::ManageGo.Droid.Resource.Id.action_text;
+			global::CustomCalendar.Droid.Resource.Id.actions = global::ManageGo.Droid.Resource.Id.actions;
+			global::CustomCalendar.Droid.Resource.Id.activity_chooser_view_content = global::ManageGo.Droid.Resource.Id.activity_chooser_view_content;
+			global::CustomCalendar.Droid.Resource.Id.add = global::ManageGo.Droid.Resource.Id.add;
+			global::CustomCalendar.Droid.Resource.Id.alertTitle = global::ManageGo.Droid.Resource.Id.alertTitle;
+			global::CustomCalendar.Droid.Resource.Id.always = global::ManageGo.Droid.Resource.Id.always;
+			global::CustomCalendar.Droid.Resource.Id.beginning = global::ManageGo.Droid.Resource.Id.beginning;
+			global::CustomCalendar.Droid.Resource.Id.bottom = global::ManageGo.Droid.Resource.Id.bottom;
+			global::CustomCalendar.Droid.Resource.Id.buttonPanel = global::ManageGo.Droid.Resource.Id.buttonPanel;
+			global::CustomCalendar.Droid.Resource.Id.cancel_action = global::ManageGo.Droid.Resource.Id.cancel_action;
+			global::CustomCalendar.Droid.Resource.Id.checkbox = global::ManageGo.Droid.Resource.Id.checkbox;
+			global::CustomCalendar.Droid.Resource.Id.chronometer = global::ManageGo.Droid.Resource.Id.chronometer;
+			global::CustomCalendar.Droid.Resource.Id.collapseActionView = global::ManageGo.Droid.Resource.Id.collapseActionView;
+			global::CustomCalendar.Droid.Resource.Id.contentPanel = global::ManageGo.Droid.Resource.Id.contentPanel;
+			global::CustomCalendar.Droid.Resource.Id.custom = global::ManageGo.Droid.Resource.Id.custom;
+			global::CustomCalendar.Droid.Resource.Id.customPanel = global::ManageGo.Droid.Resource.Id.customPanel;
+			global::CustomCalendar.Droid.Resource.Id.decor_content_parent = global::ManageGo.Droid.Resource.Id.decor_content_parent;
+			global::CustomCalendar.Droid.Resource.Id.default_activity_button = global::ManageGo.Droid.Resource.Id.default_activity_button;
+			global::CustomCalendar.Droid.Resource.Id.disableHome = global::ManageGo.Droid.Resource.Id.disableHome;
+			global::CustomCalendar.Droid.Resource.Id.edit_query = global::ManageGo.Droid.Resource.Id.edit_query;
+			global::CustomCalendar.Droid.Resource.Id.end = global::ManageGo.Droid.Resource.Id.end;
+			global::CustomCalendar.Droid.Resource.Id.end_padder = global::ManageGo.Droid.Resource.Id.end_padder;
+			global::CustomCalendar.Droid.Resource.Id.expand_activities_button = global::ManageGo.Droid.Resource.Id.expand_activities_button;
+			global::CustomCalendar.Droid.Resource.Id.expanded_menu = global::ManageGo.Droid.Resource.Id.expanded_menu;
+			global::CustomCalendar.Droid.Resource.Id.home = global::ManageGo.Droid.Resource.Id.home;
+			global::CustomCalendar.Droid.Resource.Id.homeAsUp = global::ManageGo.Droid.Resource.Id.homeAsUp;
+			global::CustomCalendar.Droid.Resource.Id.icon = global::ManageGo.Droid.Resource.Id.icon;
+			global::CustomCalendar.Droid.Resource.Id.icon_group = global::ManageGo.Droid.Resource.Id.icon_group;
+			global::CustomCalendar.Droid.Resource.Id.ifRoom = global::ManageGo.Droid.Resource.Id.ifRoom;
+			global::CustomCalendar.Droid.Resource.Id.image = global::ManageGo.Droid.Resource.Id.image;
+			global::CustomCalendar.Droid.Resource.Id.info = global::ManageGo.Droid.Resource.Id.info;
+			global::CustomCalendar.Droid.Resource.Id.line1 = global::ManageGo.Droid.Resource.Id.line1;
+			global::CustomCalendar.Droid.Resource.Id.line3 = global::ManageGo.Droid.Resource.Id.line3;
+			global::CustomCalendar.Droid.Resource.Id.listMode = global::ManageGo.Droid.Resource.Id.listMode;
+			global::CustomCalendar.Droid.Resource.Id.list_item = global::ManageGo.Droid.Resource.Id.list_item;
+			global::CustomCalendar.Droid.Resource.Id.media_actions = global::ManageGo.Droid.Resource.Id.media_actions;
+			global::CustomCalendar.Droid.Resource.Id.middle = global::ManageGo.Droid.Resource.Id.middle;
+			global::CustomCalendar.Droid.Resource.Id.multiply = global::ManageGo.Droid.Resource.Id.multiply;
+			global::CustomCalendar.Droid.Resource.Id.never = global::ManageGo.Droid.Resource.Id.never;
+			global::CustomCalendar.Droid.Resource.Id.none = global::ManageGo.Droid.Resource.Id.none;
+			global::CustomCalendar.Droid.Resource.Id.normal = global::ManageGo.Droid.Resource.Id.normal;
+			global::CustomCalendar.Droid.Resource.Id.notification_background = global::ManageGo.Droid.Resource.Id.notification_background;
+			global::CustomCalendar.Droid.Resource.Id.notification_main_column = global::ManageGo.Droid.Resource.Id.notification_main_column;
+			global::CustomCalendar.Droid.Resource.Id.notification_main_column_container = global::ManageGo.Droid.Resource.Id.notification_main_column_container;
+			global::CustomCalendar.Droid.Resource.Id.parentPanel = global::ManageGo.Droid.Resource.Id.parentPanel;
+			global::CustomCalendar.Droid.Resource.Id.progress_circular = global::ManageGo.Droid.Resource.Id.progress_circular;
+			global::CustomCalendar.Droid.Resource.Id.progress_horizontal = global::ManageGo.Droid.Resource.Id.progress_horizontal;
+			global::CustomCalendar.Droid.Resource.Id.radio = global::ManageGo.Droid.Resource.Id.radio;
+			global::CustomCalendar.Droid.Resource.Id.right_icon = global::ManageGo.Droid.Resource.Id.right_icon;
+			global::CustomCalendar.Droid.Resource.Id.right_side = global::ManageGo.Droid.Resource.Id.right_side;
+			global::CustomCalendar.Droid.Resource.Id.screen = global::ManageGo.Droid.Resource.Id.screen;
+			global::CustomCalendar.Droid.Resource.Id.scrollIndicatorDown = global::ManageGo.Droid.Resource.Id.scrollIndicatorDown;
+			global::CustomCalendar.Droid.Resource.Id.scrollIndicatorUp = global::ManageGo.Droid.Resource.Id.scrollIndicatorUp;
+			global::CustomCalendar.Droid.Resource.Id.scrollView = global::ManageGo.Droid.Resource.Id.scrollView;
+			global::CustomCalendar.Droid.Resource.Id.search_badge = global::ManageGo.Droid.Resource.Id.search_badge;
+			global::CustomCalendar.Droid.Resource.Id.search_bar = global::ManageGo.Droid.Resource.Id.search_bar;
+			global::CustomCalendar.Droid.Resource.Id.search_button = global::ManageGo.Droid.Resource.Id.search_button;
+			global::CustomCalendar.Droid.Resource.Id.search_close_btn = global::ManageGo.Droid.Resource.Id.search_close_btn;
+			global::CustomCalendar.Droid.Resource.Id.search_edit_frame = global::ManageGo.Droid.Resource.Id.search_edit_frame;
+			global::CustomCalendar.Droid.Resource.Id.search_go_btn = global::ManageGo.Droid.Resource.Id.search_go_btn;
+			global::CustomCalendar.Droid.Resource.Id.search_mag_icon = global::ManageGo.Droid.Resource.Id.search_mag_icon;
+			global::CustomCalendar.Droid.Resource.Id.search_plate = global::ManageGo.Droid.Resource.Id.search_plate;
+			global::CustomCalendar.Droid.Resource.Id.search_src_text = global::ManageGo.Droid.Resource.Id.search_src_text;
+			global::CustomCalendar.Droid.Resource.Id.search_voice_btn = global::ManageGo.Droid.Resource.Id.search_voice_btn;
+			global::CustomCalendar.Droid.Resource.Id.select_dialog_listview = global::ManageGo.Droid.Resource.Id.select_dialog_listview;
+			global::CustomCalendar.Droid.Resource.Id.shortcut = global::ManageGo.Droid.Resource.Id.shortcut;
+			global::CustomCalendar.Droid.Resource.Id.showCustom = global::ManageGo.Droid.Resource.Id.showCustom;
+			global::CustomCalendar.Droid.Resource.Id.showHome = global::ManageGo.Droid.Resource.Id.showHome;
+			global::CustomCalendar.Droid.Resource.Id.showTitle = global::ManageGo.Droid.Resource.Id.showTitle;
+			global::CustomCalendar.Droid.Resource.Id.spacer = global::ManageGo.Droid.Resource.Id.spacer;
+			global::CustomCalendar.Droid.Resource.Id.split_action_bar = global::ManageGo.Droid.Resource.Id.split_action_bar;
+			global::CustomCalendar.Droid.Resource.Id.src_atop = global::ManageGo.Droid.Resource.Id.src_atop;
+			global::CustomCalendar.Droid.Resource.Id.src_in = global::ManageGo.Droid.Resource.Id.src_in;
+			global::CustomCalendar.Droid.Resource.Id.src_over = global::ManageGo.Droid.Resource.Id.src_over;
+			global::CustomCalendar.Droid.Resource.Id.status_bar_latest_event_content = global::ManageGo.Droid.Resource.Id.status_bar_latest_event_content;
+			global::CustomCalendar.Droid.Resource.Id.submenuarrow = global::ManageGo.Droid.Resource.Id.submenuarrow;
+			global::CustomCalendar.Droid.Resource.Id.submit_area = global::ManageGo.Droid.Resource.Id.submit_area;
+			global::CustomCalendar.Droid.Resource.Id.tabMode = global::ManageGo.Droid.Resource.Id.tabMode;
+			global::CustomCalendar.Droid.Resource.Id.text = global::ManageGo.Droid.Resource.Id.text;
+			global::CustomCalendar.Droid.Resource.Id.text2 = global::ManageGo.Droid.Resource.Id.text2;
+			global::CustomCalendar.Droid.Resource.Id.textSpacerNoButtons = global::ManageGo.Droid.Resource.Id.textSpacerNoButtons;
+			global::CustomCalendar.Droid.Resource.Id.textSpacerNoTitle = global::ManageGo.Droid.Resource.Id.textSpacerNoTitle;
+			global::CustomCalendar.Droid.Resource.Id.time = global::ManageGo.Droid.Resource.Id.time;
+			global::CustomCalendar.Droid.Resource.Id.title = global::ManageGo.Droid.Resource.Id.title;
+			global::CustomCalendar.Droid.Resource.Id.titleDividerNoCustom = global::ManageGo.Droid.Resource.Id.titleDividerNoCustom;
+			global::CustomCalendar.Droid.Resource.Id.title_template = global::ManageGo.Droid.Resource.Id.title_template;
+			global::CustomCalendar.Droid.Resource.Id.top = global::ManageGo.Droid.Resource.Id.top;
+			global::CustomCalendar.Droid.Resource.Id.topPanel = global::ManageGo.Droid.Resource.Id.topPanel;
+			global::CustomCalendar.Droid.Resource.Id.up = global::ManageGo.Droid.Resource.Id.up;
+			global::CustomCalendar.Droid.Resource.Id.useLogo = global::ManageGo.Droid.Resource.Id.useLogo;
+			global::CustomCalendar.Droid.Resource.Id.withText = global::ManageGo.Droid.Resource.Id.withText;
+			global::CustomCalendar.Droid.Resource.Id.wrap_content = global::ManageGo.Droid.Resource.Id.wrap_content;
+			global::CustomCalendar.Droid.Resource.Integer.abc_config_activityDefaultDur = global::ManageGo.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::CustomCalendar.Droid.Resource.Integer.abc_config_activityShortDur = global::ManageGo.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::CustomCalendar.Droid.Resource.Integer.cancel_button_image_alpha = global::ManageGo.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::CustomCalendar.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::ManageGo.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::CustomCalendar.Droid.Resource.Layout.abc_action_bar_title_item = global::ManageGo.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::CustomCalendar.Droid.Resource.Layout.abc_action_bar_up_container = global::ManageGo.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::CustomCalendar.Droid.Resource.Layout.abc_action_menu_item_layout = global::ManageGo.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::CustomCalendar.Droid.Resource.Layout.abc_action_menu_layout = global::ManageGo.Droid.Resource.Layout.abc_action_menu_layout;
+			global::CustomCalendar.Droid.Resource.Layout.abc_action_mode_bar = global::ManageGo.Droid.Resource.Layout.abc_action_mode_bar;
+			global::CustomCalendar.Droid.Resource.Layout.abc_action_mode_close_item_material = global::ManageGo.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::CustomCalendar.Droid.Resource.Layout.abc_activity_chooser_view = global::ManageGo.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::CustomCalendar.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::ManageGo.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::CustomCalendar.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::ManageGo.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::CustomCalendar.Droid.Resource.Layout.abc_alert_dialog_material = global::ManageGo.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::CustomCalendar.Droid.Resource.Layout.abc_alert_dialog_title_material = global::ManageGo.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::CustomCalendar.Droid.Resource.Layout.abc_dialog_title_material = global::ManageGo.Droid.Resource.Layout.abc_dialog_title_material;
+			global::CustomCalendar.Droid.Resource.Layout.abc_expanded_menu_layout = global::ManageGo.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::CustomCalendar.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::ManageGo.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::CustomCalendar.Droid.Resource.Layout.abc_list_menu_item_icon = global::ManageGo.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::CustomCalendar.Droid.Resource.Layout.abc_list_menu_item_layout = global::ManageGo.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::CustomCalendar.Droid.Resource.Layout.abc_list_menu_item_radio = global::ManageGo.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::CustomCalendar.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::ManageGo.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::CustomCalendar.Droid.Resource.Layout.abc_popup_menu_item_layout = global::ManageGo.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::CustomCalendar.Droid.Resource.Layout.abc_screen_content_include = global::ManageGo.Droid.Resource.Layout.abc_screen_content_include;
+			global::CustomCalendar.Droid.Resource.Layout.abc_screen_simple = global::ManageGo.Droid.Resource.Layout.abc_screen_simple;
+			global::CustomCalendar.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::ManageGo.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::CustomCalendar.Droid.Resource.Layout.abc_screen_toolbar = global::ManageGo.Droid.Resource.Layout.abc_screen_toolbar;
+			global::CustomCalendar.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::ManageGo.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::CustomCalendar.Droid.Resource.Layout.abc_search_view = global::ManageGo.Droid.Resource.Layout.abc_search_view;
+			global::CustomCalendar.Droid.Resource.Layout.abc_select_dialog_material = global::ManageGo.Droid.Resource.Layout.abc_select_dialog_material;
+			global::CustomCalendar.Droid.Resource.Layout.notification_action = global::ManageGo.Droid.Resource.Layout.notification_action;
+			global::CustomCalendar.Droid.Resource.Layout.notification_action_tombstone = global::ManageGo.Droid.Resource.Layout.notification_action_tombstone;
+			global::CustomCalendar.Droid.Resource.Layout.notification_media_action = global::ManageGo.Droid.Resource.Layout.notification_media_action;
+			global::CustomCalendar.Droid.Resource.Layout.notification_media_cancel_action = global::ManageGo.Droid.Resource.Layout.notification_media_cancel_action;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_big_media = global::ManageGo.Droid.Resource.Layout.notification_template_big_media;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_big_media_custom = global::ManageGo.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_big_media_narrow = global::ManageGo.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::ManageGo.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_custom_big = global::ManageGo.Droid.Resource.Layout.notification_template_custom_big;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_icon_group = global::ManageGo.Droid.Resource.Layout.notification_template_icon_group;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_lines_media = global::ManageGo.Droid.Resource.Layout.notification_template_lines_media;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_media = global::ManageGo.Droid.Resource.Layout.notification_template_media;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_media_custom = global::ManageGo.Droid.Resource.Layout.notification_template_media_custom;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_part_chronometer = global::ManageGo.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::CustomCalendar.Droid.Resource.Layout.notification_template_part_time = global::ManageGo.Droid.Resource.Layout.notification_template_part_time;
+			global::CustomCalendar.Droid.Resource.Layout.select_dialog_item_material = global::ManageGo.Droid.Resource.Layout.select_dialog_item_material;
+			global::CustomCalendar.Droid.Resource.Layout.select_dialog_multichoice_material = global::ManageGo.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::CustomCalendar.Droid.Resource.Layout.select_dialog_singlechoice_material = global::ManageGo.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::CustomCalendar.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::ManageGo.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::CustomCalendar.Droid.Resource.String.abc_action_bar_home_description = global::ManageGo.Droid.Resource.String.abc_action_bar_home_description;
+			global::CustomCalendar.Droid.Resource.String.abc_action_bar_up_description = global::ManageGo.Droid.Resource.String.abc_action_bar_up_description;
+			global::CustomCalendar.Droid.Resource.String.abc_action_menu_overflow_description = global::ManageGo.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::CustomCalendar.Droid.Resource.String.abc_action_mode_done = global::ManageGo.Droid.Resource.String.abc_action_mode_done;
+			global::CustomCalendar.Droid.Resource.String.abc_activity_chooser_view_see_all = global::ManageGo.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::CustomCalendar.Droid.Resource.String.abc_activitychooserview_choose_application = global::ManageGo.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::CustomCalendar.Droid.Resource.String.abc_capital_off = global::ManageGo.Droid.Resource.String.abc_capital_off;
+			global::CustomCalendar.Droid.Resource.String.abc_capital_on = global::ManageGo.Droid.Resource.String.abc_capital_on;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_body_1_material = global::ManageGo.Droid.Resource.String.abc_font_family_body_1_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_body_2_material = global::ManageGo.Droid.Resource.String.abc_font_family_body_2_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_button_material = global::ManageGo.Droid.Resource.String.abc_font_family_button_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_caption_material = global::ManageGo.Droid.Resource.String.abc_font_family_caption_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_display_1_material = global::ManageGo.Droid.Resource.String.abc_font_family_display_1_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_display_2_material = global::ManageGo.Droid.Resource.String.abc_font_family_display_2_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_display_3_material = global::ManageGo.Droid.Resource.String.abc_font_family_display_3_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_display_4_material = global::ManageGo.Droid.Resource.String.abc_font_family_display_4_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_headline_material = global::ManageGo.Droid.Resource.String.abc_font_family_headline_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_menu_material = global::ManageGo.Droid.Resource.String.abc_font_family_menu_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_subhead_material = global::ManageGo.Droid.Resource.String.abc_font_family_subhead_material;
+			global::CustomCalendar.Droid.Resource.String.abc_font_family_title_material = global::ManageGo.Droid.Resource.String.abc_font_family_title_material;
+			global::CustomCalendar.Droid.Resource.String.abc_search_hint = global::ManageGo.Droid.Resource.String.abc_search_hint;
+			global::CustomCalendar.Droid.Resource.String.abc_searchview_description_clear = global::ManageGo.Droid.Resource.String.abc_searchview_description_clear;
+			global::CustomCalendar.Droid.Resource.String.abc_searchview_description_query = global::ManageGo.Droid.Resource.String.abc_searchview_description_query;
+			global::CustomCalendar.Droid.Resource.String.abc_searchview_description_search = global::ManageGo.Droid.Resource.String.abc_searchview_description_search;
+			global::CustomCalendar.Droid.Resource.String.abc_searchview_description_submit = global::ManageGo.Droid.Resource.String.abc_searchview_description_submit;
+			global::CustomCalendar.Droid.Resource.String.abc_searchview_description_voice = global::ManageGo.Droid.Resource.String.abc_searchview_description_voice;
+			global::CustomCalendar.Droid.Resource.String.abc_shareactionprovider_share_with = global::ManageGo.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::CustomCalendar.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::ManageGo.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::CustomCalendar.Droid.Resource.String.abc_toolbar_collapse_description = global::ManageGo.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::CustomCalendar.Droid.Resource.String.library_name = global::ManageGo.Droid.Resource.String.library_name;
+			global::CustomCalendar.Droid.Resource.String.search_menu_title = global::ManageGo.Droid.Resource.String.search_menu_title;
+			global::CustomCalendar.Droid.Resource.String.status_bar_notification_info_overflow = global::ManageGo.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::CustomCalendar.Droid.Resource.Style.AlertDialog_AppCompat = global::ManageGo.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::ManageGo.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Animation_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::ManageGo.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::CustomCalendar.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::ManageGo.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::ManageGo.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::CustomCalendar.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::ManageGo.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::ManageGo.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::ManageGo.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::CustomCalendar.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::ManageGo.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::ManageGo.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::ManageGo.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::CustomCalendar.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::ManageGo.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::CustomCalendar.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::ManageGo.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::ManageGo.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::ManageGo.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::ManageGo.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::ManageGo.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::ManageGo.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::ManageGo.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::CustomCalendar.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::ManageGo.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::CustomCalendar.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::ManageGo.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::CustomCalendar.Droid.Resource.Style.Platform_AppCompat = global::ManageGo.Droid.Resource.Style.Platform_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Platform_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::ManageGo.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::ManageGo.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::CustomCalendar.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V11_AppCompat = global::ManageGo.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V14_AppCompat = global::ManageGo.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V21_AppCompat = global::ManageGo.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V25_AppCompat = global::ManageGo.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::ManageGo.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::ManageGo.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::CustomCalendar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::ManageGo.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::CustomCalendar.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::ManageGo.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::CustomCalendar.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::ManageGo.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ManageGo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ManageGo.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ManageGo.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::CustomCalendar.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::ManageGo.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat = global::ManageGo.Droid.Resource.Style.Theme_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::ManageGo.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::CustomCalendar.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::ManageGo.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Button = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_EditText = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ListView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_SearchView = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Spinner = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::CustomCalendar.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::ManageGo.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar = global::ManageGo.Droid.Resource.Styleable.ActionBar;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_background = global::ManageGo.Droid.Resource.Styleable.ActionBar_background;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::ManageGo.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::ManageGo.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::ManageGo.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::ManageGo.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::ManageGo.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::ManageGo.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::ManageGo.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::ManageGo.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::ManageGo.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_displayOptions = global::ManageGo.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_divider = global::ManageGo.Droid.Resource.Styleable.ActionBar_divider;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_elevation = global::ManageGo.Droid.Resource.Styleable.ActionBar_elevation;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_height = global::ManageGo.Droid.Resource.Styleable.ActionBar_height;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::ManageGo.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::ManageGo.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_homeLayout = global::ManageGo.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_icon = global::ManageGo.Droid.Resource.Styleable.ActionBar_icon;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::ManageGo.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_itemPadding = global::ManageGo.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_logo = global::ManageGo.Droid.Resource.Styleable.ActionBar_logo;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_navigationMode = global::ManageGo.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_popupTheme = global::ManageGo.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::ManageGo.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::ManageGo.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_subtitle = global::ManageGo.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::ManageGo.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_title = global::ManageGo.Droid.Resource.Styleable.ActionBar_title;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::ManageGo.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBarLayout = global::ManageGo.Droid.Resource.Styleable.ActionBarLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::ManageGo.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMenuItemView = global::ManageGo.Droid.Resource.Styleable.ActionMenuItemView;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::ManageGo.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMenuView = global::ManageGo.Droid.Resource.Styleable.ActionMenuView;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode = global::ManageGo.Droid.Resource.Styleable.ActionMode;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode_background = global::ManageGo.Droid.Resource.Styleable.ActionMode_background;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::ManageGo.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::ManageGo.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode_height = global::ManageGo.Droid.Resource.Styleable.ActionMode_height;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::ManageGo.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::ManageGo.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.ActivityChooserView = global::ManageGo.Droid.Resource.Styleable.ActivityChooserView;
+			global::CustomCalendar.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::ManageGo.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::ManageGo.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog = global::ManageGo.Droid.Resource.Styleable.AlertDialog;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_android_layout = global::ManageGo.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::ManageGo.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::ManageGo.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_listLayout = global::ManageGo.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::ManageGo.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_showTitle = global::ManageGo.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::CustomCalendar.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::ManageGo.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatImageView = global::ManageGo.Droid.Resource.Styleable.AppCompatImageView;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatImageView_android_src = global::ManageGo.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::ManageGo.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatImageView_tint = global::ManageGo.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::ManageGo.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatSeekBar = global::ManageGo.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::ManageGo.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::ManageGo.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::ManageGo.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::ManageGo.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::ManageGo.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextView = global::ManageGo.Droid.Resource.Styleable.AppCompatTextView;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::ManageGo.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::ManageGo.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::CustomCalendar.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::ManageGo.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::CustomCalendar.Droid.Resource.Styleable.ButtonBarLayout = global::ManageGo.Droid.Resource.Styleable.ButtonBarLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::ManageGo.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::CustomCalendar.Droid.Resource.Styleable.ColorStateListItem = global::ManageGo.Droid.Resource.Styleable.ColorStateListItem;
+			global::CustomCalendar.Droid.Resource.Styleable.ColorStateListItem_alpha = global::ManageGo.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::CustomCalendar.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::ManageGo.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::CustomCalendar.Droid.Resource.Styleable.ColorStateListItem_android_color = global::ManageGo.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::CustomCalendar.Droid.Resource.Styleable.CompoundButton = global::ManageGo.Droid.Resource.Styleable.CompoundButton;
+			global::CustomCalendar.Droid.Resource.Styleable.CompoundButton_android_button = global::ManageGo.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::CustomCalendar.Droid.Resource.Styleable.CompoundButton_buttonTint = global::ManageGo.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::CustomCalendar.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::ManageGo.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_color = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::CustomCalendar.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::ManageGo.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::CustomCalendar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::ManageGo.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::CustomCalendar.Droid.Resource.Styleable.ListPopupWindow = global::ManageGo.Droid.Resource.Styleable.ListPopupWindow;
+			global::CustomCalendar.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::ManageGo.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::CustomCalendar.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::ManageGo.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup = global::ManageGo.Droid.Resource.Styleable.MenuGroup;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::ManageGo.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup_android_enabled = global::ManageGo.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup_android_id = global::ManageGo.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::ManageGo.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::ManageGo.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuGroup_android_visible = global::ManageGo.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem = global::ManageGo.Droid.Resource.Styleable.MenuItem;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_actionLayout = global::ManageGo.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::ManageGo.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_actionViewClass = global::ManageGo.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_checkable = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_checked = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_enabled = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_icon = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_id = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_id;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_onClick = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_title = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_title;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_android_visible = global::ManageGo.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuItem_showAsAction = global::ManageGo.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView = global::ManageGo.Droid.Resource.Styleable.MenuView;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_headerBackground = global::ManageGo.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::ManageGo.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_itemBackground = global::ManageGo.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::ManageGo.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::ManageGo.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::ManageGo.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::ManageGo.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::ManageGo.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::CustomCalendar.Droid.Resource.Styleable.MenuView_subMenuArrow = global::ManageGo.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::CustomCalendar.Droid.Resource.Styleable.PopupWindow = global::ManageGo.Droid.Resource.Styleable.PopupWindow;
+			global::CustomCalendar.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::ManageGo.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::ManageGo.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::ManageGo.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::CustomCalendar.Droid.Resource.Styleable.PopupWindowBackgroundState = global::ManageGo.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::CustomCalendar.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::ManageGo.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::CustomCalendar.Droid.Resource.Styleable.RecycleListView = global::ManageGo.Droid.Resource.Styleable.RecycleListView;
+			global::CustomCalendar.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::ManageGo.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::CustomCalendar.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::ManageGo.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView = global::ManageGo.Droid.Resource.Styleable.SearchView;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_android_focusable = global::ManageGo.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_android_imeOptions = global::ManageGo.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_android_inputType = global::ManageGo.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_android_maxWidth = global::ManageGo.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_closeIcon = global::ManageGo.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_commitIcon = global::ManageGo.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::ManageGo.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_goIcon = global::ManageGo.Droid.Resource.Styleable.SearchView_goIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::ManageGo.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_layout = global::ManageGo.Droid.Resource.Styleable.SearchView_layout;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_queryBackground = global::ManageGo.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_queryHint = global::ManageGo.Droid.Resource.Styleable.SearchView_queryHint;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_searchHintIcon = global::ManageGo.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_searchIcon = global::ManageGo.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_submitBackground = global::ManageGo.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::ManageGo.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::CustomCalendar.Droid.Resource.Styleable.SearchView_voiceIcon = global::ManageGo.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.Spinner = global::ManageGo.Droid.Resource.Styleable.Spinner;
+			global::CustomCalendar.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::ManageGo.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::CustomCalendar.Droid.Resource.Styleable.Spinner_android_entries = global::ManageGo.Droid.Resource.Styleable.Spinner_android_entries;
+			global::CustomCalendar.Droid.Resource.Styleable.Spinner_android_popupBackground = global::ManageGo.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::CustomCalendar.Droid.Resource.Styleable.Spinner_android_prompt = global::ManageGo.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::CustomCalendar.Droid.Resource.Styleable.Spinner_popupTheme = global::ManageGo.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat = global::ManageGo.Droid.Resource.Styleable.SwitchCompat;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_showText = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_track = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_track;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_trackTint = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::CustomCalendar.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::ManageGo.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance = global::ManageGo.Droid.Resource.Styleable.TextAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_textColor = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_textSize = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_android_typeface = global::ManageGo.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::CustomCalendar.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::ManageGo.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar = global::ManageGo.Droid.Resource.Styleable.Toolbar;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_android_gravity = global::ManageGo.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_android_minHeight = global::ManageGo.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_buttonGravity = global::ManageGo.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::ManageGo.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_collapseIcon = global::ManageGo.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::ManageGo.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::ManageGo.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::ManageGo.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::ManageGo.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::ManageGo.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::ManageGo.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_logo = global::ManageGo.Droid.Resource.Styleable.Toolbar_logo;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_logoDescription = global::ManageGo.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::ManageGo.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::ManageGo.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_navigationIcon = global::ManageGo.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_popupTheme = global::ManageGo.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_subtitle = global::ManageGo.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::ManageGo.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::ManageGo.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_title = global::ManageGo.Droid.Resource.Styleable.Toolbar_title;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleMargin = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleMargins = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::CustomCalendar.Droid.Resource.Styleable.Toolbar_titleTextColor = global::ManageGo.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::CustomCalendar.Droid.Resource.Styleable.View = global::ManageGo.Droid.Resource.Styleable.View;
+			global::CustomCalendar.Droid.Resource.Styleable.View_android_focusable = global::ManageGo.Droid.Resource.Styleable.View_android_focusable;
+			global::CustomCalendar.Droid.Resource.Styleable.View_android_theme = global::ManageGo.Droid.Resource.Styleable.View_android_theme;
+			global::CustomCalendar.Droid.Resource.Styleable.View_paddingEnd = global::ManageGo.Droid.Resource.Styleable.View_paddingEnd;
+			global::CustomCalendar.Droid.Resource.Styleable.View_paddingStart = global::ManageGo.Droid.Resource.Styleable.View_paddingStart;
+			global::CustomCalendar.Droid.Resource.Styleable.View_theme = global::ManageGo.Droid.Resource.Styleable.View_theme;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewBackgroundHelper = global::ManageGo.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::ManageGo.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::ManageGo.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::ManageGo.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewStubCompat = global::ManageGo.Droid.Resource.Styleable.ViewStubCompat;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewStubCompat_android_id = global::ManageGo.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ManageGo.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::CustomCalendar.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::ManageGo.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::ManageGo.Core.Droid.Resource.String.library_name = global::ManageGo.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ManageGo.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -3793,6 +5204,9 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f090038
 			public const int character_counter_pattern = 2131296312;
 			
+			// aapt resource value: 0x7f09003e
+			public const int library_name = 2131296318;
+			
 			// aapt resource value: 0x7f090000
 			public const int mr_button_content_description = 2131296256;
 			
@@ -3890,44 +5304,44 @@ namespace ManageGo.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f0b00ac
-			public const int AlertDialog_AppCompat = 2131427500;
-			
-			// aapt resource value: 0x7f0b00ad
-			public const int AlertDialog_AppCompat_Light = 2131427501;
-			
 			// aapt resource value: 0x7f0b00ae
-			public const int Animation_AppCompat_Dialog = 2131427502;
+			public const int AlertDialog_AppCompat = 2131427502;
 			
 			// aapt resource value: 0x7f0b00af
-			public const int Animation_AppCompat_DropDownUp = 2131427503;
-			
-			// aapt resource value: 0x7f0b016e
-			public const int Animation_Design_BottomSheetDialog = 2131427694;
-			
-			// aapt resource value: 0x7f0b0189
-			public const int AppCompatDialogStyle = 2131427721;
+			public const int AlertDialog_AppCompat_Light = 2131427503;
 			
 			// aapt resource value: 0x7f0b00b0
-			public const int Base_AlertDialog_AppCompat = 2131427504;
+			public const int Animation_AppCompat_Dialog = 2131427504;
 			
 			// aapt resource value: 0x7f0b00b1
-			public const int Base_AlertDialog_AppCompat_Light = 2131427505;
+			public const int Animation_AppCompat_DropDownUp = 2131427505;
+			
+			// aapt resource value: 0x7f0b0170
+			public const int Animation_Design_BottomSheetDialog = 2131427696;
+			
+			// aapt resource value: 0x7f0b018b
+			public const int AppCompatDialogStyle = 2131427723;
 			
 			// aapt resource value: 0x7f0b00b2
-			public const int Base_Animation_AppCompat_Dialog = 2131427506;
+			public const int Base_AlertDialog_AppCompat = 2131427506;
 			
 			// aapt resource value: 0x7f0b00b3
-			public const int Base_Animation_AppCompat_DropDownUp = 2131427507;
+			public const int Base_AlertDialog_AppCompat_Light = 2131427507;
+			
+			// aapt resource value: 0x7f0b00b4
+			public const int Base_Animation_AppCompat_Dialog = 2131427508;
+			
+			// aapt resource value: 0x7f0b00b5
+			public const int Base_Animation_AppCompat_DropDownUp = 2131427509;
 			
 			// aapt resource value: 0x7f0b000c
 			public const int Base_CardView = 2131427340;
 			
-			// aapt resource value: 0x7f0b00b4
-			public const int Base_DialogWindowTitle_AppCompat = 2131427508;
+			// aapt resource value: 0x7f0b00b6
+			public const int Base_DialogWindowTitle_AppCompat = 2131427510;
 			
-			// aapt resource value: 0x7f0b00b5
-			public const int Base_DialogWindowTitleBackground_AppCompat = 2131427509;
+			// aapt resource value: 0x7f0b00b7
+			public const int Base_DialogWindowTitleBackground_AppCompat = 2131427511;
 			
 			// aapt resource value: 0x7f0b004e
 			public const int Base_TextAppearance_AppCompat = 2131427406;
@@ -3983,8 +5397,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b005b
 			public const int Base_TextAppearance_AppCompat_Menu = 2131427419;
 			
-			// aapt resource value: 0x7f0b00b6
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427510;
+			// aapt resource value: 0x7f0b00b8
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427512;
 			
 			// aapt resource value: 0x7f0b005c
 			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131427420;
@@ -4043,8 +5457,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b00a4
 			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131427492;
 			
-			// aapt resource value: 0x7f0b00b7
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427511;
+			// aapt resource value: 0x7f0b00b9
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427513;
 			
 			// aapt resource value: 0x7f0b0068
 			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131427432;
@@ -4061,8 +5475,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b006c
 			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427436;
 			
-			// aapt resource value: 0x7f0b00b8
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427512;
+			// aapt resource value: 0x7f0b00ba
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427514;
 			
 			// aapt resource value: 0x7f0b006d
 			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427437;
@@ -4073,8 +5487,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b006f
 			public const int Base_Theme_AppCompat = 2131427439;
 			
-			// aapt resource value: 0x7f0b00b9
-			public const int Base_Theme_AppCompat_CompactMenu = 2131427513;
+			// aapt resource value: 0x7f0b00bb
+			public const int Base_Theme_AppCompat_CompactMenu = 2131427515;
 			
 			// aapt resource value: 0x7f0b0020
 			public const int Base_Theme_AppCompat_Dialog = 2131427360;
@@ -4082,8 +5496,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0021
 			public const int Base_Theme_AppCompat_Dialog_Alert = 2131427361;
 			
-			// aapt resource value: 0x7f0b00ba
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427514;
+			// aapt resource value: 0x7f0b00bc
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427516;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131427362;
@@ -4094,8 +5508,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0070
 			public const int Base_Theme_AppCompat_Light = 2131427440;
 			
-			// aapt resource value: 0x7f0b00bb
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427515;
+			// aapt resource value: 0x7f0b00bd
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427517;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int Base_Theme_AppCompat_Light_Dialog = 2131427363;
@@ -4103,8 +5517,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0024
 			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131427364;
 			
-			// aapt resource value: 0x7f0b00bc
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427516;
+			// aapt resource value: 0x7f0b00be
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427518;
 			
 			// aapt resource value: 0x7f0b0025
 			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131427365;
@@ -4112,17 +5526,17 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0011
 			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131427345;
 			
-			// aapt resource value: 0x7f0b00bd
-			public const int Base_ThemeOverlay_AppCompat = 2131427517;
-			
-			// aapt resource value: 0x7f0b00be
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427518;
-			
 			// aapt resource value: 0x7f0b00bf
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427519;
+			public const int Base_ThemeOverlay_AppCompat = 2131427519;
 			
 			// aapt resource value: 0x7f0b00c0
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427520;
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427520;
+			
+			// aapt resource value: 0x7f0b00c1
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427521;
+			
+			// aapt resource value: 0x7f0b00c2
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427522;
 			
 			// aapt resource value: 0x7f0b0026
 			public const int Base_ThemeOverlay_AppCompat_Dialog = 2131427366;
@@ -4130,8 +5544,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0027
 			public const int Base_ThemeOverlay_AppCompat_Dialog_Alert = 2131427367;
 			
-			// aapt resource value: 0x7f0b00c1
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131427521;
+			// aapt resource value: 0x7f0b00c3
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131427523;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int Base_V11_Theme_AppCompat_Dialog = 2131427368;
@@ -4175,35 +5589,35 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b00a6
 			public const int Base_V23_Theme_AppCompat_Light = 2131427494;
 			
-			// aapt resource value: 0x7f0b00c2
-			public const int Base_V7_Theme_AppCompat = 2131427522;
-			
-			// aapt resource value: 0x7f0b00c3
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131427523;
-			
 			// aapt resource value: 0x7f0b00c4
-			public const int Base_V7_Theme_AppCompat_Light = 2131427524;
+			public const int Base_V7_Theme_AppCompat = 2131427524;
 			
 			// aapt resource value: 0x7f0b00c5
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131427525;
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131427525;
 			
 			// aapt resource value: 0x7f0b00c6
-			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131427526;
+			public const int Base_V7_Theme_AppCompat_Light = 2131427526;
 			
 			// aapt resource value: 0x7f0b00c7
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131427527;
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131427527;
 			
 			// aapt resource value: 0x7f0b00c8
-			public const int Base_V7_Widget_AppCompat_EditText = 2131427528;
+			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131427528;
 			
 			// aapt resource value: 0x7f0b00c9
-			public const int Base_Widget_AppCompat_ActionBar = 2131427529;
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131427529;
 			
 			// aapt resource value: 0x7f0b00ca
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427530;
+			public const int Base_V7_Widget_AppCompat_EditText = 2131427530;
 			
 			// aapt resource value: 0x7f0b00cb
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427531;
+			public const int Base_Widget_AppCompat_ActionBar = 2131427531;
+			
+			// aapt resource value: 0x7f0b00cc
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427532;
+			
+			// aapt resource value: 0x7f0b00cd
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427533;
 			
 			// aapt resource value: 0x7f0b0076
 			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131427446;
@@ -4220,11 +5634,11 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b007a
 			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131427450;
 			
-			// aapt resource value: 0x7f0b00cc
-			public const int Base_Widget_AppCompat_ActionMode = 2131427532;
+			// aapt resource value: 0x7f0b00ce
+			public const int Base_Widget_AppCompat_ActionMode = 2131427534;
 			
-			// aapt resource value: 0x7f0b00cd
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427533;
+			// aapt resource value: 0x7f0b00cf
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427535;
 			
 			// aapt resource value: 0x7f0b0034
 			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131427380;
@@ -4238,8 +5652,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b007d
 			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131427453;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427534;
+			// aapt resource value: 0x7f0b00d0
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427536;
 			
 			// aapt resource value: 0x7f0b00a7
 			public const int Base_Widget_AppCompat_Button_Colored = 2131427495;
@@ -4250,8 +5664,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b007f
 			public const int Base_Widget_AppCompat_ButtonBar = 2131427455;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131427535;
+			// aapt resource value: 0x7f0b00d1
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131427537;
 			
 			// aapt resource value: 0x7f0b0080
 			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131427456;
@@ -4259,14 +5673,14 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0081
 			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131427457;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427536;
+			// aapt resource value: 0x7f0b00d2
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427538;
 			
 			// aapt resource value: 0x7f0b000f
 			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131427343;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131427537;
+			// aapt resource value: 0x7f0b00d3
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131427539;
 			
 			// aapt resource value: 0x7f0b0082
 			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131427458;
@@ -4277,14 +5691,14 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0083
 			public const int Base_Widget_AppCompat_ImageButton = 2131427459;
 			
-			// aapt resource value: 0x7f0b00d2
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427538;
-			
-			// aapt resource value: 0x7f0b00d3
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427539;
-			
 			// aapt resource value: 0x7f0b00d4
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427540;
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427540;
+			
+			// aapt resource value: 0x7f0b00d5
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427541;
+			
+			// aapt resource value: 0x7f0b00d6
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427542;
 			
 			// aapt resource value: 0x7f0b0084
 			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131427460;
@@ -4301,8 +5715,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0088
 			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131427464;
 			
-			// aapt resource value: 0x7f0b00d5
-			public const int Base_Widget_AppCompat_ListMenuView = 2131427541;
+			// aapt resource value: 0x7f0b00d7
+			public const int Base_Widget_AppCompat_ListMenuView = 2131427543;
 			
 			// aapt resource value: 0x7f0b0089
 			public const int Base_Widget_AppCompat_ListPopupWindow = 2131427465;
@@ -4322,8 +5736,8 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b008e
 			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131427470;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int Base_Widget_AppCompat_PopupWindow = 2131427542;
+			// aapt resource value: 0x7f0b00d8
+			public const int Base_Widget_AppCompat_PopupWindow = 2131427544;
 			
 			// aapt resource value: 0x7f0b002b
 			public const int Base_Widget_AppCompat_ProgressBar = 2131427371;
@@ -4340,17 +5754,17 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b00a9
 			public const int Base_Widget_AppCompat_RatingBar_Small = 2131427497;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int Base_Widget_AppCompat_SearchView = 2131427543;
+			// aapt resource value: 0x7f0b00d9
+			public const int Base_Widget_AppCompat_SearchView = 2131427545;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131427544;
+			// aapt resource value: 0x7f0b00da
+			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131427546;
 			
 			// aapt resource value: 0x7f0b0090
 			public const int Base_Widget_AppCompat_SeekBar = 2131427472;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131427545;
+			// aapt resource value: 0x7f0b00db
+			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131427547;
 			
 			// aapt resource value: 0x7f0b0091
 			public const int Base_Widget_AppCompat_Spinner = 2131427473;
@@ -4361,17 +5775,17 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0092
 			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131427474;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int Base_Widget_AppCompat_Toolbar = 2131427546;
+			// aapt resource value: 0x7f0b00dc
+			public const int Base_Widget_AppCompat_Toolbar = 2131427548;
 			
 			// aapt resource value: 0x7f0b0093
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131427475;
 			
-			// aapt resource value: 0x7f0b016f
-			public const int Base_Widget_Design_AppBarLayout = 2131427695;
+			// aapt resource value: 0x7f0b0171
+			public const int Base_Widget_Design_AppBarLayout = 2131427697;
 			
-			// aapt resource value: 0x7f0b0170
-			public const int Base_Widget_Design_TabLayout = 2131427696;
+			// aapt resource value: 0x7f0b0172
+			public const int Base_Widget_Design_TabLayout = 2131427698;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int CardView = 2131427339;
@@ -4382,17 +5796,17 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b000e
 			public const int CardView_Light = 2131427342;
 			
+			// aapt resource value: 0x7f0b018c
+			public const int CustomTheme = 2131427724;
+			
+			// aapt resource value: 0x7f0b0189
+			public const int MyTheme = 2131427721;
+			
 			// aapt resource value: 0x7f0b018a
-			public const int CustomTheme = 2131427722;
+			public const int MyTheme_Base = 2131427722;
 			
-			// aapt resource value: 0x7f0b0187
-			public const int MyTheme = 2131427719;
-			
-			// aapt resource value: 0x7f0b0188
-			public const int MyTheme_Base = 2131427720;
-			
-			// aapt resource value: 0x7f0b018b
-			public const int MyTheme_Splash = 2131427723;
+			// aapt resource value: 0x7f0b018d
+			public const int MyTheme_Splash = 2131427725;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;
@@ -4426,6 +5840,12 @@ namespace ManageGo.Droid
 			
 			// aapt resource value: 0x7f0b0098
 			public const int Platform_V21_AppCompat_Light = 2131427480;
+			
+			// aapt resource value: 0x7f0b00ac
+			public const int Platform_V25_AppCompat = 2131427500;
+			
+			// aapt resource value: 0x7f0b00ad
+			public const int Platform_V25_AppCompat_Light = 2131427501;
 			
 			// aapt resource value: 0x7f0b0031
 			public const int Platform_Widget_AppCompat_Spinner = 2131427377;
@@ -4472,65 +5892,65 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b004d
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131427405;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int TextAppearance_AppCompat = 2131427547;
-			
-			// aapt resource value: 0x7f0b00dc
-			public const int TextAppearance_AppCompat_Body1 = 2131427548;
-			
 			// aapt resource value: 0x7f0b00dd
-			public const int TextAppearance_AppCompat_Body2 = 2131427549;
+			public const int TextAppearance_AppCompat = 2131427549;
 			
 			// aapt resource value: 0x7f0b00de
-			public const int TextAppearance_AppCompat_Button = 2131427550;
+			public const int TextAppearance_AppCompat_Body1 = 2131427550;
 			
 			// aapt resource value: 0x7f0b00df
-			public const int TextAppearance_AppCompat_Caption = 2131427551;
+			public const int TextAppearance_AppCompat_Body2 = 2131427551;
 			
 			// aapt resource value: 0x7f0b00e0
-			public const int TextAppearance_AppCompat_Display1 = 2131427552;
+			public const int TextAppearance_AppCompat_Button = 2131427552;
 			
 			// aapt resource value: 0x7f0b00e1
-			public const int TextAppearance_AppCompat_Display2 = 2131427553;
+			public const int TextAppearance_AppCompat_Caption = 2131427553;
 			
 			// aapt resource value: 0x7f0b00e2
-			public const int TextAppearance_AppCompat_Display3 = 2131427554;
+			public const int TextAppearance_AppCompat_Display1 = 2131427554;
 			
 			// aapt resource value: 0x7f0b00e3
-			public const int TextAppearance_AppCompat_Display4 = 2131427555;
+			public const int TextAppearance_AppCompat_Display2 = 2131427555;
 			
 			// aapt resource value: 0x7f0b00e4
-			public const int TextAppearance_AppCompat_Headline = 2131427556;
+			public const int TextAppearance_AppCompat_Display3 = 2131427556;
 			
 			// aapt resource value: 0x7f0b00e5
-			public const int TextAppearance_AppCompat_Inverse = 2131427557;
+			public const int TextAppearance_AppCompat_Display4 = 2131427557;
 			
 			// aapt resource value: 0x7f0b00e6
-			public const int TextAppearance_AppCompat_Large = 2131427558;
+			public const int TextAppearance_AppCompat_Headline = 2131427558;
 			
 			// aapt resource value: 0x7f0b00e7
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131427559;
+			public const int TextAppearance_AppCompat_Inverse = 2131427559;
 			
 			// aapt resource value: 0x7f0b00e8
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427560;
+			public const int TextAppearance_AppCompat_Large = 2131427560;
 			
 			// aapt resource value: 0x7f0b00e9
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427561;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131427561;
 			
 			// aapt resource value: 0x7f0b00ea
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427562;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427562;
 			
 			// aapt resource value: 0x7f0b00eb
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427563;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427563;
 			
 			// aapt resource value: 0x7f0b00ec
-			public const int TextAppearance_AppCompat_Medium = 2131427564;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427564;
 			
 			// aapt resource value: 0x7f0b00ed
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427565;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427565;
 			
 			// aapt resource value: 0x7f0b00ee
-			public const int TextAppearance_AppCompat_Menu = 2131427566;
+			public const int TextAppearance_AppCompat_Medium = 2131427566;
+			
+			// aapt resource value: 0x7f0b00ef
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427567;
+			
+			// aapt resource value: 0x7f0b00f0
+			public const int TextAppearance_AppCompat_Menu = 2131427568;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int TextAppearance_AppCompat_Notification = 2131427385;
@@ -4541,11 +5961,11 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b009a
 			public const int TextAppearance_AppCompat_Notification_Info_Media = 2131427482;
 			
-			// aapt resource value: 0x7f0b00ef
-			public const int TextAppearance_AppCompat_Notification_Line2 = 2131427567;
+			// aapt resource value: 0x7f0b00f1
+			public const int TextAppearance_AppCompat_Notification_Line2 = 2131427569;
 			
-			// aapt resource value: 0x7f0b00f0
-			public const int TextAppearance_AppCompat_Notification_Line2_Media = 2131427568;
+			// aapt resource value: 0x7f0b00f2
+			public const int TextAppearance_AppCompat_Notification_Line2_Media = 2131427570;
 			
 			// aapt resource value: 0x7f0b009b
 			public const int TextAppearance_AppCompat_Notification_Media = 2131427483;
@@ -4562,107 +5982,107 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b009e
 			public const int TextAppearance_AppCompat_Notification_Title_Media = 2131427486;
 			
-			// aapt resource value: 0x7f0b00f1
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427569;
-			
-			// aapt resource value: 0x7f0b00f2
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427570;
-			
 			// aapt resource value: 0x7f0b00f3
-			public const int TextAppearance_AppCompat_Small = 2131427571;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427571;
 			
 			// aapt resource value: 0x7f0b00f4
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131427572;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427572;
 			
 			// aapt resource value: 0x7f0b00f5
-			public const int TextAppearance_AppCompat_Subhead = 2131427573;
+			public const int TextAppearance_AppCompat_Small = 2131427573;
 			
 			// aapt resource value: 0x7f0b00f6
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427574;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131427574;
 			
 			// aapt resource value: 0x7f0b00f7
-			public const int TextAppearance_AppCompat_Title = 2131427575;
+			public const int TextAppearance_AppCompat_Subhead = 2131427575;
 			
 			// aapt resource value: 0x7f0b00f8
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131427576;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427576;
 			
 			// aapt resource value: 0x7f0b00f9
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427577;
+			public const int TextAppearance_AppCompat_Title = 2131427577;
 			
 			// aapt resource value: 0x7f0b00fa
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427578;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131427578;
 			
 			// aapt resource value: 0x7f0b00fb
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427579;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427579;
 			
 			// aapt resource value: 0x7f0b00fc
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427580;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427580;
 			
 			// aapt resource value: 0x7f0b00fd
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427581;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427581;
 			
 			// aapt resource value: 0x7f0b00fe
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427582;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427582;
 			
 			// aapt resource value: 0x7f0b00ff
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427583;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427583;
 			
 			// aapt resource value: 0x7f0b0100
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427584;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427584;
 			
 			// aapt resource value: 0x7f0b0101
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427585;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427585;
 			
 			// aapt resource value: 0x7f0b0102
-			public const int TextAppearance_AppCompat_Widget_Button = 2131427586;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427586;
 			
 			// aapt resource value: 0x7f0b0103
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131427587;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427587;
 			
 			// aapt resource value: 0x7f0b0104
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131427588;
+			public const int TextAppearance_AppCompat_Widget_Button = 2131427588;
 			
 			// aapt resource value: 0x7f0b0105
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131427589;
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131427589;
 			
 			// aapt resource value: 0x7f0b0106
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427590;
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131427590;
 			
 			// aapt resource value: 0x7f0b0107
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131427591;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131427591;
 			
 			// aapt resource value: 0x7f0b0108
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427592;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427592;
 			
 			// aapt resource value: 0x7f0b0109
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427593;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131427593;
 			
 			// aapt resource value: 0x7f0b010a
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131427594;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427594;
 			
 			// aapt resource value: 0x7f0b010b
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427595;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427595;
 			
-			// aapt resource value: 0x7f0b0171
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131427697;
+			// aapt resource value: 0x7f0b010c
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131427596;
 			
-			// aapt resource value: 0x7f0b0172
-			public const int TextAppearance_Design_Counter = 2131427698;
+			// aapt resource value: 0x7f0b010d
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427597;
 			
 			// aapt resource value: 0x7f0b0173
-			public const int TextAppearance_Design_Counter_Overflow = 2131427699;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131427699;
 			
 			// aapt resource value: 0x7f0b0174
-			public const int TextAppearance_Design_Error = 2131427700;
+			public const int TextAppearance_Design_Counter = 2131427700;
 			
 			// aapt resource value: 0x7f0b0175
-			public const int TextAppearance_Design_Hint = 2131427701;
+			public const int TextAppearance_Design_Counter_Overflow = 2131427701;
 			
 			// aapt resource value: 0x7f0b0176
-			public const int TextAppearance_Design_Snackbar_Message = 2131427702;
+			public const int TextAppearance_Design_Error = 2131427702;
 			
 			// aapt resource value: 0x7f0b0177
-			public const int TextAppearance_Design_Tab = 2131427703;
+			public const int TextAppearance_Design_Hint = 2131427703;
+			
+			// aapt resource value: 0x7f0b0178
+			public const int TextAppearance_Design_Snackbar_Message = 2131427704;
+			
+			// aapt resource value: 0x7f0b0179
+			public const int TextAppearance_Design_Tab = 2131427705;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int TextAppearance_MediaRouter_PrimaryText = 2131427328;
@@ -4688,20 +6108,20 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b003f
 			public const int TextAppearance_StatusBar_EventContent_Title = 2131427391;
 			
-			// aapt resource value: 0x7f0b010c
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427596;
-			
-			// aapt resource value: 0x7f0b010d
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427597;
-			
 			// aapt resource value: 0x7f0b010e
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427598;
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427598;
 			
 			// aapt resource value: 0x7f0b010f
-			public const int Theme_AppCompat = 2131427599;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427599;
 			
 			// aapt resource value: 0x7f0b0110
-			public const int Theme_AppCompat_CompactMenu = 2131427600;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427600;
+			
+			// aapt resource value: 0x7f0b0111
+			public const int Theme_AppCompat = 2131427601;
+			
+			// aapt resource value: 0x7f0b0112
+			public const int Theme_AppCompat_CompactMenu = 2131427602;
 			
 			// aapt resource value: 0x7f0b0013
 			public const int Theme_AppCompat_DayNight = 2131427347;
@@ -4724,59 +6144,59 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0019
 			public const int Theme_AppCompat_DayNight_NoActionBar = 2131427353;
 			
-			// aapt resource value: 0x7f0b0111
-			public const int Theme_AppCompat_Dialog = 2131427601;
-			
-			// aapt resource value: 0x7f0b0112
-			public const int Theme_AppCompat_Dialog_Alert = 2131427602;
-			
 			// aapt resource value: 0x7f0b0113
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131427603;
+			public const int Theme_AppCompat_Dialog = 2131427603;
 			
 			// aapt resource value: 0x7f0b0114
-			public const int Theme_AppCompat_DialogWhenLarge = 2131427604;
+			public const int Theme_AppCompat_Dialog_Alert = 2131427604;
 			
 			// aapt resource value: 0x7f0b0115
-			public const int Theme_AppCompat_Light = 2131427605;
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131427605;
 			
 			// aapt resource value: 0x7f0b0116
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131427606;
+			public const int Theme_AppCompat_DialogWhenLarge = 2131427606;
 			
 			// aapt resource value: 0x7f0b0117
-			public const int Theme_AppCompat_Light_Dialog = 2131427607;
+			public const int Theme_AppCompat_Light = 2131427607;
 			
 			// aapt resource value: 0x7f0b0118
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131427608;
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131427608;
 			
 			// aapt resource value: 0x7f0b0119
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131427609;
+			public const int Theme_AppCompat_Light_Dialog = 2131427609;
 			
 			// aapt resource value: 0x7f0b011a
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427610;
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131427610;
 			
 			// aapt resource value: 0x7f0b011b
-			public const int Theme_AppCompat_Light_NoActionBar = 2131427611;
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131427611;
 			
 			// aapt resource value: 0x7f0b011c
-			public const int Theme_AppCompat_NoActionBar = 2131427612;
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427612;
 			
-			// aapt resource value: 0x7f0b0178
-			public const int Theme_Design = 2131427704;
+			// aapt resource value: 0x7f0b011d
+			public const int Theme_AppCompat_Light_NoActionBar = 2131427613;
 			
-			// aapt resource value: 0x7f0b0179
-			public const int Theme_Design_BottomSheetDialog = 2131427705;
+			// aapt resource value: 0x7f0b011e
+			public const int Theme_AppCompat_NoActionBar = 2131427614;
 			
 			// aapt resource value: 0x7f0b017a
-			public const int Theme_Design_Light = 2131427706;
+			public const int Theme_Design = 2131427706;
 			
 			// aapt resource value: 0x7f0b017b
-			public const int Theme_Design_Light_BottomSheetDialog = 2131427707;
+			public const int Theme_Design_BottomSheetDialog = 2131427707;
 			
 			// aapt resource value: 0x7f0b017c
-			public const int Theme_Design_Light_NoActionBar = 2131427708;
+			public const int Theme_Design_Light = 2131427708;
 			
 			// aapt resource value: 0x7f0b017d
-			public const int Theme_Design_NoActionBar = 2131427709;
+			public const int Theme_Design_Light_BottomSheetDialog = 2131427709;
+			
+			// aapt resource value: 0x7f0b017e
+			public const int Theme_Design_Light_NoActionBar = 2131427710;
+			
+			// aapt resource value: 0x7f0b017f
+			public const int Theme_Design_NoActionBar = 2131427711;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int Theme_MediaRouter = 2131427331;
@@ -4790,26 +6210,26 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0006
 			public const int Theme_MediaRouter_LightControlPanel = 2131427334;
 			
-			// aapt resource value: 0x7f0b011d
-			public const int ThemeOverlay_AppCompat = 2131427613;
-			
-			// aapt resource value: 0x7f0b011e
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131427614;
-			
 			// aapt resource value: 0x7f0b011f
-			public const int ThemeOverlay_AppCompat_Dark = 2131427615;
+			public const int ThemeOverlay_AppCompat = 2131427615;
 			
 			// aapt resource value: 0x7f0b0120
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427616;
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131427616;
 			
 			// aapt resource value: 0x7f0b0121
-			public const int ThemeOverlay_AppCompat_Dialog = 2131427617;
+			public const int ThemeOverlay_AppCompat_Dark = 2131427617;
 			
 			// aapt resource value: 0x7f0b0122
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131427618;
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427618;
 			
 			// aapt resource value: 0x7f0b0123
-			public const int ThemeOverlay_AppCompat_Light = 2131427619;
+			public const int ThemeOverlay_AppCompat_Dialog = 2131427619;
+			
+			// aapt resource value: 0x7f0b0124
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131427620;
+			
+			// aapt resource value: 0x7f0b0125
+			public const int ThemeOverlay_AppCompat_Light = 2131427621;
 			
 			// aapt resource value: 0x7f0b0007
 			public const int ThemeOverlay_MediaRouter_Dark = 2131427335;
@@ -4817,164 +6237,164 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0008
 			public const int ThemeOverlay_MediaRouter_Light = 2131427336;
 			
-			// aapt resource value: 0x7f0b0124
-			public const int Widget_AppCompat_ActionBar = 2131427620;
-			
-			// aapt resource value: 0x7f0b0125
-			public const int Widget_AppCompat_ActionBar_Solid = 2131427621;
-			
 			// aapt resource value: 0x7f0b0126
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131427622;
+			public const int Widget_AppCompat_ActionBar = 2131427622;
 			
 			// aapt resource value: 0x7f0b0127
-			public const int Widget_AppCompat_ActionBar_TabText = 2131427623;
+			public const int Widget_AppCompat_ActionBar_Solid = 2131427623;
 			
 			// aapt resource value: 0x7f0b0128
-			public const int Widget_AppCompat_ActionBar_TabView = 2131427624;
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131427624;
 			
 			// aapt resource value: 0x7f0b0129
-			public const int Widget_AppCompat_ActionButton = 2131427625;
+			public const int Widget_AppCompat_ActionBar_TabText = 2131427625;
 			
 			// aapt resource value: 0x7f0b012a
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427626;
+			public const int Widget_AppCompat_ActionBar_TabView = 2131427626;
 			
 			// aapt resource value: 0x7f0b012b
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131427627;
+			public const int Widget_AppCompat_ActionButton = 2131427627;
 			
 			// aapt resource value: 0x7f0b012c
-			public const int Widget_AppCompat_ActionMode = 2131427628;
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427628;
 			
 			// aapt resource value: 0x7f0b012d
-			public const int Widget_AppCompat_ActivityChooserView = 2131427629;
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131427629;
 			
 			// aapt resource value: 0x7f0b012e
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131427630;
+			public const int Widget_AppCompat_ActionMode = 2131427630;
 			
 			// aapt resource value: 0x7f0b012f
-			public const int Widget_AppCompat_Button = 2131427631;
+			public const int Widget_AppCompat_ActivityChooserView = 2131427631;
 			
 			// aapt resource value: 0x7f0b0130
-			public const int Widget_AppCompat_Button_Borderless = 2131427632;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131427632;
 			
 			// aapt resource value: 0x7f0b0131
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131427633;
+			public const int Widget_AppCompat_Button = 2131427633;
 			
 			// aapt resource value: 0x7f0b0132
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427634;
+			public const int Widget_AppCompat_Button_Borderless = 2131427634;
 			
 			// aapt resource value: 0x7f0b0133
-			public const int Widget_AppCompat_Button_Colored = 2131427635;
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131427635;
 			
 			// aapt resource value: 0x7f0b0134
-			public const int Widget_AppCompat_Button_Small = 2131427636;
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427636;
 			
 			// aapt resource value: 0x7f0b0135
-			public const int Widget_AppCompat_ButtonBar = 2131427637;
+			public const int Widget_AppCompat_Button_Colored = 2131427637;
 			
 			// aapt resource value: 0x7f0b0136
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131427638;
+			public const int Widget_AppCompat_Button_Small = 2131427638;
 			
 			// aapt resource value: 0x7f0b0137
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131427639;
+			public const int Widget_AppCompat_ButtonBar = 2131427639;
 			
 			// aapt resource value: 0x7f0b0138
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131427640;
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131427640;
 			
 			// aapt resource value: 0x7f0b0139
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131427641;
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131427641;
 			
 			// aapt resource value: 0x7f0b013a
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131427642;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131427642;
 			
 			// aapt resource value: 0x7f0b013b
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427643;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131427643;
 			
 			// aapt resource value: 0x7f0b013c
-			public const int Widget_AppCompat_EditText = 2131427644;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131427644;
 			
 			// aapt resource value: 0x7f0b013d
-			public const int Widget_AppCompat_ImageButton = 2131427645;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427645;
 			
 			// aapt resource value: 0x7f0b013e
-			public const int Widget_AppCompat_Light_ActionBar = 2131427646;
+			public const int Widget_AppCompat_EditText = 2131427646;
 			
 			// aapt resource value: 0x7f0b013f
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427647;
+			public const int Widget_AppCompat_ImageButton = 2131427647;
 			
 			// aapt resource value: 0x7f0b0140
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427648;
+			public const int Widget_AppCompat_Light_ActionBar = 2131427648;
 			
 			// aapt resource value: 0x7f0b0141
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427649;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427649;
 			
 			// aapt resource value: 0x7f0b0142
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427650;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427650;
 			
 			// aapt resource value: 0x7f0b0143
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427651;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427651;
 			
 			// aapt resource value: 0x7f0b0144
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427652;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427652;
 			
 			// aapt resource value: 0x7f0b0145
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427653;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427653;
 			
 			// aapt resource value: 0x7f0b0146
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427654;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427654;
 			
 			// aapt resource value: 0x7f0b0147
-			public const int Widget_AppCompat_Light_ActionButton = 2131427655;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427655;
 			
 			// aapt resource value: 0x7f0b0148
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427656;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427656;
 			
 			// aapt resource value: 0x7f0b0149
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427657;
+			public const int Widget_AppCompat_Light_ActionButton = 2131427657;
 			
 			// aapt resource value: 0x7f0b014a
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427658;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427658;
 			
 			// aapt resource value: 0x7f0b014b
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427659;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427659;
 			
 			// aapt resource value: 0x7f0b014c
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427660;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427660;
 			
 			// aapt resource value: 0x7f0b014d
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427661;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427661;
 			
 			// aapt resource value: 0x7f0b014e
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427662;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427662;
 			
 			// aapt resource value: 0x7f0b014f
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427663;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427663;
 			
 			// aapt resource value: 0x7f0b0150
-			public const int Widget_AppCompat_Light_PopupMenu = 2131427664;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427664;
 			
 			// aapt resource value: 0x7f0b0151
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427665;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427665;
 			
 			// aapt resource value: 0x7f0b0152
-			public const int Widget_AppCompat_Light_SearchView = 2131427666;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131427666;
 			
 			// aapt resource value: 0x7f0b0153
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427667;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427667;
 			
 			// aapt resource value: 0x7f0b0154
-			public const int Widget_AppCompat_ListMenuView = 2131427668;
+			public const int Widget_AppCompat_Light_SearchView = 2131427668;
 			
 			// aapt resource value: 0x7f0b0155
-			public const int Widget_AppCompat_ListPopupWindow = 2131427669;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427669;
 			
 			// aapt resource value: 0x7f0b0156
-			public const int Widget_AppCompat_ListView = 2131427670;
+			public const int Widget_AppCompat_ListMenuView = 2131427670;
 			
 			// aapt resource value: 0x7f0b0157
-			public const int Widget_AppCompat_ListView_DropDown = 2131427671;
+			public const int Widget_AppCompat_ListPopupWindow = 2131427671;
 			
 			// aapt resource value: 0x7f0b0158
-			public const int Widget_AppCompat_ListView_Menu = 2131427672;
+			public const int Widget_AppCompat_ListView = 2131427672;
+			
+			// aapt resource value: 0x7f0b0159
+			public const int Widget_AppCompat_ListView_DropDown = 2131427673;
+			
+			// aapt resource value: 0x7f0b015a
+			public const int Widget_AppCompat_ListView_Menu = 2131427674;
 			
 			// aapt resource value: 0x7f0b009f
 			public const int Widget_AppCompat_NotificationActionContainer = 2131427487;
@@ -4982,95 +6402,95 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b00a0
 			public const int Widget_AppCompat_NotificationActionText = 2131427488;
 			
-			// aapt resource value: 0x7f0b0159
-			public const int Widget_AppCompat_PopupMenu = 2131427673;
-			
-			// aapt resource value: 0x7f0b015a
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427674;
-			
 			// aapt resource value: 0x7f0b015b
-			public const int Widget_AppCompat_PopupWindow = 2131427675;
+			public const int Widget_AppCompat_PopupMenu = 2131427675;
 			
 			// aapt resource value: 0x7f0b015c
-			public const int Widget_AppCompat_ProgressBar = 2131427676;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427676;
 			
 			// aapt resource value: 0x7f0b015d
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427677;
+			public const int Widget_AppCompat_PopupWindow = 2131427677;
 			
 			// aapt resource value: 0x7f0b015e
-			public const int Widget_AppCompat_RatingBar = 2131427678;
+			public const int Widget_AppCompat_ProgressBar = 2131427678;
 			
 			// aapt resource value: 0x7f0b015f
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131427679;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427679;
 			
 			// aapt resource value: 0x7f0b0160
-			public const int Widget_AppCompat_RatingBar_Small = 2131427680;
+			public const int Widget_AppCompat_RatingBar = 2131427680;
 			
 			// aapt resource value: 0x7f0b0161
-			public const int Widget_AppCompat_SearchView = 2131427681;
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131427681;
 			
 			// aapt resource value: 0x7f0b0162
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131427682;
+			public const int Widget_AppCompat_RatingBar_Small = 2131427682;
 			
 			// aapt resource value: 0x7f0b0163
-			public const int Widget_AppCompat_SeekBar = 2131427683;
+			public const int Widget_AppCompat_SearchView = 2131427683;
 			
 			// aapt resource value: 0x7f0b0164
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131427684;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131427684;
 			
 			// aapt resource value: 0x7f0b0165
-			public const int Widget_AppCompat_Spinner = 2131427685;
+			public const int Widget_AppCompat_SeekBar = 2131427685;
 			
 			// aapt resource value: 0x7f0b0166
-			public const int Widget_AppCompat_Spinner_DropDown = 2131427686;
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131427686;
 			
 			// aapt resource value: 0x7f0b0167
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427687;
+			public const int Widget_AppCompat_Spinner = 2131427687;
 			
 			// aapt resource value: 0x7f0b0168
-			public const int Widget_AppCompat_Spinner_Underlined = 2131427688;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131427688;
 			
 			// aapt resource value: 0x7f0b0169
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131427689;
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427689;
 			
 			// aapt resource value: 0x7f0b016a
-			public const int Widget_AppCompat_Toolbar = 2131427690;
+			public const int Widget_AppCompat_Spinner_Underlined = 2131427690;
 			
 			// aapt resource value: 0x7f0b016b
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427691;
-			
-			// aapt resource value: 0x7f0b016d
-			public const int Widget_Design_AppBarLayout = 2131427693;
-			
-			// aapt resource value: 0x7f0b017e
-			public const int Widget_Design_BottomNavigationView = 2131427710;
-			
-			// aapt resource value: 0x7f0b017f
-			public const int Widget_Design_BottomSheet_Modal = 2131427711;
-			
-			// aapt resource value: 0x7f0b0180
-			public const int Widget_Design_CollapsingToolbar = 2131427712;
-			
-			// aapt resource value: 0x7f0b0181
-			public const int Widget_Design_CoordinatorLayout = 2131427713;
-			
-			// aapt resource value: 0x7f0b0182
-			public const int Widget_Design_FloatingActionButton = 2131427714;
-			
-			// aapt resource value: 0x7f0b0183
-			public const int Widget_Design_NavigationView = 2131427715;
-			
-			// aapt resource value: 0x7f0b0184
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131427716;
-			
-			// aapt resource value: 0x7f0b0185
-			public const int Widget_Design_Snackbar = 2131427717;
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131427691;
 			
 			// aapt resource value: 0x7f0b016c
-			public const int Widget_Design_TabLayout = 2131427692;
+			public const int Widget_AppCompat_Toolbar = 2131427692;
+			
+			// aapt resource value: 0x7f0b016d
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427693;
+			
+			// aapt resource value: 0x7f0b016f
+			public const int Widget_Design_AppBarLayout = 2131427695;
+			
+			// aapt resource value: 0x7f0b0180
+			public const int Widget_Design_BottomNavigationView = 2131427712;
+			
+			// aapt resource value: 0x7f0b0181
+			public const int Widget_Design_BottomSheet_Modal = 2131427713;
+			
+			// aapt resource value: 0x7f0b0182
+			public const int Widget_Design_CollapsingToolbar = 2131427714;
+			
+			// aapt resource value: 0x7f0b0183
+			public const int Widget_Design_CoordinatorLayout = 2131427715;
+			
+			// aapt resource value: 0x7f0b0184
+			public const int Widget_Design_FloatingActionButton = 2131427716;
+			
+			// aapt resource value: 0x7f0b0185
+			public const int Widget_Design_NavigationView = 2131427717;
 			
 			// aapt resource value: 0x7f0b0186
-			public const int Widget_Design_TextInputLayout = 2131427718;
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131427718;
+			
+			// aapt resource value: 0x7f0b0187
+			public const int Widget_Design_Snackbar = 2131427719;
+			
+			// aapt resource value: 0x7f0b016e
+			public const int Widget_Design_TabLayout = 2131427694;
+			
+			// aapt resource value: 0x7f0b0188
+			public const int Widget_Design_TextInputLayout = 2131427720;
 			
 			// aapt resource value: 0x7f0b0009
 			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131427337;

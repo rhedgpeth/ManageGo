@@ -13,6 +13,14 @@
 
             <controls:FilterView LeftFilterText="All dates" LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue">
+
+                <controls:FilterView.LeftExpandableLayout>
+
+                    <StackLayout Margin="0,15,0,0">
+                        <controls:CalendarView HeightRequest="275" WidthRequest="400" HorizontalOptions="Center" />
+                    </StackLayout>
+
+                </controls:FilterView.LeftExpandableLayout>
                 
                 <controls:FilterView.RightExpandableLayout>
 

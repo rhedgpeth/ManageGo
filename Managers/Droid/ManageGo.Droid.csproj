@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ManageGo.Droid</RootNamespace>
     <AssemblyName>ManageGo.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -126,6 +126,7 @@
     <Compile Include="Renderers\CustomNavigationRenderer.cs" />
     <Compile Include="Renderers\CustomViewCell.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="Renderers\CalendarRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -185,6 +186,14 @@
     <ProjectReference Include="..\..\ManageGo.Core.Droid\ManageGo.Core.Droid.csproj">
       <Project>{0373CA23-DC53-4773-973D-8D30AEDCEEA1}</Project>
       <Name>ManageGo.Core.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Calendar\CustomCalendar.Core\CustomCalendar.Core.csproj">
+      <Project>{5C500D75-6FB4-4F65-BBA4-867E67B28720}</Project>
+      <Name>CustomCalendar.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Calendar\CustomCalendar.Droid\CustomCalendar.Droid.csproj">
+      <Project>{BFA31F1A-8494-4712-A80F-CB0170AB3981}</Project>
+      <Name>CustomCalendar.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

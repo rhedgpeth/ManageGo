@@ -131,6 +131,7 @@
     <Compile Include="Renderers\CustomNavigationRenderer.cs" />
     <Compile Include="Renderers\BasePageRenderer.cs" />
     <Compile Include="Renderers\CustomViewCellRenderer.cs" />
+    <Compile Include="Renderers\CalendarRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
@@ -148,6 +149,14 @@
     <ProjectReference Include="..\..\ManageGo.Core.iOS\ManageGo.Core.iOS.csproj">
       <Project>{529CF9F9-CC97-4330-9DCD-0149D761C00A}</Project>
       <Name>ManageGo.Core.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Calendar\CustomCalendar.Core\CustomCalendar.Core.csproj">
+      <Project>{5C500D75-6FB4-4F65-BBA4-867E67B28720}</Project>
+      <Name>CustomCalendar.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Calendar\CustomCalendar.iOS\CustomCalendar.iOS.csproj">
+      <Project>{74AFEE3F-E3FD-40C7-8033-EB62AFB86A0B}</Project>
+      <Name>CustomCalendar.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
