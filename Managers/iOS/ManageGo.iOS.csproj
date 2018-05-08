@@ -116,6 +116,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Renderers\" />
+    <Folder Include="Effects\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -132,6 +133,7 @@
     <Compile Include="Renderers\BasePageRenderer.cs" />
     <Compile Include="Renderers\CustomViewCellRenderer.cs" />
     <Compile Include="Renderers\CalendarRenderer.cs" />
+    <Compile Include="Effects\ChangeColorSwitchEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
@@ -195,6 +197,8 @@
     <BundleResource Include="Resources\logo_simple%402x.png" />
     <BundleResource Include="Resources\building_grey%402x.png" />
     <BundleResource Include="Resources\building_grey%403x.png" />
+    <BundleResource Include="Resources\pencil_grey%402x.png" />
+    <BundleResource Include="Resources\pencil_grey%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets')" />

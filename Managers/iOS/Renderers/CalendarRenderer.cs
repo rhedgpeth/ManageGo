@@ -51,13 +51,13 @@ namespace ManageGo.iOS.Renderers
 
             ResetNativeView();
 
-            _calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight));
+            _calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight), Element.AllowMultipleSelection);
 
 			_calendarView.OnCurrentMonthYearChange += CurrentMonthYearChanged;
 
             SetNativeControl(_calendarView);
         }
-
+        
         void ResetNativeView()
         {
             if (_calendarView != null)

@@ -17,13 +17,22 @@
                 <controls:FilterView.LeftExpandableLayout>
 
                     <StackLayout Margin="0,15,0,0">
-                        <controls:CalendarView HeightRequest="275" WidthRequest="400" HorizontalOptions="Center" />
+                        
+                        <controls:CalendarView AllowMultipleSelection="true" HeightRequest="275" WidthRequest="400" HorizontalOptions="Center" />
+
+                        <Button Text="Apply" TextColor="White" FontAttributes="Bold" WidthRequest="300"
+                                HorizontalOptions="Center" BackgroundColor="#55C433" />
+                        
                     </StackLayout>
 
                 </controls:FilterView.LeftExpandableLayout>
                 
                 <controls:FilterView.RightExpandableLayout>
 
+                    <!--
+                    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    -->
+                    
                     <StackLayout>
 
                         <controls:SearchView />
@@ -113,7 +122,11 @@
                         </StackLayout>
 
                     </StackLayout>
-                        
+
+                    <!--
+                    </ScrollView>  
+                    -->
+                    
                 </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
 

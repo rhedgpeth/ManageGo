@@ -82,12 +82,9 @@ namespace ManageGo.UI.Droid.Renderers
             
             ResetNativeView();
 
-            _calendarView = new CalendarViewPager(Context);
-
+            _calendarView = new CalendarViewPager(Context, Element.AllowMultipleSelection);
 			_calendarView.OnCurrentMonthYearChange += CurrentMonthYearChanged;
-
-            //_calendarView.AllowMultipleSelection = false;
-
+         
             var layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
           
             _calendarView.LayoutParameters = layoutParams;

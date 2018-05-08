@@ -3,11 +3,120 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    xmlns:effects="clr-namespace:ManageGo.Effects;assembly=ManageGo"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.SettingsPage"
     x:TypeArguments="vm:SettingsViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="0" Spacing="10">
+                <Label Text="Profile" FontSize="16" FontAttributes="Bold" Margin="35,10,0,0" />
+                <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />     
+
+                <Grid RowSpacing="10" Margin="35,0,25,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Name" FontSize="12" TextColor="#AAABAE" VerticalOptions="Center" />
+                    <controls:EditableLabel Grid.Row="0" Grid.Column="1" Value="{Binding Name}" EditIcon="pencil_grey"
+                                            HorizontalOptions="FillAndExpand" />
+                    <BoxView Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Email" FontSize="12" TextColor="#AAABAE" VerticalOptions="Center" />
+                    <controls:EditableLabel Grid.Row="2" Grid.Column="1" Value="{Binding Email}" EditIcon="pencil_grey"
+                                            HorizontalOptions="FillAndExpand" />
+                    <BoxView Grid.Row="3" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <Label Grid.Row="4" Grid.Column="0" Text="Display name" FontSize="12" TextColor="#AAABAE" VerticalOptions="Center" />
+                    <controls:EditableLabel Grid.Row="4" Grid.Column="1" Value="{Binding DisplayName}" EditIcon="pencil_grey"
+                                            HorizontalOptions="FillAndExpand" />
+                    <BoxView Grid.Row="5" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <Label Grid.Row="6" Grid.Column="0" Text="Password" FontSize="12" TextColor="#AAABAE" VerticalOptions="Center" />
+                    <controls:EditableLabel Grid.Row="6" Grid.Column="1" Value="{Binding Password}" EditIcon="pencil_grey"
+                                            HorizontalOptions="FillAndExpand" />
+                    <BoxView Grid.Row="7" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <StackLayout Grid.Row="8" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
+                        <Label Text="Push notifications" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Switch Scale=".5" HorizontalOptions="EndAndExpand"
+                                effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                    </StackLayout>
+                    <BoxView Grid.Row="9" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <StackLayout Grid.Row="10" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
+                        <Label Text="Enable fingerprint login" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                                effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                    </StackLayout>
+                    <BoxView Grid.Row="11" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+                    
+                    <Label Grid.Row="12" Grid.ColumnSpan="2" Text="Notifications" FontSize="16" FontAttributes="Bold" Margin="0,10,0,0" />
+                    <BoxView Grid.Row="13" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <StackLayout Grid.Row="14" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
+                        <Label Text="Enable fingerprint login" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                                effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                    </StackLayout>
+                    <BoxView Grid.Row="15" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <StackLayout Grid.Row="16" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
+                        <Label Text="Enable fingerprint login" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                                effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                    </StackLayout>
+                    <BoxView Grid.Row="17" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <StackLayout Grid.Row="18" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
+                        <Label Text="Enable fingerprint login" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                                effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                    </StackLayout>
+                    <BoxView Grid.Row="19" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
+
+                    <StackLayout Grid.Row="20" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
+                        <Label Text="Enable fingerprint login" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                                effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                    </StackLayout>
+                    <BoxView Grid.Row="21" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />  
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </local:BaseContentPage>

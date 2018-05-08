@@ -14,6 +14,19 @@
 
             <controls:FilterView LeftFilterText="May 5 - May 15" LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue"> 
+
+                <controls:FilterView.LeftExpandableLayout>
+
+                    <StackLayout Margin="0,15,0,0">
+                        
+                        <controls:CalendarView AllowMultipleSelection="true" HeightRequest="275" WidthRequest="400" HorizontalOptions="Center" />
+
+                        <Button Text="Apply" TextColor="White" FontAttributes="Bold" WidthRequest="300"
+                                HorizontalOptions="Center" BackgroundColor="#55C433" />
+                        
+                    </StackLayout>
+
+                </controls:FilterView.LeftExpandableLayout>
                 
                 <controls:FilterView.RightExpandableLayout>
 

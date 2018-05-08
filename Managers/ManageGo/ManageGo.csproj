@@ -20,6 +20,7 @@
     <Folder Include="DataTemplates\ViewCells\" />
     <Folder Include="Converters\" />
     <Folder Include="Controls\" />
+    <Folder Include="Effects\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />

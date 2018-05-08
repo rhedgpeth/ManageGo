@@ -17,6 +17,10 @@ namespace CustomCalendar.Droid
 		public delegate void CurrentMonthYearHandler(DateTime date);
 		public event CurrentMonthYearHandler OnCurrentMonthYearChange;            
 
+		public bool AllowMultipleSelection { get; set; }
+
+        DateRange SelectedDates { get; set; }
+
 		bool IsDragging { get; set; }
 
 		DateTime NextMonth { get; set; }
@@ -27,8 +31,10 @@ namespace CustomCalendar.Droid
         public DrawableControlView<CalendarMonthControl> Item1 { get; set; }
         public DrawableControlView<CalendarMonthControl> Item2 { get; set; }
 
-		public CalendarViewPager(Android.Content.Context context) : base(context)
+		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection) : base(context)
 		{
+			AllowMultipleSelection = allowMultipleSelection;
+
 			Adapter = new CalendarPageAdapter(this);
 
 			AddOnPageChangeListener(new OnPageChangeListener(this));
@@ -41,7 +47,7 @@ namespace CustomCalendar.Droid
 
 			SetMonth(DateTime.Now);
 		}
-                    
+         
 		DateTime? _selectedDate;
 		public DateTime? SelectedDate
 		{
@@ -54,13 +60,15 @@ namespace CustomCalendar.Droid
 				if (value.HasValue)
 				{
 					var dt = value.Value;
+
 					_selectedDate = value.Value.Date;
-					UpdateSelectedDates(new DateTime[] { dt });
+
+					UpdateSelectedDates(dt);
 				}
 				else
 				{
-					_selectedDate = null;
-					UpdateSelectedDates(new DateTime[] { });
+					_selectedDate = null;               
+					//UpdateSelectedDates(new DateTime[] { });
 				}
 			}
 		}
@@ -71,17 +79,20 @@ namespace CustomCalendar.Droid
 			if (e.Action == MotionEventActions.Down)
 			{
 				var pager = this;
+
 				if (pager.CurrentItem == 0)
 				{
 					pager.SetCurrentItem(1, false);
 					pager.SetMonth(pager.PreviousMonth);
-					this.Invalidate();
+
+					Invalidate();
 				}
 				else if (pager.CurrentItem == 2)
 				{
 					pager.SetCurrentItem(1, false);
 					pager.SetMonth(pager.NextMonth);
-					this.Invalidate();
+
+					Invalidate();
 				}
 			}
 
@@ -90,22 +101,31 @@ namespace CustomCalendar.Droid
 				var x = e.GetX();
 				var y = e.GetY();
 				var points = new SKPoint[] { new SKPoint(x, y) };
+
 				Item1.ControlDelegate.EndInteractions(points);
 			}
 
 			return base.DispatchTouchEvent(e);
 		}
 
-		void UpdateSelectedDates(IEnumerable<DateTime> dateTimes)
-        {
-            if (dateTimes.Count() == 1)
-            {
-                //this.DateSelected?.Invoke(dateTimes.ElementAt(0));
-            }
 
-            Item0.ControlDelegate.HighlightedDates = dateTimes;
-            Item1.ControlDelegate.HighlightedDates = dateTimes;
-            Item2.ControlDelegate.HighlightedDates = dateTimes;
+
+		void UpdateSelectedDates(DateTime selectedDate)
+        {
+			//DateSelected(selectedDate);
+         
+			if (SelectedDates == null || !AllowMultipleSelection)
+			{
+				SelectedDates = new DateRange(selectedDate);
+			}
+			else if (AllowMultipleSelection)
+			{
+				SelectedDates.AddDate(selectedDate);
+			}
+
+            Item0.ControlDelegate.SelectedDates = SelectedDates;
+            Item1.ControlDelegate.SelectedDates = SelectedDates;
+            Item2.ControlDelegate.SelectedDates = SelectedDates;
             
 			Item0.Invalidate();
             Item1.Invalidate();
@@ -142,6 +162,7 @@ namespace CustomCalendar.Droid
             public void OnPageScrolled(int position, float positionOffset, int positionOffsetPixels)
             {
                 CalendarViewPager pager = null;
+
                 if (_weakPager.TryGetTarget(out pager))
                 {
                     var shouldUpdate = false;
@@ -149,8 +170,10 @@ namespace CustomCalendar.Droid
                     if (pager.ScrollX == 0 && !_isInitialized)
                     {
                         _isInitialized = true;
+
                         pager.SetCurrentItem(1, false);
                         pager.ScrollX = pager.Width;
+
                         shouldUpdate = true;
                     }
 
@@ -186,6 +209,7 @@ namespace CustomCalendar.Droid
             public void OnPageScrollStateChanged(int state)
             {
                 CalendarViewPager pager = null;
+
                 if (_weakPager.TryGetTarget(out pager))
                 {
                     pager.IsDragging = state == 1;
@@ -193,8 +217,7 @@ namespace CustomCalendar.Droid
             }
 
             public void OnPageSelected(int position)
-            {
-            }
+            {  }
         }
 	}
 }

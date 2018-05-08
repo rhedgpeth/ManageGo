@@ -5,6 +5,8 @@ namespace ManageGo.Controls
 {
 	public class Calendar : View
     {
+		public bool AllowMultipleSelection { get; set; }
+
         public static readonly BindableProperty SelectedDateProperty
             = BindableProperty.Create(nameof(SelectedDate),
                                       typeof(DateTime),

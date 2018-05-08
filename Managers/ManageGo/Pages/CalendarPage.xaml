@@ -9,13 +9,9 @@
     x:TypeArguments="vm:CalendarViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout Margin="0" Padding="10">
 
-            <!--
-            <controls:Calendar HeightRequest="200" WidthRequest="400" HorizontalOptions="Center" />
-            -->
-
-            <controls:CalendarView HeightRequest="300" WidthRequest="400" HorizontalOptions="Center" />
+            <controls:CalendarView AllowMultipleSelection="false" HeightRequest="300" WidthRequest="400" HorizontalOptions="Center" />
             
         </StackLayout>
     </ContentPage.Content>

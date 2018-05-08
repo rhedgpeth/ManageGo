@@ -5,6 +5,18 @@ using SkiaSharp;
 
 namespace CustomCalendar
 {
+    public enum HighlightType
+	{
+		Dark,
+        Light
+	}
+
+    public class HighlightedDay
+	{
+		public HighlightType Type { get; set; }
+		public int Day { get; set; }
+	}
+
 	public class CalendarMonthModel
 	{
 		public int Year { get; private set; }
@@ -15,9 +27,9 @@ namespace CustomCalendar
 
 		public int GridSize { get; private set; }
 
-		public IEnumerable<int> HighlightedDays { get; private set; }
+		public IEnumerable<HighlightedDay> HighlightedDays { get; private set; }
 
-		CalendarMonthModel(int year, int month, IEnumerable<CalendarDayModel> calendarDays, int gridSize, IEnumerable<int> highlightedDays)
+		CalendarMonthModel(int year, int month, IEnumerable<CalendarDayModel> calendarDays, int gridSize, IEnumerable<HighlightedDay> highlightedDays)
 		{
 			Year = year;
 			Month = month;
@@ -31,7 +43,7 @@ namespace CustomCalendar
 			return this.Days.FirstOrDefault(day => day.Rectangle.Contains(point));
 		}
         
-		public static CalendarMonthModel Create(int year, int month, IEnumerable<int> highlightedDays, int width, int height)
+		public static CalendarMonthModel Create(int year, int month, IEnumerable<HighlightedDay> highlightedDays, int width, int height)
 		{
 			var monthDate = new DateTime(year, month, 1);
 
@@ -78,6 +90,7 @@ namespace CustomCalendar
 					var y = (float)((((gridSize / 1.25 )) * i)) + offset_y;
 
 					calendarDays.Add(new CalendarDayModel(date.Year, date.Month, date.Day, x, y, gridSize, gridSize));
+
 					date = date.AddDays(1);
 				}
 			}

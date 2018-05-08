@@ -11,10 +11,26 @@ namespace CustomCalendar.iOS
 		public delegate void CurrentMonthYearHandler(DateTime date);
         public event CurrentMonthYearHandler OnCurrentMonthYearChange; 
 
+		internal bool AllowMultipleSelection { get; set; }
+
+		DateRange _selectedDates;
+        public DateRange SelectedDates
+        {
+            get
+            {
+                if (_selectedDates == null)
+                    _selectedDates = new DateRange(DateTime.Now.Date);
+
+                return _selectedDates;
+            }
+            set => _selectedDates = value;
+        }
+
 		class CalendarViewDelegate : IInfiniteScrollViewDelegate<CalendarViewCell>
 		{
 			WeakReference<CalendarView> _weakView;
 
+            /*
 			void SelectDate(CalendarViewCell cell, DateTime? date)
 			{
 				if (date != null)
@@ -25,7 +41,7 @@ namespace CustomCalendar.iOS
 				{
 					cell.ControlDelegate.HighlightedDates = new DateTime[] { };
 				}
-			}
+			}*/
 
 			public CalendarViewDelegate(WeakReference<CalendarView> weakView)
 			{
@@ -34,33 +50,25 @@ namespace CustomCalendar.iOS
 
 			public void InitializeCell(InfiniteScrollView<CalendarViewCell> infiniteScrollView, CalendarViewCell cell, int index)
 			{
-				cell.ControlDelegate.DatesInteracted += dateTimes =>
+				cell.ControlDelegate.DatesInteracted += selectedDate =>
 				{
 					CalendarView v;
+
 					if (_weakView.TryGetTarget(out v))
-					{
-						var date = dateTimes.ElementAt(0);
-						cell.ControlDelegate.HighlightedDates = new DateTime[] { date };
-						v.DateSelected?.Invoke(date);
-						v.SelectedDate = date;
-						cell.SetNeedsDisplay();
+					{                  
+						//cell.ControlDelegate.HighlightedDates = new DateTime[] { date };
+
+						if (v.AllowMultipleSelection)
+                            v.SelectedDates.AddDate(selectedDate);
+                        else
+                            v.SelectedDates.SetStartDate(selectedDate);
+
+						cell.ControlDelegate.AllowMultipleSelection = v.AllowMultipleSelection;
+                        cell.ControlDelegate.SelectedDates = v.SelectedDates;
+
+                        cell.SetNeedsDisplay();
 					}
-				};
-
-				var weakCell = new WeakReference<CalendarViewCell>(cell);
-
-				CalendarView view;
-				if (_weakView.TryGetTarget(out view))
-				{
-					view.SelectedDateChanged += dateTime =>
-					{
-						CalendarViewCell c;
-						if (weakCell.TryGetTarget(out c))
-						{
-							SelectDate(c, view.SelectedDate);
-						}
-					};
-				}            
+				};           
 			}
 
 			public void UpdateCell(InfiniteScrollView<CalendarViewCell> infiniteScrollView, CalendarViewCell cell, int index)
@@ -83,7 +91,10 @@ namespace CustomCalendar.iOS
 						cell.ControlDelegate.Date = view.Month.AddMonths(-1);
 					}
 
-					SelectDate(cell, view.SelectedDate);
+					//SelectDate(cell, view.SelectedDate);
+
+					cell.ControlDelegate.AllowMultipleSelection = view.AllowMultipleSelection;
+                    cell.ControlDelegate.SelectedDates = view.SelectedDates;
 
 					cell.SetNeedsDisplay();
 				}
@@ -112,8 +123,10 @@ namespace CustomCalendar.iOS
 
 		DateTime Month { get; set; }
 
-		public CalendarView(CGRect frame) : base(frame)
+		public CalendarView(CGRect frame, bool allowMultipleSelection) : base(frame)
 		{
+			AllowMultipleSelection = allowMultipleSelection;
+
 			var del = new CalendarViewDelegate(new WeakReference<CalendarView>(this));
 			var infiniteScrollView = new InfiniteScrollView<CalendarViewCell>(del, frame);
 

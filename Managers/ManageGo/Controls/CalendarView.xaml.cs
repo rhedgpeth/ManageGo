@@ -8,6 +8,25 @@ namespace ManageGo.Controls
 {
     public partial class CalendarView : Grid
     {
+		public static readonly BindableProperty AllowMultipleSelectionProperty = BindableProperty.Create(nameof(AllowMultipleSelection),
+                                                                                        typeof(bool),
+                                                                                        typeof(CalendarView),
+                                                                                        false,
+		                                                                                                 propertyChanged: AllowMultipleSelectionPropertyChanged);
+
+
+		public bool AllowMultipleSelection
+        {
+			get { return (bool)GetValue(AllowMultipleSelectionProperty); }
+			set { SetValue(AllowMultipleSelectionProperty, value); }
+        }
+
+        static void AllowMultipleSelectionPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var calendarView = bindable as CalendarView;
+            calendarView.calendar.AllowMultipleSelection = (bool)newValue;
+        }
+
         public CalendarView()
         {
             InitializeComponent();

@@ -47,8 +47,7 @@ namespace CustomCalendar
 			paint.IsAntialias = true;
 			paint.StrokeCap = SKStrokeCap.Square;
 			paint.Style = SKPaintStyle.Fill;
-			paint.StrokeWidth = 0;
-			paint.Color = SKColor.Parse("#55C433");
+			paint.StrokeWidth = 0;         
 
 			canvas.DrawRoundRect(rect, 10, 10, paint);
 		}
@@ -76,17 +75,26 @@ namespace CustomCalendar
 			{
 				text = date.Day.ToString();
 			
-			    if (calendarDay.IsHighlighted)
+			    if (calendarDay.Type != null)
 				{
 					var adjusted_x = x + (width * .125f);
 					var adjusted_y = y + (height * .125f);
 
 					var adjusted_width = width * .75f;
 					var adjusted_height = height * .75f;
+                    
+					if (calendarDay.Type == HighlightType.Dark)
+					{
+						paint.Color = SKColor.Parse("#55C433");
+						textPaint.Color = SKColors.White;
+					}
+					else
+					{
+						paint.Color = SKColor.Parse("#E5F6DB");
+						textPaint.Color = SKColor.Parse("#737387");
+					}
 
 					DrawRectangle(canvas, paint, adjusted_x, adjusted_y, adjusted_width, adjusted_height);
-
-					textPaint.Color = SKColors.White;
 				}
 				else if (!isTargetMonth)
 				{
@@ -113,7 +121,7 @@ namespace CustomCalendar
 			var gridSize = calendarMonth.GridSize;
 			var dateTime = new DateTime(calendarMonth.Year, calendarMonth.Month, 1);
 			var date = dateTime.AddDays(-dateTime.Day + 1);
-
+         
 			using (var textPaint = new SKPaint())
 			{
 				using (var paint = new SKPaint())
@@ -122,11 +130,14 @@ namespace CustomCalendar
 					{            
 						foreach (var calendarDay in calendarMonth.Days)
 						{
-							foreach (var highlightDay in calendarMonth.HighlightedDays)
+							if (calendarMonth.HighlightedDays?.Count() > 0)
 							{
-								if (highlightDay == calendarDay.DateTime.Day && calendarDay.DateTime.Month == calendarMonth.Month) 
+								foreach (var highlightDay in calendarMonth.HighlightedDays)
 								{
-									calendarDay.IsHighlighted = true;
+									if (highlightDay.Day == calendarDay.DateTime.Day && calendarDay.DateTime.Month == calendarMonth.Month)
+									{
+										calendarDay.Type = highlightDay.Type;
+									}
 								}
 							}
 	

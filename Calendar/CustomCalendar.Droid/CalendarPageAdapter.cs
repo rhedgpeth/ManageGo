@@ -31,9 +31,11 @@ namespace CustomCalendar.Droid
 		public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
 		{
 			CalendarViewPager pager = null;
+
 			if (_weakPager.TryGetTarget(out pager))
 			{
 				var color = Android.Graphics.Color.Red;
+
 				if (position == 1)
 				{
 					color = Android.Graphics.Color.Blue;
@@ -44,6 +46,7 @@ namespace CustomCalendar.Droid
 				}
 
 				View view;
+
 				switch (position)
 				{
 					case 0:
@@ -65,6 +68,7 @@ namespace CustomCalendar.Droid
 
 				container.RemoveView(view);
 				container.AddView(view);
+
 				return view;	
 			}
 
@@ -72,13 +76,11 @@ namespace CustomCalendar.Droid
 		}
 
 		public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object objectValue)
-		{
-		}
+		{ }
 
-		public override bool IsViewFromObject(Android.Views.View view, Java.Lang.Object objectValue)
+		public override bool IsViewFromObject(View view, Java.Lang.Object objectValue)
 		{
 			return view == objectValue;
 		}
 	}
-	
 }
