@@ -11,9 +11,9 @@ namespace ManageGo.DataTemplates.Selectors
         {
             switch (item)
             {
-                case NotificationSectionHeaderViewModel _:
+                case CalendarSectionHeaderViewModel _:
                     return CalendarSectionHeaderCell.Template;
-                case NotificationDetailsViewModel _:
+                case CalendarDetailsViewModel _:
                     return CalendarDetailsCell.Template;
                 default:
                     throw new ArgumentException($"Unknown item type '{item?.GetType()}'", nameof(item));

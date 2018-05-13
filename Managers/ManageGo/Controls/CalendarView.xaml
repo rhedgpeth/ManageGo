@@ -16,8 +16,17 @@
         <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
-    <Label Grid.Row="0" Grid.Column="1" Text="{Binding CurrentMonthYearDescription}" HorizontalTextAlignment="Center" 
-           FontSize="14" FontAttributes="Bold" />
+    <StackLayout Spacing="15" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+
+        <Image Source="chevron_left" VerticalOptions="Center" />
+        
+        <Label Text="{Binding CurrentMonthYearDescription}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                FontSize="14" FontAttributes="Bold" />
+
+        <Image Source="chevron_right" VerticalOptions="Center" />
+        
+    </StackLayout>
+
 
     <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 

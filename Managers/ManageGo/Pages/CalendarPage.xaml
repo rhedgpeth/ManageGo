@@ -9,10 +9,25 @@
     x:TypeArguments="vm:CalendarViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <StackLayout Margin="0" Padding="10">
 
-            <controls:CalendarView AllowMultipleSelection="false" HeightRequest="300" WidthRequest="400" HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".4*" />
+                <RowDefinition Height=".6*" />  
+            </Grid.RowDefinitions>
+
+            <controls:CalendarView Grid.Row="0" AllowMultipleSelection="false" 
+                                   HeightRequest="300" WidthRequest="400" HorizontalOptions="Center" />
+
+            <ListView   
+                x:Name="listView"
+                Grid.Row="1"
+                ItemsSource="{Binding Items}"
+                SeparatorVisibility="None" 
+                HasUnevenRows="true"
+                BackgroundColor="#F9FAFB" />
             
-        </StackLayout>
+        </Grid>
+
     </ContentPage.Content>
 </local:BaseContentPage>

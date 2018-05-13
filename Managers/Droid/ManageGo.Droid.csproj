@@ -173,6 +173,8 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\building_red.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\pencil_grey.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\profile_red.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chevron_left.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chevron_right.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
