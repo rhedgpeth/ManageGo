@@ -131,6 +131,7 @@
             <converters:IsExpandedRotationConverter x:Key="cnvExpandedRotation"></converters:IsExpandedRotationConverter>
             <converters:ListToCommaSeparatedStringConverter x:Key="cnvListToCommaSeparatedString"></converters:ListToCommaSeparatedStringConverter>
             <converters:TransactionSourceTypeToImageConverter x:Key="cnvTransactionSourceTypeToImage"></converters:TransactionSourceTypeToImageConverter>
+            <converters:NotificationTypeToImageConverter x:Key="cnvNotificationTypeToImage"></converters:NotificationTypeToImageConverter>
             
         </ResourceDictionary>
     </Application.Resources>

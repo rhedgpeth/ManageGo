@@ -14,6 +14,8 @@
     <Folder Include="ViewModels\Transactions\" />
     <Folder Include="ViewModels\Buildings\" />
     <Folder Include="Enumerations\" />
+    <Folder Include="ViewModels\Notifications\" />
+    <Folder Include="ViewModels\Calendar\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />

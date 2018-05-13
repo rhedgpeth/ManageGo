@@ -170,6 +170,9 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\bank_grey.png" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\logo_simple.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\building_red.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pencil_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_red.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
