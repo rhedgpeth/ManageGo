@@ -14,9 +14,9 @@
                 <ColumnDefinition Width="35" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="15" />
                 <RowDefinition Height="1" />
             </Grid.RowDefinitions>
 
@@ -38,7 +38,7 @@
                 <Label Text="{Binding Location}" FontSize="14" VerticalTextAlignment="Center" />
             </StackLayout>
 
-            <BoxView Grid.Row="3" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+            <BoxView Grid.Row="3" Grid.ColumnSpan="2" IsVisible="{Binding IsCollapsed}" HeightRequest="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
             
         </Grid>
 

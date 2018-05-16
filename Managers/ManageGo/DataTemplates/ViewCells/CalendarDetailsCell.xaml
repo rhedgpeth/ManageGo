@@ -2,10 +2,56 @@
 <ViewCell 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     x:Class="ManageGo.DataTemplates.ViewCells.CalendarDetailsCell">
 
-    <StackLayout>
-        
-    </StackLayout>
+    <Frame Padding="0" Margin="15,0,15,0" IsClippedToBounds="False" 
+           HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+    
+        <Grid RowSpacing="15" Margin="10,0,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="35" /> 
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="15" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.ColumnSpan="3" Text="{Binding Description}" FontSize="14" />
+            <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="#DBDBDC" HorizontalOptions="FillAndExpand" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Participants" TextColor="#AAABAE" FontSize="12" />
+            <Label Grid.Row="2" Grid.Column="1" 
+                   Text="{Binding Participants, Converter={StaticResource cnvListToCommaSeparatedString}}" 
+                   FontSize="12" />
+            <Image Grid.Row="2" Grid.Column="2" Source="chevron_right" Aspect="AspectFit" VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="#DBDBDC" HorizontalOptions="FillAndExpand" />
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Event date" TextColor="#AAABAE" FontSize="12" />
+            <Label Grid.Row="4" Grid.Column="1" Text="{Binding EventDateDescription}" FontSize="12" />
+            <Image Grid.Row="4" Grid.Column="2" Source="chevron_right" Aspect="AspectFit" VerticalOptions="Center" />
+            <BoxView Grid.Row="5" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="#DBDBDC" HorizontalOptions="FillAndExpand" />
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Event time" TextColor="#AAABAE" FontSize="12" />
+            <Label Grid.Row="6" Grid.Column="1" Text="{Binding EventTimeDescription}" FontSize="12" />
+            <Image Grid.Row="6" Grid.Column="2" Source="chevron_right" Aspect="AspectFit" VerticalOptions="Center" />
+            <BoxView Grid.Row="7" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="#DBDBDC" HorizontalOptions="FillAndExpand" />
+
+            <controls:TappableLabel Grid.Row="8" Grid.ColumnSpan="3" Text="View ticket" TextColor="#58A0F4" 
+                                    FontSize="12" TappedCommand="{Binding ViewTicketCommand}" />
+            
+        </Grid>
+
+    </Frame>
     
 </ViewCell>

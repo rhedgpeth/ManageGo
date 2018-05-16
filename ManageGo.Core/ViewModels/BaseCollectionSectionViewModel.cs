@@ -5,13 +5,25 @@ using System.Collections.Generic;
 namespace ManageGo.Core.ViewModels
 {
 	public abstract class BaseCollectionSectionViewModel : BaseNotify
-    {
+	{
 		bool _isExpanded;
-        public bool IsExpanded
+		public bool IsExpanded
 		{
 			get => _isExpanded;
-			set => SetPropertyChanged(ref _isExpanded, value);
+			set 
+			{
+				SetPropertyChanged(ref _isExpanded, value);
+				SetPropertyChanged(nameof(IsCollapsed));
+			}
 		}
+        
+		public bool IsCollapsed
+        {
+			get
+			{
+				return !_isExpanded;
+			}
+        }
 
 		IList<object> _children;
 		public IList<object> Children
@@ -19,8 +31,5 @@ namespace ManageGo.Core.ViewModels
 			get => _children;
 			set => _children = value;
 		}
-
-        public BaseCollectionSectionViewModel()
-        { }
     }
 }

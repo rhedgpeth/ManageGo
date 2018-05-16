@@ -10,7 +10,7 @@ namespace ManageGo.Core.Managers.ViewModels
 		public string TimeDescription { get; set; }      
 		public string DateDescription { get; set; }      
 		public string Title { get; set; }      
-		public string Location { get; set; }      
+		public string Location { get; set; }
 
 		public CalendarSectionHeaderViewModel(MaintenanceTicket ticket)
         {         
@@ -29,5 +29,5 @@ namespace ManageGo.Core.Managers.ViewModels
                 new CalendarDetailsViewModel(ticket)
             };
         }
-    }
+	}
 }
