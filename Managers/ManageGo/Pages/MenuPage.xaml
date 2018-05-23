@@ -13,7 +13,7 @@
         
     <StackLayout Margin="0">
 
-        <StackLayout HorizontalOptions="FillAndExpand" Margin="0,40,0,0">
+        <StackLayout HorizontalOptions="FillAndExpand" Margin="0,28,0,0">
 
             <Image Source="logo" WidthRequest="200" HeightRequest="75" Margin="15,0,0,0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />

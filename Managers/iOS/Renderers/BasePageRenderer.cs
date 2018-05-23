@@ -52,13 +52,21 @@ namespace ManageGo.iOS.Renderers
                 ParentViewController.NavigationItem.TitleView = _imageView;
             }
         }
-              
-        public override void ViewWillAppear(bool animated)
+
+		public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
             
+			if (ParentViewController?.NavigationController?.NavigationItem != null)
+            {
+                ParentViewController.NavigationController.NavigationBar.BackIndicatorImage = UIImage.FromFile("nav_back_icon");
+                ParentViewController.NavigationController.NavigationBar.BackIndicatorTransitionMaskImage = UIImage.FromFile("nav_back_icon");
+            }
+
             if (ParentViewController?.NavigationItem != null)
-            {            
+            {      
+				ParentViewController.NavigationItem.BackBarButtonItem = new UIBarButtonItem("", UIBarButtonItemStyle.Plain, null);
+
                 _imageView = new UIImageView(UIImage.FromFile("logo.png"))
                 {
                     ContentMode = UIViewContentMode.ScaleAspectFit
