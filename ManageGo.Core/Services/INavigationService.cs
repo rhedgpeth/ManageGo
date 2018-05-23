@@ -21,7 +21,7 @@ namespace ManageGo.Core.Services
         Task PopToRootAsync(bool animate);
       
         Task SetDetailView<T>(Action<T> initialize = null) where T : BaseNavigationViewModel;
-        Task SetDetailView(BaseNavigationViewModel viewModel);
+		Task SetDetailView(BaseNavigationViewModel viewModel, bool allowSamePageSet = false);
 
         void SetRootView(BaseNavigationViewModel viewModel, bool withNavigationEnabled = true);      
     }

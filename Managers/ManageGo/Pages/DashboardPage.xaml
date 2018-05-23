@@ -9,11 +9,12 @@
     ControlTemplate="{StaticResource HeaderNoBorderPageTemplate}">
     <ContentPage.Content>
 
-        <StackLayout Margin="0" Padding="0">
+        <StackLayout>
 
-            <Image Source="dashboard_1.jpg" HorizontalOptions="FillAndExpand" Margin="0" />
+            <Image Source="dashboard_1.jpg" Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand" Margin="0" BackgroundColor="White" />
 
-            <StackLayout BackgroundColor="#F9FAFB" Padding="10,20,10,0" Margin="0">
+            <StackLayout Padding="10,20,10,0" Margin="0">
             
                 <Frame Padding="0" IsClippedToBounds="False" HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
                     <StackLayout HorizontalOptions="FillAndExpand">
@@ -75,15 +76,15 @@
                     </StackLayout>
                 </Frame>
 
-                <StackLayout Margin="0,10,0,0" Spacing="0">
-                    <Label Text="Highview Management" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" 
-                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="#323232" />
-                    <Label Text="Open the menu to get started" FontSize="11" HorizontalTextAlignment="Center"
-                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="#5D5E60"/>
-                </StackLayout>
-               
             </StackLayout>
-                    
+
+            <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+                    <Label Text="Highview Management" FontSize="16" FontAttributes="Bold"  
+                           HorizontalOptions="Center" TextColor="#323232" />
+                    <Label Text="Open the menu to get started" FontSize="11" 
+                           HorizontalOptions="Center" TextColor="#5D5E60"/>
+            </StackLayout>
+
         </StackLayout>
         
     </ContentPage.Content>

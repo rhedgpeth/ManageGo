@@ -4,13 +4,19 @@ using ManageGo.UI.Navigation;
 using Xamarin.Forms;
 
 namespace ManageGo.UI.Pages
-{
-    public abstract class BaseSearchContentPage<T> : BaseContentPage<T>, IViewFor<T> where T : BaseSearchViewModel //, new()
+{   
+	public abstract class BaseSearchContentPage<T> : BaseContentPage<T>, IBaseSearchPage,
+	    IViewFor<T> where T : BaseSearchViewModel //, new()
     {
+		public event SearchHandler OnSearchIconTapped;
+
         public BaseSearchContentPage()
         {
 			ToolbarItems.Add(new ToolbarItem("Search", "search_grey",
-			                                  () => { }));
+			                                  () => 
+			{
+				OnSearchIconTapped?.Invoke();
+			}));
         }
     }
 }

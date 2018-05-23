@@ -6,6 +6,7 @@
     x:Class="ManageGo.App">
     <Application.Resources>
         <ResourceDictionary>
+            
             <Color x:Key="Primary">#3E90F4</Color>
             <Color x:Key="Secondary">#60A6F5</Color>
             <Color x:Key="Tertiary">#FFFFFF</Color>
@@ -13,17 +14,7 @@
             <Color x:Key="Grey-Light-1">#ACAEB1</Color>
             <Color x:Key="Grey-Mid-2">#DFDFE0</Color>
             <Color x:Key="Grey-Dark-1">#424242</Color>
-
-            <!--
-            <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="BarTextColor" Value="White" />
-            </Style>
-
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="Gray" />
-            </Style>
-            -->
+            <Color x:Key="Off-White">#F9FAFB</Color>
 
             <Style x:Key="tertiaryTitleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}"/>

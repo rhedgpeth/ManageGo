@@ -79,8 +79,28 @@ namespace ManageGo.UI.Navigation
             }
         }
         
-        public async Task SetDetailView(BaseNavigationViewModel viewModel)
+        public async Task SetDetailView(BaseNavigationViewModel viewModel, bool allowSamePageSet = false)
         {
+			// Ensure that we're not pushing a new page if the DetailPage is already set to this type
+            if (!allowSamePageSet)
+            {
+                IViewFor page;
+
+                if (DetailPage is NavigationPage)
+                    page = ((NavigationPage)DetailPage).RootPage as IViewFor;
+                else
+                    page = DetailPage as IViewFor;
+
+                if (page?.ViewModel.GetType() == viewModel.GetType())
+                {
+                    var masterController = Application.Current.MainPage as MasterDetailPage;
+
+                    masterController.IsPresented = false;
+
+                    return;
+                }
+            }
+
 			Page newDetailPage = await Task.Run(() =>
 			{
 				var view = InstantiateView(viewModel);

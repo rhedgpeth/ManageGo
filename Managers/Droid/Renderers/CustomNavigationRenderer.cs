@@ -4,7 +4,6 @@ using ManageGo.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
-using Android.App;
 using Android.Widget;
 using Android.Support.V7.Graphics.Drawable;
 using System.Threading.Tasks;

@@ -4,114 +4,48 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.Controls"
+    xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.MaintenanceTicketPage"
     x:TypeArguments="vm:MaintenanceTicketViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#F9FAFB">
-
-            <controls:FilterView LeftFilterText="18-05 27th Av...#4B" RightFilterText="Ticket details">
-                <controls:FilterView.RightExpandableLayout>
-                    <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
-                        
-                        <controls:ExpandablePicker Descriptor="Date" SelectedText="All dates">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-                        
-                        <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                        <controls:ExpandablePicker Descriptor="Priority" SelectedText="All">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                        <controls:ExpandablePicker Descriptor="Category" SelectedText="Electricity">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                        <controls:ExpandablePicker Descriptor="Tags" SelectedText="Access Granted, Forward to Super">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                        <controls:ExpandablePicker Descriptor="Status" SelectedText="Open">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                        <controls:ExpandablePicker Descriptor="Due date" SelectedText="1/10/2018">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                        <controls:ExpandablePicker Descriptor="Assigned" SelectedText="Boris Gursky">
-                            <controls:ExpandablePicker.ExpandableLayout>
-                                <StackLayout>
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                    <Label Text="This is a filter option." />
-                                </StackLayout>
-                            </controls:ExpandablePicker.ExpandableLayout>
-                        </controls:ExpandablePicker>
-
-                    </StackLayout>
-                </controls:FilterView.RightExpandableLayout>
+        <StackLayout Spacing="0" BackgroundColor="#F9FAFB">
+            <controls:FilterView LeftFilterIcon="building_blue" LeftFilterText="18-05 27th Av...#4B" 
+                                 RightFilterIcon="star_blue" RightFilterText="Ticket details">
+                
             </controls:FilterView>
 
-            <Button Text="Reply" Command="{Binding ReplyCommand}" />
+            <StackLayout Spacing="10" Orientation="Horizontal" Margin="0" Padding="25,15,10,15" BackgroundColor="White">
+                <Image Source="chat_grey_lg" Aspect="AspectFit" VerticalOptions="Center" />
+                <Label Text="My light is not working" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center" />
+                <Image Source="pet_blue" Aspect="AspectFit" Margin="0,0,10,0"
+                       HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
             
-            <Button Text="Create event" Command="{Binding CreateEventCommand}" />
-
-            <Button Text="Create work order" Command="{Binding CreateWorkOrderCommand}" />
-
             <ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB" />
-           
+                BackgroundColor="#F9FAFB"
+                Margin="0,10,0,0">
+
+                <ListView.Footer>
+                    <StackLayout Margin="35,0,35,0">
+                        <controls:BorderedFrame CornerRadius="20" HasShadow="false" Padding="0" Margin="0,30,0,0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ReplyCommand}" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers> 
+                            <Label Text="Reply:" TextColor="#4E9AF4" Margin="15,5,0,5" FontSize="14" />
+                        </controls:BorderedFrame>
+                        <StackLayout Spacing="15" Orientation="Horizontal" Margin="0,20,0,15">
+                            <global-controls:TappableLabel Text="+ Create event" TextColor="#4E9AF4" FontSize="14" TappedCommand="{Binding CreateEventCommand}" />
+                            <global-controls:TappableLabel Text="+ Create work order" TextColor="#4E9AF4" FontSize="14" TappedCommand="{Binding CreateWorkOrderCommand}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </local:BaseSearchContentPage>

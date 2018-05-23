@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:TypeArguments="vm:BuildingUnitsViewModel"
     x:Class="ManageGo.Pages.BuildingUnitsPage"
@@ -65,10 +66,10 @@
                                        LineBreakMode="WordWrap" />
                                 -->
 
-                                <Label Grid.Column="1" FontSize="13" TextColor="#529DF5"
+                                <controls:TappableLabel Grid.Column="1" FontSize="13" TextColor="#529DF5"
                                        Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}}" 
-                                       LineBreakMode="WordWrap" />
-                                
+                                       TappedCommand="{Binding TenantsCommand}" LineBreakMode="WordWrap" />
+
                                 <!--
                                 <Label Grid.Column="1" FontSize="13" 
                                     HorizontalOptions="Start"

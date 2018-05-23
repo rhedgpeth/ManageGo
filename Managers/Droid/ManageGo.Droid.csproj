@@ -118,6 +118,15 @@
     <Reference Include="Rg.Plugins.Popup.Platform">
       <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\packages\SkiaSharp.1.60.0\lib\MonoAndroid\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Android">
+      <HintPath>..\packages\SkiaSharp.Views.1.60.0\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms">
+      <HintPath>..\packages\SkiaSharp.Views.Forms.1.60.0\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -128,6 +137,8 @@
     <Compile Include="SplashActivity.cs" />
     <Compile Include="Renderers\CalendarRenderer.cs" />
     <Compile Include="Effects\ChangeColorSwitchEffect.cs" />
+    <Compile Include="Renderers\BorderedFrameRenderer.cs" />
+    <Compile Include="Effects\BorderEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -175,6 +186,11 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\profile_red.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\chevron_left.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\chevron_right.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\building_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\star_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_grey_lg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pet_blue.png" />
+    <AndroidResource Include="Resources\drawable\grey_rect.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ManageGo.Controls"
+    xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    x:Class="ManageGo.DataTemplates.ViewCells.MaintenanceTicketActionCell">
+       
+    <Grid Margin="20,0,15,0" Padding="10,0,10,0" BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <controls:ListRunnerView Grid.Row="0" Grid.Column="0" BackgroundColor="White" 
+                                 FirstColor="{Binding FirstColor}" SecondColor="{Binding SecondColor}"
+                                 WidthRequest="20" VerticalOptions="FillAndExpand" />
+
+        <Frame Grid.Row="0" Grid.Column="1" Margin="0,10,0,0"
+               IsVisible="{Binding IsAccessGranted}" BackgroundColor="#FFF2E1" HasShadow="false">
+
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Title}" FontSize="16" TextColor="#58595B" FontAttributes="Bold" />
+                    <Label Text="-" TextColor="#A9ABAE" FontSize="12" />
+                    <Label Text="Dec 15 - 8:00 AM" TextColor="#A9ABAE" FontSize="12" />
+                </StackLayout> 
+
+                <Label Text="{Binding Description}" FontSize="14" />
+
+                <global-controls:TappableLabel Text="{Binding ViewDescription}" TextColor="#3E90F4"
+                                               TappedCommand="{Binding ViewCommand}" FontSize="12" />
+                
+            </StackLayout>
+            
+        </Frame>
+
+    </Grid>
+    
+</ViewCell>

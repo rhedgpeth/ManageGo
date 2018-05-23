@@ -3,28 +3,41 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:converters="clr-namespace:ManageGo.Converters"
+    xmlns:ui="clr-namespace:ManageGo.UI.Validation;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.RegisterPage"
     x:TypeArguments="vm:RegisterViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ErrorConverter x:Key="ErrorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         
         <StackLayout Spacing="0" Margin="0,50,0,0">
 
             <Label Text="Your name:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,0,0,5" />
-            <Entry Text="{Binding Name}" Style="{StaticResource defaultEntryCentered}" />
+            
+            <Entry Text="{Binding Registration.Name}" ui:Validation.Errors="{Binding Registration.Errors[Name]}"
+                   Style="{StaticResource defaultEntryCentered}" />
+            
+            <Label Text="{Binding Registration.Errors[Name], Converter={StaticResource ErrorConverter}"
+                    HorizontalTextAlignment="Center" FontSize="Small" TextColor="Red" />
+
 
             <Label Text="Company name:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
-            <Entry Text="{Binding CompanyName}" Style="{StaticResource defaultEntryCentered}" />
+            <Entry Text="{Binding Registration.CompanyName}" Style="{StaticResource defaultEntryCentered}" />
 
             <Label Text="Email address:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
-            <Entry Text="{Binding Email}" Style="{StaticResource defaultEntryCentered}" />
+            <Entry Text="{Binding Registration.Email}" Style="{StaticResource defaultEntryCentered}" />
 
             <Label Text="Phone number:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
-            <Entry Text="{Binding PhoneNumber}" Style="{StaticResource defaultEntryCentered}" />
+            <Entry Text="{Binding Registration.PhoneNumber}" Style="{StaticResource defaultEntryCentered}" />
 
             <Label Text="# of units under management:" Style="{StaticResource entryDescriptionLabelCentered}" Margin="0,15,0,5" />
-            <Entry Text="{Binding UnitCount}" Style="{StaticResource defaultEntryCentered}" />
+            <Entry Text="{Binding Registration.UnitCount}" Style="{StaticResource defaultEntryCentered}" />
 
             <Button Text="Submit" Command="{Binding SubmitCommand}" Style="{StaticResource primaryBackgroundButton}" 
                     Margin="0,25,0,0" WidthRequest="125" HorizontalOptions="Center" />

@@ -8,7 +8,7 @@ namespace ManageGo.Core.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public bool SetPropertyChanged<T>(ref T currentValue, T newValue, [CallerMemberName] string propertyName = "")
+        protected virtual bool SetPropertyChanged<T>(ref T currentValue, T newValue, [CallerMemberName] string propertyName = "")
         {
             return PropertyChanged.SetProperty(this, ref currentValue, newValue, propertyName);
         }
