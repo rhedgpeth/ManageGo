@@ -5,9 +5,7 @@
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     x:Class="ManageGo.DataTemplates.ViewCells.MaintenanceTicketDetailsCell">
 
-    <Frame Padding="0" Margin="15,0,15,0" IsClippedToBounds="False" 
-           HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
-
+    <Frame Style="{StaticResource ListItem-Detail}">
 
         <Grid RowSpacing="10" Padding="0,0,0,0" Margin="45,5,45,0">
             <Grid.ColumnDefinitions>
@@ -21,10 +19,10 @@
 
             <Image Grid.Row="0" Grid.Column="0" Source="chat_grey" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start" />
             
-            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Description}" FontSize="12" TextColor="#5A5B5D" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Description}" Style="{StaticResource Dark-Grey-Small}" />
             
-            <controls:TappableLabel Grid.Row="1" Grid.Column="1" Text="View ticket" TextColor="#509CF5" 
-                                    FontSize="12" TappedCommand="{Binding ViewTicketCommand}" />
+            <controls:TappableLabel Grid.Row="1" Grid.Column="1" Text="View ticket" 
+                                    Style="{StaticResource Primary-Small}" TappedCommand="{Binding ViewTicketCommand}" />
             
         </Grid>
 

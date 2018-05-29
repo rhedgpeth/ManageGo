@@ -4,9 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="ManageGo.DataTemplates.ViewCells.TenantSectionHeaderCell">
 
-    <Frame Padding="10,10,15,10" Margin="15,15,15,0" 
-           IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
-           BackgroundColor="White" HorizontalOptions="FillAndExpand">
+    <Frame Style="{StaticResource ListItem-Header}">
 
         <Grid RowSpacing="10">
             <Grid.ColumnDefinitions>
@@ -24,15 +22,14 @@
               <Image Source="profile_grey" Aspect="AspectFit" />
             </StackLayout>
             
-            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" Style="{StaticResource Header-Text}" FontAttributes="Bold" VerticalTextAlignment="Center" />
             
             <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
 
-            <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="1" 
-                     BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+            <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource Separator-Line}" />
 
-            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Address}" FontSize="12" TextColor="Gray" VerticalTextAlignment="Center" />
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Address}" Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
             
         </Grid>
 

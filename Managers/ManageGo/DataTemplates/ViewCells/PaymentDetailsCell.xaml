@@ -4,12 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="ManageGo.DataTemplates.ViewCells.PaymentDetailsCell">
 
-    <Frame Padding="0" Margin="15,0,15,0" IsClippedToBounds="False" 
-           HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+    <Frame Style="{StaticResource ListItem-Detail}">
 
         <StackLayout Padding="0,0,0,10">
 
-            <BoxView HeightRequest="1" BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
+            <BoxView Style="{StaticResource Separator-Line}" />
 
             <Grid RowSpacing="0" Margin="45,10,10,0">
                 <Grid.ColumnDefinitions>
@@ -30,42 +29,42 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Amount:" TextColor="#A7A9AC" Font="12" />
-                <Label Grid.Row="0" Grid.Column="1" Text="$1650.00" TextColor="#5D5E60" FontSize="12" HorizontalTextAlignment="End" />
+                <Label Grid.Row="0" Grid.Column="0" Text="Amount:" Style="{StaticResource Light-Grey-Small}" />
+                <Label Grid.Row="0" Grid.Column="1" Text="$1650.00" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End" />
                     
-                <Label Grid.Row="1" Grid.Column="0" Text="Late fee:" TextColor="#A7A9AC" Font="12" />
-                <Label Grid.Row="1" Grid.Column="1" Text="$35.00" TextColor="#5D5E60" FontSize="12" HorizontalTextAlignment="End" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Late fee:" Style="{StaticResource Light-Grey-Small}" />
+                <Label Grid.Row="1" Grid.Column="1" Text="$35.00" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End" />
 
-                <Label Grid.Row="2" Grid.Column="0" Text="Payment total:" TextColor="#A7A9AC" Font="12" />
-                <Label Grid.Row="2" Grid.Column="1" Text="$1685.00" TextColor="#5D5E60" FontSize="12" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Payment total:" Style="{StaticResource Light-Grey-Small}" />
+                <Label Grid.Row="2" Grid.Column="1" Text="$1685.00" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End"/>
                
-                <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" VerticalOptions="Center"
-                         BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
+                <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"
+                         Style="{StaticResource Separator-Line}" />
 
                 <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
                     <Image Source="bank_blue" Aspect="AspectFit" />
-                    <Label Text="JPMORGAN CHASE BANK **** 8730" 
-                           TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" /> 
+                    <Label Text="JPMORGAN CHASE BANK **** 8730" Style="{StaticResource Dark-Grey-Small}" 
+                           VerticalTextAlignment="Center" /> 
                 </StackLayout>
 
-                <Label Grid.Row="5" Grid.Column="0" Text="Transaction" TextColor="#A7A9AC" Font="12" />
-                <Label Grid.Row="5" Grid.Column="1" Text="Bank transaction" TextColor="#A7A9AC" Font="12" />
+                <Label Grid.Row="5" Grid.Column="0" Text="Transaction" Style="{StaticResource Light-Grey-Small}" />
+                <Label Grid.Row="5" Grid.Column="1" Text="Bank transaction" Style="{StaticResource Light-Grey-Small}" />
 
-                <Label Grid.Row="6" Grid.Column="0" Text="T002011" TextColor="#5D5E60" FontSize="12" />
-                <Label Grid.Row="6" Grid.Column="1" Text="B000733" TextColor="Blue" FontSize="12" />
+                <Label Grid.Row="6" Grid.Column="0" Text="T002011" Style="{StaticResource Primary-Small}" />
+                <Label Grid.Row="6" Grid.Column="1" Text="B000733" Style="{StaticResource Primary-Small}" />
 
-                <BoxView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" VerticalOptions="Center" 
-                         BackgroundColor="#DFDFE0" HorizontalOptions="FillAndExpand" />
+                <BoxView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" 
+                         Style="{StaticResource Separator-Line}" />
 
                 <StackLayout Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
                     <Image Source="dot_red" Aspect="AspectFit" />
                     <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="Reversed (Insufficient funds)" 
-                           TextColor="#5D5E60" FontSize="12" VerticalTextAlignment="Center" />
+                           Style="{StaticResource Dark-Grey-Small}"  VerticalTextAlignment="Center" />
                 </StackLayout>
 
                 <StackLayout Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"  Orientation="Horizontal">
-                    <Label Text="Payment note: " TextColor="#A7A9AC" Font="12" />
-                    <Label Text="This rent covers my roommate this month. I lost a bet :)" TextColor="#5D5E60" FontSize="12" />
+                    <Label Text="Payment note:" Style="{StaticResource Light-Grey-Small}"  />
+                    <Label Text="This rent covers my roommate this month. I lost a bet :)" Style="{StaticResource Dark-Grey-Small}"  />
                 </StackLayout>
                 
             </Grid>

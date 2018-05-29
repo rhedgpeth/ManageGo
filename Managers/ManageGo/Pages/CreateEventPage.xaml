@@ -24,9 +24,7 @@
     <!--You can use any elements here which are extended from Xamarin.Forms.View-->
 
 
-    <Frame Padding="15,10,15,10"  VerticalOptions="Center" Margin="15,0,15,0"
-           IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
-           BackgroundColor="White" HorizontalOptions="FillAndExpand">
+    <Frame Style="{StaticResource Popover}">
         
            <StackLayout 
                 VerticalOptions="FillAndExpand" 
@@ -44,7 +42,9 @@
 
                 <Label Text="Date &amp; Time:" TextColor="#ADAEB1" Margin="0,10,0,0" FontSize="14" />
 
-                <controls:BorderedFrame Padding="10">
+                <controls:Clock WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" />
+
+                <controls:BorderedFrame Padding="10" IsVisible="false">
                     <controls:BorderedFrame.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding SelectDateTimeCommand}" NumberOfTapsRequired="1" />
                     </controls:BorderedFrame.GestureRecognizers>
@@ -52,6 +52,7 @@
                 </controls:BorderedFrame>
 
                 <controls:CalendarView IsVisible="false" HeightRequest="300" WidthRequest="100" />
+
                 <!--
                 <controls:CalendarView IsVisible="{Binding ShowCalendar}" HeightRequest="300" WidthRequest="100" />
                 -->
@@ -71,7 +72,5 @@
             </StackLayout>
         
     </Frame>
-
-    
 
 </local:BasePopupPage>

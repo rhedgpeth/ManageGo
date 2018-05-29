@@ -23,6 +23,11 @@
                         <Label Text="Payments" Margin="20,10,0,0" TextColor="#323232" FontSize="16" FontAttributes="Bold" />
 
                         <Grid RowSpacing="0" Margin="20,10,0,20">
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ViewPaymentsCommand}" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
@@ -53,6 +58,11 @@
                         <Label Text="Maintenance tickets" Margin="20,10,0,0" TextColor="#323232" FontSize="16" FontAttributes="Bold" />
 
                         <Grid RowSpacing="0" Margin="20,10,0,20">
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ViewTicketsCommand}" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />

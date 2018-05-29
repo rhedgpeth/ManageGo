@@ -16,6 +16,94 @@
             <Color x:Key="Grey-Dark-1">#424242</Color>
             <Color x:Key="Off-White">#F9FAFB</Color>
 
+
+            <!-- NEW STYLES -->
+            <Color x:Key="Light-Grey">#BBBDBF</Color>
+            <Color x:Key="Main-Grey">#949494</Color>
+            <Color x:Key="Mid-Grey">#747577</Color>
+            <Color x:Key="Dark-Grey">#5D5E60</Color>
+
+            <Style x:Key="Header-Text" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style> 
+            
+            <Style x:Key="Small-Text" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+            </Style> 
+
+            <Style x:Key="Mid-Text" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+            </Style> 
+
+            <Style x:Key="Light-Grey-Small" TargetType="Label" BasedOn="{StaticResource Small-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Light-Grey}" />
+            </Style>
+
+            <Style x:Key="Light-Grey-Mid" TargetType="Label" BasedOn="{StaticResource Mid-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Light-Grey}" />
+            </Style>
+            
+            <Style x:Key="Main-Grey-Small" TargetType="Label" BasedOn="{StaticResource Small-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Main-Grey}" />
+            </Style>
+
+            <Style x:Key="Main-Grey-Mid" TargetType="Label" BasedOn="{StaticResource Mid-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Main-Grey}" />
+            </Style>
+
+            <Style x:Key="Mid-Grey-Small" TargetType="Label" BasedOn="{StaticResource Small-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Mid-Grey}" />
+            </Style>
+
+            <Style x:Key="Dark-Grey-Small" TargetType="Label" BasedOn="{StaticResource Small-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Dark-Grey}" />
+            </Style>
+
+            <Style x:Key="Dark-Grey-Mid" TargetType="Label" BasedOn="{StaticResource Mid-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Dark-Grey}" />
+            </Style>
+
+            <Style x:Key="Primary-Small" TargetType="Label" BasedOn="{StaticResource Small-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            </Style>
+
+            <Style x:Key="ListItem" TargetType="Frame">
+                <Setter Property="IsClippedToBounds" Value="False" />   
+                <Setter Property="HasShadow" Value="False" /> 
+                <Setter Property="CornerRadius" Value="5" /> 
+                <Setter Property="BackgroundColor" Value="White" /> 
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" /> 
+            </Style>
+
+            <Style x:Key="ListItem-Header" BasedOn="{StaticResource ListItem}" TargetType="Frame">
+                <Setter Property="Padding" Value="15,10,15,10" />  
+                <Setter Property="Margin" Value="15,15,15,0" /> 
+            </Style>
+
+            <Style x:Key="ListItem-Detail" BasedOn="{StaticResource ListItem}" TargetType="Frame">
+                <Setter Property="Padding" Value="0" />  
+                <Setter Property="Margin" Value="15,0,15,0" />  
+            </Style>
+            
+            <Style x:Key="Popover" BasedOn="{StaticResource ListItem}" TargetType="Frame">
+                <Setter Property="Padding" Value="15,10,15,10" />  
+                <Setter Property="Margin" Value="15,0,15,0" />
+                <Setter Property="VerticalOptions" Value="Center" />  
+            </Style>
+
+            <Style x:Key="Separator-Line" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1" /> 
+                <Setter Property="BackgroundColor" Value="{StaticResource Main-Grey}" /> 
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" /> 
+            </Style>
+            
+            <!-- NEW STYLES -->
+
+
+
+
+            
             <Style x:Key="tertiaryTitleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}"/>
                 <Setter Property="FontSize" Value="16" />

@@ -26,11 +26,11 @@
                             <Grid RowSpacing="10">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="35"/>
-                                    <ColumnDefinition Width=".27*"/>
+                                    <ColumnDefinition Width=".3*"/>
                                     <ColumnDefinition Width="1"/>
-                                    <ColumnDefinition Width=".32*"/>
+                                    <ColumnDefinition Width=".35*"/>
                                     <ColumnDefinition Width="1"/>
-                                    <ColumnDefinition Width=".4*"/>
+                                    <ColumnDefinition Width=".35*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -48,25 +48,31 @@
                                          BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
 
                                 <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Text="Units:" FontSize="12" TextColor="#68696B"  />
-                                    <controls:TappableLabel Text="{Binding UnitCount}" TappedCommand="{Binding UnitsCommand}" 
-                                                            FontSize="12" TextColor="{StaticResource Primary}" />
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding UnitsCommand}" NumberOfTapsRequired="1" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Units:" FontSize="Micro" TextColor="#68696B"  />
+                                    <Label Text="{Binding UnitCount}" FontSize="Micro" TextColor="{StaticResource Primary}" />
                                 </StackLayout>
 
                                 <BoxView Grid.Row="2" Grid.Column="2" WidthRequest="1" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
 
                                 <StackLayout Grid.Row="2" Grid.Column="3" Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Text="Tenants:" FontSize="12" TextColor="#68696B" />
-                                    <controls:TappableLabel Text="{Binding TenantCount}" TappedCommand="{Binding TenantsCommand}" 
-                                                            FontSize="12" TextColor="{StaticResource Primary}" />
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TenantsCommand}" NumberOfTapsRequired="1" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Tenants:" FontSize="Micro" TextColor="#68696B" />
+                                    <Label Text="{Binding TenantCount}" FontSize="Micro" TextColor="{StaticResource Primary}" />
                                 </StackLayout>
 
                                 <BoxView Grid.Row="2" Grid.Column="4" WidthRequest="1" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
 
                                 <StackLayout Grid.Row="2" Grid.Column="5" Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Text="Open tickets:" FontSize="12" TextColor="#68696B" />
-                                    <controls:TappableLabel Text="{Binding TicketCount}" TappedCommand="{Binding TicketsCommand}" 
-                                                            FontSize="12" TextColor="{StaticResource Primary}" />
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TicketsCommand}" NumberOfTapsRequired="1" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Tickets:" FontSize="Micro" TextColor="#68696B" />
+                                    <Label Text="{Binding TicketCount}" FontSize="Micro" TextColor="{StaticResource Primary}" />
                                 </StackLayout>
                                 
                             </Grid>

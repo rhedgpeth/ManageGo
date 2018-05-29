@@ -139,6 +139,7 @@
     <Compile Include="Effects\ChangeColorSwitchEffect.cs" />
     <Compile Include="Renderers\BorderedFrameRenderer.cs" />
     <Compile Include="Effects\BorderEffect.cs" />
+    <Compile Include="Renderers\CenteredPicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

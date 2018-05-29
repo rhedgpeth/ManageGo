@@ -4,9 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="ManageGo.DataTemplates.ViewCells.CalendarSectionHeaderCell">
 
-    <Frame Padding="10,10,15,10" Margin="15,15,15,0" 
-           IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
-           BackgroundColor="White" HorizontalOptions="FillAndExpand">
+    <Frame Style="{StaticResource ListItem-Header}">
 
         <Grid RowSpacing="10">
             <Grid.ColumnDefinitions>

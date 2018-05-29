@@ -23,12 +23,12 @@
         </StackLayout>    
             
         <controls:ListView ItemsSource="{Binding MenuItems}" ItemTappedCommand="{Binding MenutItemSelectedCommand}" 
-                           SeparatorVisibility="None" HasUnevenRows="true" Margin="0,25,0,0">
+                           SeparatorVisibility="None" HasUnevenRows="true" Margin="0,15,0,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
 
                     <ViewCell>
-                        <Grid RowSpacing="0" Margin="65,0,0,0">
+                        <Grid RowSpacing="0" Margin="50,0,0,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
@@ -48,30 +48,33 @@
 
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Footer>
+                 <StackLayout Margin="50,0,0,30">
+                     <Grid RowSpacing="10" Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="15" />
+                        </Grid.RowDefinitions>
+                            
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Contact us:" FontAttributes="Bold" FontSize="16" />
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="Email:" Style="{StaticResource lightGreyEntryDescriptionLabel}" FontSize="Micro" />
+                        <controls:TappableLabel Grid.Row="1" Grid.Column="1" TappedCommand="{Binding EmailCommand}" HorizontalTextAlignment="Start"
+                                                Text="{Binding Email}" Style="{StaticResource entryDescriptionLabel}" FontSize="Micro" TextColor="{StaticResource Primary}" /> 
+
+                        <Label Grid.Row="2" Grid.Column="0" Text="Phone:" Style="{StaticResource lightGreyEntryDescriptionLabel}" FontSize="Micro" />
+                        <controls:TappableLabel Grid.Row="2" Grid.Column="1" TappedCommand="{Binding PhoneCommand}" FontSize="Micro"
+                                                Text="{Binding PhoneNumber}" Style="{StaticResource entryDescriptionLabel}" TextColor="{StaticResource Primary}"  />
+                    </Grid>  
+                </StackLayout>
+            </ListView.Footer>
         </controls:ListView>
 
-        <Grid RowSpacing="10" Margin="65,0,0,30">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25" />
-                <RowDefinition Height="15" />
-                <RowDefinition Height="15" />
-            </Grid.RowDefinitions>
-                
-            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Contact us:" FontAttributes="Bold" FontSize="16" />
-
-            <Label Grid.Row="1" Grid.Column="0" Text="Email:" Style="{StaticResource lightGreyEntryDescriptionLabel}" FontSize="Micro" />
-            <controls:TappableLabel Grid.Row="1" Grid.Column="1" TappedCommand="{Binding EmailCommand}" HorizontalTextAlignment="Start"
-                                    Text="{Binding Email}" Style="{StaticResource entryDescriptionLabel}" FontSize="Micro" TextColor="{StaticResource Primary}" /> 
-
-            <Label Grid.Row="2" Grid.Column="0" Text="Phone:" Style="{StaticResource lightGreyEntryDescriptionLabel}" FontSize="Micro" />
-            <controls:TappableLabel Grid.Row="2" Grid.Column="1" TappedCommand="{Binding PhoneCommand}" FontSize="Micro"
-                                    Text="{Binding PhoneNumber}" Style="{StaticResource entryDescriptionLabel}" TextColor="{StaticResource Primary}"  />
-        </Grid>
-            
     </StackLayout>
         
     </ContentPage.Content>

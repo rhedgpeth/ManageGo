@@ -22,13 +22,7 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
 
-    <!--
-    <StackLayout Padding="20,20,20,20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-    -->
-    
-    <Frame Padding="15,10,15,10"  VerticalOptions="Center" Margin="15,0,15,0"
-           IsClippedToBounds="False" HasShadow="False" CornerRadius="5" 
-           BackgroundColor="White" HorizontalOptions="FillAndExpand">
+    <Frame Style="{StaticResource Popover}">
         
            <StackLayout 
                 VerticalOptions="FillAndExpand" 
@@ -63,8 +57,4 @@
         
     </Frame>
 
-    <!--
-    </StackLayout>
-    -->
-        
 </local:BasePopupPage>

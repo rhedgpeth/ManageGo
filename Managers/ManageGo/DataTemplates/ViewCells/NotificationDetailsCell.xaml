@@ -6,8 +6,7 @@
     xmlns:effects="clr-namespace:ManageGo.Effects;assembly=ManageGo"
     x:Class="ManageGo.DataTemplates.ViewCells.NotificationDetailsCell">
 
-     <Frame Padding="0" Margin="15,0,15,0" IsClippedToBounds="False" 
-           HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+     <Frame Style="{StaticResource ListItem-Detail}">
         <StackLayout Padding="0,0,0,0">
             <Grid RowSpacing="0" Margin="45,10,45,0">
                 <Grid.ColumnDefinitions>
@@ -21,21 +20,21 @@
                     <RowDefinition Height="25" />
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Email:" TextColor="#A7A9AC" Font="12" />
+                <Label Grid.Row="0" Grid.Column="0" Text="Email:" Style="{StaticResource Main-Grey-Small}" />
                 <controls:TappableLabel Grid.Row="0" Grid.Column="1" Text="{Binding Email}" TappedCommand="{Binding EmailCommand}" 
-                                        TextColor="#4F9BF4" FontSize="12" HorizontalTextAlignment="End" />
+                                        Style="{StaticResource Primary-Small}" HorizontalTextAlignment="End" />
                     
-                <Label Grid.Row="1" Grid.Column="0" Text="Home:" TextColor="#A7A9AC" Font="12" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Home:" Style="{StaticResource Main-Grey-Small}" />
                 <controls:TappableLabel Grid.Row="1" Grid.Column="1" Text="{Binding HomePhoneNumber}" TappedCommand="{Binding HomePhoneCommand}"
-                                        TextColor="#4F9BF4" FontSize="12" HorizontalTextAlignment="End" />
+                                        Style="{StaticResource Primary-Small}" HorizontalTextAlignment="End" />
 
-                <Label Grid.Row="2" Grid.Column="0" Text="Cell:" TextColor="#A7A9AC" Font="12" />
+                <Label Grid.Row="2" Grid.Column="0" Text="Cell:" Style="{StaticResource Main-Grey-Small}" />
                 <controls:TappableLabel Grid.Row="2" Grid.Column="1" Text="{Binding CellPhoneNumber}" TappedCommand="{Binding CellPhoneCommand}" 
-                                        TextColor="#4F9BF4" FontSize="12" HorizontalTextAlignment="End"/>
+                                        Style="{StaticResource Primary-Small}" HorizontalTextAlignment="End"/>
 
                 <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
-                    <Label Text="{Binding ActivationDescription}" TextColor="#A7A9AC" HorizontalOptions="StartAndExpand"
-                           VerticalTextAlignment="Center" VerticalOptions="Center" Font="12"  />
+                    <Label Text="{Binding ActivationDescription}" HorizontalOptions="StartAndExpand"
+                           VerticalTextAlignment="Center" VerticalOptions="Center" Style="{StaticResource Main-Grey-Small}" />
                     <Switch Scale=".5" HorizontalOptions="EndAndExpand" Margin="0"
                                     effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
                                     effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
