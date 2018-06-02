@@ -56,7 +56,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="15" />
+                            <RowDefinition Height="25" />
                             <RowDefinition Height="15" />
                             <RowDefinition Height="15" />
                         </Grid.RowDefinitions>

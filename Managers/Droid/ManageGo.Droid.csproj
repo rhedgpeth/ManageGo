@@ -140,6 +140,7 @@
     <Compile Include="Renderers\BorderedFrameRenderer.cs" />
     <Compile Include="Effects\BorderEffect.cs" />
     <Compile Include="Renderers\CenteredPicker.cs" />
+    <Compile Include="Effects\TouchEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

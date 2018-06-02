@@ -16,7 +16,6 @@
             <Color x:Key="Grey-Dark-1">#424242</Color>
             <Color x:Key="Off-White">#F9FAFB</Color>
 
-
             <!-- NEW STYLES -->
             <Color x:Key="Light-Grey">#BBBDBF</Color>
             <Color x:Key="Main-Grey">#949494</Color>
@@ -100,10 +99,6 @@
             
             <!-- NEW STYLES -->
 
-
-
-
-            
             <Style x:Key="tertiaryTitleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}"/>
                 <Setter Property="FontSize" Value="16" />

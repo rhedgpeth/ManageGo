@@ -26,15 +26,7 @@ namespace CustomCalendar
 			paint.Style = SKPaintStyle.Stroke;
 			paint.StrokeWidth = lineWidth;
 			paint.Color = SKColors.LightGray;
-
-            /*
-			path.MoveTo(x, y);
-			path.LineTo(x, y + height);
-			path.LineTo(x + width, y + height);
-			path.LineTo(x + width, y);
-			path.LineTo(x, y);
-			*/
-
+                     
 			canvas.DrawPath(path, paint);
 
 			path.Reset();
