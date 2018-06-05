@@ -5,6 +5,10 @@
     xmlns:controls="clr-namespace:ManageGo.Controls"
     x:Class="ManageGo.Controls.ClockView">
 
-    <controls:Clock x:Name="Clock" WidthRequest="275" HeightRequest="275" HorizontalOptions="Center" VerticalOptions="Center" />
+    <controls:Clock Grid.Row="0" x:Name="Clock" WidthRequest="275" HeightRequest="275" 
+                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+    <Label Grid.Row="0" x:Name="TimeLabel" Text="12:00 AM" FontSize="14"
+           HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50,0,0" />
   
 </Grid>
