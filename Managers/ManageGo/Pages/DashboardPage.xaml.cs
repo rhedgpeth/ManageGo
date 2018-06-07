@@ -6,7 +6,7 @@ using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
 {
-    public partial class DashboardPage : BaseSearchContentPage<DashboardViewModel>
+    public partial class DashboardPage : BaseContentPage<DashboardViewModel>
     {
         public DashboardPage()
         {

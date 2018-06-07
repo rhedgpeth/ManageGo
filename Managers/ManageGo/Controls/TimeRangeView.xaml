@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ManageGo.Controls"
+    x:Class="ManageGo.Controls.TimeRangeView"
+    RowSpacing="0"
+    ColumnSpacing="0">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="15" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="277" />
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="0" Grid.Column="0" Text="To:" />
+    <Label Grid.Row="0" Grid.Column="1" Text="From:" />
+
+    <controls:BorderedFrame Grid.Row="1" Grid.Column="0" Padding="0" Margin="0,0,0,-5">
+        <StackLayout HeightRequest="60" Margin="1,1,1,-15">
+            <Label Text="Select time" VerticalOptions="Center" VerticalTextAlignment="Center" />
+        </StackLayout>
+    </controls:BorderedFrame>
+
+    <controls:BorderedFrame Grid.Row="1" Grid.Column="1" Padding="0">
+        <StackLayout HeightRequest="40" Margin="0,0,0,-10">
+            <Label Text="Select time" VerticalOptions="Center" VerticalTextAlignment="Center"  />
+        </StackLayout>
+    </controls:BorderedFrame>
+
+    <controls:BorderedFrame Grid.Row="2" Grid.ColumnSpan="2" Padding="0" Margin="0,-5,0,0">
+        <StackLayout HeightRequest="275" WidthRequest="275" Margin="0" Padding="0">
+            <controls:ClockView x:Name="LeftClock" WidthRequest="275" HeightRequest="275" />
+            <controls:ClockView x:Name="RightClock" WidthRequest="275" HeightRequest="275" IsVisible="false" />
+        </StackLayout>
+    </controls:BorderedFrame>
+        
+</Grid>

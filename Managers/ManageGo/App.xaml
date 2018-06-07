@@ -6,32 +6,68 @@
     x:Class="ManageGo.App">
     <Application.Resources>
         <ResourceDictionary>
-            
+
+            <!-- Fonts -->
+            <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+                <On Platform="Android" Value="Roboto-Bold.ttf#Open Sans" />
+                <On Platform="iOS" Value="Roboto-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="RegularFont">
+                <On Platform="Android" Value="Roboto-Regular.ttf#Open Sans" />
+                <On Platform="iOS" Value="Roboto-Regular" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LightFont">
+                <On Platform="Android" Value="Roboto-Light.ttf#Open Sans" />
+                <On Platform="iOS" Value="Roboto-Light" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="MediumFont">
+                <On Platform="Android" Value="Roboto-Medium.ttf#Open Sans" />
+                <On Platform="iOS" Value="Roboto-Medium" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Font">
+                <On Platform="Android" Value="Roboto-Regular.ttf#Open Sans" />
+                <On Platform="iOS" Value="Roboto-Regular" />
+            </OnPlatform>
+
+            <!-- Colors -->
             <Color x:Key="Primary">#3E90F4</Color>
             <Color x:Key="Secondary">#60A6F5</Color>
             <Color x:Key="Tertiary">#FFFFFF</Color>
             <Color x:Key="Grey-Mid-1">#58595B</Color>
-            <Color x:Key="Grey-Light-1">#ACAEB1</Color>
-            <Color x:Key="Grey-Mid-2">#DFDFE0</Color>
-            <Color x:Key="Grey-Dark-1">#424242</Color>
+            <Color x:Key="Grey-Light-1">#A7A9AC</Color>
+            <Color x:Key="Grey-Mid-2">#949494</Color>
+            <Color x:Key="Grey-Dark-1">#323232</Color>
             <Color x:Key="Off-White">#F9FAFB</Color>
 
             <!-- NEW STYLES -->
-            <Color x:Key="Light-Grey">#BBBDBF</Color>
+            <Color x:Key="Light-Grey">#A7A9AC</Color>
             <Color x:Key="Main-Grey">#949494</Color>
-            <Color x:Key="Mid-Grey">#747577</Color>
-            <Color x:Key="Dark-Grey">#5D5E60</Color>
+            <Color x:Key="Mid-Grey">#58595B</Color>
+            <Color x:Key="Dark-Grey">#323232</Color>
 
-            <Style x:Key="Header-Text" TargetType="Label">
+            <Style x:Key="Bold-Text" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            </Style>
+
+            <Style x:Key="Medium-Text" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource MediumFont}" />
+            </Style>
+
+            <Style x:Key="Regular-Text" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+            </Style>
+            
+            <Style x:Key="Header-Text" TargetType="Label" BasedOn="{StaticResource Medium-Text}">
+                <Setter Property="TextColor" Value="{StaticResource Dark-Grey}" />
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style> 
             
-            <Style x:Key="Small-Text" TargetType="Label">
+            <Style x:Key="Small-Text" TargetType="Label" BasedOn="{StaticResource Regular-Text}">
                 <Setter Property="FontSize" Value="12" />
             </Style> 
 
-            <Style x:Key="Mid-Text" TargetType="Label">
+            <Style x:Key="Mid-Text" TargetType="Label" BasedOn="{StaticResource Regular-Text}">
                 <Setter Property="FontSize" Value="14" />
             </Style> 
 
@@ -100,6 +136,7 @@
             <!-- NEW STYLES -->
 
             <Style x:Key="tertiaryTitleLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}"/>
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
@@ -107,16 +144,19 @@
             </Style>
 
             <Style x:Key="descriptionLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="TextColor" Value="{StaticResource Grey-Dark-1}"/>
                 <Setter Property="FontSize" Value="14" />
             </Style>
             
             <Style x:Key="entryDescriptionLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="TextColor" Value="{StaticResource Grey-Mid-1}"/>
                 <Setter Property="FontSize" Value="13" />
             </Style>
 
             <Style x:Key="entryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource entryDescriptionLabel}">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
@@ -124,11 +164,13 @@
             </Style>
 
             <Style x:Key="lightGreyEntryDescriptionLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="TextColor" Value="{StaticResource Grey-Light-1}"/>
                 <Setter Property="FontSize" Value="13" />
             </Style>
 
             <Style x:Key="lightGreyEntryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource lightGreyEntryDescriptionLabel}">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             </Style>
@@ -189,15 +231,15 @@
 
             <ControlTemplate x:Key="HeaderPageTemplate">
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Padding="0,15,0,0" WidthRequest="400" Margin="0">
-                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
+                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Style="{StaticResource Header-Text}" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" HorizontalOptions="FillAndExpand" />
                     <ContentPresenter />
                 </StackLayout>
             </ControlTemplate>
 
             <ControlTemplate x:Key="HeaderNoBorderPageTemplate">
-                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,10" WidthRequest="400">
-                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
+                <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" Padding="0,15,0,10" Margin="0">
+                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Style="{StaticResource Header-Text}" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <ContentPresenter />
                 </StackLayout>
             </ControlTemplate>

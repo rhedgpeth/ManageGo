@@ -30,9 +30,7 @@ namespace ManageGo.Controls
  
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {         
-            // Convert Xamarin.Forms point to pixels
-            var pt = args.Location;
-
+            var pt = args.Location;         
 
 			var xOffset = (Width - Clock.Width) / 2;
 			var yOffset = (Height - Clock.Height) / 2;
@@ -47,20 +45,24 @@ namespace ManageGo.Controls
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    if (Clock.ContainsPoint(point))
-					{  
-					    touchIds.Add(args.Id);
-						//Console.WriteLine($"PRESSED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");
-                        break;
-                    }
+
+					var color = Clock.GetColorAtPoint(point);
+
+					if (color == SKColor.Parse("#939598"))
+					{
+						touchIds.Add(args.Id);  
+					}
+					else //if (color == SKColors.White)               
+					{
+						// Move hand the closest angle
+					}
+
                     break;
 
                 case TouchActionType.Moved:
                     if (touchIds.Contains(args.Id))
                     {
-						//Console.WriteLine($"MOVED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");
-						//Clock.InvalidateSurface();
-
+						//Console.WriteLine($"MOVED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");                  
 						Clock.Drag(point);
                     }
                     break;
@@ -69,9 +71,7 @@ namespace ManageGo.Controls
                 case TouchActionType.Cancelled:
                     if (touchIds.Contains(args.Id))
                     {
-						//Console.WriteLine($"CANCELLED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");
-						//Clock.InvalidateSurface();
-
+						//Console.WriteLine($"CANCELLED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");                  
 						Clock.Released();
                     }
                     break;

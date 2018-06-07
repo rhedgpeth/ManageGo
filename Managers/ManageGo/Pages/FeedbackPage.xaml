@@ -24,6 +24,8 @@
                 </Picker.Items>
             </controls:CenteredPicker>
 
+            <Button Text="Pick something" Clicked="Handle_Clicked" />
+
             <Label Text="Type your message here:" Style="{StaticResource Dark-Grey-Mid}" Margin="0,15,0,0"
                    HorizontalOptions="Center" HorizontalTextAlignment="Center" />
 
