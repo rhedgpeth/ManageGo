@@ -6142,6 +6142,9 @@ namespace ManageGo.Droid
 			// aapt resource value: 0x7f0b0110
 			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427600;
 			
+			// aapt resource value: 0x7f0b018e
+			public const int TextAppearanceButtonStyle = 2131427726;
+			
 			// aapt resource value: 0x7f0b0111
 			public const int Theme_AppCompat = 2131427601;
 			

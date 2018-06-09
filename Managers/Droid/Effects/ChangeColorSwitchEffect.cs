@@ -52,7 +52,7 @@ namespace ManageGo.Droid.Effects
             }
         }
 
-        private void OnCheckedChange(object sender, CompoundButton.CheckedChangeEventArgs checkedChangeEventArgs)
+        void OnCheckedChange(object sender, CompoundButton.CheckedChangeEventArgs checkedChangeEventArgs)
         {
             if (checkedChangeEventArgs.IsChecked)
             {
@@ -70,10 +70,11 @@ namespace ManageGo.Droid.Effects
 
         protected override void OnDetached()
         {
-            if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.JellyBean)
-            {
-                ((Switch)Control).CheckedChange -= OnCheckedChange;
-            }
+			if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.JellyBean 
+			    && Control is Switch control)
+            {  
+				control.CheckedChange -= OnCheckedChange;
+			}
         }
     }
 }

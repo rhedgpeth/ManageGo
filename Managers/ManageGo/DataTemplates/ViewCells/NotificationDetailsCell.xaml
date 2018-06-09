@@ -8,7 +8,7 @@
 
      <Frame Style="{StaticResource ListItem-Detail}">
         <StackLayout Padding="0,0,0,0">
-            <Grid RowSpacing="0" Margin="45,10,45,0">
+            <Grid RowSpacing="0" Margin="55,10,45,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />

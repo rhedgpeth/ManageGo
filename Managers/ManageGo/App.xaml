@@ -129,7 +129,7 @@
 
             <Style x:Key="Separator-Line" TargetType="BoxView">
                 <Setter Property="HeightRequest" Value="1" /> 
-                <Setter Property="BackgroundColor" Value="{StaticResource Main-Grey}" /> 
+                <Setter Property="BackgroundColor" Value="{StaticResource Light-Grey}" /> 
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" /> 
             </Style>
             
@@ -160,7 +160,6 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
-                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
 
             <Style x:Key="lightGreyEntryDescriptionLabel" TargetType="Label">
@@ -176,8 +175,9 @@
             </Style>
 
             <Style x:Key="mainButtonStyle" TargetType="Button">
-                <Setter Property="HeightRequest" Value="35" />
+                <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="CornerRadius" Value="5" /> 
+                <Setter Property="FontFamily" Value="{StaticResource MediumFont}" />
             </Style>
             
             <Style x:Key="tertiaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
@@ -230,10 +230,11 @@
             -->
 
             <ControlTemplate x:Key="HeaderPageTemplate">
-                <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Padding="0,15,0,0" WidthRequest="400" Margin="0">
-                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Style="{StaticResource Header-Text}" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
+                <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+                    <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Margin="0,15,0,0"
+                           Style="{StaticResource Header-Text}" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" /> 
                     <BoxView Color="{StaticResource Primary}" HeightRequest="1" Margin="0,5,0,0" HorizontalOptions="FillAndExpand" />
-                    <ContentPresenter />
+                    <ContentPresenter VerticalOptions="FillAndExpand" Margin="0" />
                 </StackLayout>
             </ControlTemplate>
 

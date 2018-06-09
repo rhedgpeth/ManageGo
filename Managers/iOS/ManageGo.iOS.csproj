@@ -133,6 +133,8 @@
     <Folder Include="Resources\" />
     <Folder Include="Renderers\" />
     <Folder Include="Effects\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -154,6 +156,12 @@
     <Compile Include="Effects\BorderEffect.cs" />
     <Compile Include="Renderers\CenteredPicker.cs" />
     <Compile Include="Effects\TouchEffect.cs" />
+    <Compile Include="Renderers\FloatingEntryRenderer.cs" />
+    <Compile Include="Controls\FloatLabeledTextField.cs" />
+    <Compile Include="Extensions\FontExtensions.cs" />
+    <Compile Include="Extensions\KeyboardExtensions.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

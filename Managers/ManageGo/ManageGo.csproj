@@ -24,6 +24,7 @@
     <Folder Include="Controls\" />
     <Folder Include="Effects\" />
     <Folder Include="TouchTracking\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />

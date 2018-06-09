@@ -141,6 +141,8 @@
     <Compile Include="Effects\BorderEffect.cs" />
     <Compile Include="Renderers\CenteredPicker.cs" />
     <Compile Include="Effects\TouchEffect.cs" />
+    <Compile Include="Renderers\FloatingEntryRenderer.cs" />
+    <Compile Include="Extensions\FontExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -193,6 +195,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\chat_grey_lg.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\pet_blue.png" />
     <AndroidResource Include="Resources\drawable\grey_rect.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
@@ -225,6 +228,7 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Effects\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Roboto-Bold.ttf" />

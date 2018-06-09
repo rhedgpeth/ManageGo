@@ -33,8 +33,8 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="15" />
-                                <RowDefinition Height="15" />
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="25" />
                             </Grid.RowDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0" Text="Total this week" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
@@ -68,8 +68,8 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="15" />
-                                <RowDefinition Height="15" />
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="25" />
                             </Grid.RowDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0" Text="Total tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
@@ -87,7 +87,7 @@
 
             </StackLayout>
 
-            <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="0" VerticalOptions="FillAndExpand" IsVisible="false">
                     <Label Text="Highview Management" Style="{StaticResource Header-Text}" FontAttributes="Bold"  
                            HorizontalOptions="Center" TextColor="#323232" />
                     <Label Text="Open the menu to get started" FontSize="11" 
