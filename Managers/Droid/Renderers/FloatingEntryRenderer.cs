@@ -68,11 +68,11 @@ namespace ManageGo.Droid.Renderers
 
         protected override TextInputLayout CreateNativeControl()
         {
-            var textInputLayout = new TextInputLayout(Context);
+			var textInputLayout = new TextInputLayout(Context);
 
             var editText = new AppCompatEditText(Context)
             {
-                SupportBackgroundTintList = ColorStateList.ValueOf(GetPlaceholderColor())
+				SupportBackgroundTintList = ColorStateList.ValueOf(GetPlaceholderColor())
             };
 
             editText.SetTextSize(ComplexUnitType.Sp, (float)Element.FontSize);
@@ -188,12 +188,12 @@ namespace ManageGo.Droid.Renderers
 
         protected virtual void SetLabelAndUnderlineColor()
         {
-            var defaultColor = GetPlaceholderColor();
-            var activeColor = GetActivePlaceholderColor();
+           // var defaultColor = GetPlaceholderColor();
+			var activeColor = GetActivePlaceholderColor();  
 
-            SetHintLabelDefaultColor(defaultColor);
+            SetHintLabelDefaultColor(activeColor);
             SetHintLabelActiveColor(activeColor);
-            SetUnderlineColor(_hasFocus ? activeColor : defaultColor);
+            SetUnderlineColor(activeColor);
         }
 
         void SetUnderlineColor(AColor color)
