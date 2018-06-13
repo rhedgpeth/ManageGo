@@ -196,6 +196,8 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\pet_blue.png" />
     <AndroidResource Include="Resources\drawable\grey_rect.xml" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\building_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search_blue.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

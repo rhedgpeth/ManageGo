@@ -1,13 +1,6 @@
-using Android.App;
-using Android.Widget;
-using Android.OS;
-using SkiaSharp.Views.Android;
 using Android.Views;
 using SkiaSharp;
 using System;
-using System.Linq;
-using Java.Lang;
-using System.Collections.Generic;
 
 namespace CustomCalendar.Droid
 {
@@ -31,10 +24,10 @@ namespace CustomCalendar.Droid
         public DrawableControlView<CalendarMonthControl> Item1 { get; set; }
         public DrawableControlView<CalendarMonthControl> Item2 { get; set; }
 
-		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection) : base(context)
+		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection, DateTime selectedDate) : base(context)
 		{
 			AllowMultipleSelection = allowMultipleSelection;
-
+            
 			Adapter = new CalendarPageAdapter(this);
 
 			AddOnPageChangeListener(new OnPageChangeListener(this));
@@ -45,7 +38,9 @@ namespace CustomCalendar.Droid
 
 			Item1.ControlDelegate.DatesInteracted += UpdateSelectedDates;
 
-			SetMonth(DateTime.Now);
+			SelectedDate = selectedDate;
+            
+			SetMonth(SelectedDate.Value);
 		}
          
 		DateTime? _selectedDate;
@@ -68,7 +63,6 @@ namespace CustomCalendar.Droid
 				else
 				{
 					_selectedDate = null;               
-					//UpdateSelectedDates(new DateTime[] { });
 				}
 			}
 		}
@@ -107,13 +101,9 @@ namespace CustomCalendar.Droid
 
 			return base.DispatchTouchEvent(e);
 		}
-
-
-
+              
 		void UpdateSelectedDates(DateTime selectedDate)
         {
-			//DateSelected(selectedDate);
-         
 			if (SelectedDates == null || !AllowMultipleSelection)
 			{
 				SelectedDates = new DateRange(selectedDate);

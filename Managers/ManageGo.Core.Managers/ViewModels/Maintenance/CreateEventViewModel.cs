@@ -8,24 +8,24 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class CreateEventViewModel : BaseEditViewModel
     {
-		bool _showCalendar;
-        public bool ShowCalendar
+		bool _showDateTime;
+        public bool ShowDateTime
 		{
-			get => _showCalendar;
-			set => SetPropertyChanged(ref _showCalendar, value);
+			get => _showDateTime;
+			set => SetPropertyChanged(ref _showDateTime, value);
 		}
 
-		ICommand _showDateTimeCommand;
-		public ICommand ShowDateTimeCommand
+		ICommand _toggleDateTimeCommand;
+		public ICommand ToggleDateTimeCommand
 		{
 			get
 			{
-				if (_showDateTimeCommand == null)
+				if (_toggleDateTimeCommand == null)
 				{
-					_showDateTimeCommand = new Command(ToggleCalendar);
+					_toggleDateTimeCommand = new Command(ToggleDateTime);
 				}
 
-				return _showDateTimeCommand;
+				return _toggleDateTimeCommand;
 			}
 		}
 
@@ -39,6 +39,6 @@ namespace ManageGo.Core.Managers.ViewModels
             return Dismiss();
         }
 
-		void ToggleCalendar() => ShowCalendar = !ShowCalendar;
+		void ToggleDateTime() => ShowDateTime = !ShowDateTime;
     }
 }

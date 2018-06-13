@@ -49,10 +49,13 @@ namespace CustomCalendar
 
 			var calendarDays = new List<CalendarDayModel>();
 
-			var rows = Math.Ceiling((DateTime.DaysInMonth(year, month) / 7f)) + 1;
+			int dayOfWeek = int.Parse(monthDate.DayOfWeek.ToString("D"));
+
+			var rows = Math.Ceiling((DateTime.DaysInMonth(year, month) + dayOfWeek) / 7f) + 1;
+                     
 			var columns = 7;
            
-			var date = monthDate.AddDays(0 - int.Parse(monthDate.DayOfWeek.ToString("D")));
+			var date = monthDate.AddDays(0 - dayOfWeek);
 
 			var gridSize = 0;
 			int offset_x = 0;
@@ -61,8 +64,10 @@ namespace CustomCalendar
 			if (width > height)
             {
 				//gridSize = height / columns;
+                
+				gridSize = (int)((.75 * width) / columns);
 
-				gridSize = (int)((.85 * width) / columns);
+                //var totalMargin = (width - (columns ))
 
                 offset_x = (width - (columns * gridSize)) / 2;
             }

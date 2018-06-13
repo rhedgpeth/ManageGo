@@ -12,7 +12,7 @@ namespace ManageGo.iOS.Renderers
     {
         public BorderedFrameRenderer()
         {
-			Layer.CornerRadius = 12;
+			Layer.CornerRadius = 5;
 			Layer.BorderColor = UIColor.FromRGB(223, 223, 224).CGColor;         
             Layer.BorderWidth = 1;
         }

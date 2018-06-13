@@ -122,17 +122,18 @@ namespace CustomCalendar.iOS
 
 
 		DateTime Month { get; set; }
-
-		public CalendarView(CGRect frame, bool allowMultipleSelection) : base(frame)
+        
+		public CalendarView(CGRect frame, bool allowMultipleSelection, DateTime selectedDate) : base(frame)
 		{
 			AllowMultipleSelection = allowMultipleSelection;
 
 			var del = new CalendarViewDelegate(new WeakReference<CalendarView>(this));
 			var infiniteScrollView = new InfiniteScrollView<CalendarViewCell>(del, frame);
 
-			this.AddSubview(infiniteScrollView);
+			AddSubview(infiniteScrollView);
 
-			Month = DateTime.Now.Date; // default starting month is the current month
+			// Default starting month is the current month
+			Month = selectedDate.Date; 
 		}
 
 		public event Action<DateTime> DateSelected;

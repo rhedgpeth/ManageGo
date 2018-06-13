@@ -27,12 +27,12 @@
         
     </StackLayout>
 
-
     <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 
     <controls:Calendar x:Name="calendar" Grid.Row="2" Grid.ColumnSpan="3" 
                        CurrentMonthYear="{Binding CurrentMonthYear}"
-                       HeightRequest="200" WidthRequest="400" 
+                       HeightRequest="500"
+                       WidthRequest="700"
                        HorizontalOptions="Center" />
     
 </Grid>

@@ -7,7 +7,7 @@
 
     <Frame Style="{StaticResource ListItem-Detail}">
     
-        <Grid RowSpacing="15" Margin="10,0,10,10">
+        <Grid RowSpacing="15" Margin="15,0,10,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100" />
                 <ColumnDefinition Width="*" />
@@ -26,23 +26,23 @@
                 <RowDefinition Height="15" />
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Grid.ColumnSpan="3" Text="{Binding Description}" FontSize="14" />
+            <Label Grid.Row="0" Grid.ColumnSpan="3" Text="{Binding Description}" Style="{StaticResource Mid-Grey-Small}" FontSize="14" />
             <BoxView Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource Separator-Line}" />
 
             <Label Grid.Row="2" Grid.Column="0" Text="Participants" Style="{StaticResource Light-Grey-Small}" />
             <Label Grid.Row="2" Grid.Column="1" 
                    Text="{Binding Participants, Converter={StaticResource cnvListToCommaSeparatedString}}" 
-                   Style="{StaticResource Main-Grey-Small}" />
+                   Style="{StaticResource Mid-Grey-Small}" />
             <Image Grid.Row="2" Grid.Column="2" Source="chevron_right" Aspect="AspectFit" VerticalOptions="Center" />
             <BoxView Grid.Row="3" Grid.ColumnSpan="3" Style="{StaticResource Separator-Line}" />
 
             <Label Grid.Row="4" Grid.Column="0" Text="Event date" Style="{StaticResource Light-Grey-Small}" />
-            <Label Grid.Row="4" Grid.Column="1" Text="{Binding EventDateDescription}" FontSize="12" />
+            <Label Grid.Row="4" Grid.Column="1" Text="{Binding EventDateDescription}"  Style="{StaticResource Mid-Grey-Small}" />
             <Image Grid.Row="4" Grid.Column="2" Source="chevron_right" Aspect="AspectFit" VerticalOptions="Center" />
             <BoxView Grid.Row="5" Grid.ColumnSpan="3" Style="{StaticResource Separator-Line}" />
 
             <Label Grid.Row="6" Grid.Column="0" Text="Event time" Style="{StaticResource Light-Grey-Small}" />
-            <Label Grid.Row="6" Grid.Column="1" Text="{Binding EventTimeDescription}" Style="{StaticResource Main-Grey-Small}" />
+            <Label Grid.Row="6" Grid.Column="1" Text="{Binding EventTimeDescription}" Style="{StaticResource Mid-Grey-Small}" />
             <Image Grid.Row="6" Grid.Column="2" Source="chevron_right" Aspect="AspectFit" VerticalOptions="Center" />
             <BoxView Grid.Row="7" Grid.ColumnSpan="3" Style="{StaticResource Separator-Line}" />
 

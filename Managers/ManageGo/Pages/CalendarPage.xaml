@@ -12,12 +12,12 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height=".4*" />
-                <RowDefinition Height=".6*" />  
+                <RowDefinition Height=".5*" />
+                <RowDefinition Height=".5*" />  
             </Grid.RowDefinitions>
 
             <controls:CalendarView Grid.Row="0" AllowMultipleSelection="false" 
-                                   HeightRequest="300" WidthRequest="400" HorizontalOptions="Center" />
+                                   HeightRequest="550" WidthRequest="700" HorizontalOptions="Center" />
 
             <ListView   
                 x:Name="listView"
