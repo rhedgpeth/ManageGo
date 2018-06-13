@@ -67,9 +67,16 @@
 
                     <StackLayout Grid.Row="8" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
                         <Label Text="Push notifications" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Switch Scale=".5" HorizontalOptions="EndAndExpand"
+                        <Switch HorizontalOptions="EndAndExpand"
                                 effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
-                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40">
+                                <Switch.Scale>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android" Value=".75" />
+                                        <On Platform="iOS" Value=".5" />
+                                    </OnPlatform>
+                                </Switch.Scale>
+                        </Switch>
                     </StackLayout>
                     <BoxView Grid.Row="9" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
 
@@ -93,33 +100,61 @@
 
                     <StackLayout Grid.Row="14" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
                         <Label Text="Payments" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                        <Switch HorizontalOptions="EndAndExpand" 
                                 effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
-                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40">
+                                <Switch.Scale>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android" Value=".75" />
+                                        <On Platform="iOS" Value=".5" />
+                                    </OnPlatform>
+                                </Switch.Scale>
+                        </Switch>
                     </StackLayout>
                     <BoxView Grid.Row="15" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
 
                     <StackLayout Grid.Row="16" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
                         <Label Text="Maintenance" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                        <Switch HorizontalOptions="EndAndExpand" 
                                 effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
-                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40">
+                                <Switch.Scale>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android" Value=".75" />
+                                        <On Platform="iOS" Value=".5" />
+                                    </OnPlatform>
+                                </Switch.Scale>
+                        </Switch>
                     </StackLayout>
                     <BoxView Grid.Row="17" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
 
                     <StackLayout Grid.Row="18" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
                         <Label Text="Tenants" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                        <Switch HorizontalOptions="EndAndExpand" 
                                 effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
-                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40">
+                                <Switch.Scale>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android" Value=".75" />
+                                        <On Platform="iOS" Value=".5" />
+                                    </OnPlatform>
+                                </Switch.Scale>
+                        </Switch>
                     </StackLayout>
                     <BoxView Grid.Row="19" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
 
                     <StackLayout Grid.Row="20" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
                         <Label Text="Applications" FontSize="12" TextColor="#AAABAE" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Switch Scale=".5" HorizontalOptions="EndAndExpand" 
+                        <Switch HorizontalOptions="EndAndExpand" 
                                 effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
-                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                                effects:ChangeColorSwitchEffect.FalseColor="#E13D40">
+                                <Switch.Scale>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android" Value=".75" />
+                                        <On Platform="iOS" Value=".5" />
+                                    </OnPlatform>
+                                </Switch.Scale>
+                        </Switch>
                     </StackLayout>
                     <BoxView Grid.Row="21" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />  
                 </Grid>
