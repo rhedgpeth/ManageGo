@@ -19,5 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:drawableLeft="@drawable/search_blue"
+        android:drawablePadding="5dp"
+        android:textSize="12dp"
+        android:textColor="#000"
         android:visibility="gone" />
 </android.support.v7.widget.Toolbar>

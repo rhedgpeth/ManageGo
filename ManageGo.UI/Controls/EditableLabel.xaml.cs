@@ -53,8 +53,17 @@ namespace ManageGo.UI.Controls
 
 		void Handle_Tapped(object sender, EventArgs e)
         {            
-			label.IsVisible = !label.IsVisible;
-			entry.IsVisible = !label.IsVisible;
+            if (label.IsVisible)
+			{
+				label.IsVisible = false;
+				entry.IsVisible = true;            
+				entry.Focus();
+			}
+			else
+			{
+				label.IsVisible = true;
+                entry.IsVisible = false;
+			}
         }
     }
 }
