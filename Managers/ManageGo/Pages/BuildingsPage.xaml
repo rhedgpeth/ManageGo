@@ -10,8 +10,9 @@
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
 
-        <ListView   
+        <controls:ListView   
             ItemsSource="{Binding Buildings}"
+            ItemTappedCommand="{Binding ItemSelectedCommand}"
             SeparatorVisibility="None" 
             HasUnevenRows="true"
             BackgroundColor="#F9FAFB">
@@ -82,7 +83,7 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </controls:ListView>
         
     </ContentPage.Content>
 </local:BaseSearchContentPage>

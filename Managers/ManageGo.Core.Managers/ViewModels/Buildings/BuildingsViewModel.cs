@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
@@ -14,6 +16,21 @@ namespace ManageGo.Core.Managers.ViewModels
 		{
 			get => _buildings;
 			set => SetPropertyChanged(ref _buildings, value);
+		}
+
+		ICommand _itemSelectedCommand;
+		public ICommand ItemSelectedCommand
+		{
+			get 
+			{
+				if (_itemSelectedCommand == null)
+				{
+					_itemSelectedCommand = new Command<BuildingViewModel>(async (vm) => 
+					                                                      await Navigation.PushAsync(new BuildingUnitsViewModel(vm.BuildingId, vm.Name)));
+				}
+
+				return _itemSelectedCommand;
+			}
 		}
 
         public BuildingsViewModel()
