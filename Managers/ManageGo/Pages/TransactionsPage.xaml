@@ -36,16 +36,6 @@
                     
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                             
-                            <controls:ExpandablePicker Descriptor="Date" SelectedText="All Dates">
-                                <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                    </StackLayout>
-                                </controls:ExpandablePicker.ExpandableLayout>
-                            </controls:ExpandablePicker>
-                            
                             <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>

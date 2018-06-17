@@ -17,8 +17,9 @@
             </controls:FilterView>
 
             <StackLayout Spacing="10" Orientation="Horizontal" Margin="0" Padding="25,15,10,15" BackgroundColor="White">
-                <Image Source="chat_grey_lg" Aspect="AspectFit" VerticalOptions="Center" />
-                <Label Text="My light is not working" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center" />
+                <Image Source="chat_grey_lg" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />
+                <Label Text="My light is not working" Style="{StaticResource Header-Text}" FontAttributes="Bold"
+                       VerticalOptions="Center" VerticalTextAlignment="Center" />
                 <Image Source="pet_blue" Aspect="AspectFit" Margin="0,0,10,0"
                        HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
             </StackLayout>
