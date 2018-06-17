@@ -16,40 +16,40 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        
-        <StackLayout Spacing="0" Margin="0,50,0,0">
+        <ScrollView>
+            <StackLayout Spacing="0" Margin="0,50,0,0">
 
-            <controls:FloatingEntry Placeholder="Your name"
-                                    Text="{Binding Registration.Name}"
+                <controls:FloatingEntry Placeholder="Your name"
+                                        Text="{Binding Registration.Name}"
 
-                                    Style="{StaticResource defaultEntryCentered}" />
+                                        Style="{StaticResource defaultEntryCentered}" />
 
-            <!--
-            ui:Validation.Errors="{Binding Registration.Errors[Name]}"
-            <Label Text="{Binding Registration.Errors[Name], Converter={StaticResource ErrorConverter}"
-                    HorizontalTextAlignment="Center" FontSize="Small" TextColor="Red" />
-            -->
+                <!--
+                ui:Validation.Errors="{Binding Registration.Errors[Name]}"
+                <Label Text="{Binding Registration.Errors[Name], Converter={StaticResource ErrorConverter}"
+                        HorizontalTextAlignment="Center" FontSize="Small" TextColor="Red" />
+                -->
 
-            <controls:FloatingEntry Placeholder="Company name"
-                                    Text="{Binding Registration.CompanyName}"
-                                    Style="{StaticResource defaultEntryCentered}" />
+                <controls:FloatingEntry Placeholder="Company name"
+                                        Text="{Binding Registration.CompanyName}"
+                                        Style="{StaticResource defaultEntryCentered}" />
 
-            <controls:FloatingEntry Placeholder="Emil address"
-                                    Text="{Binding Registration.Email}"
-                                    Style="{StaticResource defaultEntryCentered}" />
+                <controls:FloatingEntry Placeholder="Emil address"
+                                        Text="{Binding Registration.Email}"
+                                        Style="{StaticResource defaultEntryCentered}" />
 
-            <controls:FloatingEntry Placeholder="Phone number"
-                                    Text="{Binding Registration.PhoneNumber}"
-                                    Style="{StaticResource defaultEntryCentered}" />
+                <controls:FloatingEntry Placeholder="Phone number"
+                                        Text="{Binding Registration.PhoneNumber}"
+                                        Style="{StaticResource defaultEntryCentered}" />
 
-            <controls:FloatingEntry Placeholder="# of units under management"
-                                    Text="{Binding Registration.UnitCount}"
-                                    Style="{StaticResource defaultEntryCentered}" />
+                <controls:FloatingEntry Placeholder="# of units under management"
+                                        Text="{Binding Registration.UnitCount}"
+                                        Style="{StaticResource defaultEntryCentered}" />
 
-            <Button Text="Submit" Command="{Binding SubmitCommand}" Style="{StaticResource primaryBackgroundButton}" 
-                    Margin="0,10,0,0" WidthRequest="125" HorizontalOptions="Center" />
-            
-       </StackLayout>
-        
+                <Button Text="Submit" Command="{Binding SubmitCommand}" Style="{StaticResource primaryBackgroundButton}" 
+                        Margin="0,10,0,0" WidthRequest="125" HorizontalOptions="Center" />
+                
+           </StackLayout>
+       </ScrollView>
     </ContentPage.Content>
 </local:BaseContentPage>

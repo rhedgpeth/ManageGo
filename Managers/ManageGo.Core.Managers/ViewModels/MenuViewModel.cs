@@ -112,6 +112,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
         void OnMenuItemSelected(string item)
         {
+
+
             switch(item)
             {
 				case "Home":

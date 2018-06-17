@@ -32,8 +32,9 @@
             <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
         </Grid> 
 
-        <ListView   
+        <controls:ListView   
             ItemsSource="{Binding Units}"
+            ItemTappedCommand="{Binding TenantsSelectedCommand}"
             SeparatorVisibility="None" 
             HasUnevenRows="true"
             Margin="30,0,30,0">
@@ -52,49 +53,17 @@
 
                                 <Label Grid.Column="0" Grid.Row="0" Text="{Binding Number}" FontSize="13" TextColor="#626365"/>
 
-                                <!-- 
-                                <StackLayout Grid.Column="1" Orientation="Horizontal">
-                                    <Label Text="Tenants: " FontSize="13" />
-                                    <Label FontSize="13" Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}}" 
-                                           LineBreakMode="WordWrap" />
-                                </StackLayout>
-                                -->
-
-                                <!--
-                                <Label Grid.Column="1" FontSize="13"
-                                       Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}, StringFormat='Tenants: {0:F0}'}" 
-                                       LineBreakMode="WordWrap" />
-                                -->
-
-                                <controls:TappableLabel Grid.Column="1" FontSize="13" TextColor="#529DF5"
+                                <Label Grid.Column="1" FontSize="13" TextColor="#529DF5"
                                        Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}}" 
-                                       TappedCommand="{Binding TenantsCommand}" LineBreakMode="WordWrap" />
+                                       LineBreakMode="WordWrap" />
 
-                                <!--
-                                <Label Grid.Column="1" FontSize="13" 
-                                    HorizontalOptions="Start"
-                                    LineBreakMode="WordWrap">
-                                    
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <FormattedString.Spans>
-                                                <Span Text="Tenants: " />
-                                                <Span Text="{Binding Number}" ForegroundColor="#529DF5" />
-                                            </FormattedString.Spans>
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-                                -->
-
-                                <!--Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}}"-->
-                             
                                 <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" 
                                          HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
                             </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </controls:ListView>
 
     </StackLayout>
         

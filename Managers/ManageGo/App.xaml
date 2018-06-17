@@ -212,6 +212,7 @@
                 <!--
                 <Setter Property="HeightRequest" Value="35" />
                 -->
+                <Setter Property="FontSize" Value="14" />
             </Style>
             
             <Style TargetType="Entry" BasedOn="{StaticResource mainEntryStyle}" />

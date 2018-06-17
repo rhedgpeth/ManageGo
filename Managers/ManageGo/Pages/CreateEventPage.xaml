@@ -62,7 +62,7 @@
                     <Editor HorizontalOptions="FillAndExpand" HeightRequest="100"  />
                 </controls:BorderedFrame>
 
-                <Button Text="Invite" Image="profile_blue.png" BackgroundColor="#F9FAFB" 
+                <Button Text="Participants" Image="profile_blue.png" BackgroundColor="#F9FAFB" 
                         TextColor="#3E90F4" Margin="0,15,0,0" WidthRequest="100" />
             
                 <Button Text="Create event" BackgroundColor="#55C433" Command="{Binding SaveCommand}"

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
@@ -24,6 +26,20 @@ namespace ManageGo.Core.Managers.ViewModels
 			get => _units;
 			set => SetPropertyChanged(ref _units, value);
 		}
+
+		ICommand _tenantsSelectedCommand;
+        public ICommand TenantsSelectedCommand
+        {
+            get
+            {
+				if (_tenantsSelectedCommand == null)
+                {
+					_tenantsSelectedCommand = new Command(async () => await Navigation.PushAsync(new TenantsViewModel()));
+                }
+
+				return _tenantsSelectedCommand;
+            }
+        }
 
         public BuildingUnitsViewModel(int buildingId, string buildingName)
         {

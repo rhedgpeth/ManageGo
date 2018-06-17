@@ -13,7 +13,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public NotificationsViewModel()
         {
-			Title = "Notifications";
+			Title = "Pending Approvals";
         }
 
 		public override async Task InitAsync()

@@ -31,6 +31,21 @@ namespace ManageGo.Core.Managers.ViewModels
 			}
 		}
 
+		ICommand _editTicketCommand;
+        public ICommand EditTicketCommand
+        {
+            get
+            {
+				if (_editTicketCommand == null)
+                {
+					_editTicketCommand = new Command(async () =>
+                                                     await Navigation.PushPopupAsync(new CreateEventViewModel()));
+                }
+
+				return _editTicketCommand;
+            }
+        }
+
         public CalendarDetailsViewModel(MaintenanceTicket ticket)
         { 
 			LoadMaintenanceTicket(ticket);

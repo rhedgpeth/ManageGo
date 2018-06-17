@@ -10,7 +10,6 @@
     x:TypeArguments="vm:LoginViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        
         <StackLayout Spacing="0" Margin="0,50,0,0" >
 
             <local-controls:FloatingEntry Placeholder="Email address"
@@ -32,6 +31,5 @@
                         Margin="0,5,0,0" TextColor="#4896F4" Style="{StaticResource entryDescriptionLabel}" />
             
        </StackLayout>
-                
     </ContentPage.Content>
 </local:BaseContentPage>

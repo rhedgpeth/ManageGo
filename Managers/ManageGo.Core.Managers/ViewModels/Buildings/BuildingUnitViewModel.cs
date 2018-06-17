@@ -23,22 +23,7 @@ namespace ManageGo.Core.Managers.ViewModels
             get => _tenantNames;
             set => SetPropertyChanged(ref _tenantNames, value);
         }
-
-
-		ICommand _tenantsCommand;
-		public ICommand TenantsCommand
-		{
-			get
-			{
-				if (_tenantsCommand == null)
-				{
-					_tenantsCommand = new Command(async () => await Navigation.PushAsync(new TenantsViewModel()));
-				}
-
-				return _tenantsCommand;
-			}
-		}
-
+      
         public BuildingUnitViewModel(Unit unit)
         {
 			Number = unit.Number;
