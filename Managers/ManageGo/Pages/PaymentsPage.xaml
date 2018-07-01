@@ -103,7 +103,8 @@
                 ItemsSource="{Binding Items}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB" />
+                BackgroundColor="#F9FAFB"
+                CachingStrategy="RecycleElementAndDataTemplate" />
            
         </StackLayout>
 

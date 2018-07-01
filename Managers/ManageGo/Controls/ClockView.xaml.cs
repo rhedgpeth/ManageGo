@@ -7,9 +7,20 @@ using Xamarin.Forms;
 using ManageGo.TouchTracking;
 
 namespace ManageGo.Controls
-{
+{   
+	public class ClockEventArgs : EventArgs
+    {      
+		public DateTime SelectedTime { get; set; }
+    }
+
+	public delegate void ClockEventHandler(Object sender, ClockEventArgs e);
+
     public partial class ClockView : Grid
     {
+		public event ClockEventHandler TimeChanged;
+
+		List<long> touchIds = new List<long>();
+
         public ClockView()
         {
             InitializeComponent();
@@ -20,23 +31,25 @@ namespace ManageGo.Controls
 			};
                      
 			touchEffect.TouchAction += OnTouchEffectAction;
-
+            
 			Effects.Add(touchEffect);
 
-			Clock.TimeChanged = (time) => { TimeLabel.Text = time; };
+			Clock.TimeChanged = OnTimeChanged;
         }
 
-		List<long> touchIds = new List<long>();
- 
+        void OnTimeChanged(DateTime time)
+		{
+			TimeLabel.Text = time.ToString(@"hh\:mm\:ss tt");
+
+			TimeChanged?.Invoke(this, new ClockEventArgs { SelectedTime = time });
+		}
+
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {         
             var pt = args.Location;         
 
 			var xOffset = (Width - Clock.Width) / 2;
 			var yOffset = (Height - Clock.Height) / 2;
-
-			//var x = ((Clock.CanvasSize.Width * pt.X / Width) - offset) - (550 / 2);
-			//var y = ((Clock.CanvasSize.Height * pt.Y / Height) - 0) - (550 / 2);
 
             var point =
 				new SKPoint((float)(Clock.CanvasSize.Width * ((pt.X - xOffset) / Clock.Width)),
@@ -50,7 +63,7 @@ namespace ManageGo.Controls
 
 					if (color == SKColor.Parse("#939598"))
 					{
-						touchIds.Add(args.Id);  
+						touchIds.Add(args.Id);
 					}
 					else //if (color == SKColors.White)               
 					{
@@ -61,8 +74,7 @@ namespace ManageGo.Controls
 
                 case TouchActionType.Moved:
                     if (touchIds.Contains(args.Id))
-                    {
-						//Console.WriteLine($"MOVED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");                  
+                    {                 
 						Clock.Drag(point);
                     }
                     break;
@@ -70,8 +82,7 @@ namespace ManageGo.Controls
                 case TouchActionType.Released:
                 case TouchActionType.Cancelled:
                     if (touchIds.Contains(args.Id))
-                    {
-						//Console.WriteLine($"CANCELLED - sX={pt.X} sY={pt.Y} - X={point.X} Y={point.Y}");                  
+                    {                 
 						Clock.Released();
                     }
                     break;

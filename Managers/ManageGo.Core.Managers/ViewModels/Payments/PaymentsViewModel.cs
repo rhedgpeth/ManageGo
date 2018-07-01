@@ -15,7 +15,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
 		public override async Task InitAsync()
 		{
-			await Task.Delay(250).ConfigureAwait(false);
+			//await Task.Delay(500).ConfigureAwait(false);
                      
 			var taskItems = await Task.Run(() =>
 			{

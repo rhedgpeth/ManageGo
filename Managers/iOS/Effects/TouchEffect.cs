@@ -76,25 +76,40 @@ namespace ManageGo.iOS.Effects
             viewDictionary.Remove(view);
         }
 
-        // touches = touches of interest; evt = all touches of type UITouch
-        public override void TouchesBegan(NSSet touches, UIEvent evt)
+		void SetParentTouches(bool enabled)
         {
-            base.TouchesBegan(touches, evt);
+            var t = view.Superview;
 
-            foreach (UITouch touch in touches.Cast<UITouch>())
-            {
-                long id = touch.Handle.ToInt64();
-                FireEvent(this, id, TouchActionType.Pressed, touch, true);
+            while (t != null)
+            {            
+                if (t.GetType() == typeof(ScrollViewRenderer))
+                    ((ScrollViewRenderer)t).ScrollEnabled = enabled;
 
-                if (!idToTouchDictionary.ContainsKey(id))
-                {
-                    idToTouchDictionary.Add(id, this);
-                }
+                t = t.Superview;
             }
-
-            // Save the setting of the Capture property
-            capture = touchEffect.Capture;
         }
+
+		// touches = touches of interest; evt = all touches of type UITouch
+		public override void TouchesBegan(NSSet touches, UIEvent evt)
+		{
+			SetParentTouches(false);
+
+			base.TouchesBegan(touches, evt);
+
+			foreach (UITouch touch in touches.Cast<UITouch>())
+			{
+				long id = touch.Handle.ToInt64();
+				FireEvent(this, id, TouchActionType.Pressed, touch, true);
+
+				if (!idToTouchDictionary.ContainsKey(id))
+				{
+					idToTouchDictionary.Add(id, this);
+				}
+			}
+
+			// Save the setting of the Capture property
+			capture = touchEffect.Capture;
+		}
 
         public override void TouchesMoved(NSSet touches, UIEvent evt)
         {
@@ -122,6 +137,8 @@ namespace ManageGo.iOS.Effects
 
         public override void TouchesEnded(NSSet touches, UIEvent evt)
         {
+			SetParentTouches(true);
+
             base.TouchesEnded(touches, evt);
 
             foreach (UITouch touch in touches.Cast<UITouch>())
@@ -147,6 +164,8 @@ namespace ManageGo.iOS.Effects
 
         public override void TouchesCancelled(NSSet touches, UIEvent evt)
         {
+			SetParentTouches(true);
+
             base.TouchesCancelled(touches, evt);
 
             foreach (UITouch touch in touches.Cast<UITouch>())

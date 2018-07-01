@@ -10,7 +10,7 @@
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
 
-        <controls:ListView   
+        <controls:ListView    
             ItemsSource="{Binding Buildings}"
             ItemTappedCommand="{Binding ItemSelectedCommand}"
             SeparatorVisibility="None" 

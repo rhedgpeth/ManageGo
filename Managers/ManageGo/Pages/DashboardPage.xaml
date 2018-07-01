@@ -10,90 +10,98 @@
     <ContentPage.Content>
 
         <StackLayout Margin="0,5,0,0" Padding="0">
-
+            
             <Image Source="dashboard_1.jpg" Aspect="AspectFill" Margin="0" HorizontalOptions="FillAndExpand" />
 
-            <StackLayout Padding="10,20,10,0" Margin="0">
-            
-                <Frame Padding="0" IsClippedToBounds="False" HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
-                    <StackLayout HorizontalOptions="FillAndExpand">
-                        <BoxView HeightRequest="3" BackgroundColor="#55C433" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
+            <ScrollView>
 
-                        <Label Text="Payments" Margin="20,10,0,0" Style="{StaticResource Header-Text}" FontAttributes="Bold" />
+                <StackLayout>
+                    
+                    <StackLayout Padding="10,20,10,0" Margin="0">
+                    
+                        <Frame Padding="0" IsClippedToBounds="False" HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <BoxView HeightRequest="3" BackgroundColor="#55C433" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
 
-                        <Grid RowSpacing="0" Margin="20,10,0,20">
+                                <Label Text="Payments" Margin="20,10,0,0" Style="{StaticResource Header-Text}" FontAttributes="Bold" />
 
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding ViewPaymentsCommand}" NumberOfTapsRequired="1" />
-                            </Grid.GestureRecognizers>
-                            
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="25" />
-                                <RowDefinition Height="25" />
-                            </Grid.RowDefinitions>
+                                <Grid RowSpacing="0" Margin="20,10,0,20">
 
-                            <Label Grid.Row="0" Grid.Column="0" Text="Total this week" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                            <Label Grid.Row="1" Grid.Column="0" Text="$12,985.14" Style="{StaticResource entryDescriptionLabel}" TextColor="#55C433" /> 
-                            
-                            <Label Grid.Row="0" Grid.Column="1" Text="Rent payments" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                            <Label Grid.Row="1" Grid.Column="1" Text="$11,154.00" Style="{StaticResource entryDescriptionLabel}" /> 
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ViewPaymentsCommand}" NumberOfTapsRequired="1" />
+                                    </Grid.GestureRecognizers>
+                                    
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25" />
+                                        <RowDefinition Height="25" />
+                                    </Grid.RowDefinitions>
 
-                            <Label Grid.Row="0" Grid.Column="2" Text="Other fees" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                            <Label Grid.Row="1" Grid.Column="2" Text="$1,831.14" Style="{StaticResource entryDescriptionLabel}" />
-                        </Grid>
-                        
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Total this week" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="$12,985.14" Style="{StaticResource entryDescriptionLabel}" TextColor="#55C433" /> 
+                                    
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Rent payments" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="$11,154.00" Style="{StaticResource entryDescriptionLabel}" /> 
+
+                                    <Label Grid.Row="0" Grid.Column="2" Text="Other fees" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="2" Text="$1,831.14" Style="{StaticResource entryDescriptionLabel}" />
+                                </Grid>
+                                
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame Padding="0" IsClippedToBounds="False" HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <BoxView HeightRequest="3" BackgroundColor="#3E90F4" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
+
+                                <Label Text="Maintenance tickets" Margin="20,10,0,0" Style="{StaticResource Header-Text}" FontAttributes="Bold" />
+
+                                <Grid RowSpacing="0" Margin="20,10,0,20">
+
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ViewTicketsCommand}" NumberOfTapsRequired="1" />
+                                    </Grid.GestureRecognizers>
+                                    
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25" />
+                                        <RowDefinition Height="25" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Total tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="17" Style="{StaticResource entryDescriptionLabel}" TextColor="#E13D40" /> 
+                                    
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Open tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="14" Style="{StaticResource entryDescriptionLabel}" /> 
+
+                                    <Label Grid.Row="0" Grid.Column="2" Text="Unread tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="2" Text="3" Style="{StaticResource entryDescriptionLabel}" />
+                                </Grid>
+                                
+                            </StackLayout>
+                        </Frame>
+
                     </StackLayout>
-                </Frame>
 
-                <Frame Padding="0" IsClippedToBounds="False" HasShadow="False" CornerRadius="5" BackgroundColor="White" HorizontalOptions="FillAndExpand">
-                    <StackLayout HorizontalOptions="FillAndExpand">
-                        <BoxView HeightRequest="3" BackgroundColor="#3E90F4" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
-
-                        <Label Text="Maintenance tickets" Margin="20,10,0,0" Style="{StaticResource Header-Text}" FontAttributes="Bold" />
-
-                        <Grid RowSpacing="0" Margin="20,10,0,20">
-
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding ViewTicketsCommand}" NumberOfTapsRequired="1" />
-                            </Grid.GestureRecognizers>
-                            
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="25" />
-                                <RowDefinition Height="25" />
-                            </Grid.RowDefinitions>
-
-                            <Label Grid.Row="0" Grid.Column="0" Text="Total tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                            <Label Grid.Row="1" Grid.Column="0" Text="17" Style="{StaticResource entryDescriptionLabel}" TextColor="#E13D40" /> 
-                            
-                            <Label Grid.Row="0" Grid.Column="1" Text="Open tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                            <Label Grid.Row="1" Grid.Column="1" Text="14" Style="{StaticResource entryDescriptionLabel}" /> 
-
-                            <Label Grid.Row="0" Grid.Column="2" Text="Unread tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                            <Label Grid.Row="1" Grid.Column="2" Text="3" Style="{StaticResource entryDescriptionLabel}" />
-                        </Grid>
-                        
+                    <StackLayout Spacing="0" VerticalOptions="FillAndExpand" IsVisible="false">
+                            <Label Text="Highview Management" Style="{StaticResource Header-Text}" FontAttributes="Bold"  
+                                   HorizontalOptions="Center" TextColor="#323232" />
+                            <Label Text="Open the menu to get started" FontSize="11" 
+                                   HorizontalOptions="Center" TextColor="{StaticResource Mid-Grey}"/>
                     </StackLayout>
-                </Frame>
 
-            </StackLayout>
+                </StackLayout>
 
-            <StackLayout Spacing="0" VerticalOptions="FillAndExpand" IsVisible="false">
-                    <Label Text="Highview Management" Style="{StaticResource Header-Text}" FontAttributes="Bold"  
-                           HorizontalOptions="Center" TextColor="#323232" />
-                    <Label Text="Open the menu to get started" FontSize="11" 
-                           HorizontalOptions="Center" TextColor="{StaticResource Mid-Grey}"/>
-            </StackLayout>
-
+            </ScrollView>
+                
         </StackLayout>
             
     </ContentPage.Content>

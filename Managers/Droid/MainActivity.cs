@@ -10,6 +10,8 @@ using Android.OS;
 using ManageGo.Core;
 using ManageGo.Core.Services;
 using ManageGo.Core.Droid.Services;
+using FFImageLoading.Forms.Platform;
+using FFImageLoading;
 
 namespace ManageGo.Droid
 {
@@ -23,9 +25,15 @@ namespace ManageGo.Droid
 
             base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
+
+            CachedImageRenderer.Init(true);
+
+            ImageService.Instance.Initialize();
 
 			RegisterServices();
+
+            global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
         }

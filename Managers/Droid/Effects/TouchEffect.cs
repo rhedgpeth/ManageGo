@@ -85,11 +85,15 @@ namespace ManageGo.Droid.Effects
             {
                 case MotionEventActions.Down:
                 case MotionEventActions.PointerDown:
+
+					view.Parent.RequestDisallowInterceptTouchEvent(true);
+
                     FireEvent(this, id, TouchActionType.Pressed, screenPointerCoords, true);
 
                     idToEffectDictionary.Add(id, this);
 
                     capture = libTouchEffect.Capture;
+
                     break;
 
                 case MotionEventActions.Move:
@@ -121,6 +125,9 @@ namespace ManageGo.Droid.Effects
 
                 case MotionEventActions.Up:
                 case MotionEventActions.Pointer1Up:
+
+					view.Parent.RequestDisallowInterceptTouchEvent(true);
+
                     if (capture)
                     {
                         FireEvent(this, id, TouchActionType.Released, screenPointerCoords, false);

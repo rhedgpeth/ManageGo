@@ -45,8 +45,8 @@ namespace ManageGo.Controls
 		SKPoint? _selectedPoint;
         SKColor _selectedColor;
 
-		public Action<string> TimeChanged { get; set; }
-        public string SelectedTime { get; set; }
+		public Action<DateTime> TimeChanged { get; set; }
+        public DateTime SelectedTime { get; set; }
 
         SKPoint? _lastDragPoint;
 
@@ -275,8 +275,8 @@ namespace ManageGo.Controls
 				minutes = "00";
      
 			time = $"{timeArr[0]}:{minutes}";
-                     
-			SelectedTime = DateTime.Parse(time).ToString(@"hh\:mm\:ss tt");
+
+			SelectedTime = DateTime.Parse(time); //.ToString(@"hh\:mm\:ss tt");
 
 			TimeChanged(SelectedTime);
 		}
