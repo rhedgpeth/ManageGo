@@ -42,11 +42,16 @@ namespace ManageGo.Droid.Effects
 				_falseColorDarker = _falseColor.AddLuminosity(-0.15);
                 _trueColorDarker = _trueColor.AddLuminosity(-0.15);
 
-                ((SwitchCompat)Control).CheckedChange += OnCheckedChange;
+                var switchControl = (SwitchCompat)Control;
 
-                ((SwitchCompat)Control).TrackDrawable.SetColorFilter(_falseColorDarker.ToAndroid(), PorterDuff.Mode.Multiply);
+                switchControl.SetTrackResource(Resource.Drawable.switch_track_custom);
+                switchControl.SetThumbResource(Resource.Drawable.switch_thumb_custom);
 
-                ((SwitchCompat)Control).ThumbDrawable.SetColorFilter(_thumbColor.ToAndroid(), PorterDuff.Mode.Multiply);
+                switchControl.CheckedChange += OnCheckedChange;
+
+                switchControl.TrackDrawable.SetColorFilter(_falseColorDarker.ToAndroid(), PorterDuff.Mode.Multiply);
+
+                switchControl.ThumbDrawable.SetColorFilter(_thumbColor.ToAndroid(), PorterDuff.Mode.Multiply);
                 // to change the colour of the thumb-drawable to the 'true' (or 'false') colour, enable the line below (and disable the one above)
                 // ((SwitchCompat)Control).ThumbDrawable.SetColorFilter(_trueColor.ToAndroid(), PorterDuff.Mode.Multiply);
             }

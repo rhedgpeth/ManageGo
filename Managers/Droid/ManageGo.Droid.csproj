@@ -280,6 +280,9 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\building_grey.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\search_blue.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\chat_grey_sm.png" />
+    <AndroidResource Include="Resources\drawable\switch_track_custom.xml" />
+    <AndroidResource Include="Resources\color\switch_color.xml" />
+    <AndroidResource Include="Resources\drawable\switch_thumb_custom.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
@@ -313,6 +316,7 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Effects\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Resources\color\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Roboto-Bold.ttf" />

@@ -44,10 +44,10 @@ namespace ManageGo.Droid
                 var imageButton = toolbar.GetChildAt(i) as ImageButton;
 
                 var drawerArrow = imageButton?.Drawable as DrawerArrowDrawable;
-
+                            
                 if (drawerArrow == null)
                     continue;
-
+                
                 imageButton.SetImageDrawable(Context.GetDrawable(Resource.Drawable.nav_menu_icon));
             }
         }
