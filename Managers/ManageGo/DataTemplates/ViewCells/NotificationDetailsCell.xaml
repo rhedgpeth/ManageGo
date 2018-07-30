@@ -13,7 +13,7 @@
     
      <Frame Style="{StaticResource ListItem-Detail}">
         <StackLayout Padding="0,0,0,0">
-            <Grid RowSpacing="0" Margin="55,10,45,0">
+            <Grid RowSpacing="0" Margin="55,10,45,10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />
@@ -37,12 +37,13 @@
                 <controls:TappableLabel Grid.Row="2" Grid.Column="1" Text="{Binding CellPhoneNumber}" TappedCommand="{Binding CellPhoneCommand}" 
                                         Style="{StaticResource Primary-Small}" HorizontalTextAlignment="End"/>
 
-                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
-                    <Label Text="{Binding ActivationDescription}" HorizontalOptions="StartAndExpand"
-                           VerticalTextAlignment="Center" VerticalOptions="Center" Style="{StaticResource Main-Grey-Small}" />
-                    <Switch Scale=".5" HorizontalOptions="EndAndExpand" Margin="0"
-                                    effects:ChangeColorSwitchEffect.TrueColor="#55C433" 
-                                    effects:ChangeColorSwitchEffect.FalseColor="#E13D40" />
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                    <Button Text="Approve"  
+                            Style="{StaticResource positiveButton}"
+                            HorizontalOptions="FillAndExpand" />
+                    <Button Text="Decline"
+                            Style="{StaticResource negativeButton}"
+                            HorizontalOptions="FillAndExpand" />
                 </StackLayout>
                 
             </Grid>

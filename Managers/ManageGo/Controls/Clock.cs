@@ -125,14 +125,20 @@ namespace ManageGo.Controls
                     //x' = x + (d * cos(a))
                     //y' = y + (d * sin(a))
 
-                    var x = (info.Height / 2) + (((info.Height / 2) - (info.Height * .055f)) * (float)Math.Cos(angle));
-                    var y = (info.Height / 2) + (((info.Height / 2) - (info.Height * .02f)) * (float)Math.Sin(angle));
+                    float x0 = (info.Height / 2);
+                    float y0 = (info.Height / 2);
+
+                    //float x0 = 0;
+                    //float y0 = 0;
+
+                    var x = x0 + (((info.Height / 2) - (info.Height * .055f)) * (float)Math.Cos(angle));
+                    var y = y0 + (((info.Height / 2) - (info.Height * .02f)) * (float)Math.Sin(angle));
 
                     var point = new SKPoint(x, y);
 
                     //point += new SKPoint(info.Height / 2, info.Height / 2);
 
-                    //canvas.DrawText(count.ToString(), point, lightGreyStrokePaint);
+                    canvas.DrawText(count.ToString(), point, lightGreyStrokePaint);
 
                     //canvas.RotateDegrees(-40);
                     //canvas.RotateDegrees(-45, 20, 20);
@@ -166,8 +172,8 @@ namespace ManageGo.Controls
 			{
 				if (angle % 30 == 0)
 				{ 
-					canvas.DrawText(count.ToString(), new SKPoint(-(lightGreyStrokePaint.MeasureText(count.ToString()) / 2),
-																  -(info.Height / 2f - (info.Height * .11f))), lightGreyStrokePaint);
+					//canvas.DrawText(count.ToString(), new SKPoint(-(lightGreyStrokePaint.MeasureText(count.ToString()) / 2),
+																  //-(info.Height / 2f - (info.Height * .11f))), lightGreyStrokePaint);
 
 					canvas.DrawLine(0, -(info.Height / 2 - (info.Height * .055f)), 0, -(info.Height / 2 - (info.Height * .02f)), blueStrokePaint);
 

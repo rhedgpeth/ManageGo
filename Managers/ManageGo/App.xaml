@@ -39,6 +39,9 @@
             <Color x:Key="Grey-Dark-1">#323232</Color>
             <Color x:Key="Off-White">#F9FAFB</Color>
 
+            <Color x:Key="Green">#55C433</Color>
+            <Color x:Key="Red">#E13D40</Color>
+
             <!-- NEW STYLES -->
             <Color x:Key="Light-Grey">#A7A9AC</Color>
             <Color x:Key="Main-Grey">#949494</Color>
@@ -202,6 +205,18 @@
 
             <Style x:Key="primaryBackgroundButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
                 <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="positiveButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Green}" />
+                <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            
+            <Style x:Key="negativeButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
                 <Setter Property="TextColor" Value="{StaticResource Tertiary}" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
