@@ -5,6 +5,7 @@
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:controls="clr-namespace:ManageGo.Controls;"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.CreateEventPage"
@@ -63,8 +64,15 @@
                         <Editor HorizontalOptions="FillAndExpand" HeightRequest="100"  />
                     </controls:BorderedFrame>
 
-                    <Button Text="Participants" Image="profile_blue.png" BackgroundColor="#F9FAFB" 
+                    <Button Text="Participants" Image="profile_blue.png" BackgroundColor="#F9FAFB" Clicked="Handle_Clicked"
                             TextColor="#3E90F4" Margin="0,15,0,0" WidthRequest="100" />
+
+                    <StackLayout x:Name="participantsLayout" IsVisible="false">
+                        <controls:Checkbox Text="Bruce Wayne" />
+                        <controls:Checkbox Text="Clark Kent" />
+                        <controls:Checkbox Text="Hal Jordan" />
+                        <controls:Checkbox Text="Diana Prince" />
+                    </StackLayout>
                 
                     <Button Text="Create event" BackgroundColor="#55C433" Command="{Binding SaveCommand}"
                             TextColor="White" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Margin="0,15,0,15" />

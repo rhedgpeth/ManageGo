@@ -6,6 +6,11 @@
     xmlns:effects="clr-namespace:ManageGo.Effects;assembly=ManageGo"
     x:Class="ManageGo.DataTemplates.ViewCells.NotificationDetailsCell">
 
+     <ViewCell.ContextActions>
+        <MenuItem Text="Approve"  />
+        <MenuItem Text="Reject" IsDestructive="True" />
+     </ViewCell.ContextActions>
+    
      <Frame Style="{StaticResource ListItem-Detail}">
         <StackLayout Padding="0,0,0,0">
             <Grid RowSpacing="0" Margin="55,10,45,0">

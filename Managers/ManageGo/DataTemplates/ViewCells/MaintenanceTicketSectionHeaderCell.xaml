@@ -31,8 +31,15 @@
                 <Label Text="{Binding Category}" Style="{StaticResource Light-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>
                 
-            <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
-                   HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+            <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" 
+                   Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
+                   HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                <!--
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="OnSectionHeaderSelected" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+                -->
+            </Image>
 
             <BoxView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource Separator-Line}" />
 

@@ -40,14 +40,25 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Handle_Left_Tapped" NumberOfTapsRequired="1" />
+        </Grid.GestureRecognizers>
+
         <BoxView Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource Light-Grey}" 
                  HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
         <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="{StaticResource Light-Grey}" 
                  WidthRequest="1" VerticalOptions="FillAndExpand" />
 
-        <Label Grid.Row="1" Grid.Column="1" Text="Select time" Style="{StaticResource Main-Grey-Small}" FontSize="14" 
-               VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+        <Label Grid.Row="1" Grid.Column="1" 
+               x:Name="leftTimeLabel" 
+               FontAttributes="Bold"
+               Text="Select time" 
+               Style="{StaticResource Main-Grey-Small}" 
+               FontSize="14" 
+               VerticalOptions="Center" 
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center" />
 
         <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="{StaticResource Light-Grey}"  
                  WidthRequest="1" VerticalOptions="FillAndExpand" />
@@ -66,15 +77,26 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <BoxView Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource Light-Grey}"  
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Handle_Right_Tapped" NumberOfTapsRequired="1" />
+        </Grid.GestureRecognizers>
+
+        <BoxView Grid.Row="0" Grid.ColumnSpan="3" 
+                 BackgroundColor="{StaticResource Light-Grey}"  
                  HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
         <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="{StaticResource Light-Grey}" 
                  WidthRequest="1" VerticalOptions="FillAndExpand" />
 
-        <Label Grid.Row="1" Grid.Column="1" Text="Select time" Style="{StaticResource Main-Grey-Small}"
-               FontSize="14" TextColor="White"
-               VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+        <Label Grid.Row="1" Grid.Column="1"
+               x:Name="rightTimeLabel" 
+               Text="Select time" 
+               Style="{StaticResource Main-Grey-Small}"
+               FontSize="14" 
+               TextColor="White"
+               VerticalOptions="Center" 
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center" />
 
         <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="{StaticResource Light-Grey}"  
                  WidthRequest="1" VerticalOptions="FillAndExpand" />

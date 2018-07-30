@@ -39,7 +39,7 @@ namespace ManageGo.Controls
 
         void OnTimeChanged(DateTime time)
 		{
-			TimeLabel.Text = time.ToString(@"hh\:mm\:ss tt");
+			TimeLabel.Text = time.ToString(@"h\:mm tt");
 
 			TimeChanged?.Invoke(this, new ClockEventArgs { SelectedTime = time });
 		}
