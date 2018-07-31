@@ -34,7 +34,6 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="25" />
@@ -44,11 +43,9 @@
                                     <Label Grid.Row="0" Grid.Column="0" Text="Total this week" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
                                     <Label Grid.Row="1" Grid.Column="0" Text="$12,985.14" Style="{StaticResource entryDescriptionLabel}" TextColor="#55C433" /> 
                                     
-                                    <Label Grid.Row="0" Grid.Column="1" Text="Rent payments" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="1" Text="$11,154.00" Style="{StaticResource entryDescriptionLabel}" /> 
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Total this month" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="$21,154.00" Style="{StaticResource entryDescriptionLabel}" /> 
 
-                                    <Label Grid.Row="0" Grid.Column="2" Text="Other fees" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="2" Text="$1,831.14" Style="{StaticResource entryDescriptionLabel}" />
                                 </Grid>
                                 
                             </StackLayout>
@@ -69,21 +66,18 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="25" />
                                         <RowDefinition Height="25" />
                                     </Grid.RowDefinitions>
 
-                                    <Label Grid.Row="0" Grid.Column="0" Text="Total tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Total open tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
                                     <Label Grid.Row="1" Grid.Column="0" Text="17" Style="{StaticResource entryDescriptionLabel}" TextColor="#E13D40" /> 
                                     
-                                    <Label Grid.Row="0" Grid.Column="1" Text="Open tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="1" Text="14" Style="{StaticResource entryDescriptionLabel}" /> 
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Unread tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="3" Style="{StaticResource entryDescriptionLabel}" /> 
 
-                                    <Label Grid.Row="0" Grid.Column="2" Text="Unread tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="2" Text="3" Style="{StaticResource entryDescriptionLabel}" />
                                 </Grid>
                                 
                             </StackLayout>

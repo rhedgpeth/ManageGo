@@ -13,17 +13,136 @@
         <StackLayout Spacing="0" BackgroundColor="#F9FAFB">
             <controls:FilterView LeftFilterIcon="building_blue" LeftFilterText="18-05 27th Av...#4B" 
                                  RightFilterIcon="star_blue" RightFilterText="Ticket details">
+
+                <controls:FilterView.TitleLayout>
+                    <StackLayout>
+                        <StackLayout Spacing="10" Orientation="Horizontal" Margin="0" Padding="25,15,10,15" BackgroundColor="White">
+                            <Image Source="chat_grey_lg" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />
+                            <Label Text="My light is not working" Style="{StaticResource Header-Text}" FontAttributes="Bold"
+                                   VerticalOptions="Center" VerticalTextAlignment="Center" />
+                            <Image Source="pet_blue" Aspect="AspectFit" Margin="0,0,10,0"
+                                   HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        </StackLayout>
+                        <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0"/>
+                    </StackLayout>
+                </controls:FilterView.TitleLayout>
+
+                <controls:FilterView.RightExpandableLayout>
+
+                    
+                    
+                    <StackLayout>
+
+                    <ScrollView HeightRequest="400">
+                        
+                        <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="1" />
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="1" />
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0" 
+                                       Text="Tenant" FontSize="12" 
+                                       TextColor="Gray" 
+                                       VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+
+                                <Label Grid.Row="0" Grid.Column="1" 
+                                       Text="Bruce Wayne" FontSize="12" 
+                                       VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+
+                                <BoxView Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" 
+                                         HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+
+                                <Label Grid.Row="2" Grid.Column="0" 
+                                       Text="Address" FontSize="12" 
+                                       TextColor="Gray" 
+                                       VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+
+                                <Label Grid.Row="2" Grid.Column="1" 
+                                       Text="B236 Flushing Ave, #2-B" FontSize="12" 
+                                       VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+
+                                <BoxView Grid.Row="3" Grid.ColumnSpan="2" HeightRequest="1" 
+                                         HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+                            </Grid>
+
+                            <controls:ExpandablePicker Descriptor="Priority" SelectedText="All">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <controls:ExpandablePicker Descriptor="Category" SelectedText="Electricity">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <controls:ExpandablePicker Descriptor="Tags" SelectedText="Access Granted, Forward to Super">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <controls:ExpandablePicker Descriptor="Assigned" SelectedText="Boris Gursky">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+                            
+                            <controls:ExpandablePicker Descriptor="Due date" SelectedText="1/10/2018">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                        <Label Text="This is a filter option." />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
+
+                            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" Spacing="10">
+                                <Button Text="Save" Style="{StaticResource positiveButton}" WidthRequest="100" />
+                                <global-controls:TappableLabel Text="Cancel" Style="{StaticResource Light-Grey-Small}" 
+                                                               VerticalOptions="Center" VerticalTextAlignment="Center" />    
+                            </StackLayout>
+
+                            <global-controls:TappableLabel Text="X Close ticket" FontSize="Small" 
+                                                           TextColor="{StaticResource Red}" Margin="0,15,0,0" />
+                                
+                        </StackLayout>
+
+                    </ScrollView> 
+                            
+                    </StackLayout>
+
+                </controls:FilterView.RightExpandableLayout>
                 
             </controls:FilterView>
 
-            <StackLayout Spacing="10" Orientation="Horizontal" Margin="0" Padding="25,15,10,15" BackgroundColor="White">
-                <Image Source="chat_grey_lg" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />
-                <Label Text="My light is not working" Style="{StaticResource Header-Text}" FontAttributes="Bold"
-                       VerticalOptions="Center" VerticalTextAlignment="Center" />
-                <Image Source="pet_blue" Aspect="AspectFit" Margin="0,0,10,0"
-                       HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
-            
             <ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"

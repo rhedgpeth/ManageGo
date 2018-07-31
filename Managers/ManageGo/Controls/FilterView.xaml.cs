@@ -5,7 +5,20 @@ using Xamarin.Forms;
 namespace ManageGo.Controls
 {
     public partial class FilterView : Grid
-    {            
+    {       
+        StackLayout _titleLayout;
+
+        public virtual StackLayout TitleLayout
+        {
+            get { return _titleLayout; }
+            set
+            {
+                _titleLayout = value;
+                TitleLayoutRegion.Children.Add(_titleLayout);
+                OnPropertyChanged();
+            }
+        }
+
 		StackLayout _leftExpandableLayout;
 
         public virtual StackLayout LeftExpandableLayout

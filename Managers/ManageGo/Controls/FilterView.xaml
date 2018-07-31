@@ -19,6 +19,7 @@
             <RowDefinition Height="1" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!-- Buttons -->
@@ -53,7 +54,9 @@
     
         <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 
+        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" x:Name="TitleLayoutRegion" />
+    
         <!-- Expand/collapse panels -->
-        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" x:Name="LeftExpandableLayoutRegion" IsVisible="false" />
-        <StackLayout Grid.Row="3" Grid.ColumnSpan="3" x:Name="RightExpandableLayoutRegion" IsVisible="false" />
+        <StackLayout Grid.Row="3" Grid.ColumnSpan="3" x:Name="LeftExpandableLayoutRegion" IsVisible="false" />
+        <StackLayout Grid.Row="4" Grid.ColumnSpan="3" x:Name="RightExpandableLayoutRegion" IsVisible="false" />
 </Grid>
