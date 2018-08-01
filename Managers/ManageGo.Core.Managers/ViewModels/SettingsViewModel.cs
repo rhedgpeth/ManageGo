@@ -34,6 +34,48 @@ namespace ManageGo.Core.Managers.ViewModels
 			set => SetPropertyChanged(ref _password, value);
         }
 
+        bool _enableBiometrics;
+        public bool EnableBiometrics
+        {
+            get => _enableBiometrics;
+            set => SetPropertyChanged(ref _enableBiometrics, value);
+        }
+
+        bool _enablePushNotifications;
+        public bool EnablePushNotifications
+        {
+            get => _enablePushNotifications;
+            set
+            {
+                SetPropertyChanged(ref _enablePushNotifications, value);
+
+                EnablePaymentsPushNotifications = _enablePushNotifications;
+                EnableMaintenancePushNotifications = _enablePushNotifications;
+                EnableTenantsPushNotifications = _enablePushNotifications;
+            }
+        }
+
+        bool _enablePaymentsPushNotifications;
+        public bool EnablePaymentsPushNotifications
+        {
+            get => _enablePaymentsPushNotifications;
+            set => SetPropertyChanged(ref _enablePaymentsPushNotifications, value);
+        }
+
+        bool _enableMaintenancePushNotifications;
+        public bool EnableMaintenancePushNotifications
+        {
+            get => _enableMaintenancePushNotifications;
+            set => SetPropertyChanged(ref _enableMaintenancePushNotifications, value);
+        }
+
+        bool _enableTenantsPushNotifications;
+        public bool EnableTenantsPushNotifications
+        {
+            get => _enableTenantsPushNotifications;
+            set => SetPropertyChanged(ref _enableTenantsPushNotifications, value);
+        }
+
         public SettingsViewModel()
         {
 			Title = "Settings"; 

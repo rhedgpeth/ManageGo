@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:controls="clr-namespace:ManageGo.Controls"
+    xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     x:Class="ManageGo.Controls.CalendarView">
 
     <Grid.ColumnDefinitions>
@@ -16,16 +17,57 @@
         <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
+    <Grid Grid.Row="0" Grid.ColumnSpan="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <global-controls:TappableLabel Grid.Column="0" 
+                                       x:Name="past7DaysButton"
+                                       Text="Past 7 days" 
+                                       VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                                       HorizontalTextAlignment="Center"
+                                       Style="{StaticResource Primary-Small}"
+                                       IsVisible="false" />
+        
+        <StackLayout Spacing="15" Grid.Column="1" Orientation="Horizontal">
+
+            <Image Source="chevron_left" VerticalOptions="Center" />
+            
+            <Label Text="{Binding CurrentMonthYearDescription}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    FontSize="14" FontAttributes="Bold" />
+
+            <Image Source="chevron_right" VerticalOptions="Center" />
+
+        </StackLayout>
+
+        <global-controls:TappableLabel Grid.Column="2" 
+                                       x:Name="past30DaysButton"
+                                       Text="Past 30 days" 
+                                       VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                                       HorizontalTextAlignment="Center"
+                                       Style="{StaticResource Primary-Small}"
+                                       IsVisible="false"/>
+    </Grid>
+    
+    <!--
     <StackLayout Spacing="15" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
 
-        <Image Source="chevron_left" HorizontalOptions="End" VerticalOptions="Center" />
+        <global-controls:TappableLabel Text="Past 7 days" Style="{StaticResource Primary-Small}" HorizontalOptions="End"  />
+        
+        <Image Source="chevron_left" VerticalOptions="Center" />
         
         <Label Text="{Binding CurrentMonthYearDescription}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                 FontSize="14" FontAttributes="Bold" />
 
-        <Image Source="chevron_right" HorizontalOptions="Start" VerticalOptions="Center" />
+        <Image Source="chevron_right" VerticalOptions="Center" />
+
+        <global-controls:TappableLabel Text="Past 30 days" Style="{StaticResource Primary-Small}" HorizontalOptions="End"  />
         
     </StackLayout>
+    -->
 
     <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 

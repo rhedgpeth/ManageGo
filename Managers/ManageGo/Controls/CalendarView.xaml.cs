@@ -24,7 +24,12 @@ namespace ManageGo.Controls
         static void AllowMultipleSelectionPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var calendarView = bindable as CalendarView;
-            calendarView.calendar.AllowMultipleSelection = (bool)newValue;
+
+            bool allowMultiplSelection = (bool)newValue;
+
+            calendarView.calendar.AllowMultipleSelection = allowMultiplSelection;
+            calendarView.past7DaysButton.IsVisible = allowMultiplSelection;
+            calendarView.past30DaysButton.IsVisible = allowMultiplSelection;
         }
 
         public CalendarView()
