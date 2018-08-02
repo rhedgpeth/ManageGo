@@ -6,7 +6,7 @@ using Xamarin.Forms.Platform.iOS;
 
 namespace ManageGo.iOS.Extensions
 {
-    // stolen from Xamarin.Forms codebase because theres is internal.
+    // Taken from Xamarin.Forms codebase because theirs is internal
     public static class StringExtensions
     {
         public static NSAttributedString ToAttributed(this Span span, Font defaultFont, Color defaultForegroundColor)
@@ -24,7 +24,6 @@ namespace ManageGo.iOS.Extensions
                 fgcolor = Color.Black; // as defined by apple docs      
 
             return new NSAttributedString(span.Text, font == Font.Default ? null : font.ToUIFont(), fgcolor.ToUIColor(), span.BackgroundColor.ToUIColor());
-
         }
 
         public static NSAttributedString ToAttributed(this FormattedString formattedString, Font defaultFont,
@@ -32,7 +31,9 @@ namespace ManageGo.iOS.Extensions
         {
             if (formattedString == null)
                 return null;
+            
             var attributed = new NSMutableAttributedString();
+
             foreach (var span in formattedString.Spans)
             {
                 if (span.Text == null)
@@ -50,12 +51,14 @@ namespace ManageGo.iOS.Extensions
                 return null;
 
             UIFont targetFont;
+
             if (span.IsDefault())
                 targetFont = ((IFontElement)owner).ToUIFont();
             else
                 targetFont = span.ToUIFont();
 
             var fgcolor = span.ForegroundColor;
+
             if (fgcolor.IsDefault)
                 fgcolor = defaultForegroundColor;
             if (fgcolor.IsDefault)

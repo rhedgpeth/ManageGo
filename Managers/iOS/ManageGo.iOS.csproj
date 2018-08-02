@@ -208,6 +208,8 @@
     <Compile Include="Extensions\KeyboardExtensions.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Renderers\RadioButtonRenderer.cs" />
+    <Compile Include="Controls\RadioButtonView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">
@@ -298,6 +300,8 @@
     <BundleResource Include="Resources\search_blue%403x.png" />
     <BundleResource Include="Resources\checked%403x.png" />
     <BundleResource Include="Resources\unchecked%403x.png" />
+    <BundleResource Include="Resources\radio_selected%403x.png" />
+    <BundleResource Include="Resources\radio_unselected%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets')" />

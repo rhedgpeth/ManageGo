@@ -82,9 +82,8 @@
                             <controls:ExpandablePicker Descriptor="Status" SelectedText="Open">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        <controls:RadioGroup ItemsSource="{Binding StatusOptions}" 
+                                                             VerticalOptions="Start" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>

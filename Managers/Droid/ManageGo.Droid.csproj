@@ -227,6 +227,7 @@
     <Compile Include="Effects\TouchEffect.cs" />
     <Compile Include="Renderers\FloatingEntryRenderer.cs" />
     <Compile Include="Extensions\FontExtensions.cs" />
+    <Compile Include="Renderers\RadioButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -10,6 +10,7 @@
     <Folder Include="Input\" />
     <Folder Include="Enumerations\" />
     <Folder Include="Validation\" />
+    <Folder Include="Events\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

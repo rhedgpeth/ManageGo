@@ -1,4 +1,5 @@
-﻿using Android.Views;
+﻿using Android.Content;
+using Android.Views;
 using ManageGo.Controls;
 using ManageGo.Droid.Renderers;
 using Xamarin.Forms;
@@ -9,6 +10,9 @@ namespace ManageGo.Droid.Renderers
 {
     public class CenteredPickerRenderer : PickerRenderer
     {
+        public CenteredPickerRenderer(Context context) : base(context)
+        { }
+
         protected override void OnElementChanged(ElementChangedEventArgs<Picker> e)
         {
             base.OnElementChanged(e);

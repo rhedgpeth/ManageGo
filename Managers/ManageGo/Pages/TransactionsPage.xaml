@@ -61,7 +61,6 @@
                 BackgroundColor="#F9FAFB" />
            
         </StackLayout>
-        
 
     </ContentPage.Content>
 </local:BaseSearchContentPage>

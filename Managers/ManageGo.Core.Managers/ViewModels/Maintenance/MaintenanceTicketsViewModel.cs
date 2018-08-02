@@ -9,7 +9,9 @@ using ManageGo.Core.ViewModels;
 namespace ManageGo.Core.Managers.ViewModels
 {
     public class MaintenanceTicketsViewModel : BaseExpandableCollectionViewModel<MaintenanceTicketSectionHeaderViewModel>
-    {    
+    {
+        public List<string> StatusOptions => new List<string> { "New", "Assigned", "In progress", "Closed" };
+
         public MaintenanceTicketsViewModel()
         {
 			Title = "Tickets";
