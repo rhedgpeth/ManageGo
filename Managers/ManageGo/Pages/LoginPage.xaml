@@ -13,10 +13,11 @@
         <StackLayout Spacing="0" Margin="0,50,0,0" >
 
             <local-controls:FloatingEntry Placeholder="Email address"
-                                          Text="{Binding UserName}"
+                                          Text="{Binding Username}"
                                           Style="{StaticResource defaultEntryCentered}" />
 
             <local-controls:FloatingEntry Placeholder="Password" Text="{Binding Password}"
+                                          IsPassword="true"
                                           Style="{StaticResource defaultEntryCentered}" />
 
             <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="Center" WidthRequest="125" HeightRequest="40"

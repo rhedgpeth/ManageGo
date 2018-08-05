@@ -193,7 +193,9 @@ namespace ManageGo.Core.Services
                     var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
                     if (!string.IsNullOrWhiteSpace(json))
+                    {
                         result = JsonConvert.DeserializeObject<T>(json);
+                    }
                 }
             }
             else

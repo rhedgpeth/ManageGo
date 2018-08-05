@@ -1,6 +1,11 @@
-﻿using System.Reflection;
+﻿using System.Threading.Tasks;
+using ManageGo.Core;
+using ManageGo.Core.Managers;
 using ManageGo.Core.Managers.ViewModels;
+using ManageGo.Core.Services;
 using ManageGo.Pages;
+using ManageGo.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ManageGo
@@ -11,31 +16,38 @@ namespace ManageGo
         {
             InitializeComponent();
 
+            RegisterServices();
+
             UI.Navigation.NavigationService.Initialize(typeof(WelcomePage).Assembly);
 
             SetRootPage();
         }
 
-        // TODO: Implement functionality
-        //bool loggedIn = true;
-		bool loggedIn = false;
-
-        void SetRootPage()
+        async void SetRootPage()
         {
-			// Mocked data
-			if (loggedIn)
+			if (await IsLoggedIn())
 				MainPage = new RootPage { ViewModel = new RootViewModel() };
             else
 				MainPage = new NavigationPage(new WelcomePage { ViewModel = new WelcomeViewModel() });
         }
 
-        protected override void OnStart()
-        { }
+        async Task<bool> IsLoggedIn()
+        {
+            var accessToken = await SecureStorage.GetAsync(Core.Managers.Constants.SecureStorageKeys.AccessToken);
 
-        protected override void OnSleep()
-        { }
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                AppInstance.ApiAccessToken = accessToken;
 
-        protected override void OnResume()
-        { }
+                return true;
+            }
+
+            return false;
+        }
+
+        void RegisterServices()
+        {
+            ServiceContainer.Register<ISecureStorageService>(() => new SecureStorageService());
+        }
     }
 }

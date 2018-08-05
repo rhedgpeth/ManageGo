@@ -7,10 +7,13 @@ namespace ManageGo.Core.Managers.Services
 {
     public class AuthenticationService : BaseHttpService
     {
-        public AuthenticationService() : base(Constants.BaseApiUrl)
-        { }
+        static readonly Lazy<AuthenticationService> lazy = new Lazy<AuthenticationService>(() => new AuthenticationService());
+        public static AuthenticationService Instance { get { return lazy.Value; } }
 
-        public Task<AuthResponse> Authenticate(string username, string password) 
-            => PostAsync<AuthResponse, AuthRequest>("authorize", new AuthRequest { Username = username, Password = password });
+        AuthenticationService() : base(Constants.BaseApiUrl) { }
+
+        public Task<BaseResponse<AuthenticationResponse>> Authenticate(string username, string password) 
+            => PostAsync<BaseResponse<AuthenticationResponse>, AuthenticationRequest>("authorize", 
+                                                                        new AuthenticationRequest { Login = username, Password = password });
     }
 }

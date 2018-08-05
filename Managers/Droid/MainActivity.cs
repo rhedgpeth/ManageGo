@@ -27,8 +27,9 @@ namespace ManageGo.Droid
 
             Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
 
-            CachedImageRenderer.Init(true);
+            Xamarin.Essentials.Platform.Init(this, bundle);
 
+            CachedImageRenderer.Init(true);
             ImageService.Instance.Initialize();
 
 			RegisterServices();
@@ -42,5 +43,12 @@ namespace ManageGo.Droid
 		{
 			ServiceContainer.Register<IExternalAppService>(() => new ExternalAppService());
 		}
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 }

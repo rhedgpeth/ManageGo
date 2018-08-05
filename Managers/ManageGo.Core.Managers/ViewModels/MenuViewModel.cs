@@ -23,6 +23,20 @@ namespace ManageGo.Core.Managers.ViewModels
 			}
 		}
 
+        ISecureStorageService _secureStorageService;
+        ISecureStorageService SecureStorageService
+        {
+            get
+            {
+                if (_secureStorageService == null)
+                {
+                    _secureStorageService = ServiceContainer.Resolve<ISecureStorageService>();
+                }
+
+                return _secureStorageService;
+            }
+        }
+
         public string Email 
 		{
 			get
@@ -156,11 +170,14 @@ namespace ManageGo.Core.Managers.ViewModels
 
         void Logout()
         {
-            Console.WriteLine("Logged Out");
-
-            // TODO: Do stuff here to log out.
-
-            Navigation.SetRootView(new LoginViewModel());
+            if (SecureStorageService.Remove(Constants.SecureStorageKeys.AccessToken))
+            {
+                Navigation.SetRootView(new LoginViewModel());
+            }
+            else
+            {
+                // TODO: Handle logout error
+            }
         }
 
 		void CallPhoneNumber() => ExternalAppService.CallPhoneNumber(PhoneNumber);

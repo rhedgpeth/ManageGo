@@ -1,5 +1,4 @@
-﻿using System;
-namespace ManageGo.Core.Managers
+﻿namespace ManageGo.Core.Managers
 {
     public static class Constants
     {
@@ -7,8 +6,13 @@ namespace ManageGo.Core.Managers
         {
             get
             {
-                return "https://ploop.dynamo-ny.com/api/PMC_V1/";    
+                return "http://mg-qa.dynamo-ny.com/api/pmc_v2/";    
             }
+        }
+
+        public static class SecureStorageKeys
+        {
+            public const string AccessToken = "AccessToken";
         }
     }
 }

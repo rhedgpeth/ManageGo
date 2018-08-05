@@ -11,6 +11,13 @@ namespace ManageGo.Core.ViewModels
 			set => SetPropertyChanged(ref _title, value);
 		}
 
+        bool _isBusy;
+        public bool IsBusy
+        {
+            get => _isBusy;
+            set => SetPropertyChanged(ref _isBusy, value);
+        }
+
         public virtual Task InitAsync() => Task.FromResult(true);
     }
 }

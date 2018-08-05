@@ -11,6 +11,8 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
     <PackageReference Include="Xamarin.Forms.InputKit" Version="2.0.5" />
+    <PackageReference Include="Xamarin.Essentials" Version="0.9.1-preview" />
+    <PackageReference Include="Refractored.XamForms.PullToRefresh" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />
@@ -27,6 +29,7 @@
     <Folder Include="Effects\" />
     <Folder Include="TouchTracking\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />

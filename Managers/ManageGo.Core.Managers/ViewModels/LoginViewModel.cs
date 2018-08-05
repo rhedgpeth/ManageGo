@@ -2,20 +2,37 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Managers.Models;
+using ManageGo.Core.Managers.Services;
+using ManageGo.Core.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
     public class LoginViewModel : BaseNavigationViewModel 
     {
-		string _userName;
+        ISecureStorageService _secureStorageService;
+        ISecureStorageService SecureStorageService
+        {
+            get
+            {
+                if (_secureStorageService == null)
+                {
+                    _secureStorageService = ServiceContainer.Resolve<ISecureStorageService>();
+                }
+
+                return _secureStorageService;
+            }
+        }
+
+		string _userName = "pmc.mail.test@gmail.com";
         public string Username
 		{
 			get => _userName;
 			set => SetPropertyChanged(ref _userName, value);
 		}
 
-		string _password;
+		string _password = "123456";
         public string Password
 		{
 			get => _password;
@@ -29,7 +46,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			{
 				if (_loginCommand == null)
 				{
-					_loginCommand = new Command(OnLoginCommand);
+					_loginCommand = new Command(async () => await OnLoginCommand());
 				}
 
 				return _loginCommand;
@@ -64,12 +81,52 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
+        public Action<string> OnFailure { get; set; }
+
 		public LoginViewModel()
         {
 			Title = "Welcome";
 		}
 
-		void OnLoginCommand() => Navigation.SetRootView(new RootViewModel(), false);
+		async Task OnLoginCommand() 
+        {
+            if (!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password))
+            {
+                var response = await AuthenticationService.Instance.Authenticate(Username, Password); //.ConfigureAwait(false);
+
+                if (response?.Status == Enumerations.ResponseStatus.Data)
+                {
+                    if (await Authorize(response.Result))
+                    {
+                        Navigation.SetRootView(new RootViewModel(), false);
+                    }
+                }
+                else if (!string.IsNullOrEmpty(response.ErrorMessage))
+                {
+                    OnFailure?.Invoke(response?.ErrorMessage);
+                }
+                else
+                {
+                    OnFailure?.Invoke("Unknown error has occured. (OnLoginCommand)");
+                }
+            }
+            else // Double check on client-side validation
+            {
+                OnFailure?.Invoke("Invalid username/password.");
+            }
+        }
+
+        async Task<bool> Authorize(AuthenticationResponse response)
+        {
+            if (response != null && !string.IsNullOrEmpty(response.User?.AccessToken))
+            {
+                return await SecureStorageService.Set(Constants.SecureStorageKeys.AccessToken, response.User.AccessToken);
+            }
+         
+            OnFailure?.Invoke("Unknown error has occured. (Authorize)");
+
+            return false;
+        }
 
 		Task OnResetPasswordCommand() => Navigation.PushAsync(new ResetPasswordViewModel());
 

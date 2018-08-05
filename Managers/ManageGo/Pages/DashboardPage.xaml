@@ -4,15 +4,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    xmlns:ptr="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
     x:Class="ManageGo.Pages.DashboardPage"
     x:TypeArguments="vm:DashboardViewModel"
     ControlTemplate="{StaticResource HeaderNoBorderPageTemplate}">
     <ContentPage.Content>
 
+        
+
+        
         <StackLayout Margin="0,5,0,0" Padding="0">
             
+               
+                
             <Image Source="dashboard_1.jpg" Aspect="AspectFill" Margin="0" HorizontalOptions="FillAndExpand" />
 
+            <!--
+            <ptr:PullToRefreshLayout
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsBusy}">-->
+            
             <ScrollView>
 
                 <StackLayout>
@@ -41,10 +53,12 @@
                                     </Grid.RowDefinitions>
 
                                     <Label Grid.Row="0" Grid.Column="0" Text="Total this week" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="0" Text="$12,985.14" Style="{StaticResource entryDescriptionLabel}" TextColor="#55C433" /> 
+                                    <ActivityIndicator Grid.Row="1" Grid.Column="0" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Start" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding TotalPaymentsThisWeek}" Style="{StaticResource entryDescriptionLabel}" TextColor="#55C433" /> 
                                     
                                     <Label Grid.Row="0" Grid.Column="1" Text="Total this month" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="1" Text="$21,154.00" Style="{StaticResource entryDescriptionLabel}" /> 
+                                    <ActivityIndicator Grid.Row="1" Grid.Column="1" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Start" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding TotalPaymentsThisMonth}" Style="{StaticResource entryDescriptionLabel}" /> 
 
                                 </Grid>
                                 
@@ -73,10 +87,12 @@
                                     </Grid.RowDefinitions>
 
                                     <Label Grid.Row="0" Grid.Column="0" Text="Total open tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="0" Text="17" Style="{StaticResource entryDescriptionLabel}" TextColor="#E13D40" /> 
+                                    <ActivityIndicator Grid.Row="1" Grid.Column="0" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Start" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding OpenTicketCount}" Style="{StaticResource entryDescriptionLabel}" TextColor="#E13D40" /> 
                                     
                                     <Label Grid.Row="0" Grid.Column="1" Text="Unread tickets" Style="{StaticResource lightGreyEntryDescriptionLabel}" />
-                                    <Label Grid.Row="1" Grid.Column="1" Text="3" Style="{StaticResource entryDescriptionLabel}" /> 
+                                    <ActivityIndicator Grid.Row="1" Grid.Column="1" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Start" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding NoReplyTicketCount}" Style="{StaticResource entryDescriptionLabel}" /> 
 
                                 </Grid>
                                 
@@ -95,8 +111,14 @@
                 </StackLayout>
 
             </ScrollView>
+
+            <!--
+            </ptr:PullToRefreshLayout>
+            -->
                 
         </StackLayout>
+
+         
             
     </ContentPage.Content>
 </local:BaseContentPage>
