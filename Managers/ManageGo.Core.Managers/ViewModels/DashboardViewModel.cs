@@ -84,7 +84,13 @@ namespace ManageGo.Core.Managers.ViewModels
             Title = "Welcome";
         }
 
-        public override async Task InitAsync() => await LoadDashboard();
+        public override async Task InitAsync()
+        {
+            await LoadDashboard();
+
+            // We do not want to wait for these results - fire and forget
+            LoadUserSettings();
+        }
 
         async Task LoadDashboard()
         {
@@ -105,6 +111,16 @@ namespace ManageGo.Core.Managers.ViewModels
             else
             {
                 // TODO: Handle no data?
+            }
+        }
+
+        async void LoadUserSettings()
+        {
+            var maintenanceUserSettings = await MaintenanceService.Instance.GetUserSettings();
+
+            if (maintenanceUserSettings.Status == Enumerations.ResponseStatus.Data)
+            {
+                AppInstance.Maintenance.Settings = maintenanceUserSettings.Result;
             }
         }
     }

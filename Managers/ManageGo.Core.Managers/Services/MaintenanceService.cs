@@ -1,11 +1,18 @@
 ﻿using System;
-using ManageGo.Core.Services;
+using System.Threading;
+using System.Threading.Tasks;
+using ManageGo.Core.Managers.Models;
 
 namespace ManageGo.Core.Managers.Services
 {
-    public class MaintenanceService : BaseHttpService
+    public class MaintenanceService : BaseAuthenticatedHttpService
     {
-        public MaintenanceService() : base(Constants.BaseApiUrl)
-        { }
+        static readonly Lazy<MaintenanceService> lazy = new Lazy<MaintenanceService>(() => new MaintenanceService());
+        public static MaintenanceService Instance { get { return lazy.Value; } }
+
+        MaintenanceService() { }
+
+        public Task<BaseResponse<MaintenanceUserSettings>> GetUserSettings()
+            => PostAsync<BaseResponse<MaintenanceUserSettings>>("maintenanceobjects", default(CancellationToken), AddAccessToken); 
     }
 }

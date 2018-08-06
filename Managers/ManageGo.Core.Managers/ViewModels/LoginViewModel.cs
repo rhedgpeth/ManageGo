@@ -25,7 +25,7 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
-		string _userName = "pmc.mail.test@gmail.com";
+		string _userName = "rob@managego.com";
         public string Username
 		{
 			get => _userName;
