@@ -10,6 +10,20 @@ namespace ManageGo.Core.Services
 {   
 	public abstract class BaseHttpService 
     {      
+        IMessageService _messageService;
+        IMessageService MessageService
+        {
+            get
+            {
+                if (_messageService == null)
+                {
+                    _messageService = ServiceContainer.Resolve<IMessageService>();
+                }
+
+                return _messageService;
+            }
+        }
+
         string _baseApiUri;
 
         /// <summary>
@@ -200,7 +214,12 @@ namespace ManageGo.Core.Services
             }
             else
             {
-                response.EnsureSuccessStatusCode();
+                //response.EnsureSuccessStatusCode();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                {
+                    MessageService.Send(MessageType.ApiForbiddenStatus, "Access is forbidden (403).");
+                }
             }
 
             return result;

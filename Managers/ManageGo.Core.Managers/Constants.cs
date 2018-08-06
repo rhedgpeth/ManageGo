@@ -14,5 +14,12 @@
         {
             public const string AccessToken = "AccessToken";
         }
+
+        /*
+        public static class MessageServiceIDs
+        {
+            public const string Logout = "Logout";
+        }
+        */
     }
 }

@@ -7,7 +7,7 @@ namespace ManageGo.Services
 {
     public class SecureStorageService : ISecureStorageService
     {
-        public async Task<bool> Set(string key, string value)
+        public async Task<bool> SetAsync(string key, string value)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace ManageGo.Services
             }
         }
 
-        public async Task<string> Get(string key)
+        public async Task<string> GetAsync(string key)
         {
             try
             {

@@ -5,22 +5,67 @@ using ManageGo.Core.Managers.ViewModels;
 using ManageGo.Core.Services;
 using ManageGo.Pages;
 using ManageGo.Services;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ManageGo
 {
     public partial class App : Application
     {
+        ISecureStorageService _secureStorageService;
+        ISecureStorageService SecureStorageService
+        {
+            get
+            {
+                if (_secureStorageService == null)
+                {
+                    _secureStorageService = ServiceContainer.Resolve<ISecureStorageService>();
+                }
+
+                return _secureStorageService;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
 
-            RegisterServices();
-
             UI.Navigation.NavigationService.Initialize(typeof(WelcomePage).Assembly);
 
+            RegisterServices();
+
+            SubscribeToGlobalMessages();
+
             SetRootPage();
+        }
+
+        void SubscribeToGlobalMessages()
+        {
+            var messageService = ServiceContainer.Resolve<IMessageService>();
+
+            if (messageService != null)
+            {
+                messageService.Subscribe(this, MessageType.ApiForbiddenStatus, Logout);
+            }
+        }
+
+        void Logout(string message)
+        {
+            if (!string.IsNullOrEmpty(AppInstance.ApiAccessToken))
+            {
+                AppInstance.ApiAccessToken = null;
+
+                SecureStorageService.Remove(Constants.SecureStorageKeys.AccessToken);
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    MainPage = new NavigationPage(new LoginPage { ViewModel = new LoginViewModel() });
+                });
+            }
+
+            if (!string.IsNullOrEmpty(message))
+            {
+                // TODO: Show toast
+            }
         }
 
         async void SetRootPage()
@@ -33,7 +78,7 @@ namespace ManageGo
 
         async Task<bool> IsLoggedIn()
         {
-            var accessToken = await SecureStorage.GetAsync(Core.Managers.Constants.SecureStorageKeys.AccessToken);
+            var accessToken = await SecureStorageService.GetAsync(Constants.SecureStorageKeys.AccessToken);
 
             if (!string.IsNullOrEmpty(accessToken))
             {
@@ -48,6 +93,7 @@ namespace ManageGo
         void RegisterServices()
         {
             ServiceContainer.Register<ISecureStorageService>(() => new SecureStorageService());
+            ServiceContainer.Register<IMessageService>(() => new MessageService());
         }
     }
 }

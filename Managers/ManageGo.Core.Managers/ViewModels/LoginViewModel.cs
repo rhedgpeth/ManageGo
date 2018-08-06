@@ -120,7 +120,7 @@ namespace ManageGo.Core.Managers.ViewModels
         {
             if (response != null && !string.IsNullOrEmpty(response.User?.AccessToken))
             {
-                return await SecureStorageService.Set(Constants.SecureStorageKeys.AccessToken, response.User.AccessToken);
+                return await SecureStorageService.SetAsync(Constants.SecureStorageKeys.AccessToken, response.User.AccessToken);
             }
          
             OnFailure?.Invoke("Unknown error has occured. (Authorize)");
