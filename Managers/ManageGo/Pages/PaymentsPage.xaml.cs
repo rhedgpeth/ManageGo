@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
-using ManageGo.UI.Pages;
 using ManageGo.DataTemplates.Selectors;
+using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
 {
-    public partial class PaymentsPage : BaseSearchContentPage<PaymentsViewModel>
+    public partial class PaymentsPage : BaseSearchContentPage<PaymentsViewModel,object>
     {      
         public PaymentsPage()
         {

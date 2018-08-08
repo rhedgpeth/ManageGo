@@ -25,22 +25,14 @@ namespace ManageGo.Core.Managers.ViewModels
                     var ticket = new MaintenanceTicket
                     {
                         TicketId = i,
-                        Title = $"Maintenance Ticket #{i}",
-                        Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                        TicketSubject = $"Maintenance Ticket #{i}",
+                        FirstComment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                             "Sed vel dolor leo. Aliquam erat volutpat. Cras turpis sem, tempus eu " +
                             "turpis nec, fringilla sollicitudin quam. Maecenas quis auctor orci.",
-                        CreatedDateTime = DateTime.Now.AddDays(i).AddHours(i),
-                        Category = $"Category {i}",
-                        Tenant = new Tenant
-                        {
-                            Name = $"Tenant Name {i}",
-                            Building = new Building
-                            {
-                                Name = "Building {i}",
-                                Address = $"{i} Main St."
-                            },
-                            Unit = $"{i}B"
-                        }
+                        TicketCreateTime = DateTime.Now.AddDays(i).AddHours(i),
+                        Categories = new MaintenanceCategory[] { new MaintenanceCategory { Name = $"Category {i}" }},
+                        TenantFirstName = "Tenant",
+                        TenantLastName = i.ToString()
                     };
 
                     sectionHeaders.Add(new CalendarSectionHeaderViewModel(ticket));

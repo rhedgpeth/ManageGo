@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
@@ -7,15 +8,18 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class MaintenanceTicketSectionHeaderViewModel : BaseCollectionSectionViewModel
     {
-		public string Title { get; set; }
-       
-		public string CreatedDateTime { get; set; }
+        MaintenanceTicket Ticket { get; set; }
 
-		public string Category { get; set; }
-
-		public string TenantName { get; set; }
-
-		public string TenantAddress { get; set; }
+		public string Title { get; private set; }
+		public string CreatedDateTime { get; private set; }
+        public int ReplyCount { get; private set; }
+		public string Categories { get; private set; }
+		public string TenantName { get; private set; }
+		public string TenantAddress { get; private set; }
+        public bool HasPet { get; private set; }
+        public bool HasEvent { get; private set; }
+        public bool HasWorkorder { get; private set; }
+        public bool HasAccess { get; private set; }
 
         public MaintenanceTicketSectionHeaderViewModel(MaintenanceTicket ticket)
         {
@@ -24,11 +28,27 @@ namespace ManageGo.Core.Managers.ViewModels
 
         void LoadMaintenanceTicket(MaintenanceTicket ticket)
 		{
-			Title = ticket.Title;
-			CreatedDateTime = ticket.CreatedDateTime.ToShortDateString();
-			Category = ticket.Category;
-			TenantName = ticket.Tenant.Name;
-			TenantAddress = $"{ticket.Tenant.Building.Address}, {ticket.Tenant.Unit}";
+            Ticket = ticket;
+
+			Title = ticket.TicketSubject;
+			
+            CreatedDateTime = ticket.TicketCreateTime.ToShortDateString();
+
+            ReplyCount = ticket.NumberOfReplies;
+
+            if (ticket.Categories?.Length > 0)
+            {
+                Categories = string.Join(", ", ticket.Categories.Select(x => x.Name));
+            }
+
+            TenantName = $"{ticket.TenantFirstName} {ticket.TenantLastName}".Trim();
+			
+            TenantAddress = ticket.ShortAddress;
+
+            HasPet = ticket.HasPet;
+            HasEvent = ticket.HasEvent;
+            HasWorkorder = ticket.HasWorkorder;
+            HasAccess = ticket.HasAccess;
                      
 			Children = new List<object>
 			{

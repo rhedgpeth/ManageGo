@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
-using ManageGo.Core.Managers.Models;
+using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
+using ManageGo.Core.Managers.Models;
+using System.Collections.ObjectModel;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class BuildingsViewModel : BaseSearchViewModel
+    public class BuildingsViewModel : BaseSearchViewModel<BuildingViewModel>
     {
-		ObservableCollection<BuildingViewModel> _buildings;
-        public ObservableCollection<BuildingViewModel> Buildings 
-		{
-			get => _buildings;
-			set => SetPropertyChanged(ref _buildings, value);
-		}
-
 		ICommand _itemSelectedCommand;
 		public ICommand ItemSelectedCommand
 		{
@@ -38,24 +31,39 @@ namespace ManageGo.Core.Managers.ViewModels
 			Title = "Buildings";
         }
 
-		public override Task InitAsync()
-		{
-			var buildings = new List<BuildingViewModel>();
+        public override Task InitAsync() => LoadAsync(true);
 
-			for (int i = 0; i < 10; i++)
-			{
-				buildings.Add(new BuildingViewModel(new Building
-				{
-					Name = $"Building {i}",
-					UnitCount = (int)RandomNumberBetween(1, 50),
-					TenantCount = (int)RandomNumberBetween(1, 100),
-					TicketCount = (int)RandomNumberBetween(1, 10)
-				}));
-			}
+        public override async Task LoadAsync(bool refresh)
+        {
+            await base.LoadAsync(refresh);
 
-			Buildings = new ObservableCollection<BuildingViewModel>(buildings);
+            IsBusy = true;
 
-			return base.InitAsync();
-		}
-	}
+            // TODO: Implement paging
+            var request = new PagedRequest { Page = Page, PageSize = 20 };
+
+            var buildingsResponse = await BuildingService.Instance.GetBuildings(request);
+
+            if (buildingsResponse?.Status == Enumerations.ResponseStatus.Data)
+            {
+                CanLoadMore = buildingsResponse.Result.Count == 20;
+
+                var buildingViewModels = buildingsResponse.Result.Select(x => new BuildingViewModel(x));
+
+                if (refresh)
+                {
+                    Items = new ObservableCollection<BuildingViewModel>(buildingViewModels);
+                }
+                else
+                {
+                    foreach (var building in buildingsResponse.Result)
+                    {
+                        Items.Add(new BuildingViewModel(building));
+                    }
+                }
+            }
+
+            IsBusy = false;
+        }
+    }
 }

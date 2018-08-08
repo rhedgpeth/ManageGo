@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -9,7 +8,7 @@ using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-	public class BuildingUnitsViewModel : BaseSearchViewModel 
+    public class BuildingUnitsViewModel : BaseSearchViewModel<BuildingUnitViewModel> 
     {
 		int BuildingId { get; set; }
 
@@ -19,13 +18,6 @@ namespace ManageGo.Core.Managers.ViewModels
             get => _buildingName;
             set => SetPropertyChanged(ref _buildingName, value);
         }
-
-		List<BuildingUnitViewModel> _units;
-		public List<BuildingUnitViewModel> Units
-		{
-			get => _units;
-			set => SetPropertyChanged(ref _units, value);
-		}
 
 		ICommand _tenantsSelectedCommand;
         public ICommand TenantsSelectedCommand
@@ -53,7 +45,7 @@ namespace ManageGo.Core.Managers.ViewModels
 		{
 			var units = await BuildingService.Instance.GetUnits(BuildingId);
 
-			Units = units?.Select(u => new BuildingUnitViewModel(u)).ToList();
+            Items = new ObservableCollection<BuildingUnitViewModel>(units?.Select(u => new BuildingUnitViewModel(u)).ToList());
 		}      
 	}
 }

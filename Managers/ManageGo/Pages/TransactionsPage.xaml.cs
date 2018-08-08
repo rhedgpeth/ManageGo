@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
 using ManageGo.DataTemplates.Selectors;
 
 namespace ManageGo.Pages
 {
-    public partial class TransactionsPage : BaseSearchContentPage<TransactionsViewModel>
+    public partial class TransactionsPage : BaseSearchContentPage<TransactionsViewModel,object>
     {
 		public TransactionsPage()
         {

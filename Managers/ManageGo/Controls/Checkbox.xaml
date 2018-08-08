@@ -7,12 +7,14 @@
     x:Class="ManageGo.Controls.Checkbox">
 
     <controls:ToggleButton 
+            x:Name="toggleButton"
             CheckedImage="checked"
             UnCheckedImage="unchecked"
             Enabled="true"
-            Animate="False"
+            Animate="false"
             VerticalOptions="CenterAndExpand" />
 
-    <Label x:Name="descriptionLabel" FontSize="Small" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+    <Label x:Name="descriptionLabel" Text="{Binding Text}"
+           FontSize="Small" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
     
 </StackLayout>

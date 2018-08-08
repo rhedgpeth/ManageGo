@@ -2,11 +2,12 @@
 <local:BaseSearchContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"  
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.Controls"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.MaintenanceTicketsPage"
-    x:TypeArguments="vm:MaintenanceTicketsViewModel"
+    x:TypeArguments="vm:MaintenanceTicketsViewModel,sys:object"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
@@ -42,9 +43,7 @@
                             <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        <!-- List of buildings -->
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -52,9 +51,9 @@
                             <controls:ExpandablePicker Descriptor="Priority" SelectedText="All">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        
+                                       <controls:CheckboxList ItemsSource="{Binding Priorities}" />
+                                        
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -62,9 +61,7 @@
                             <controls:ExpandablePicker Descriptor="Category" SelectedText="Electricity">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        <!-- List of categories -->
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -72,9 +69,7 @@
                             <controls:ExpandablePicker Descriptor="Tags" SelectedText="Access Granted, Forward to Super">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        <!-- List of tags -->
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -82,8 +77,12 @@
                             <controls:ExpandablePicker Descriptor="Status" SelectedText="Open">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
+
+                                        <!-- List of statuses -->
+                                        
+                                        <!--
                                         <controls:RadioGroup ItemsSource="{Binding StatusOptions}" 
-                                                             VerticalOptions="Start" />
+                                                             VerticalOptions="Start" />-->
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -91,9 +90,7 @@
                             <controls:ExpandablePicker Descriptor="Due date" SelectedText="1/10/2018">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        <!-- Calendar (single select) -->
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -101,9 +98,7 @@
                             <controls:ExpandablePicker Descriptor="Assigned" SelectedText="Boris Gursky">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                        <!-- List of users(?) -->
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -122,6 +117,9 @@
             <ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"
+                IsPullToRefreshEnabled="true"
+                RefreshCommand="{Binding RefreshCommand}"
+                IsRefreshing="{Binding IsRefreshing}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
                 BackgroundColor="#F9FAFB" />

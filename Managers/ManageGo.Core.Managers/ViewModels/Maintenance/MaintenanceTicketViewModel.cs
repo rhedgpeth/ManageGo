@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -9,7 +8,7 @@ using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {   
-    public class MaintenanceTicketViewModel : BaseSearchViewModel
+    public class MaintenanceTicketViewModel : BaseNavigationViewModel
     {
 		MaintenanceTicket _maintenanceTicket;
         public MaintenanceTicket MaintenanceTicket

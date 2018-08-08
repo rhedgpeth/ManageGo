@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Models;
@@ -14,5 +15,11 @@ namespace ManageGo.Core.Managers.Services
 
         public Task<BaseResponse<MaintenanceUserSettings>> GetUserSettings()
             => PostAsync<BaseResponse<MaintenanceUserSettings>>("maintenanceobjects", default(CancellationToken), AddAccessToken); 
+
+        public Task<BaseResponse<List<MaintenanceTicket>>> GetTickets(MaintenanceTicketsRequest request)
+        {
+            return PostAsync<BaseResponse<List<MaintenanceTicket>>, 
+                MaintenanceTicketsRequest>("tickets", request, default(CancellationToken), AddAccessToken);
+        }
     }
 }

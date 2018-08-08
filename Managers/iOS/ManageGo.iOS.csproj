@@ -312,6 +312,14 @@
     <BundleResource Include="Resources\unchecked%403x.png" />
     <BundleResource Include="Resources\radio_selected%403x.png" />
     <BundleResource Include="Resources\radio_unselected%403x.png" />
+    <BundleResource Include="Resources\chat_red%402x.png" />
+    <BundleResource Include="Resources\chat_red%403x.png" />
+    <BundleResource Include="Resources\key_blue%402x.png" />
+    <BundleResource Include="Resources\key_blue%403x.png" />
+    <BundleResource Include="Resources\wrench_blue%402x.png" />
+    <BundleResource Include="Resources\wrench_blue%403x.png" />
+    <BundleResource Include="Resources\calendar_blue_sm%402x.png" />
+    <BundleResource Include="Resources\calendar_blue_sm%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets')" />

@@ -6,13 +6,18 @@
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.BuildingsPage"
-    x:TypeArguments="vm:BuildingsViewModel"
+    x:TypeArguments="vm:BuildingsViewModel,vm:BuildingViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
 
         <controls:ListView    
-            ItemsSource="{Binding Buildings}"
+            ItemsSource="{Binding Items}"
             ItemTappedCommand="{Binding ItemSelectedCommand}"
+            IsPullToRefreshEnabled="true"
+            RefreshCommand="{Binding RefreshCommand}"
+            IsRefreshing="{Binding IsRefreshing}"
+            PreloadCount="5"
+            LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
             SeparatorVisibility="None" 
             HasUnevenRows="true"
             BackgroundColor="#F9FAFB">
@@ -79,10 +84,13 @@
                             </Grid>
 
                         </Frame>
-                        
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Footer>
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Margin="10"/>    
+            </ListView.Footer>
         </controls:ListView>
         
     </ContentPage.Content>

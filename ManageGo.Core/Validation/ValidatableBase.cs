@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Validation
 {
-	public class ValidatableBase : ViewModels.BaseNotify, IValidatableBase
+	public class ValidatableBase : BaseNotify, IValidatableBase
     {
         readonly Validator validator;
 

@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace ManageGo.Core.ViewModels
+namespace ManageGo.Core
 {
     public abstract class BaseNotify : INotifyPropertyChanged
     {

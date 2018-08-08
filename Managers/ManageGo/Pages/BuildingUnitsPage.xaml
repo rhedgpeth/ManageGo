@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
-    x:TypeArguments="vm:BuildingUnitsViewModel"
+    x:TypeArguments="vm:BuildingUnitsViewModel,vm:BuildingUnitViewModel"
     x:Class="ManageGo.Pages.BuildingUnitsPage"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
@@ -33,7 +33,7 @@
         </Grid> 
 
         <controls:ListView   
-            ItemsSource="{Binding Units}"
+            ItemsSource="{Binding Items}"
             ItemTappedCommand="{Binding TenantsSelectedCommand}"
             SeparatorVisibility="None" 
             HasUnevenRows="true"

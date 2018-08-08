@@ -56,11 +56,10 @@ namespace ManageGo.Core.Managers.ViewModels
 			MaintenanceTicket = ticket;
 
             //Description = ticket.Description;
-			Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-                " Sed et risus fermentum, imperdiet arcu ut, dapibus quam.Nam sit amet lobortis tortor.";
+			Description = ticket.FirstComment;
 			Participants = new List<string> { "John Doe", "Jim Doe", "Jake Doe" };
 			EventTimeDescription = "2:00 PM to 3:00 PM";
-			EventDateDescription = ticket.CreatedDateTime.ToShortDateString();         
+			EventDateDescription = ticket.TicketCreateTime.ToShortDateString();         
         }
     }
 }

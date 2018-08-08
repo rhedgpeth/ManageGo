@@ -98,6 +98,7 @@ namespace ManageGo.Core.Managers.ViewModels
                 {
                     if (await Authorize(response.Result))
                     {
+                        AppInstance.ApiAccessToken = response.Result.User.AccessToken;
                         Navigation.SetRootView(new RootViewModel(), false);
                     }
                 }

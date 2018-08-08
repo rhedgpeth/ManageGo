@@ -2,11 +2,12 @@
 <local:BaseSearchContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"   
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.Controls"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.PaymentsPage"
-    x:TypeArguments="vm:PaymentsViewModel"
+    x:TypeArguments="vm:PaymentsViewModel,sys:object"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
 
     <ContentPage.Content>

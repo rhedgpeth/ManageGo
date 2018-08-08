@@ -7,7 +7,7 @@ using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class DashboardViewModel : BaseSearchViewModel
+    public class DashboardViewModel : BaseNavigationViewModel
     {
         string _totalPaymentsThisWeek;
         public string TotalPaymentsThisWeek
@@ -65,20 +65,6 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
-        ICommand _refreshCommand;
-        public ICommand RefreshCommand
-        {
-            get
-            {
-                if (_refreshCommand == null)
-                {
-                    _refreshCommand = new Command(async () => await LoadDashboard());
-                }
-
-                return _refreshCommand;
-            }
-        }
-
         public DashboardViewModel()
         {
             Title = "Welcome";
@@ -86,10 +72,10 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public override async Task InitAsync()
         {
-            await LoadDashboard();
-
             // We do not want to wait for these results - fire and forget
             LoadUserSettings();
+
+            await LoadDashboard();
         }
 
         async Task LoadDashboard()
@@ -118,7 +104,7 @@ namespace ManageGo.Core.Managers.ViewModels
         {
             var maintenanceUserSettings = await MaintenanceService.Instance.GetUserSettings();
 
-            if (maintenanceUserSettings.Status == Enumerations.ResponseStatus.Data)
+            if (maintenanceUserSettings?.Status == Enumerations.ResponseStatus.Data)
             {
                 AppInstance.Maintenance.Settings = maintenanceUserSettings.Result;
             }

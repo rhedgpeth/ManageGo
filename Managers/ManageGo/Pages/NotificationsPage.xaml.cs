@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
 using ManageGo.DataTemplates.Selectors;
 
 namespace ManageGo.Pages
 {
-    public partial class NotificationsPage : BaseSearchContentPage<NotificationsViewModel>
+    public partial class NotificationsPage : BaseSearchContentPage<NotificationsViewModel,object>
     {
         public NotificationsPage()
 		{

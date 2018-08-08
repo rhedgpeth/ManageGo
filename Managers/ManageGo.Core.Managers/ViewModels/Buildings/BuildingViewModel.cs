@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
@@ -61,7 +60,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			Name = building.Name;
 			UnitCount = building.UnitCount;
 			TenantCount = building.TenantCount;
-			TicketCount = building.TicketCount;
+			TicketCount = building.OpenTicketCount;
         }
     }
 }

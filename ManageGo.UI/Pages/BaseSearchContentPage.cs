@@ -5,8 +5,8 @@ using Xamarin.Forms;
 
 namespace ManageGo.UI.Pages
 {   
-	public abstract class BaseSearchContentPage<T> : BaseContentPage<T>, IBaseSearchPage,
-	    IViewFor<T> where T : BaseSearchViewModel //, new()
+	public abstract class BaseSearchContentPage<T, K> : BaseContentPage<T>, IBaseSearchPage,
+	    IViewFor<T> where T : BaseSearchViewModel<K> //, new()
     {
 		public event SearchHandler OnSearchIconTapped;
 

@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Models;
-using ManageGo.Core.Services;
 
 namespace ManageGo.Core.Managers.Services
 {
-	public class BuildingService : BaseHttpService
+	public class BuildingService : BaseAuthenticatedHttpService
     {
 		static readonly Lazy<BuildingService> lazy = new Lazy<BuildingService>(() => new BuildingService());
 		public static BuildingService Instance { get { return lazy.Value; } }
 
-		BuildingService() : base(Constants.BaseApiUrl) 
-		{ }
+		BuildingService() { }
+
+        public Task<BaseResponse<List<Building>>> GetBuildings(PagedRequest request) 
+            => PostAsync<BaseResponse<List<Building>>, PagedRequest>("buildings", 
+                                                                     request, 
+                                                                     default(CancellationToken), 
+                                                                     AddAccessToken);
 
 		//public Task<List<Unit>> GetUnits(int buildingId) => GetAsync<List<Unit>>("building/{buildingId}/units");
         public Task<List<Unit>> GetUnits(int buildingId)

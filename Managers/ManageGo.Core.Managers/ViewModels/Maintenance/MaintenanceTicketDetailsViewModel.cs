@@ -35,7 +35,7 @@ namespace ManageGo.Core.Managers.ViewModels
         void LoadMaintenanceTicket(MaintenanceTicket ticket)
 		{
 			MaintenanceTicket = ticket;
-			Description = ticket.Description;
+			Description = ticket.FirstComment;
 		}
     }
 }

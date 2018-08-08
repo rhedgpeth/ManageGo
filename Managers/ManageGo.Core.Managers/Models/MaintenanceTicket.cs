@@ -1,20 +1,27 @@
 ﻿using System;
+using System.Linq;
+
 namespace ManageGo.Core.Managers.Models
 {
     public class MaintenanceTicket
     {
 		public int TicketId { get; set; }
+        public string TicketNumber { get; set; }
+        public string TicketStatus { get; set; }
+        public DateTime TicketCreateTime { get; set; }
+        public string TenantFirstName { get; set; }
+        public string TenantLastName { get; set; }
+        public string ShortAddress { get; set; }
+        public string TicketSubject { get; set; }
+        public string FirstComment { get; set; }
 
-		public string Title { get; set; }
-     
-		public string Description { get; set; }
+        public MaintenanceCategory[] Categories { get; set; }
 
-		public DateTime CreatedDateTime { get; set; }
-
-		// TODO: Replace with enumeration or category type/id from server
-		public string Category { get; set; }
-
-		// TODO: Possibly refactor to attach multiple tenants
-		public Tenant Tenant { get; set; }
+        //public DateTime DueDate { get; set; }
+        public int NumberOfReplies { get; set; }
+        public bool HasWorkorder { get; set; }
+        public bool HasEvent { get; set; }
+        public bool HasPet { get; set; }
+        public bool HasAccess { get; set; }
     }
 }

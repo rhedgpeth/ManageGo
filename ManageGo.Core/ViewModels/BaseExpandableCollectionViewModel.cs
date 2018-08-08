@@ -1,18 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Collections.ObjectModel;
+﻿using System.Linq;
 
 namespace ManageGo.Core.ViewModels
 {
-	public abstract class BaseExpandableCollectionViewModel<T> : BaseSearchViewModel where T : BaseCollectionSectionViewModel
+	public abstract class BaseExpandableCollectionViewModel<T> : BaseSearchViewModel<object> where T : BaseCollectionSectionViewModel
     {
-		ObservableCollection<object> _items;
-        public ObservableCollection<object> Items
-        {
-            get => _items;
-            set => SetPropertyChanged(ref _items, value);
-        }
-       
 		public void OnSectionHeaderSelected(T section)
         {         
 			if (section.IsExpanded)

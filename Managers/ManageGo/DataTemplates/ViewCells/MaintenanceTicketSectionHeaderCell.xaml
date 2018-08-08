@@ -20,15 +20,23 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.Row="0">
-                <Image Source="chat_green" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,3,0,0" />
-                <Label Text="3" TextColor="White" FontSize="Micro" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Image Source="{Binding ReplyCount, Converter={StaticResource cnvReplyCountToImage}}" 
+                       Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,3,0,0" />
+                <Label Text="{Binding ReplyCount}" TextColor="White" FontSize="Micro" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
             </Grid>
 
             <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" Style="{Binding Header-Text}" FontAttributes="Bold" VerticalTextAlignment="Center" />
 
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
+                <Image IsVisible="{Binding HasPet}" Source="pet_blue" Aspect="AspectFit" HorizontalOptions="Center" />
+                <Image IsVisible="{Binding HasAccess}" Source="key_blue" Aspect="AspectFit" HorizontalOptions="Center" />
+                <Image IsVisible="{Binding HasEvent}" Source="calendar_blue_sm" Aspect="AspectFit" HorizontalOptions="Center" />
+                <Image IsVisible="{Binding HasWorkorder}" Source="wrench_blue" Aspect="AspectFit" HorizontalOptions="Center" />
+            </StackLayout>
+            
             <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
                 <Label Text="{Binding CreatedDateTime}" Style="{StaticResource Mid-Grey-Small}" VerticalTextAlignment="Center" />
-                <Label Text="{Binding Category}" Style="{StaticResource Light-Grey-Small}" VerticalTextAlignment="Center" />
+                <Label Text="{Binding Categories}" Style="{StaticResource Light-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>
                 
             <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" 

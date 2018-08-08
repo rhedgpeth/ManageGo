@@ -1,4 +1,6 @@
 ﻿using System.Threading.Tasks;
+using System.Windows.Input;
+using ManageGo.Core.Input;
 
 namespace ManageGo.Core.ViewModels
 {
@@ -18,6 +20,36 @@ namespace ManageGo.Core.ViewModels
             set => SetPropertyChanged(ref _isBusy, value);
         }
 
+        bool _isRefreshing;
+        public bool IsRefreshing
+        {
+            get => _isRefreshing;
+            set => SetPropertyChanged(ref _isRefreshing, value);
+        }
+
+        ICommand _refreshCommand;
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                if (_refreshCommand == null)
+                {
+                    _refreshCommand = new Command(async () => 
+                    {
+                        IsRefreshing = true;
+
+                        await LoadAsync(true);
+
+                        IsRefreshing = false;
+                    });
+                }
+
+                return _refreshCommand;
+            }
+        }
+
         public virtual Task InitAsync() => Task.FromResult(true);
+
+        public virtual Task LoadAsync(bool refresh) => Task.FromResult(true);
     }
 }

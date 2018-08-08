@@ -263,6 +263,10 @@
     <AndroidResource Include="Resources\drawable\switch_track_custom.xml" />
     <AndroidResource Include="Resources\color\switch_color.xml" />
     <AndroidResource Include="Resources\drawable\switch_thumb_custom.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_red.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\key_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\wrench_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\calendar_blue_sm.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

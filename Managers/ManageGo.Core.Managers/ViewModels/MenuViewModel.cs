@@ -170,14 +170,11 @@ namespace ManageGo.Core.Managers.ViewModels
 
         void Logout()
         {
-            if (SecureStorageService.Remove(Constants.SecureStorageKeys.AccessToken))
-            {
-                Navigation.SetRootView(new LoginViewModel());
-            }
-            else
-            {
-                // TODO: Handle logout error
-            }
+            AppInstance.ApiAccessToken = null;
+
+            SecureStorageService.Remove(Constants.SecureStorageKeys.AccessToken);
+         
+            Navigation.SetRootView(new LoginViewModel());
         }
 
 		void CallPhoneNumber() => ExternalAppService.CallPhoneNumber(PhoneNumber);

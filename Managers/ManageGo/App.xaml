@@ -265,6 +265,7 @@
             <converters:ListToCommaSeparatedStringConverter x:Key="cnvListToCommaSeparatedString"></converters:ListToCommaSeparatedStringConverter>
             <converters:TransactionSourceTypeToImageConverter x:Key="cnvTransactionSourceTypeToImage"></converters:TransactionSourceTypeToImageConverter>
             <converters:NotificationTypeToImageConverter x:Key="cnvNotificationTypeToImage"></converters:NotificationTypeToImageConverter>
+            <converters:ReplyCountToImageConverter x:Key="cnvReplyCountToImage"></converters:ReplyCountToImageConverter>
             
         </ResourceDictionary>
     </Application.Resources>

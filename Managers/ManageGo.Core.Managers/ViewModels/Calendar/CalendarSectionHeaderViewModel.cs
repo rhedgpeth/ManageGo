@@ -20,9 +20,9 @@ namespace ManageGo.Core.Managers.ViewModels
         void LoadMaintenanceTicket(MaintenanceTicket ticket)
         {
 			TimeDescription = "4:00 PM to 5:00 PM";
-			DateDescription = ticket.CreatedDateTime.ToShortDateString();
-            Title = ticket.Title;
-			Location = "123 Main St, Astoria, NY #4B";
+			DateDescription = ticket.TicketCreateTime.ToShortDateString();
+            Title = ticket.TicketSubject;
+			Location = ticket.ShortAddress;
 
             Children = new List<object>
             {
