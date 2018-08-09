@@ -14,20 +14,6 @@ namespace ManageGo.DataTemplates.ViewCells
             InitializeComponent();
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            declineButton.Unfocused += DeclineButton_Unfocused;
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-
-            declineButton.Unfocused -= DeclineButton_Unfocused;
-        }
-
         void DeclineButton_Unfocused(object sender, FocusEventArgs e)
         {
             _declineButtonTapCount = 0;
