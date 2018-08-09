@@ -4,6 +4,9 @@ using ManageGo.Core.Services;
 using ManageGo.Core.ViewModels;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Enumerations;
+using System.Threading.Tasks;
+using ManageGo.Core.Managers.Services;
+using ManageGo.Core.Managers.Models;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
@@ -23,24 +26,11 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
+        public int LeaseId { get; set; }
 		public NotificationType NotificationType { get; set; } 
         public string Email { get; set; }
         public string HomePhoneNumber { get; set; }
         public string CellPhoneNumber { get; set; }
-		public string ActivationDescription
-		{
-			get
-			{
-				string target = string.Empty;
-
-				if (NotificationType == NotificationType.Tenant)
-					target = "tenant";
-				else
-					target = "unit";
-
-				return $"Approve {target} and activate:";
-			}
-		}
 
         ICommand _emailCommand;
         public ICommand EmailCommand
@@ -84,8 +74,61 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
+        ICommand _approveCommand;
+        public ICommand ApproveCommand
+        {
+            get 
+            {
+                if (_approveCommand == null)
+                {
+                    _approveCommand = new Command(async () => await UpdatePendingLeaseApproval(true));
+                }
+
+                return _approveCommand;
+            }   
+        }
+
+        ICommand _declineCommand;
+        public ICommand DeclineCommand
+        {
+            get
+            {
+                if (_declineCommand == null)
+                {
+                    _declineCommand = new Command(async () => await UpdatePendingLeaseApproval(false));
+                }
+
+                return _declineCommand;
+            }
+        }
+
         public NotificationDetailsViewModel()
-        { }
+        { 
+            // TODO: Resolve IAlertService
+        }
+
+        async Task UpdatePendingLeaseApproval(bool isApproved)
+        {
+            /*
+            var response = await PMCService.Instance.UpdatePendingLeaseApproval(new PendingLeaseApprovalAction
+            {
+                LeaseId = LeaseId,
+                IsApproved = isApproved
+            });
+
+            if (response.Status == ResponseStatus.ActionSuccessful)
+            {
+                // Success toast
+                // TODO: Add IAlertService (for Toast in this situation)
+            }
+            else
+            {
+                // Report error
+            }
+            */
+
+            // TODO: Send message (pub-sub) to refresh the list.
+        }
 
 		void CallPhoneNumber(string phoneNumber) => ExternalAppService.CallPhoneNumber(phoneNumber);
 

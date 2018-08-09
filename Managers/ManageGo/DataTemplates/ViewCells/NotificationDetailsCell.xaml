@@ -15,14 +15,14 @@
         <StackLayout Padding="0,0,0,0">
             <Grid RowSpacing="0" Margin="55,10,45,10">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25" />
                     <RowDefinition Height="25" />
                     <RowDefinition Height="25" />
-                    <RowDefinition Height="25" />
+                    <RowDefinition Height="35" />
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0" Grid.Column="0" Text="Email:" Style="{StaticResource Main-Grey-Small}" />
@@ -39,9 +39,11 @@
 
                 <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" >
                     <Button Text="Approve"  
+                            Command="{Binding ApproveCommand}"
                             Style="{StaticResource positiveButton}"
                             HorizontalOptions="FillAndExpand" />
                     <Button Text="Decline"
+                            Command="{Binding DeclineCommand}"
                             Style="{StaticResource negativeButton}"
                             HorizontalOptions="FillAndExpand" />
                 </StackLayout>

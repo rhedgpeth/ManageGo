@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Enumerations;
+using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -18,28 +20,42 @@ namespace ManageGo.Core.Managers.ViewModels
 
 		public override async Task InitAsync()
         {
-            var items = new List<object>();
+            var pendingApprovalsResponse = await PMCService.Instance.GetPendingLeaseApprovals();
 
-            for (int i = 0; i < 10; i++)
+            if (pendingApprovalsResponse.Status == ResponseStatus.Data)
             {
-                items.Add(new NotificationSectionHeaderViewModel 
-                              { 
-					                Title = $"Notification {i}",
-					                Type = i % 2 ==0 ? NotificationType.Tenant : NotificationType.Unit,
-					                Description = i % 2 == 0 ? $"12{i} Main St." : $"Building Manager {i}",
-                                    Children = new List<object> 
-                                    { 
-                                        new NotificationDetailsViewModel 
-                                        { 
-							                Email = $"person{i}@gmail.com",
-                                            HomePhoneNumber = $"(417)844-555{i}",
-                                            CellPhoneNumber = $"(417)844-55{i}1"
-                                        }
-                                    }  
-                                });
-            }
+                foreach (var pendingApproval in pendingApprovalsResponse.Result)
+                {
+                    var sectionHeaderViewModel = new NotificationSectionHeaderViewModel();
 
-            Items = new ObservableCollection<object>(items);
-        }  
+                    if (pendingApproval.ApprovalType.ToLower() == "tenant")
+                    {
+                        sectionHeaderViewModel.Title = $"{pendingApproval.TenantFirstName} {pendingApproval.TenantLastName}".Trim();
+                    }
+                    else
+                    {
+                        sectionHeaderViewModel.Title = pendingApproval.UnitName;   
+                    }
+
+                    sectionHeaderViewModel.Type = pendingApproval.ApprovalType.ToLower() == "tenant" 
+                                                        ? NotificationType.Tenant : NotificationType.Unit;
+
+                    sectionHeaderViewModel.Description = pendingApproval.BuildingShortAddress;
+
+                    sectionHeaderViewModel.Children = new List<object>
+                                                        {
+                                                            new NotificationDetailsViewModel
+                                                            {
+                                                                LeaseId = pendingApproval.LeaseId,
+                                                                Email = pendingApproval.TenantEmailAddress,
+                                                                HomePhoneNumber = pendingApproval.TenantHomePhone,
+                                                                CellPhoneNumber = pendingApproval.TenantCellPhone
+                                                            }
+                                                        };
+
+                    Items.Add(sectionHeaderViewModel);
+                }
+            }
+        }
     }
 }

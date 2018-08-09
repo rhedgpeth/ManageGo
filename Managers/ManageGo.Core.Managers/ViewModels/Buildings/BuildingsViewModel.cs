@@ -39,7 +39,6 @@ namespace ManageGo.Core.Managers.ViewModels
 
             IsBusy = true;
 
-            // TODO: Implement paging
             var request = new PagedRequest { Page = Page, PageSize = 20 };
 
             var buildingsResponse = await BuildingService.Instance.GetBuildings(request);
