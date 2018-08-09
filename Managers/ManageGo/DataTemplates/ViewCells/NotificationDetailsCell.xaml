@@ -42,8 +42,9 @@
                             Command="{Binding ApproveCommand}"
                             Style="{StaticResource positiveButton}"
                             HorizontalOptions="FillAndExpand" />
-                    <Button Text="Decline"
-                            Command="{Binding DeclineCommand}"
+                    <Button x:Name="declineButton"
+                            Text="Decline"
+                            Clicked="Handle_Declined_Clicked"
                             Style="{StaticResource negativeButton}"
                             HorizontalOptions="FillAndExpand" />
                 </StackLayout>

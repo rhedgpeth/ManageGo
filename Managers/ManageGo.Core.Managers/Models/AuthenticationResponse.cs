@@ -5,7 +5,7 @@ namespace ManageGo.Core.Managers.Models
     public class AuthenticationResponse
     {
         [JsonProperty(PropertyName = "UserInfo")]
-        public User User { get; set; }
+        public AuthenticatedUser User { get; set; }
 
         [JsonProperty(PropertyName = "PMCInfo")]
         public PropertyManagementCompany PropertyManageCompany { get; set; }

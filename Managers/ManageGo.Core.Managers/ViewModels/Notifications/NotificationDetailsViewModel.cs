@@ -118,26 +118,12 @@ namespace ManageGo.Core.Managers.ViewModels
             }   
         }
 
-        ICommand _declineCommand;
-        public ICommand DeclineCommand
-        {
-            get
-            {
-                if (_declineCommand == null)
-                {
-                    _declineCommand = new Command(async () => await UpdatePendingLeaseApproval(false));
-                }
-
-                return _declineCommand;
-            }
-        }
-
         public NotificationDetailsViewModel()
         { 
             // TODO: Resolve IAlertService
         }
 
-        async Task UpdatePendingLeaseApproval(bool isApproved)
+        public async Task UpdatePendingLeaseApproval(bool isApproved)
         {
             /*
             var response = await PMCService.Instance.UpdatePendingLeaseApproval(new PendingLeaseApprovalAction

@@ -52,7 +52,8 @@ namespace ManageGo.Core.Managers.Services
 			{
 				var tenant = new Tenant
 				{
-					Name = $"Tenant {_tenantCount++}"
+					FirstName = "Tenant",
+                    LastName = _tenantCount++.ToString()
 				};
 
 				tenants.Add(tenant);

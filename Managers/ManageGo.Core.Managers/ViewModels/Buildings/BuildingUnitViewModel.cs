@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
-using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
@@ -27,7 +24,7 @@ namespace ManageGo.Core.Managers.ViewModels
         public BuildingUnitViewModel(Unit unit)
         {
 			Number = unit.Number;
-			TenantNames = unit.Tenants.Select(t => t.Name).ToList();
+            TenantNames = unit.Tenants.Select(t => $"{t.FirstName} {t.LastName}").ToList();
         }
     }
 }
