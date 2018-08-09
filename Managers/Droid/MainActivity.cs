@@ -12,6 +12,8 @@ using ManageGo.Core.Services;
 using ManageGo.Core.Droid.Services;
 using FFImageLoading.Forms.Platform;
 using FFImageLoading;
+using Xamarin.Forms;
+using Plugin.Toasts;
 
 namespace ManageGo.Droid
 {
@@ -28,6 +30,9 @@ namespace ManageGo.Droid
             Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
 
             Xamarin.Essentials.Platform.Init(this, bundle);
+
+            DependencyService.Register<ToastNotification>();
+            ToastNotification.Init(this);
 
             CachedImageRenderer.Init(true);
             ImageService.Instance.Initialize();

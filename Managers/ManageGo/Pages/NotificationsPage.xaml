@@ -25,9 +25,16 @@
             <ListView   
                     x:Name="listView"
                     ItemsSource="{Binding Items}"
+                    IsPullToRefreshEnabled="true"
+                    RefreshCommand="{Binding RefreshCommand}"
+                    IsRefreshing="{Binding IsRefreshing}"
                     SeparatorVisibility="None" 
                     HasUnevenRows="true"
-                    BackgroundColor="#F9FAFB" />
+                    BackgroundColor="#F9FAFB">
+                <ListView.Footer>
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Margin="10"/>    
+                </ListView.Footer>
+            </ListView>
 
         </StackLayout>
         

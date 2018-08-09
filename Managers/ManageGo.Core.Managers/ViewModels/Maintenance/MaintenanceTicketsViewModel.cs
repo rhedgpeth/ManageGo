@@ -29,6 +29,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public override async Task LoadAsync(bool refresh)
         {
+            IsBusy = true;
+
             var request = new MaintenanceTicketsRequest
             {
                 FromDate = new DateTime(2018, 2, 1),
@@ -51,6 +53,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
                 Items = new System.Collections.ObjectModel.ObservableCollection<object>(sectionHeaders);
             }
+
+            IsBusy = false;
         }
     }
 }

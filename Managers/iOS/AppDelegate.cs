@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using FFImageLoading.Forms.Platform;
+﻿using FFImageLoading.Forms.Platform;
 using Foundation;
 using ManageGo.Core;
 using ManageGo.Core.iOS.Services;
 using ManageGo.Core.Services;
+using Plugin.Toasts;
 using UIKit;
+using UserNotifications;
+using Xamarin.Forms;
 
 namespace ManageGo.iOS
 {
@@ -17,6 +17,11 @@ namespace ManageGo.iOS
         {         
             global::Xamarin.Forms.Forms.Init();
 
+            DependencyService.Register<ToastNotification>();
+            ToastNotification.Init();
+
+            RequestNotificationPermissions(app);
+
             CachedImageRenderer.Init();
 
 			RegisterServices();
@@ -24,6 +29,26 @@ namespace ManageGo.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        void RequestNotificationPermissions(UIApplication app)
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                // Request Permissions
+                UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge | UNAuthorizationOptions.Sound, (granted, error) =>
+                {
+                    // Do something if needed
+                });
+            }
+            else if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+            {
+                var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
+                 UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
+                    );
+
+                app.RegisterUserNotificationSettings(notificationSettings);
+            }
         }
 
 		void RegisterServices()

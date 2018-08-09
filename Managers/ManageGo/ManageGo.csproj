@@ -13,6 +13,7 @@
     <PackageReference Include="Xamarin.Forms.InputKit" Version="2.0.5" />
     <PackageReference Include="Xamarin.Essentials" Version="0.9.1-preview" />
     <PackageReference Include="Refractored.XamForms.PullToRefresh" Version="2.2.2" />
+    <PackageReference Include="Toasts.Forms.Plugin" Version="3.3.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />

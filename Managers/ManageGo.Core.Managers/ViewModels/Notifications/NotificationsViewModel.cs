@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Enumerations;
 using ManageGo.Core.Managers.Services;
+using ManageGo.Core.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -16,14 +15,26 @@ namespace ManageGo.Core.Managers.ViewModels
         public NotificationsViewModel()
         {
 			Title = "Pending Approvals";
+
+            var messageService = ServiceContainer.Resolve<IMessageService>();
+
+            messageService?.Subscribe<NotificationDetailsViewModel>(this, "RefreshList", ReceivedUpdateRequest);
         }
 
-		public override async Task InitAsync()
+        async void ReceivedUpdateRequest(NotificationDetailsViewModel details) => await LoadAsync(true);
+
+        public override Task InitAsync() => LoadAsync(true);
+
+        public override async Task LoadAsync(bool refresh)
         {
+            IsBusy = true;
+
             var pendingApprovalsResponse = await PMCService.Instance.GetPendingLeaseApprovals();
 
             if (pendingApprovalsResponse.Status == ResponseStatus.Data)
             {
+                var items = new List<NotificationSectionHeaderViewModel>();
+
                 foreach (var pendingApproval in pendingApprovalsResponse.Result)
                 {
                     var sectionHeaderViewModel = new NotificationSectionHeaderViewModel();
@@ -34,10 +45,10 @@ namespace ManageGo.Core.Managers.ViewModels
                     }
                     else
                     {
-                        sectionHeaderViewModel.Title = pendingApproval.UnitName;   
+                        sectionHeaderViewModel.Title = pendingApproval.UnitName;
                     }
 
-                    sectionHeaderViewModel.Type = pendingApproval.ApprovalType.ToLower() == "tenant" 
+                    sectionHeaderViewModel.Type = pendingApproval.ApprovalType.ToLower() == "tenant"
                                                         ? NotificationType.Tenant : NotificationType.Unit;
 
                     sectionHeaderViewModel.Description = pendingApproval.BuildingShortAddress;
@@ -47,15 +58,25 @@ namespace ManageGo.Core.Managers.ViewModels
                                                             new NotificationDetailsViewModel
                                                             {
                                                                 LeaseId = pendingApproval.LeaseId,
+                                                                LeaseName = sectionHeaderViewModel.Title,
                                                                 Email = pendingApproval.TenantEmailAddress,
                                                                 HomePhoneNumber = pendingApproval.TenantHomePhone,
                                                                 CellPhoneNumber = pendingApproval.TenantCellPhone
                                                             }
                                                         };
 
-                    Items.Add(sectionHeaderViewModel);
+
+
+                    items.Add(sectionHeaderViewModel);
+                }
+
+                if (items != null)
+                {
+                    Items = new ObservableCollection<object>(items);
                 }
             }
+
+            IsBusy = false;
         }
     }
 }

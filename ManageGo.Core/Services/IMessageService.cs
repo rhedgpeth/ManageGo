@@ -25,7 +25,9 @@ namespace ManageGo.Core.Services
     public interface IMessageService
     {
         void Send(MessageType sender, string message);
+        void Send<TSender>(TSender sender, string message) where TSender : class;
 
         void Subscribe(object subcriber, MessageType message, Action<string> callback);
+        void Subscribe<TSender>(object subscriber, string message, Action<TSender> callback) where TSender : class;
     }
 }
