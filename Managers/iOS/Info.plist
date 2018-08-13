@@ -5,13 +5,11 @@
 	<key>CFBundleDisplayName</key>
 	<string>ManageGo</string>
 	<key>CFBundleName</key>
-	<string>ManageGo - Managers</string>
+	<string>ManageGo</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.managego.managers</string>
+	<string>com.managego.pmc</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -48,5 +46,7 @@
 		<string>Roboto-Thin.ttf</string>
 		<string>Roboto-Regular.ttf</string>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 </dict>
 </plist>

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using ManageGo.Core.Managers.Enumerations;
 using ManageGo.Core.Managers.Models;
 
 namespace ManageGo.Core.Managers.Services

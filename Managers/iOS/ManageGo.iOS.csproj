@@ -36,13 +36,14 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution: MANAGEGO LLC (4GH47MZ6ZW)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
@@ -190,6 +191,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\app_icon_1024-01.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_152.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -326,6 +332,10 @@
     <BundleResource Include="Resources\wrench_blue%403x.png" />
     <BundleResource Include="Resources\calendar_blue_sm%402x.png" />
     <BundleResource Include="Resources\calendar_blue_sm%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets')" />

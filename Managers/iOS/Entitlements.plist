@@ -4,7 +4,9 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>com.managego.managers</string>
+		<string>$(AppIdentifierPrefix)com.managego.pmc</string>
 	</array>
+	<key>aps-environment</key>
+	<string>production</string>
 </dict>
 </plist>

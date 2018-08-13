@@ -83,21 +83,25 @@
       "idiom": "ipad"
     },
     {
+      "filename": "icon_167.png",
       "size": "83.5x83.5",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
+      "filename": "icon_76.png",
       "size": "76x76",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
+      "filename": "icon_152.png",
       "size": "76x76",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
+      "filename": "app_icon_1024-01.png",
       "size": "1024x1024",
       "scale": "1x",
       "idiom": "ios-marketing"
@@ -194,6 +198,7 @@
       "idiom": "mac"
     },
     {
+      "filename": "icon.png",
       "size": "256x256",
       "scale": "2x",
       "idiom": "mac"
@@ -204,6 +209,7 @@
       "idiom": "mac"
     },
     {
+      "filename": "app_icon_1024-01.png",
       "size": "512x512",
       "scale": "2x",
       "idiom": "mac"
