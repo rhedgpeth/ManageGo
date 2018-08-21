@@ -57,7 +57,8 @@ namespace ManageGo.Core.Managers.ViewModels
         
         public BuildingViewModel(Building building)
         {
-			Name = building.Name;
+            BuildingId = building.BuildingId;
+			Name = building.BuildingName;
 			UnitCount = building.UnitCount;
 			TenantCount = building.TenantCount;
 			TicketCount = building.OpenTicketCount;

@@ -31,16 +31,22 @@ namespace ManageGo.Core.Managers.ViewModels
         {
             IsBusy = true;
 
+            await base.LoadAsync(refresh);
+
             var request = new MaintenanceTicketsRequest
             {
-                FromDate = new DateTime(2018, 2, 1),
-                ToDate = new DateTime(2018, 2, 5)
+                DateFrom = new DateTime(2018, 2, 1),
+                DateTo = new DateTime(2018, 2, 5),
+                Page = Page,
+                PageSize = 20
             };
 
             var ticketsResponse = await MaintenanceService.Instance.GetTickets(request).ConfigureAwait(false);
 
             if (ticketsResponse?.Status == Enumerations.ResponseStatus.Data)
             {
+                CanLoadMore = ticketsResponse.Result.Count == 20;
+
                 var sectionHeaders = new List<MaintenanceTicketSectionHeaderViewModel>();
 
                 await Task.Run(() =>
@@ -51,7 +57,7 @@ namespace ManageGo.Core.Managers.ViewModels
                     }
                 });
 
-                Items = new System.Collections.ObjectModel.ObservableCollection<object>(sectionHeaders);
+                LoadItems(refresh, sectionHeaders);
             }
 
             IsBusy = false;

@@ -41,17 +41,17 @@ namespace ManageGo.Core.Managers.ViewModels
 
                     if (pendingApproval.ApprovalType.ToLower() == "tenant")
                     {
-                        sectionHeaderViewModel.Title = $"{pendingApproval.TenantFirstName} {pendingApproval.TenantLastName}".Trim();
+                        sectionHeaderViewModel.Title = $"{pendingApproval.Tenant.TenantFirstName} {pendingApproval.Tenant.TenantLastName}".Trim();
                     }
                     else
                     {
-                        sectionHeaderViewModel.Title = pendingApproval.UnitName;
+                        sectionHeaderViewModel.Title = pendingApproval.Unit.UnitName;
                     }
 
                     sectionHeaderViewModel.Type = pendingApproval.ApprovalType.ToLower() == "tenant"
                                                         ? NotificationType.Tenant : NotificationType.Unit;
 
-                    sectionHeaderViewModel.Description = pendingApproval.BuildingShortAddress;
+                    sectionHeaderViewModel.Description = pendingApproval.Building.BuildingShortAddress;
 
                     sectionHeaderViewModel.Children = new List<object>
                                                         {
@@ -59,9 +59,9 @@ namespace ManageGo.Core.Managers.ViewModels
                                                             {
                                                                 LeaseId = pendingApproval.LeaseId,
                                                                 LeaseName = sectionHeaderViewModel.Title,
-                                                                Email = pendingApproval.TenantEmailAddress,
-                                                                HomePhoneNumber = pendingApproval.TenantHomePhone,
-                                                                CellPhoneNumber = pendingApproval.TenantCellPhone
+                                                                Email = pendingApproval.Tenant.TenantEmailAddress,
+                                                                HomePhoneNumber = pendingApproval.Tenant.TenantHomePhone,
+                                                                CellPhoneNumber = pendingApproval.Tenant.TenantCellPhone
                                                             }
                                                         };
 

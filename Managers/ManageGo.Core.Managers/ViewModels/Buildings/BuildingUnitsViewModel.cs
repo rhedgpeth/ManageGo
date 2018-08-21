@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
@@ -40,12 +41,15 @@ namespace ManageGo.Core.Managers.ViewModels
 			BuildingId = buildingId;
 			BuildingName = buildingName;
         }
-        
+
 		public override async Task InitAsync()
 		{
-			var units = await BuildingService.Instance.GetUnits(BuildingId);
+            var buildingDetailsResponse = await BuildingService.Instance.GetBuildingDetails(new Building { PropertyId = BuildingId });
 
-            Items = new ObservableCollection<BuildingUnitViewModel>(units?.Select(u => new BuildingUnitViewModel(u)).ToList());
+            if (buildingDetailsResponse?.Status == Enumerations.ResponseStatus.Data)
+            {
+                Items = new ObservableCollection<BuildingUnitViewModel>(buildingDetailsResponse.Result.Units.Select(u => new BuildingUnitViewModel(u)).ToList());
+            }
 		}      
 	}
 }

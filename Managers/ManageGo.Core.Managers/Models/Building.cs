@@ -1,18 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace ManageGo.Core.Managers.Models
 {
     public class Building
     {
-		public int Id { get; set; }
+		public int BuildingId { get; set; }
+        public int PropertyId { get; set; }
 
-        [JsonProperty(PropertyName = "BuildingName")]
-		public string Name { get; set; }
+		public string BuildingName { get; set; }
+		public string BuildingShortAddress { get; set; }
 
-        [JsonProperty(PropertyName = "BuildingShortAddress")]
-		public string ShortAddress { get; set; }
+        [JsonProperty(PropertyName = "MaintenanceEnabled")]
+        public bool IsMaintenanceEnabled { get; set; }
 
+        public List<Unit> Units { get; set; }
+
+        // TODO: Find a better way to split this up
         [JsonProperty(PropertyName = "NumberOfUnits")]
 		public int UnitCount { get; set; }
 

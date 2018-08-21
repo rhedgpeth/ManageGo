@@ -23,8 +23,8 @@ namespace ManageGo.Core.Managers.ViewModels
       
         public BuildingUnitViewModel(Unit unit)
         {
-			Number = unit.Number;
-            TenantNames = unit.Tenants.Select(t => $"{t.FirstName} {t.LastName}").ToList();
+			Number = unit.UnitName;
+            TenantNames = unit.Tenants.Select(t => $"{t.TenantFirstName} {t.TenantLastName}").ToList();
         }
     }
 }

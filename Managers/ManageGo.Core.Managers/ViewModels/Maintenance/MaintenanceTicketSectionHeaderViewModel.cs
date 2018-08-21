@@ -38,7 +38,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (ticket.Categories?.Length > 0)
             {
-                Categories = string.Join(", ", ticket.Categories.Select(x => x.Name));
+                Categories = string.Join(", ", ticket.Categories.Select(x => x.CategoryName));
             }
 
             TenantName = $"{ticket.TenantFirstName} {ticket.TenantLastName}".Trim();

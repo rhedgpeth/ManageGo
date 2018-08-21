@@ -35,9 +35,9 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public override async Task LoadAsync(bool refresh)
         {
-            await base.LoadAsync(refresh);
-
             IsBusy = true;
+
+            await base.LoadAsync(refresh);
 
             var request = new PagedRequest { Page = Page, PageSize = 20 };
 
@@ -49,17 +49,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
                 var buildingViewModels = buildingsResponse.Result.Select(x => new BuildingViewModel(x));
 
-                if (refresh)
-                {
-                    Items = new ObservableCollection<BuildingViewModel>(buildingViewModels);
-                }
-                else
-                {
-                    foreach (var building in buildingsResponse.Result)
-                    {
-                        Items.Add(new BuildingViewModel(building));
-                    }
-                }
+                LoadItems(refresh, buildingViewModels);
             }
 
             IsBusy = false;

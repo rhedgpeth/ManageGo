@@ -19,7 +19,11 @@ namespace ManageGo.Core.Managers.Services
                                                                      default(CancellationToken), 
                                                                      AddAccessToken);
 
-		//public Task<List<Unit>> GetUnits(int buildingId) => GetAsync<List<Unit>>("building/{buildingId}/units");
+        //public Task<List<Unit>> GetUnits(int buildingId) => GetAsync<List<Unit>>("building/{buildingId}/units");
+
+        public Task<BaseResponse<Building>> GetBuildingDetails(Building request)
+        => PostAsync<BaseResponse<Building>, Building>("buildingdetails", request, default(CancellationToken), AddAccessToken);
+
         public Task<List<Unit>> GetUnits(int buildingId)
 		{
 			return Task.Run(() =>
@@ -52,8 +56,8 @@ namespace ManageGo.Core.Managers.Services
 			{
 				var tenant = new Tenant
 				{
-					FirstName = "Tenant",
-                    LastName = _tenantCount++.ToString()
+					TenantFirstName = "Tenant",
+                    TenantLastName = _tenantCount++.ToString()
 				};
 
 				tenants.Add(tenant);

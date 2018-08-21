@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
@@ -49,6 +50,21 @@ namespace ManageGo.Core.ViewModels
             }
 
             return base.LoadAsync(refresh);
+        }
+
+        protected void LoadItems(bool resetCollection, IEnumerable<T> items)
+        {
+            if (resetCollection)
+            {
+                Items = new ObservableCollection<T>(items);
+            }
+            else if (!resetCollection && Items != null)
+            {
+                foreach (var item in items)
+                {
+                    Items.Add(item);
+                }
+            }
         }
     }
 }
