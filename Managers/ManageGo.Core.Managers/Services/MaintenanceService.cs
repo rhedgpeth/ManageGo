@@ -21,5 +21,17 @@ namespace ManageGo.Core.Managers.Services
             return PostAsync<BaseResponse<List<MaintenanceTicket>>, 
                 MaintenanceTicketsRequest>("tickets", request, default(CancellationToken), AddAccessToken);
         }
+
+        public Task<BaseResponse<MaintenanceTicket>> GetTicketDetails(MaintenanceTicket ticket)
+            => PostAsync<BaseResponse<MaintenanceTicket>, MaintenanceTicket>("ticketdetails", 
+                                                                             ticket, 
+                                                                             default(CancellationToken), 
+                                                                             AddAccessToken);
+
+        public Task<BaseResponse<List<MaintenanceTicketEvent>>> GetEvents(DateRangeRequest request)
+            => PostAsync<BaseResponse<List<MaintenanceTicketEvent>>, DateRangeRequest>("eventlist", 
+                                                                                       request, 
+                                                                                       default(CancellationToken), 
+                                                                                       AddAccessToken);
     }
 }

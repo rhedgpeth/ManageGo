@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ManageGo.Core.Managers.Models
@@ -15,7 +16,7 @@ namespace ManageGo.Core.Managers.Models
         public string TicketSubject { get; set; }
         public string FirstComment { get; set; }
 
-        public MaintenanceCategory[] Categories { get; set; }
+        public IList<MaintenanceCategory> Categories { get; set; }
 
         //public DateTime DueDate { get; set; }
         public int NumberOfReplies { get; set; }
@@ -23,5 +24,7 @@ namespace ManageGo.Core.Managers.Models
         public bool HasEvent { get; set; }
         public bool HasPet { get; set; }
         public bool HasAccess { get; set; }
+
+        public IList<MaintenanceTicketComment> Comments { get; set; }
     }
 }

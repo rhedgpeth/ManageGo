@@ -36,7 +36,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
             ReplyCount = ticket.NumberOfReplies;
 
-            if (ticket.Categories?.Length > 0)
+            if (ticket.Categories?.Count > 0)
             {
                 Categories = string.Join(", ", ticket.Categories.Select(x => x.CategoryName));
             }
