@@ -30,9 +30,13 @@ namespace ManageGo.Core.Managers.ViewModels
                             "Sed vel dolor leo. Aliquam erat volutpat. Cras turpis sem, tempus eu " +
                             "turpis nec, fringilla sollicitudin quam. Maecenas quis auctor orci.",
                         TicketCreateTime = DateTime.Now.AddDays(i).AddHours(i),
-                        Categories = new MaintenanceCategory[] { new MaintenanceCategory { CategoryName = $"Category {i}" }},
-                        TenantFirstName = "Tenant",
-                        TenantLastName = i.ToString()
+                        Categories = new MaintenanceCategory[] { new MaintenanceCategory { CategoryName = $"Category {i}" } },
+
+                        Tenant = new Tenant
+                        {
+                            TenantFirstName = "Tenant",
+                            TenantLastName = i.ToString()
+                        }
                     };
 
                     sectionHeaders.Add(new CalendarSectionHeaderViewModel(ticket));

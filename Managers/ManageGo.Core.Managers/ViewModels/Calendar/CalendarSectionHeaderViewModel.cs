@@ -22,7 +22,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			TimeDescription = "4:00 PM to 5:00 PM";
 			DateDescription = ticket.TicketCreateTime.ToShortDateString();
             Title = ticket.TicketSubject;
-			Location = ticket.ShortAddress;
+			Location = ticket.Building?.BuildingShortAddress;
 
             Children = new List<object>
             {

@@ -9,7 +9,6 @@ namespace ManageGo.Core.Managers.Models
         public string TenantHomePhone { get; set; }
         public string TenantCellPhone { get; set; }
         public string TenantEmailAddress { get; set; }
-
-        public List<Unit> Units { get; set; }   
+        public List<Unit> TenantUnits { get; set; }   
     }
 }

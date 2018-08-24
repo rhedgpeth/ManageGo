@@ -5,6 +5,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"  
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.Controls"
+    xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.TenantsPage"
     x:TypeArguments="vm:TenantsViewModel,sys:object"
@@ -55,9 +56,14 @@
                 </controls:FilterView.LeftExpandableLayout>
             </controls:FilterView>
 
-            <ListView   
+            <global-controls:ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"
+                IsPullToRefreshEnabled="true"
+                RefreshCommand="{Binding RefreshCommand}"
+                IsRefreshing="{Binding IsRefreshing}"
+                PreloadCount="5"
+                LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
                 BackgroundColor="#F9FAFB" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -8,7 +9,24 @@ namespace ManageGo.Core.Managers.ViewModels
         public string Name { get; set; }
         public string Address { get; set; }
 
-        public TenantSectionHeaderViewModel()
-        { }
+        public TenantSectionHeaderViewModel(Tenant tenant)
+        {
+            LoadTenant(tenant);
+        }
+
+        void LoadTenant(Tenant tenant)
+        {
+            Name = $"{tenant.TenantFirstName} {tenant.TenantLastName}".Trim();
+            Address = "[Address Placeholder]";
+            Children = new List<object>
+                                    {
+                                        new TenantDetailsViewModel
+                                        {
+                                            Email = tenant.TenantEmailAddress,
+                                            HomePhoneNumber = tenant.TenantHomePhone,
+                                            CellPhoneNumber = tenant.TenantCellPhone
+                                        }
+            };
+        }
     }
 }

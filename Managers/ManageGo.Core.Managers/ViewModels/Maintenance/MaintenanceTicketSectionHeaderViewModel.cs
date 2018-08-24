@@ -41,9 +41,9 @@ namespace ManageGo.Core.Managers.ViewModels
                 Categories = string.Join(", ", ticket.Categories.Select(x => x.CategoryName));
             }
 
-            TenantName = $"{ticket.TenantFirstName} {ticket.TenantLastName}".Trim();
+            TenantName = $"{ticket.Tenant?.TenantFirstName} {ticket.Tenant?.TenantLastName}".Trim();
 			
-            TenantAddress = ticket.ShortAddress;
+            TenantAddress = ticket.Building?.BuildingShortAddress;
 
             HasPet = ticket.HasPet;
             HasEvent = ticket.HasEvent;
