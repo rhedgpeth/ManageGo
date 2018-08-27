@@ -1,48 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using ManageGo.Core.Managers.Models;
+using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class PaymentsViewModel : BaseExpandableCollectionViewModel<PaymentSectionHeaderViewModel>
+    public class PaymentsViewModel : BaseFilterViewModel<PaymentSectionHeaderViewModel>
     {      
+        public string SearchTerm { get; set; }
+
         public PaymentsViewModel()
         {
             Title = "Payments";
         }
 
-		public override async Task InitAsync()
-		{
-			//await Task.Delay(500).ConfigureAwait(false);
-                     
-			var taskItems = await Task.Run(() =>
-			{
-				var items = new List<object>();
+        public override Task InitAsync() => LoadAsync(true);
 
-				for (int i = 0; i < 10; i++)
-				{
-					items.Add(new PaymentSectionHeaderViewModel
-					{
-						Amount = string.Format("${0:#.00}", Convert.ToDecimal(RandomNumberBetween(1, 10000) / 100)),
-						PaymentDateTime = DateTime.Now.AddDays(-10).AddDays(i).ToShortDateString() + " 8:00 AM",
-						Name = $"Person {i}",
-						Address = $"1234 Main St. Apt. #{i}",
-						Children = new List<object>
-									{
-										new PaymentDetailsViewModel
-										{
-											Description = $"This is a description for payment {i}."
-										}
-									}
-					});
-				}
+        public override async Task LoadAsync(bool refresh)
+        {
+            IsBusy = true;
 
-				return items;
-			});
+            await base.LoadAsync(refresh);
 
-			Items = new ObservableCollection<object>(taskItems);
-		}      
+            var request = new PaymentRequest
+            {
+                DateFrom = new DateTime(2018, 2, 1),
+                DateTo = new DateTime(2018, 2, 5),
+                Page = Page,
+                PageSize = 20,
+                Search = SearchTerm
+            };
+
+            var paymentsResponse = await FinanceService.Instance.GetPayments(request).ConfigureAwait(false);
+
+            if (paymentsResponse?.Status == Enumerations.ResponseStatus.Data ||
+                paymentsResponse?.Status == Enumerations.ResponseStatus.NoData)
+            {
+                CanLoadMore = paymentsResponse.Result.Count == 20;
+
+                var sectionHeaders = new List<PaymentSectionHeaderViewModel>();
+
+                foreach (var payment in paymentsResponse.Result)
+                {
+                    sectionHeaders.Add(new PaymentSectionHeaderViewModel(payment));
+                }
+
+                LoadItems(refresh, sectionHeaders);
+            }
+
+            IsBusy = false;
+        }
 	}
 }

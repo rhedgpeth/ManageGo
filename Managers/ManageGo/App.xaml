@@ -236,14 +236,14 @@
                 <Setter Property="WidthRequest" Value="275" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
-            <!--
-            <Style x:Key="buttonSelected" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
-                <Setter Property="BackgroundColor" Value="LightGray" />
+
+            <Style x:Key="filterButton" TargetType="Button" BasedOn="{StaticResource mainButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Green}" />
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="BorderColor" Value="LightGray" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="35,0,35,10" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
-            -->
 
             <ControlTemplate x:Key="HeaderPageTemplate">
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">

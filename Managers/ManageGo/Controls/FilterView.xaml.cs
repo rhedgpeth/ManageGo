@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Windows.Input;
 using ManageGo.UI.Controls;
 using Xamarin.Forms;
 
 namespace ManageGo.Controls
 {
     public partial class FilterView : Grid
-    {       
+    {
         StackLayout _titleLayout;
 
         public virtual StackLayout TitleLayout
@@ -158,17 +159,43 @@ namespace ManageGo.Controls
         
 		void ToggleLayouts(StackLayout expandableLayout1, StackLayout expandableLayout2, StackLayout filterLayout1, StackLayout filterLayout2)
 		{
-			if (expandableLayout1 != null)
+            if (expandableLayout1 != null)
 			{
 				filterLayout1.Opacity = 1;               
 				expandableLayout1.IsVisible = !expandableLayout1.IsVisible;
+                filterButton.IsVisible = expandableLayout1.IsVisible;
 			}
-            
+
 			if (expandableLayout2 != null)
 			{
                 filterLayout2.Opacity = expandableLayout1.IsVisible ? .5 : 1;
 				expandableLayout2.IsVisible = false;
 			}
+        }
+
+        public static readonly BindableProperty ApplyFilterCommandProperty =
+            BindableProperty.Create(nameof(ApplyFilterCommand), typeof(ICommand), typeof(FilterView));
+
+        public ICommand ApplyFilterCommand
+        {
+            get { return (ICommand)GetValue(ApplyFilterCommandProperty); }
+            set { SetValue(ApplyFilterCommandProperty, value); }
+        }
+
+        void Handle_Clicked(object sender, EventArgs e)
+        {
+            LeftExpandableLayoutRegion.IsVisible = false;
+            LeftFilterOption.Opacity = 1;
+
+            RightExpandableLayoutRegion.IsVisible = false;
+            RightFilterOption.Opacity = 1;
+
+            filterButton.IsVisible = false;
+
+            if (ApplyFilterCommand != null && ApplyFilterCommand.CanExecute(null))
+            {
+                ApplyFilterCommand.Execute(null);
+            }
         }
     }
 }

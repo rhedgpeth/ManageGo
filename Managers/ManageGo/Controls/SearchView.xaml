@@ -19,7 +19,7 @@
         <Image Source="search_grey" Aspect="AspectFit" />
     </StackLayout>
     
-    <Editor Grid.Row="0" Grid.Column="2" />
+    <Editor Grid.Row="0" Grid.Column="2" TextChanged="OnTextChanged" />
 
     <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
     

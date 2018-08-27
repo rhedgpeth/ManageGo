@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class MaintenanceTicketsViewModel : BaseExpandableCollectionViewModel<MaintenanceTicketSectionHeaderViewModel>
+    public class MaintenanceTicketsViewModel : BaseFilterViewModel<MaintenanceTicketSectionHeaderViewModel>
     {
+        public string SearchTerm { get; set; }
+
         public List<string> StatusOptions => new List<string> { "New", "Assigned", "In progress", "Closed" };
 
         public List<SelectableItem> Priorities { get; set; } = new List<SelectableItem>();
@@ -38,24 +38,23 @@ namespace ManageGo.Core.Managers.ViewModels
                 DateFrom = new DateTime(2018, 2, 1),
                 DateTo = new DateTime(2018, 2, 5),
                 Page = Page,
-                PageSize = 20
+                PageSize = 20,
+                Search = SearchTerm
             };
 
             var ticketsResponse = await MaintenanceService.Instance.GetTickets(request).ConfigureAwait(false);
 
-            if (ticketsResponse?.Status == Enumerations.ResponseStatus.Data)
+            if (ticketsResponse?.Status == Enumerations.ResponseStatus.Data ||
+                ticketsResponse?.Status == Enumerations.ResponseStatus.NoData)
             {
                 CanLoadMore = ticketsResponse.Result.Count == 20;
 
                 var sectionHeaders = new List<MaintenanceTicketSectionHeaderViewModel>();
 
-                await Task.Run(() =>
+                foreach (var ticket in ticketsResponse.Result)
                 {
-                    foreach (var ticket in ticketsResponse.Result)
-                    {
-                        sectionHeaders.Add(new MaintenanceTicketSectionHeaderViewModel(ticket));
-                    }
-                });
+                    sectionHeaders.Add(new MaintenanceTicketSectionHeaderViewModel(ticket));
+                }
 
                 LoadItems(refresh, sectionHeaders);
             }

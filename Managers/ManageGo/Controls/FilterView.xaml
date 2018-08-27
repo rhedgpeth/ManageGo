@@ -20,6 +20,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!-- Buttons -->
@@ -59,4 +60,7 @@
         <!-- Expand/collapse panels -->
         <StackLayout Grid.Row="3" Grid.ColumnSpan="3" x:Name="LeftExpandableLayoutRegion" IsVisible="false" />
         <StackLayout Grid.Row="4" Grid.ColumnSpan="3" x:Name="RightExpandableLayoutRegion" IsVisible="false" />
+
+        <Button x:Name="filterButton" Text="Apply" Grid.Row="5" Grid.ColumnSpan="3" Clicked="Handle_Clicked"
+                Style="{StaticResource filterButton}" IsVisible="false" />
 </Grid>

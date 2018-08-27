@@ -5,6 +5,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"  
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.Controls"
+    xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:TypeArguments="vm:TransactionsViewModel,sys:object"
     x:Class="ManageGo.Pages.TransactionsPage"
@@ -14,7 +15,8 @@
         <StackLayout BackgroundColor="#F9FAFB">
 
             <controls:FilterView LeftFilterText="May 5 - May 15" LeftFilterIcon="calendar_blue" 
-                                 RightFilterText="Filter" RightFilterIcon="filter_blue"> 
+                                 RightFilterText="Filter" RightFilterIcon="filter_blue"
+                                 ApplyFilterCommand="{Binding ApplyFilterCommand}"> 
 
                 <controls:FilterView.LeftExpandableLayout>
 
@@ -22,9 +24,6 @@
                         
                         <controls:CalendarView AllowMultipleSelection="true" HeightRequest="275" WidthRequest="400" HorizontalOptions="Center" />
 
-                        <Button Text="Apply" TextColor="White" FontAttributes="Bold" WidthRequest="300"
-                                HorizontalOptions="Center" BackgroundColor="#55C433" />
-                        
                     </StackLayout>
 
                 </controls:FilterView.LeftExpandableLayout>
@@ -33,7 +32,7 @@
 
                     <StackLayout>
 
-                        <controls:SearchView />
+                        <controls:SearchView Text="{Binding SearchTerm}" />
                     
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                             
@@ -54,9 +53,14 @@
                 </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
 
-            <ListView   
+            <global-controls:ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"
+                IsPullToRefreshEnabled="true"
+                RefreshCommand="{Binding RefreshCommand}"
+                IsRefreshing="{Binding IsRefreshing}"
+                PreloadCount="5"
+                LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
                 BackgroundColor="#F9FAFB" />

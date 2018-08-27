@@ -2,9 +2,8 @@
 
 namespace ManageGo.Core.Managers.Models
 {
-    public class MaintenanceTicketsRequest : PagedRequest
+    public class MaintenanceTicketsRequest : DateRangeRequest
     {
-        public DateTime DateFrom { get; set; }
-        public DateTime DateTo { get; set; }
+        public string Search { get; set; }
     }
 }

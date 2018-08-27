@@ -13,11 +13,12 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="Filter" LeftFilterIcon="filter_blue" ShowRightFilter="false">
+            <controls:FilterView LeftFilterText="Filter" LeftFilterIcon="filter_blue" ShowRightFilter="false" 
+                                 ApplyFilterCommand="{Binding ApplyFilterCommand}">
                 <controls:FilterView.LeftExpandableLayout>
                     <StackLayout>
                         
-                        <controls:SearchView />
+                        <controls:SearchView Text="{Binding SearchTerm}" />
   
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                             <controls:ExpandablePicker Descriptor="Building" SelectedText="899 Amsterdam Avenue">
@@ -30,7 +31,7 @@
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
                             
-                            <controls:ExpandablePicker Descriptor="Unit" SelectedText="All">
+                            <controls:ExpandablePicker x:Name="UnitsPicker" Descriptor="Unit" SelectedText="All" IsVisible="false">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
                                         <Label Text="This is a filter option." />
@@ -51,8 +52,9 @@
                             </controls:ExpandablePicker>
 
                         </StackLayout>
+                        
                     </StackLayout>
-                    
+
                 </controls:FilterView.LeftExpandableLayout>
             </controls:FilterView>
 

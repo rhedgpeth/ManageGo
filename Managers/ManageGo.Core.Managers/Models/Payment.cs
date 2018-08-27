@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ManageGo.Core.Managers.Models
 {
@@ -19,6 +20,8 @@ namespace ManageGo.Core.Managers.Models
         public string PaymentNote { get; set; }
         public string PaymentAcctUsed { get; set; }
         public int? RecurringId { get; set; }
+        public List<BankTransaction> ReverseTransactions { get; set; }
+        public List<BankTransaction> BankTransactions { get; set; }
         public Tenant Tenant { get; set; }
         public Unit Unit { get; set; }
         public Building Building { get; set; }

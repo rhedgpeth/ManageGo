@@ -5,5 +5,6 @@
         public decimal? AmountFrom { get; set; }
         public decimal? AmountTo { get; set; }
         public int? BankAccountId { get; set; }
+        public string Search { get; set; }
     }
 }

@@ -30,20 +30,20 @@
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0" Grid.Column="0" Text="Amount:" Style="{StaticResource Light-Grey-Small}" />
-                <Label Grid.Row="0" Grid.Column="1" Text="$1650.00" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End" />
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding TotalAmount}" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End" />
                     
-                <Label Grid.Row="1" Grid.Column="0" Text="Late fee:" Style="{StaticResource Light-Grey-Small}" />
-                <Label Grid.Row="1" Grid.Column="1" Text="$35.00" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Fees:" Style="{StaticResource Light-Grey-Small}" />
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding TotalFees}" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End" />
 
                 <Label Grid.Row="2" Grid.Column="0" Text="Payment total:" Style="{StaticResource Light-Grey-Small}" />
-                <Label Grid.Row="2" Grid.Column="1" Text="$1685.00" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="{Binding TotalAmountAndFees}" Style="{StaticResource Dark-Grey-Small}" HorizontalTextAlignment="End"/>
                
                 <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"
                          Style="{StaticResource Separator-Line}" />
 
                 <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
                     <Image Source="bank_blue" Aspect="AspectFit" />
-                    <Label Text="JPMORGAN CHASE BANK **** 8730" Style="{StaticResource Dark-Grey-Small}" 
+                    <Label Text="{Binding PaymentAccountDescription}" Style="{StaticResource Dark-Grey-Small}" 
                            VerticalTextAlignment="Center" /> 
                 </StackLayout>
 
@@ -64,7 +64,7 @@
 
                 <StackLayout Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"  Orientation="Horizontal">
                     <Label Text="Payment note:" Style="{StaticResource Light-Grey-Small}"  />
-                    <Label Text="This rent covers my roommate this month. I lost a bet :)" Style="{StaticResource Dark-Grey-Small}"  />
+                    <Label Text="{Binding PaymentNote}" Style="{StaticResource Dark-Grey-Small}"  />
                 </StackLayout>
                 
             </Grid>
