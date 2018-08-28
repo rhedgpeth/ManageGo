@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ManageGo.Core.Managers.Models
 {
@@ -11,5 +12,6 @@ namespace ManageGo.Core.Managers.Models
         public bool IsMarked { get; set; }
         public string BankAccountInfo { get; set; }
         public int TenantTransactionsCount { get; set; }
+        public List<PaymentBase> Payments { get; set; }
     }
 }
