@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ManageGo.Controls
 {
@@ -25,19 +26,36 @@ namespace ManageGo.Controls
         public static readonly BindableProperty IsCheckedProperty = BindableProperty.Create(nameof(IsChecked),
                                                                                         typeof(bool),
                                                                                         typeof(Checkbox),
-                                                                                        default(bool),
+                                                                                        default(bool), BindingMode.TwoWay,
                                                                                         propertyChanged: HandleIsCheckedPropertyChanged);
 
         public bool IsChecked
         {
-            get { return (bool)GetValue(TextProperty); }
-            set { SetValue(TextProperty, value); }
+            get { return (bool)GetValue(IsCheckedProperty); }
+            set { SetValue(IsCheckedProperty, value); }
         }
 
         static void HandleIsCheckedPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var cb = bindable as Checkbox;
             cb.toggleButton.Checked = (bool)newValue;
+        }
+
+        ICommand _checkedCommand;
+        public ICommand CheckedCommand
+        {
+            get
+            {
+                if (_checkedCommand == null)
+                {
+                    _checkedCommand = new Command(() =>
+                    {
+                        IsChecked = toggleButton.Checked;
+                    });
+                }
+
+                return _checkedCommand;
+            }
         }
 
         public Checkbox()

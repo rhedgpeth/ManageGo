@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:controls="clr-namespace:ManageGo.Controls;"
     Orientation="Horizontal"
+    x:Name="CheckboxControl"
     x:Class="ManageGo.Controls.Checkbox">
 
     <controls:ToggleButton 
@@ -12,7 +13,8 @@
             UnCheckedImage="unchecked"
             Enabled="true"
             Animate="false"
-            VerticalOptions="CenterAndExpand" />
+            VerticalOptions="CenterAndExpand"
+            Command="{Binding Source={x:Reference CheckboxControl}, Path=CheckedCommand }" />
 
     <Label x:Name="descriptionLabel" Text="{Binding Text}"
            FontSize="Small" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />

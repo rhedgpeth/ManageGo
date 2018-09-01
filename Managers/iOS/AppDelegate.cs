@@ -8,6 +8,8 @@ using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
 
+[assembly: Xamarin.Forms.ExportRenderer(typeof(Xamarin.RangeSlider.Forms.RangeSlider), typeof(Xamarin.RangeSlider.Forms.RangeSliderRenderer))]
+
 namespace ManageGo.iOS
 {
     [Register("AppDelegate")]

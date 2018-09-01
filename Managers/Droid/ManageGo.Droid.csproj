@@ -194,6 +194,18 @@
     <Reference Include="Toasts.Forms.Plugin.Droid">
       <HintPath>..\packages\Toasts.Forms.Plugin.3.3.2\lib\MonoAndroid10\Toasts.Forms.Plugin.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.RangeSlider.Common">
+      <HintPath>..\packages\Xamarin.RangeSlider.0.7.36\lib\MonoAndroid10\Xamarin.RangeSlider.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.RangeSlider.Droid">
+      <HintPath>..\packages\Xamarin.RangeSlider.0.7.36\lib\MonoAndroid10\Xamarin.RangeSlider.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.RangeSlider.Forms">
+      <HintPath>..\packages\Xamarin.Forms.RangeSlider.0.7.36\lib\MonoAndroid10\Xamarin.RangeSlider.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.RangeSlider.Forms.Droid">
+      <HintPath>..\packages\Xamarin.Forms.RangeSlider.0.7.36\lib\MonoAndroid10\Xamarin.RangeSlider.Forms.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

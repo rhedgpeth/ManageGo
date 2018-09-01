@@ -21,17 +21,19 @@
                         <controls:SearchView Text="{Binding SearchTerm}" />
   
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
-                            <controls:ExpandablePicker Descriptor="Building" SelectedText="899 Amsterdam Avenue">
+                            <controls:ExpandablePicker Descriptor="Building" SelectedText="{Binding SelectedBuildingsDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Buildings}" 
+                                                               ItemTypeDescription="Buildings" 
+                                                               SelectedItems="{Binding SelectedBuildings}"
+                                                               SelectedItemsDescription="{Binding SelectedBuildingsDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
                             
-                            <controls:ExpandablePicker x:Name="UnitsPicker" Descriptor="Unit" SelectedText="All" IsVisible="false">
+                            <controls:ExpandablePicker x:Name="UnitsPicker" Descriptor="Unit" 
+                                                       SelectedText="All" IsVisible="{Binding ShowUnitsFilterOption}">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
                                         <Label Text="This is a filter option." />
@@ -41,12 +43,11 @@
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Status" SelectedText="Active">
+                            <controls:ExpandablePicker Descriptor="Status" SelectedText="{Binding Status}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                    <StackLayout Margin="0,0,0,10">
+                                        <controls:Checkbox Text="Active" IsChecked="{Binding IsActive}" />
+                                        <controls:Checkbox Text="Inactive" IsChecked="{Binding IsInActive}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -68,7 +69,13 @@
                 LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB" />
+                BackgroundColor="#F9FAFB">
+                <!--
+                <global-controls:ListView.Header>
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />    
+                </global-controls:ListView.Header>
+                -->
+            </global-controls:ListView>
            
         </StackLayout>
     </ContentPage.Content>

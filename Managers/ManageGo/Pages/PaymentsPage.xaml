@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.Controls"
     xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    xmlns:slider="clr-namespace:Xamarin.RangeSlider.Forms;assembly=Xamarin.RangeSlider.Forms"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.PaymentsPage"
     x:TypeArguments="vm:PaymentsViewModel,sys:object"
@@ -84,9 +85,12 @@
                                 <controls:ExpandablePicker Descriptor="Amount" SelectedText="All">
                                     <controls:ExpandablePicker.ExpandableLayout>
                                         <StackLayout>
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
+                                            <Label Text="$0 - $500" />
+                                            <slider:RangeSlider x:Name="RangeSlider" 
+                                                                MinimumValue="1" MaximumValue="10000" 
+                                                                LowerValue="0" UpperValue="500" 
+                                                                StepValue="500" StepValueContinuously="False" 
+                                                                VerticalOptions="Center" TextSize="15" />
                                         </StackLayout>
                                     </controls:ExpandablePicker.ExpandableLayout>
                                 </controls:ExpandablePicker>

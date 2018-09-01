@@ -3,42 +3,66 @@ using System.Collections.Generic;
 using System.Reflection;
 using ManageGo.Core.Managers.Models;
 using Xamarin.Forms;
+using System.Collections;
 
 namespace ManageGo.Controls
 {
-    public class CheckboxItem
-    {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public bool IsChecked { get; set; }
-    }
-
     public partial class CheckboxList : ListView
     {
-        /*
-        public static readonly BindableProperty ItemSourceProperty = BindableProperty.Create(nameof(ItemSource),
-                                                                                        typeof(IEnumerable),
-                                                                                             typeof(CheckboxList));//,
-                                                                                        //propertyChanged: HandleItemSourcePropertyChanged);
+        public string ItemTypeDescription { get; set; }
 
-        static void HandleItemSourcePropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        public static readonly BindableProperty SelectedItemsProperty 
+                = BindableProperty.Create(nameof(SelectedItems),
+                                        typeof(IList<SelectableItem>),
+                                          typeof(CheckboxList), default(List<SelectableItem>), BindingMode.TwoWay); //,
+                                                                                                                    //propertyChanged: HandleItemSourcePropertyChanged);
+
+        List<SelectableItem> _selectedItems = new List<SelectableItem>();
+        public IList<SelectableItem> SelectedItems
         {
-            Console.WriteLine("ItemSource changed");
+            get { return (IList<SelectableItem>)GetValue(SelectedItemsProperty); }
+            set { SetValue(SelectedItemsProperty, value); }
         }
 
-        public IEnumerable ItemSource
+        public static readonly BindableProperty SelectedItemsDescriptionProperty
+                = BindableProperty.Create(nameof(SelectedItemsDescription),
+                                          typeof(string),
+                                        typeof(CheckboxList), default(string), BindingMode.TwoWay); //,
+                                                                                   //propertyChanged: HandleItemSourcePropertyChanged);
+
+        public string SelectedItemsDescription
         {
-            get { return (IEnumerable)GetValue(ItemSourceProperty); }
-            set { SetValue(ItemSourceProperty, value); }
-        }*/
+            get { return (string)GetValue(SelectedItemsDescriptionProperty); }
+            set { SetValue(SelectedItemsDescriptionProperty, value); }
+        }
 
         public CheckboxList()
         {
             InitializeComponent();
         }
 
+        void UpdateSelectedItemsDescription(string singleDescription)
+        {
+            if (_selectedItems.Count == 0 || _selectedItems.Count == _totalItemCount)
+            {
+                SelectedItemsDescription = "All";
+            }
+            else if (_selectedItems.Count == 1)
+            {
+                SelectedItemsDescription = singleDescription;
+            }
+            else
+            {
+                SelectedItemsDescription = $"{_selectedItems.Count} {ItemTypeDescription}";
+            }
+        }
+
+        int _totalItemCount;
+
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            _totalItemCount = 0;
+
             if (e.Item is SelectableItem item)
             {
                 item.IsSelected = !item.IsSelected;
@@ -64,10 +88,8 @@ namespace ManageGo.Controls
                             {
                                 target.IsSelected = item.IsSelected;
                             }
-                            else if (target.Id == -1) //&& target.IsSelected && !item.IsSelected)
+                            else if (target.Id == -1)
                             {
-                                //target.IsSelected = false;
-
                                 rootItem = target;
                             }
                             else
@@ -82,8 +104,25 @@ namespace ManageGo.Controls
                                     allUnchecked = !target.IsSelected;
                                 }
                             }
+
+                            if (target.Id >= 0)
+                            {
+                                _totalItemCount++;
+
+                                if (target.IsSelected && !_selectedItems.Contains(target))
+                                {
+                                    _selectedItems.Add(target);
+                                }
+                                else if (!target.IsSelected && _selectedItems.Contains(target))
+                                {
+                                    _selectedItems.Remove(target);
+                                }
+                            }
                         }
                     }
+
+                    UpdateSelectedItemsDescription(item.Description);
+                    SelectedItems = _selectedItems;
 
                     if (rootItem != null)
                     {

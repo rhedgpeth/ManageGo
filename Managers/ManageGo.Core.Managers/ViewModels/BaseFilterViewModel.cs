@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.ViewModels;
@@ -15,11 +16,20 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 if (_applyFilterCommand == null)
                 {
-                    _applyFilterCommand = new Command(async ()  => await LoadAsync(true));
+                    _applyFilterCommand = new Command(async () => await LoadAsync(true));
                 }
 
                 return _applyFilterCommand;
             }
         }
+
+        public override async Task InitAsync()
+        {
+            LoadFilters();
+
+            await LoadAsync(true);
+        }
+
+        protected virtual void LoadFilters() { }
     }
 }

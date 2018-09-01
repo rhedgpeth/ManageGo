@@ -29,7 +29,8 @@
 
             <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource Separator-Line}" />
 
-            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Address}" Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Address}" LineBreakMode="TailTruncation"
+                   Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
             
         </Grid>
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using ManageGo.Core.Managers.Enumerations;
 
 namespace ManageGo.Core.Managers.Models
 {
@@ -6,5 +8,7 @@ namespace ManageGo.Core.Managers.Models
     {
         public int PropertyId { get; set; }
         public string Search { get; set; }
+        public TenantStatus Status { get; set; }
+        public List<int> Buildings { get; set; }
     }
 }

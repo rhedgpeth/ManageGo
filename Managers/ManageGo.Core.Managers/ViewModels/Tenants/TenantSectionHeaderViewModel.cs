@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
@@ -17,7 +18,7 @@ namespace ManageGo.Core.Managers.ViewModels
         void LoadTenant(Tenant tenant)
         {
             Name = $"{tenant.TenantFirstName} {tenant.TenantLastName}".Trim();
-            Address = "[Address Placeholder]";
+            Address = string.Join(", ", tenant.TenantUnits.Select(x => x.ShortName));;
             Children = new List<object>
                                     {
                                         new TenantDetailsViewModel

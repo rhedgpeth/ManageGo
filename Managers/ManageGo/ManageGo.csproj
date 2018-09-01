@@ -14,6 +14,8 @@
     <PackageReference Include="Xamarin.Essentials" Version="0.9.1-preview" />
     <PackageReference Include="Refractored.XamForms.PullToRefresh" Version="2.2.2" />
     <PackageReference Include="Toasts.Forms.Plugin" Version="3.3.2" />
+    <PackageReference Include="Xamarin.Forms.RangeSlider" Version="0.7.36" />
+    <PackageReference Include="Xamarin.RangeSlider" Version="0.7.36" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />

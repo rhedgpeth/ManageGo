@@ -15,6 +15,8 @@ using FFImageLoading;
 using Xamarin.Forms;
 using Plugin.Toasts;
 
+[assembly: Xamarin.Forms.ExportRenderer(typeof(Xamarin.RangeSlider.Forms.RangeSlider), typeof(Xamarin.RangeSlider.Forms.RangeSliderRenderer))]
+
 namespace ManageGo.Droid
 {
     [Activity(Label = "ManageGo.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
