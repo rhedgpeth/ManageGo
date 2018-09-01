@@ -10,5 +10,6 @@ namespace ManageGo.Core.Managers.Models
         public string Search { get; set; }
         public TenantStatus Status { get; set; }
         public List<int> Buildings { get; set; }
+        public List<int> Units { get; set; }
     }
 }

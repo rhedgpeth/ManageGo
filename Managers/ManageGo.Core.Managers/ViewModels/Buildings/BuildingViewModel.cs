@@ -34,7 +34,7 @@ namespace ManageGo.Core.Managers.ViewModels
             {
 				if (_tenantsCommand == null)
                 {
-					_tenantsCommand = new Command(async () => await Navigation.PushAsync(new TenantsViewModel()));
+					_tenantsCommand = new Command(async () => await Navigation.PushAsync(new TenantsViewModel(BuildingId)));
                 }
 
 				return _tenantsCommand;

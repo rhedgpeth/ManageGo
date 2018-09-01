@@ -75,9 +75,34 @@ namespace ManageGo.Core.Managers.ViewModels
             set => SetPropertyChanged(ref _showUnitsFilterOption, value);
         }
 
+        List<SelectableItem> _selectedUnits;
+        public List<SelectableItem> SelectedUnits
+        {
+            get => _selectedUnits;
+            set
+            {
+                SetPropertyChanged(ref _selectedUnits, value);
+                ShowUnitsFilterOption = _selectedUnits?.Count == 1;
+            }
+        }
+
+        int SelectedBuildingId { get; set; }
+        int SelectedUnitId { get; set; }
+
         public TenantsViewModel()
         {
             Title = "Tenants";
+        }
+
+        public TenantsViewModel(int buildingId)
+        {
+            SelectedBuildingId = buildingId;
+        }
+
+        public TenantsViewModel(int buildingId, int unitId)
+        {
+            SelectedBuildingId = buildingId;
+            SelectedUnitId = unitId;
         }
 
         protected override async void LoadFilters()
@@ -88,7 +113,15 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 foreach (var building in buildings.Result)
                 {
-                    Buildings.Add(new SelectableItem { Id = building.BuildingId, Description = building.BuildingName });
+                    var item = new SelectableItem { Id = building.BuildingId, Description = building.BuildingName };
+
+                    if (item.Id == SelectedBuildingId)
+                    {
+                        item.IsSelected = true;
+                        SelectedBuildingsDescription = item.Description;
+                    }
+
+                    Buildings.Add(item);
                 }
             }
         }
@@ -141,6 +174,19 @@ namespace ManageGo.Core.Managers.ViewModels
             if (SelectedBuildings?.Count > 0)
             {
                 request.Buildings = SelectedBuildings.Select(x => x.Id).ToList();
+            }
+            else if (SelectedBuildingId > 0)
+            {
+                request.Buildings = new List<int> { SelectedBuildingId };
+            }
+
+            if (SelectedUnits?.Count > 0)
+            {
+                request.Units = SelectedUnits.Select(x => x.Id).ToList();
+            }
+            else
+            {
+                request.Units = new List<int> { SelectedUnitId };
             }
 
             return request;

@@ -7,6 +7,8 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class BuildingUnitViewModel : BaseNavigationViewModel
     {
+        public int UnitId { get; set; }
+
 		string _number;
         public string Number
         {
@@ -23,6 +25,7 @@ namespace ManageGo.Core.Managers.ViewModels
       
         public BuildingUnitViewModel(Unit unit)
         {
+            UnitId = unit.UnitId;
 			Number = unit.UnitName;
             TenantNames = unit.Tenants.Select(t => $"{t.TenantFirstName} {t.TenantLastName}").ToList();
         }

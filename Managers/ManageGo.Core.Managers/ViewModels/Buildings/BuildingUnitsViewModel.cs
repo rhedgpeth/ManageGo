@@ -27,7 +27,7 @@ namespace ManageGo.Core.Managers.ViewModels
             {
 				if (_tenantsSelectedCommand == null)
                 {
-					_tenantsSelectedCommand = new Command(async () => await Navigation.PushAsync(new TenantsViewModel()));
+					_tenantsSelectedCommand = new Command<BuildingUnitViewModel>(async (item) => await Navigation.PushAsync(new TenantsViewModel(BuildingId, item.UnitId)));
                 }
 
 				return _tenantsSelectedCommand;
