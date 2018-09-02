@@ -43,7 +43,7 @@ namespace ManageGo.Core.Managers.ViewModels
 				if (_createEventCommand == null)
 				{
 					_createEventCommand = new Command(async () 
-					                                  => await Navigation.PushPopupAsync(new CreateEventViewModel()));
+					                                  => await Navigation.PushPopupAsync(new MaintenanceTicketEventViewModel()));
 				}
 
 				return _createEventCommand;
@@ -78,6 +78,11 @@ namespace ManageGo.Core.Managers.ViewModels
 
 			Title = $"Ticket #{_maintenanceTicket.TicketId}"; 
 		}
+
+        public MaintenanceTicketViewModel(int ticketId)
+        {
+            // TODO:
+        }
 
 		public override async Task InitAsync()
 		{

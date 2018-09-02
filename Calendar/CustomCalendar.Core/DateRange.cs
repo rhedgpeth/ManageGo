@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace CustomCalendar
 {
+    public delegate void CurrentMonthYearHandler(DateTime date);
+    public delegate void DateRangeHandler(DateRange dates);
+
     public class DateRange
     {
         List<DateTime> _dates;

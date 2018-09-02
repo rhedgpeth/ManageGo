@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:controls="clr-namespace:ManageGo.Controls"
     xmlns:global-controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    x:Name="CalendarViewControl"
     x:Class="ManageGo.Controls.CalendarView">
 
     <Grid.ColumnDefinitions>
@@ -36,7 +37,7 @@
 
             <Image Source="chevron_left" VerticalOptions="Center" />
             
-            <Label Text="{Binding CurrentMonthYearDescription}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            <Label x:Name="titleLabel" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                     FontSize="14" FontAttributes="Bold" />
 
             <Image Source="chevron_right" VerticalOptions="Center" />
@@ -51,30 +52,19 @@
                                        Style="{StaticResource Primary-Small}"
                                        IsVisible="false"/>
     </Grid>
-    
-    <!--
-    <StackLayout Spacing="15" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-
-        <global-controls:TappableLabel Text="Past 7 days" Style="{StaticResource Primary-Small}" HorizontalOptions="End"  />
-        
-        <Image Source="chevron_left" VerticalOptions="Center" />
-        
-        <Label Text="{Binding CurrentMonthYearDescription}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                FontSize="14" FontAttributes="Bold" />
-
-        <Image Source="chevron_right" VerticalOptions="Center" />
-
-        <global-controls:TappableLabel Text="Past 30 days" Style="{StaticResource Primary-Small}" HorizontalOptions="End"  />
-        
-    </StackLayout>
-    -->
 
     <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
 
     <controls:Calendar x:Name="calendar" Grid.Row="2" Grid.ColumnSpan="3" 
-                       CurrentMonthYear="{Binding CurrentMonthYear}"
+                       OnMonthYearChanged="Handle_OnMonthYearChanged"
+                       OnSelectedDatesChanged="Handle_OnSelectedDatesChanged"
                        HeightRequest="500"
                        WidthRequest="700"
                        HorizontalOptions="Center" />
+
+    <!-- 
+    SelectedDates="{Binding SelectedDates}"
+    SelectedDates="{Binding Source={x:Reference CalendarViewControl}, Path=SelectedDates }" 
+    -->
     
 </Grid>

@@ -12,21 +12,21 @@ namespace ManageGo.Core.Managers.ViewModels
 		public string Title { get; set; }      
 		public string Location { get; set; }
 
-		public CalendarSectionHeaderViewModel(MaintenanceTicket ticket)
+		public CalendarSectionHeaderViewModel(MaintenanceTicketEvent evt)
         {         
-            LoadMaintenanceTicket(ticket);
+            LoadMaintenanceTicket(evt);
         }
 
-        void LoadMaintenanceTicket(MaintenanceTicket ticket)
+        void LoadMaintenanceTicket(MaintenanceTicketEvent evt)
         {
-			TimeDescription = "4:00 PM to 5:00 PM";
-			DateDescription = ticket.TicketCreateTime.ToShortDateString();
-            Title = ticket.TicketSubject;
-			Location = ticket.Building?.BuildingShortAddress;
+            TimeDescription = $"{evt.TimeFrom} to {evt.TimeTo}";
+			DateDescription = evt.EventDateStart.ToShortDateString();
+            Title = evt.Title + $" {evt.TicketId}";
+			//Location = ticket.Building?.BuildingShortAddress;
 
             Children = new List<object>
             {
-                new CalendarDetailsViewModel(ticket)
+                new CalendarDetailsViewModel(evt)
             };
         }
 	}

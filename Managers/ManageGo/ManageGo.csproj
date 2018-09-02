@@ -21,6 +21,7 @@
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />
     <ProjectReference Include="..\ManageGo.Core.Managers\ManageGo.Core.Managers.csproj" />
     <ProjectReference Include="..\..\ManageGo.UI\ManageGo.UI.csproj" />
+    <ProjectReference Include="..\..\Calendar\CustomCalendar.Core\CustomCalendar.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />

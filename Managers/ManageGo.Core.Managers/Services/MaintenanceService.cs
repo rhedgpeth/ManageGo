@@ -33,5 +33,11 @@ namespace ManageGo.Core.Managers.Services
                                                                                        request, 
                                                                                        default(CancellationToken), 
                                                                                        AddAccessToken);
+
+        public Task<BaseResponse<List<DateTime>>> GetEventDates(DateRangeRequest request)
+            => PostAsync<BaseResponse<List<DateTime>>, DateRangeRequest>("eventslistdates",
+                                                                        request,
+                                                                        default(CancellationToken),
+                                                                        AddAccessToken);
     }
 }

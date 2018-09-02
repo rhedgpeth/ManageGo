@@ -9,6 +9,7 @@ using Xamarin.Forms.Platform.Android;
 
 using ManageGo.Controls;
 using CustomCalendar.Droid;
+using CustomCalendar;
 
 [assembly: ExportRenderer(typeof(Calendar), typeof(CalendarRenderer))]
 namespace ManageGo.UI.Droid.Renderers
@@ -83,6 +84,7 @@ namespace ManageGo.UI.Droid.Renderers
 
             _calendarView = new CalendarViewPager(Context, Element.AllowMultipleSelection, DateTime.Now);
 			_calendarView.OnCurrentMonthYearChange += CurrentMonthYearChanged;
+            _calendarView.OnSelectedDatesChange += DatesSelected;
          
             var layoutParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
           
@@ -96,9 +98,9 @@ namespace ManageGo.UI.Droid.Renderers
 			Element.CurrentMonthYear = date;
 		}
 
-        void DateSelected(DateTime date)
+        void DatesSelected(DateRange dates)
         {
-            Element.SelectedDate = date;
+            Element.SelectedDates = dates;
         }
 
         void ResetNativeView()
@@ -112,6 +114,7 @@ namespace ManageGo.UI.Droid.Renderers
             {
                 _calendarView.RemoveFromParent();
 				_calendarView.OnCurrentMonthYearChange -= CurrentMonthYearChanged;
+                _calendarView.OnSelectedDatesChange -= DatesSelected;
                 _calendarView.Adapter = null;
                 _calendarView = null;
             }

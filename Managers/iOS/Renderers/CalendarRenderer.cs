@@ -1,6 +1,6 @@
 ﻿using System;
 using CoreGraphics;
-using CustomCalendar.iOS;
+using CustomCalendar;
 using Foundation;
 using ManageGo.Controls;
 using ManageGo.iOS.Renderers;
@@ -53,7 +53,8 @@ namespace ManageGo.iOS.Renderers
 
 			_calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight), Element.AllowMultipleSelection, DateTime.Now);
 
-			_calendarView.OnCurrentMonthYearChange += CurrentMonthYearChanged;
+            _calendarView.OnCurrentMonthYearChange += Element.OnCurrentMonthYearChanged;
+            _calendarView.OnSelectedDatesChange += Element.OnDatesChanged;
 
             SetNativeControl(_calendarView);
         }
@@ -62,21 +63,12 @@ namespace ManageGo.iOS.Renderers
         {
             if (_calendarView != null)
             {
-				_calendarView.OnCurrentMonthYearChange -= CurrentMonthYearChanged;
+				_calendarView.OnCurrentMonthYearChange -= Element.OnCurrentMonthYearChanged;
+                _calendarView.OnSelectedDatesChange -= Element.OnDatesChanged;
                 _calendarView.RemoveFromSuperview();
                 _calendarView.Dispose();
                 _calendarView = null;
             }
-        }
-
-		void CurrentMonthYearChanged(DateTime date)
-        {
-            Element.CurrentMonthYear = date;
-        }
-
-        void DateSelected(DateTime date)
-        {
-            Element.SelectedDate = date;
         }
 
         void ElementSizeChanged(object sender, EventArgs e)
@@ -132,7 +124,8 @@ namespace ManageGo.iOS.Renderers
 
 				if (_calendarView != null)
 				{
-					_calendarView.OnCurrentMonthYearChange -= CurrentMonthYearChanged;
+                    _calendarView.OnCurrentMonthYearChange -= Element.OnCurrentMonthYearChanged;
+                    _calendarView.OnSelectedDatesChange -= Element.OnDatesChanged;
 				}
             }
 

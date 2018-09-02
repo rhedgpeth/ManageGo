@@ -10,7 +10,15 @@ namespace ManageGo.Core.Managers.ViewModels
 {
     public class TenantsViewModel : BaseFilterViewModel<TenantSectionHeaderViewModel>
     {
-        public string SearchTerm { get; set; }
+        string _searchTerm;
+        public string SearchTerm
+        {
+            get => _searchTerm;
+            set 
+            {
+                _searchTerm = value;
+            }
+        }
 
         bool _isActive = true;
         public bool IsActive 

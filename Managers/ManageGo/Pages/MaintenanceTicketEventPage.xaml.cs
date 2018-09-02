@@ -3,9 +3,9 @@ using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
 {
-	public partial class CreateEventPage : BasePopupPage<CreateEventViewModel>
+	public partial class MaintenanceTicketEventPage : BasePopupPage<MaintenanceTicketEventViewModel>
     {
-        public CreateEventPage()
+        public MaintenanceTicketEventPage()
         {
             InitializeComponent();
 

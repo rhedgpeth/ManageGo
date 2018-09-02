@@ -2,11 +2,12 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-	public class CreateEventViewModel : BaseEditViewModel
+	public class MaintenanceTicketEventViewModel : BaseEditViewModel
     {
 		bool _showDateTime;
         public bool ShowDateTime
@@ -29,8 +30,13 @@ namespace ManageGo.Core.Managers.ViewModels
 			}
 		}
 
-        public CreateEventViewModel()
+        public MaintenanceTicketEventViewModel()
         { }
+
+        public MaintenanceTicketEventViewModel(MaintenanceTicketEvent evt)
+        {
+            
+        }
 
 		protected override Task Save()
         {

@@ -4,11 +4,10 @@ using System;
 
 namespace CustomCalendar.Droid
 {
-
 	public class CalendarViewPager : Android.Support.V4.View.ViewPager
 	{
-		public delegate void CurrentMonthYearHandler(DateTime date);
-		public event CurrentMonthYearHandler OnCurrentMonthYearChange;            
+		public event CurrentMonthYearHandler OnCurrentMonthYearChange;      
+        public event DateRangeHandler OnSelectedDatesChange;
 
 		public bool AllowMultipleSelection { get; set; }
 

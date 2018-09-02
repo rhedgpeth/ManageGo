@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using ManageGo.Core.ViewModels;
+using CustomCalendar;
 using Xamarin.Forms;
 
 namespace ManageGo.Controls
@@ -11,7 +10,7 @@ namespace ManageGo.Controls
 		public static readonly BindableProperty AllowMultipleSelectionProperty = BindableProperty.Create(nameof(AllowMultipleSelection),
                                                                                         typeof(bool),
                                                                                         typeof(CalendarView),
-                                                                                        false,
+                                                                                                         false,
 		                                                                                                 propertyChanged: AllowMultipleSelectionPropertyChanged);
 
 
@@ -32,33 +31,52 @@ namespace ManageGo.Controls
             calendarView.past30DaysButton.IsVisible = allowMultiplSelection;
         }
 
+        public static readonly BindableProperty SelectedDateProperty
+            = BindableProperty.Create(nameof(SelectedDate),
+                                      typeof(DateTime),
+                                      typeof(CalendarView),
+                                      DateTime.Now, 
+                                      BindingMode.TwoWay);
+
+        public DateTime SelectedDate
+        {
+            get => (DateTime)GetValue(SelectedDateProperty);
+            set
+            {
+                SetValue(SelectedDateProperty, value);
+            }
+        }
+
+        public static readonly BindableProperty SelectedDatesProperty
+            = BindableProperty.Create(nameof(SelectedDates),
+                                      typeof(DateRange),
+                                      typeof(CalendarView),
+                                      new DateRange(DateTime.Now),
+                                      BindingMode.TwoWay);
+
+        public DateRange SelectedDates
+        {
+            get => (DateRange)GetValue(SelectedDatesProperty);
+            set
+            {
+                SetValue(SelectedDatesProperty, value);
+            }
+        }
+
         public CalendarView()
         {
             InitializeComponent();
+        }
 
-			BindingContext = new CalendarViewModel();
+        void Handle_OnSelectedDatesChanged(DateRange dates)
+        {
+            SelectedDate = dates.StartDate;
+            SelectedDates = dates;
+        }
+
+        void Handle_OnMonthYearChanged(DateTime date)
+        {
+            titleLabel.Text = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(date.Month)}, {date.Year}";
         }
     }
-
-	public class CalendarViewModel : BaseViewModel
-	{
-        public string CurrentMonthYearDescription
-		{
-			get
-			{
-				return $"{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(CurrentMonthYear.Month)}, {CurrentMonthYear.Year}";
-			}
-		}
-
-		DateTime _currentMonthYear;
-        public DateTime CurrentMonthYear
-		{
-			get => _currentMonthYear;
-			set 
-			{
-				SetPropertyChanged(ref _currentMonthYear, value);
-				SetPropertyChanged(nameof(CurrentMonthYearDescription));
-			}
-		}
-	}
 }

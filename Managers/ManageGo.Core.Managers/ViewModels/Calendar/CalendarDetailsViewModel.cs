@@ -9,8 +9,8 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class CalendarDetailsViewModel : BaseNavigationViewModel
 	{
-		MaintenanceTicket MaintenanceTicket { get; set; }  
-
+        MaintenanceTicketEvent Event { get; set; }
+		 
 		public string Description { get; set; }      
 		public List<string> Participants { get; set; }      
 		public string EventDateDescription { get; set; }      
@@ -24,7 +24,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			    if (_viewTicketCommand == null)
 				{
 					_viewTicketCommand = new Command(async () => 
-					                                 await Navigation.PushAsync(new MaintenanceTicketViewModel(MaintenanceTicket)));
+					                                 await Navigation.PushAsync(new MaintenanceTicketViewModel(Event.TicketId)));
 				}
 
 				return _viewTicketCommand;
@@ -39,27 +39,26 @@ namespace ManageGo.Core.Managers.ViewModels
 				if (_editTicketCommand == null)
                 {
 					_editTicketCommand = new Command(async () =>
-                                                     await Navigation.PushPopupAsync(new CreateEventViewModel()));
+                                                     await Navigation.PushPopupAsync(new MaintenanceTicketEventViewModel(Event)));
                 }
 
 				return _editTicketCommand;
             }
         }
 
-        public CalendarDetailsViewModel(MaintenanceTicket ticket)
+        public CalendarDetailsViewModel(MaintenanceTicketEvent evt)
         { 
-			LoadMaintenanceTicket(ticket);
+			LoadMaintenanceTicket(evt);
         }
 
-        void LoadMaintenanceTicket(MaintenanceTicket ticket)
+        void LoadMaintenanceTicket(MaintenanceTicketEvent evt)
         {
-			MaintenanceTicket = ticket;
+			Event = evt;
 
-            //Description = ticket.Description;
-			Description = ticket.FirstComment;
+			Description = evt.Note;
 			Participants = new List<string> { "John Doe", "Jim Doe", "Jake Doe" };
-			EventTimeDescription = "2:00 PM to 3:00 PM";
-			EventDateDescription = ticket.TicketCreateTime.ToShortDateString();         
+            EventTimeDescription = $"{evt.TimeFrom} to {evt.TimeTo}";
+			EventDateDescription = evt.EventDateStart.ToShortDateString();         
         }
     }
 }

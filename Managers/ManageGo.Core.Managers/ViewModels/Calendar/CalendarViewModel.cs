@@ -1,49 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Globalization;
+using System.Linq;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Models;
-using ManageGo.Core.ViewModels;
+using ManageGo.Core.Managers.Services;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-	public class CalendarViewModel : BaseExpandableCollectionViewModel<CalendarSectionHeaderViewModel>
+	public class CalendarViewModel : BaseFilterViewModel<CalendarSectionHeaderViewModel>
     {
+        DateTime _selectedDate = DateTime.Now;
+        public DateTime SelectedDate
+        {
+            get => _selectedDate;
+            set
+            {
+                _selectedDate = value;
+                SelectedDateDescription = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(_selectedDate.Month)} {_selectedDate.Day}, {_selectedDate.Year}";
+            }
+        }
+
+        string _selectedDateDescription;
+        public string SelectedDateDescription
+        {
+            get => _selectedDateDescription;
+            set => SetPropertyChanged(ref _selectedDateDescription, value);
+        }
+
         public CalendarViewModel()
         {
 			Title = "Calendar";
         }
 
-		public override async Task InitAsync()
-		{
-			var sectionHeaders = new List<CalendarSectionHeaderViewModel>();
+        public override async Task LoadAsync(bool refresh)
+        {
+            IsBusy = true;
 
-            await Task.Run(() =>
+            var eventsRequest = new DateRangeRequest { DateFrom = SelectedDate, DateTo = SelectedDate };
+
+            var eventsResponse = await MaintenanceService.Instance.GetEvents(eventsRequest);
+
+            if (eventsResponse?.Status == Enumerations.ResponseStatus.Data ||
+                eventsResponse?.Status == Enumerations.ResponseStatus.NoData)
             {
-                for (int i = 1; i < 11; i++)
-                {
-                    var ticket = new MaintenanceTicket
-                    {
-                        TicketId = i,
-                        TicketSubject = $"Maintenance Ticket #{i}",
-                        FirstComment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                            "Sed vel dolor leo. Aliquam erat volutpat. Cras turpis sem, tempus eu " +
-                            "turpis nec, fringilla sollicitudin quam. Maecenas quis auctor orci.",
-                        TicketCreateTime = DateTime.Now.AddDays(i).AddHours(i),
-                        Categories = new MaintenanceCategory[] { new MaintenanceCategory { CategoryName = $"Category {i}" } },
+                var tenantsSectionHeaderViewModels = eventsResponse.Result?.Select(x => new CalendarSectionHeaderViewModel(x));
 
-                        Tenant = new Tenant
-                        {
-                            TenantFirstName = "Tenant",
-                            TenantLastName = i.ToString()
-                        }
-                    };
+                LoadItems(refresh, tenantsSectionHeaderViewModels);
+            }
 
-                    sectionHeaders.Add(new CalendarSectionHeaderViewModel(ticket));
-                }
-            });
-
-            Items = new ObservableCollection<object>(sectionHeaders);
-		}
+            IsBusy = false;
+        }
 	}
 }
