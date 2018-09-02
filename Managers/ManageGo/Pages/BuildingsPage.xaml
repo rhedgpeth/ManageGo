@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local:BaseSearchContentPage 
+<local:BaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ManageGo.UI.Pages"
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.BuildingsPage"
-    x:TypeArguments="vm:BuildingsViewModel,vm:BuildingViewModel"
+    x:TypeArguments="vm:BuildingsViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
 
@@ -94,4 +94,4 @@
         </controls:ListView>
         
     </ContentPage.Content>
-</local:BaseSearchContentPage>
+</local:BaseContentPage>

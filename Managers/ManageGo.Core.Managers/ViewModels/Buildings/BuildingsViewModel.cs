@@ -9,7 +9,7 @@ using System.Collections.ObjectModel;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class BuildingsViewModel : BaseSearchViewModel<BuildingViewModel>
+    public class BuildingsViewModel : BaseCollectionViewModel<BuildingViewModel>
     {
 		ICommand _itemSelectedCommand;
 		public ICommand ItemSelectedCommand

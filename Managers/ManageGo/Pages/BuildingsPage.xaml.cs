@@ -3,7 +3,7 @@ using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
 {
-    public partial class BuildingsPage : BaseSearchContentPage<BuildingsViewModel,BuildingViewModel>
+    public partial class BuildingsPage : BaseContentPage<BuildingsViewModel>
     {
         public BuildingsPage()
         {

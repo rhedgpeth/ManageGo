@@ -5,7 +5,7 @@ using ManageGo.DataTemplates.Selectors;
 
 namespace ManageGo.Pages
 {
-    public partial class NotificationsPage : BaseSearchContentPage<NotificationsViewModel,object>
+    public partial class NotificationsPage : BaseContentPage<NotificationsViewModel> 
     {
         public NotificationsPage()
 		{

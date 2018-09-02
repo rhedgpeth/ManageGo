@@ -9,7 +9,7 @@ using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
-    public class BuildingUnitsViewModel : BaseSearchViewModel<BuildingUnitViewModel> 
+    public class BuildingUnitsViewModel : BaseCollectionViewModel<BuildingUnitViewModel> 
     {
 		int BuildingId { get; set; }
 

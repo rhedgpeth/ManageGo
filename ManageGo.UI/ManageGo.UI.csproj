@@ -22,5 +22,6 @@
   <ItemGroup>
     <Compile Remove="Controls\BaseViewCell.cs" />
     <Compile Remove="Validation\Validator.cs" />
+    <Compile Remove="Pages\BaseCollectionContentPage.cs" />
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 
 namespace ManageGo.Core.ViewModels
 {
-	public abstract class BaseExpandableCollectionViewModel<T> : BaseSearchViewModel<object> where T : BaseCollectionSectionViewModel
+	public abstract class BaseExpandableCollectionViewModel<T> : BaseCollectionViewModel<object> where T : BaseCollectionSectionViewModel
     {
 		public void OnSectionHeaderSelected(T section)
         {         
