@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:controls="clr-namespace:ManageGo.Controls"
     ItemTapped="Handle_ItemTapped"
+    ItemSelected="Handle_ItemSelected"
     SeparatorVisibility="None"
     HasUnevenRows="true"
     VerticalOptions="Start"

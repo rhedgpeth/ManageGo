@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using ManageGo.Core.Managers.Models;
 using Xamarin.Forms;
-using System.Collections;
 
 namespace ManageGo.Controls
 {
@@ -58,6 +57,11 @@ namespace ManageGo.Controls
         }
 
         int _totalItemCount;
+
+        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            SelectedItem = null;
+        }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {

@@ -286,6 +286,8 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\key_blue.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\wrench_blue.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\calendar_blue_sm.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checked.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\unchecked.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

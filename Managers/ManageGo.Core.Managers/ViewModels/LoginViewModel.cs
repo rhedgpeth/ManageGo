@@ -88,6 +88,15 @@ namespace ManageGo.Core.Managers.ViewModels
 			Title = "Welcome";
 		}
 
+        //f8c178f6-5cb1-483e-add6-9ff71091a1c1
+
+        async Task OnLoginCommand()
+        {
+            AppInstance.ApiAccessToken = "f8c178f6-5cb1-483e-add6-9ff71091a1c1";
+            Navigation.SetRootView(new RootViewModel(), false);
+        }
+
+        /*
 		async Task OnLoginCommand() 
         {
             if (!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password))
@@ -115,7 +124,7 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 OnFailure?.Invoke("Invalid username/password.");
             }
-        }
+        }*/
 
         async Task<bool> Authorize(AuthenticationResponse response)
         {
