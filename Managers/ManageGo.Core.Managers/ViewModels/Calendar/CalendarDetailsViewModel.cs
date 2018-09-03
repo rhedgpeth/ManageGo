@@ -58,7 +58,7 @@ namespace ManageGo.Core.Managers.ViewModels
 			Description = evt.Note;
 			Participants = new List<string> { "John Doe", "Jim Doe", "Jake Doe" };
             EventTimeDescription = $"{evt.TimeFrom} to {evt.TimeTo}";
-			EventDateDescription = evt.EventDateStart.ToShortDateString();         
+			EventDateDescription = evt.Date.ToShortDateString();         
         }
     }
 }

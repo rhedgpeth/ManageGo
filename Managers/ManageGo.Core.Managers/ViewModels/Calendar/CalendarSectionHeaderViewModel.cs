@@ -20,9 +20,9 @@ namespace ManageGo.Core.Managers.ViewModels
         void LoadMaintenanceTicket(MaintenanceTicketEvent evt)
         {
             TimeDescription = $"{evt.TimeFrom} to {evt.TimeTo}";
-			DateDescription = evt.EventDateStart.ToShortDateString();
+			DateDescription = evt.Date.ToShortDateString();
             Title = evt.Title + $" {evt.TicketId}";
-			//Location = ticket.Building?.BuildingShortAddress;
+			Location = evt.Building?.BuildingShortAddress;
 
             Children = new List<object>
             {

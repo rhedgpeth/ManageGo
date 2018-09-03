@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Services;
@@ -15,5 +16,8 @@ namespace ManageGo.Core.Managers.Services
         public Task<BaseResponse<AuthenticationResponse>> Authenticate(string username, string password) 
             => PostAsync<BaseResponse<AuthenticationResponse>, AuthenticationRequest>("authorize", 
                                                                         new AuthenticationRequest { Login = username, Password = password });
+
+        public Task<BaseResponse<string>> ResetPassword(ResetPasswordRequest request)
+            => PostAsync<BaseResponse<string>, ResetPasswordRequest>("resetpassword", request, default(CancellationToken));
     }
 }
