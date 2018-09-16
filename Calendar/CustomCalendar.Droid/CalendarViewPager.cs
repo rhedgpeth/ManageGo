@@ -11,7 +11,18 @@ namespace CustomCalendar.Droid
 
 		public bool AllowMultipleSelection { get; set; }
 
-        DateRange SelectedDates { get; set; }
+        DateRange _selectedDates;
+        public DateRange SelectedDates
+        {
+            get
+            {
+                if (_selectedDates == null)
+                    _selectedDates = new DateRange(DateTime.Now.Date);
+
+                return _selectedDates;
+            }
+            set => _selectedDates = value;
+        }
 
 		bool IsDragging { get; set; }
 
@@ -23,7 +34,7 @@ namespace CustomCalendar.Droid
         public DrawableControlView<CalendarMonthControl> Item1 { get; set; }
         public DrawableControlView<CalendarMonthControl> Item2 { get; set; }
 
-		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection, DateTime selectedDate) : base(context)
+		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection, DateRange selectedDates) : base(context)
 		{
 			AllowMultipleSelection = allowMultipleSelection;
             
@@ -37,34 +48,24 @@ namespace CustomCalendar.Droid
 
 			Item1.ControlDelegate.DatesInteracted += UpdateSelectedDates;
 
-			SelectedDate = selectedDate;
+			SelectedDates = selectedDates;
             
-			SetMonth(SelectedDate.Value);
+			if (SelectedDates.EndDate.HasValue)
+            {
+                SetMonth(SelectedDates.EndDate.Value);
+            }
+            else
+            {
+                SetMonth(SelectedDates.StartDate);
+            }
 		}
-         
-		DateTime? _selectedDate;
-		public DateTime? SelectedDate
-		{
-			get
-			{
-				return _selectedDate;
-			}
-			set
-			{
-				if (value.HasValue)
-				{
-					var dt = value.Value;
 
-					_selectedDate = value.Value.Date;
+        public void UpdateSelectedDates(DateRange dates)
+        {
+            SelectedDates = dates;
 
-					UpdateSelectedDates(dt);
-				}
-				else
-				{
-					_selectedDate = null;               
-				}
-			}
-		}
+            Invalidate();
+        }
 
 		public override bool DispatchTouchEvent(MotionEvent e)
 		{

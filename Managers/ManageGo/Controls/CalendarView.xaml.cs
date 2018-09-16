@@ -44,6 +44,8 @@ namespace ManageGo.Controls
             set
             {
                 SetValue(SelectedDateProperty, value);
+
+                calendar.SelectedDates = new DateRange(value);
             }
         }
 
@@ -52,20 +54,45 @@ namespace ManageGo.Controls
                                       typeof(DateRange),
                                       typeof(CalendarView),
                                       new DateRange(DateTime.Now),
-                                      BindingMode.TwoWay);
+                                      BindingMode.TwoWay,
+                                      propertyChanged: HandleSelectedDatesPropertyChanged);
 
         public DateRange SelectedDates
         {
             get => (DateRange)GetValue(SelectedDatesProperty);
-            set
+            set => SetValue(SelectedDatesProperty, value);
+        }
+
+        static void HandleSelectedDatesPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var calendarView = bindable as CalendarView;
+
+            if (newValue != null)
             {
-                SetValue(SelectedDatesProperty, value);
+                calendarView.calendar.SelectedDates = newValue as DateRange;
             }
         }
 
         public CalendarView()
         {
             InitializeComponent();
+
+            past7DaysButton.Tapped += Past7DaysButton_Tapped;
+            past30DaysButton.Tapped += Past30DaysButton_Tapped;
+        }
+
+        void Past7DaysButton_Tapped(object sender, EventArgs e)
+        {
+            calendar.SelectedDates = new DateRange(DateTime.Now.AddDays(-7), DateTime.Now);
+
+            SelectedDates = new DateRange(DateTime.Now.AddDays(-7), DateTime.Now);
+        }
+
+        void Past30DaysButton_Tapped(object sender, EventArgs e)
+        {
+            calendar.SelectedDates = new DateRange(DateTime.Now.AddDays(-30), DateTime.Now);
+
+            SelectedDates = new DateRange(DateTime.Now.AddDays(-30), DateTime.Now);
         }
 
         void Handle_OnSelectedDatesChanged(DateRange dates)

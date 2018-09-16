@@ -12,6 +12,7 @@ namespace CustomCalendar
 		public bool AllowMultipleSelection { get; set; }
 
 		public DateRange SelectedDates { get; set; }
+        public List<DateTime> HighlightedDates { get; set; }
 
 		DateTime _date;
 		public DateTime Date
@@ -45,18 +46,35 @@ namespace CustomCalendar
 
 		public void Draw(SKSurface surface, SKImageInfo info)
 		{
-			var highlightedDays = SelectedDates?.GetDateRangeDates()
-                                                   .Where(hd => hd.Year == Date.Year && hd.Month == Date.Month)
-			                                    .Select(d => new HighlightedDay 
-			                                    {
-				                                    Type = (d == SelectedDates.StartDate || 
-				                                            d == SelectedDates.EndDate ) ? HighlightType.Dark : HighlightType.Light,
-				                                    Day = d.Day
-			                                    }).ToList();
+            List<HighlightedDay> calendarDates = new List<HighlightedDay>();
 
-            
+            if (SelectedDates != null)
+            {
+                var selectedDates = SelectedDates?.GetDateRangeDates()
+                                                       .Where(hd => hd.Year == Date.Year && hd.Month == Date.Month)
+                                                    .Select(d => new HighlightedDay
+                                                    {
+                                                        Type = (d == SelectedDates.StartDate ||
+                                                                d == SelectedDates.EndDate) ? HighlightType.Dark : HighlightType.Light,
+                                                        Day = d.Day
+                                                    }).ToList();
 
-            Model = CalendarMonthModel.Create(Date.Year, Date.Month, highlightedDays, info.Width, info.Height);
+                calendarDates.AddRange(selectedDates);
+            }
+
+            if (HighlightedDates != null)
+            {
+                var highlightedDates = HighlightedDates?.Where(hd => hd.Year == Date.Year && hd.Month == Date.Month)
+                                                        .Select(d => new HighlightedDay
+                                                            {
+                                                                Type = HighlightType.Light,
+                                                                Day = d.Day
+                                                            }).ToList();
+
+                calendarDates.AddRange(highlightedDates);
+            }
+
+            Model = CalendarMonthModel.Create(Date.Year, Date.Month, calendarDates, info.Width, info.Height);
 
             CalendarMonthRenderer.Draw(surface, info, Model);
 		}

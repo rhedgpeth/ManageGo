@@ -39,11 +39,13 @@ namespace ManageGo.UI.Droid.Renderers
                 }
 
                 Element.SizeChanged -= ElementSizeChanged;
+                Element.UpdateSelectedDates = null;
             }
 
             if (e.NewElement != null)
             {
                 Element.SizeChanged += ElementSizeChanged;
+                Element.UpdateSelectedDates = UpdateSelectedDates;
             }
 
             InitializeNativeView();
@@ -73,6 +75,11 @@ namespace ManageGo.UI.Droid.Renderers
             return (int)(Context.ToPixels(pixelValue));
         }
 
+        void UpdateSelectedDates(DateRange dates)
+        {
+            _calendarView?.UpdateSelectedDates(dates);
+        }
+
         void InitializeNativeView()
         {
             if (elementWidth <= 0 || elementHeight <= 0)
@@ -82,7 +89,7 @@ namespace ManageGo.UI.Droid.Renderers
             
             ResetNativeView();
 
-            _calendarView = new CalendarViewPager(Context, Element.AllowMultipleSelection, DateTime.Now);
+            _calendarView = new CalendarViewPager(Context, Element.AllowMultipleSelection, Element.SelectedDates);
 			_calendarView.OnCurrentMonthYearChange += CurrentMonthYearChanged;
             _calendarView.OnSelectedDatesChange += DatesSelected;
          

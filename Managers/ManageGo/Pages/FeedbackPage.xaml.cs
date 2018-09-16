@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using ManageGo.Core.Managers.ViewModels;
+﻿using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
-using Xamarin.Forms;
 
 namespace ManageGo.Pages
 {
@@ -11,11 +8,6 @@ namespace ManageGo.Pages
         public FeedbackPage()
         {
             InitializeComponent();         
-        }
-
-		async void Handle_Clicked(object sender, System.EventArgs e)
-        {
-			await DisplayActionSheet("Pick an option", "Cancel", "Close", "General feedback", "Support");
-        }      
+        }    
 	}
 }

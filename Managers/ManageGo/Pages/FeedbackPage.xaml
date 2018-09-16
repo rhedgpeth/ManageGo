@@ -17,14 +17,15 @@
             <Label Text="Select your topic:" Style="{StaticResource Dark-Grey-Mid}" Margin="0,15,0,0"
                    HorizontalOptions="Center" HorizontalTextAlignment="Center" />
 
-            <controls:CenteredPicker Title="Select a topic" SelectedItem="{Binding SelectedTopic}" HorizontalOptions="CenterAndExpand">
+            <controls:CenteredPicker Title="Select a topic" 
+                                     SelectedItem="{Binding SelectedTopic}" 
+                                     TextColor="{StaticResource Primary}"
+                                     HorizontalOptions="CenterAndExpand">
                 <Picker.Items>
                     <x:String>General feedback</x:String>
                     <x:String>Support</x:String>
                 </Picker.Items>
             </controls:CenteredPicker>
-
-            <Button Text="Pick something" Clicked="Handle_Clicked" />
 
             <Label Text="Type your message here:" Style="{StaticResource Dark-Grey-Mid}" Margin="0,15,0,0"
                    HorizontalOptions="Center" HorizontalTextAlignment="Center" />

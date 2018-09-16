@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CoreGraphics;
 using CustomCalendar;
 using Foundation;
@@ -13,7 +14,7 @@ namespace ManageGo.iOS.Renderers
     [Preserve(AllMembers = true)]
     public class CalendarRenderer : ViewRenderer<Calendar, CustomCalendar.iOS.CalendarView>
     {
-		CustomCalendar.iOS.CalendarView _calendarView;
+        CustomCalendar.iOS.CalendarView _calendarView;
 
         double elementWidth;
         double elementHeight;
@@ -32,14 +33,26 @@ namespace ManageGo.iOS.Renderers
                 }
 
                 Element.SizeChanged -= ElementSizeChanged;
+                Element.UpdateSelectedDates = null;
             }
 
             if (e.NewElement != null)
             {
                 Element.SizeChanged += ElementSizeChanged;
+                Element.UpdateSelectedDates = UpdateSelectedDates;
             }
 
             InitializeNativeView();
+        }
+
+        void UpdateSelectedDates(DateRange dates)
+        {
+            _calendarView?.UpdateSelectedDates(dates);
+        }
+
+        void UpdateHighlightedDates(List<DateTime> dates)
+        {
+            _calendarView?.UpdateHighlatedDates(dates);
         }
 
         void InitializeNativeView()
@@ -51,7 +64,8 @@ namespace ManageGo.iOS.Renderers
 
             ResetNativeView();
 
-			_calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight), Element.AllowMultipleSelection, DateTime.Now);
+			_calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight), 
+                                                                Element.AllowMultipleSelection, Element.SelectedDates, Element.HighlightedDates);
 
             _calendarView.OnCurrentMonthYearChange += Element.OnCurrentMonthYearChanged;
             _calendarView.OnSelectedDatesChange += Element.OnDatesChanged;
@@ -120,6 +134,7 @@ namespace ManageGo.iOS.Renderers
                     ResetNativeView();
 
                     Element.SizeChanged -= ElementSizeChanged;
+                    Element.UpdateSelectedDates = null;
                 }
 
 				if (_calendarView != null)

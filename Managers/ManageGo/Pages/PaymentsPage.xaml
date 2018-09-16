@@ -16,7 +16,7 @@
 
         <StackLayout Margin="0" BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="May 5 - May 15" LeftFilterIcon="calendar_blue" 
+            <controls:FilterView LeftFilterText="{Binding SelectedDatesDescription}" LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue"
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}"> 
 
@@ -25,6 +25,7 @@
                     <StackLayout Margin="0,15,0,0">
                         
                         <controls:CalendarView AllowMultipleSelection="true" 
+                                               SelectedDates="{Binding SelectedDates}"
                                                HeightRequest="275" WidthRequest="400" 
                                                HorizontalOptions="Center" />
 

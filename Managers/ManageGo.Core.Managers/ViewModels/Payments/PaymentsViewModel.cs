@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Threading.Tasks;
+using CustomCalendar;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Managers.Services;
-using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
@@ -11,12 +12,49 @@ namespace ManageGo.Core.Managers.ViewModels
     {      
         public string SearchTerm { get; set; }
 
+        DateRange _selectedDates;
+        public DateRange SelectedDates 
+        {
+            get => _selectedDates;
+            set
+            {
+                SetPropertyChanged(ref _selectedDates, value);
+
+                if (_selectedDates != null)
+                {
+                    var startMonthShortName = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(_selectedDates.StartDate.Month);
+
+                    if (_selectedDates.EndDate.HasValue && _selectedDates.StartDate != _selectedDates.EndDate.Value)
+                    {
+                        var endMonthShortName = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(_selectedDates.EndDate.Value.Month);
+
+                        SelectedDatesDescription = $"{startMonthShortName} {_selectedDates.StartDate.Day} - " +
+                                                    $"{endMonthShortName} {_selectedDates.EndDate.Value.Day}";
+                    }
+                    else
+                    {
+                        SelectedDatesDescription = $"{startMonthShortName} {_selectedDates.StartDate.Day}";
+                    }
+                }
+            }
+        }
+
+        string _selectedDatesDescription;
+        public string SelectedDatesDescription
+        {
+            get => _selectedDatesDescription;
+            set => SetPropertyChanged(ref _selectedDatesDescription, value);
+        }
+
         public PaymentsViewModel()
         {
             Title = "Payments";
         }
 
-        public override Task InitAsync() => LoadAsync(true);
+        protected override void LoadFilters()
+        {
+            SelectedDates = new DateRange(DateTime.Now.AddDays(-30), DateTime.Now);
+        }
 
         public override async Task LoadAsync(bool refresh)
         {
@@ -26,8 +64,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
             var request = new PaymentRequest
             {
-                DateFrom = new DateTime(2018, 2, 1),
-                DateTo = new DateTime(2018, 2, 5),
+                DateFrom = SelectedDates.StartDate,
+                DateTo = SelectedDates.EndDate.Value,
                 Page = Page,
                 PageSize = 20,
                 Search = SearchTerm
