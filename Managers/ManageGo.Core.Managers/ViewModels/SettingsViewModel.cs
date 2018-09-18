@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -81,14 +82,20 @@ namespace ManageGo.Core.Managers.ViewModels
 			Title = "Settings"; 
         }
 
-		public override Task InitAsync()
+		public override async Task InitAsync()
 		{
+            var user = await CacheService.GetObjectAsync<AuthenticatedUser>("UserSettings");
+
+            /*
 			Name = "Robert Hedgpeth";
 			Email = "rob@hedgpethconsulting.com";
+			*/
+
+            Name = $"{user.FirstName} {user.LastName}".Trim();
+            Email = user.EmailAddress;
+
 			DisplayName = "Robby H";
 			Password = "******";
-
-			return base.InitAsync();
 		}
 	}
 }

@@ -106,6 +106,10 @@ namespace ManageGo.Core.Managers.ViewModels
                     if (await Authorize(response.Result))
                     {
                         AppInstance.ApiAccessToken = response.Result.User.AccessToken;
+
+                        // TODO: Put this in a better spot
+                        await CacheService.InsertObjectAsync("UserSettings", response.Result.User, new TimeSpan(30,0,0));
+
                         Navigation.SetRootView(new RootViewModel(), false);
                     }
                 }

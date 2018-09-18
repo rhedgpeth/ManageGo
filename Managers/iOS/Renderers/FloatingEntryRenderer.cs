@@ -15,6 +15,7 @@ using ManageGo.Extensions;
 using ManageGo.iOS.Controls;
 
 using ColorExtensions = ManageGo.iOS.Extensions.ColorExtensions;
+using Color = Xamarin.Forms.Color;
 
 [assembly: ExportRenderer(typeof(FloatingEntry), typeof(FloatingEntryRenderer))]
 

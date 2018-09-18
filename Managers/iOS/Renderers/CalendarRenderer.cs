@@ -11,7 +11,7 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(Calendar), typeof(CalendarRenderer))]
 namespace ManageGo.iOS.Renderers
 {
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
     public class CalendarRenderer : ViewRenderer<Calendar, CustomCalendar.iOS.CalendarView>
     {
         CustomCalendar.iOS.CalendarView _calendarView;

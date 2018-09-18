@@ -95,6 +95,7 @@ namespace ManageGo
             ServiceContainer.Register<ISecureStorageService>(() => new SecureStorageService());
             ServiceContainer.Register<IMessageService>(() => new MessageService());
             ServiceContainer.Register<IAlertService>(() => new AlertService());
+            ServiceContainer.Register<ICacheService>(() => new CacheService("ManageGo"));
         }
     }
 }

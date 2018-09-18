@@ -1,12 +1,27 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Services;
 
 namespace ManageGo.Core.ViewModels
 {
     public abstract class BaseViewModel : BaseNotify
     {
-		string _title;
+        ICacheService _cacheService;
+        protected ICacheService CacheService
+        {
+            get
+            {
+                if (_cacheService == null)
+                {
+                    _cacheService = ServiceContainer.Resolve<ICacheService>();
+                }
+
+                return _cacheService;
+            }
+        }
+
+        string _title;
         public string Title
 		{
 			get => _title;
