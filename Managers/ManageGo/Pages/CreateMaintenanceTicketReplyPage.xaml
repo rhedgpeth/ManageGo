@@ -40,7 +40,7 @@
                 <Editor HorizontalOptions="FillAndExpand" HeightRequest="300"  />
 
                 <Grid ColumnSpacing="10"> 
-                    <Button Grid.Column="0" Text="Take picture" BackgroundColor="#F9FAFB" TextColor="#3E90F4" />
+                    <Button Grid.Column="0" Text="Take picture" Command="{Binding TakePhotoCommand}" BackgroundColor="#F9FAFB" TextColor="#3E90F4" />
                     <Button Grid.Column="1" Text="Upload file" BackgroundColor="#F9FAFB" TextColor="#3E90F4" />
                 </Grid>
             

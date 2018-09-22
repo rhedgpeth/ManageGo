@@ -17,6 +17,7 @@
     <PackageReference Include="Xamarin.Forms.RangeSlider" Version="0.7.36" />
     <PackageReference Include="Xamarin.RangeSlider" Version="0.7.36" />
     <PackageReference Include="akavache" Version="6.0.20" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />
@@ -39,6 +40,7 @@
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />
     <Compile Remove="Controls\ExpandableViewCell.cs" />
+    <Compile Remove="Pages\SettingsPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\MenuPage.xaml.cs">
@@ -58,9 +60,6 @@
     </Compile>
     <Compile Update="Pages\TenantsPage.xaml.cs">
       <DependentUpon>TenantsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\NotificationsPage.xaml.cs">
       <DependentUpon>NotificationsPage.xaml</DependentUpon>

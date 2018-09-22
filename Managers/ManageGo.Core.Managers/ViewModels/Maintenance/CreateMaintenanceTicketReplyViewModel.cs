@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
+using ManageGo.Core.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -36,8 +37,46 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
+        ICommand _takePhotoCommand;
+        public ICommand TakePhotoCommand
+        {
+            get
+            {
+                if (_takePhotoCommand == null)
+                {
+                    _takePhotoCommand = new Command(async () => await TakePhoto());
+                }
+
+                return _takePhotoCommand;
+            }
+        }
+
+        IMediaService _mediaService;
+        IMediaService MediaService
+        {
+            get
+            {
+                if (_mediaService == null)
+                {
+                    _mediaService = ServiceContainer.Resolve<IMediaService>();
+                }
+
+                return _mediaService;
+            }
+        }
+
         public CreateMaintenanceTicketReplyViewModel()
         { }
+
+        async Task TakePhoto()
+        {
+            var photo = await MediaService.TakePhoto().ConfigureAwait(false);
+
+            if (photo != null)
+            {
+                // Test 
+            }
+        }
 
         Task Reply()
 		{

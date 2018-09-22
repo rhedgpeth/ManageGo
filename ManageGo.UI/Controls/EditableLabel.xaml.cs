@@ -48,7 +48,6 @@ namespace ManageGo.UI.Controls
         public EditableLabel()
         {
             InitializeComponent();
-			//BindingContext = this;
         }
 
 		void Handle_Tapped(object sender, EventArgs e)
@@ -61,6 +60,7 @@ namespace ManageGo.UI.Controls
 			}
 			else
 			{
+                label.Text = entry.Text;
 				label.IsVisible = true;
                 entry.IsVisible = false;
 			}

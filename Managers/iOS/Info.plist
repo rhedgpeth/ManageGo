@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>ManageGo</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.managego.pmc</string>
+	<string>com.managego.managers</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -48,5 +48,7 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>4</string>
+	<key>NSCameraUsageDescription</key>
+	<string>ManageGo needs to access the camera to take photos.</string>
 </dict>
 </plist>
