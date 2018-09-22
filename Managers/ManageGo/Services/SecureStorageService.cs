@@ -35,12 +35,26 @@ namespace ManageGo.Services
             {
                 // Possible that device doesn't support secure storage on device.
 
-                // TODO: Handle this better
+                // TODO: Log this error
 
                 return null;
             }
         }
 
-        public bool Remove(string key) => SecureStorage.Remove(key);
+        public bool Remove(string key)
+        {
+            try
+            {
+                SecureStorage.Remove(key);
+
+                return true;
+            }
+            catch 
+            {
+                // TODO: Log this error
+
+                return false;
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@
             <StackLayout Margin="0" Spacing="10">
                 <Label Text="Profile" FontSize="16" FontAttributes="Bold" Margin="35,10,0,0" />
                 <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />     
-
+                
                 <Grid RowSpacing="10" Margin="35,0,25,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="75" />
@@ -41,6 +41,7 @@
                         <RowDefinition Height="1" />
                         <RowDefinition Height="25" />
                         <RowDefinition Height="1" />
+                        <RowDefinition Height="35" />
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Name" FontSize="12" TextColor="#AAABAE" VerticalOptions="Center" />
@@ -147,6 +148,8 @@
                     </StackLayout>
                     <BoxView Grid.Row="17" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" /> 
   
+                    <Button Grid.Row="18" Grid.Column="0" Text="Save" Command="{Binding SaveCommand}" />
+                    <Button Grid.Row="18" Grid.Column="1" Text="Reset" Command="{Binding ResetCommand}" />
                 </Grid>
             </StackLayout>
         </ScrollView>

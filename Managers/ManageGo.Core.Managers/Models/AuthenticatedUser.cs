@@ -6,13 +6,10 @@ namespace ManageGo.Core.Managers.Models
     {
         public string AccessToken { get; set; }
 
-        [JsonProperty(PropertyName = "PaymentPushNotification")]
-        public bool AllowPaymentPushNotifications { get; set; }
+        public bool PaymentPushNotification { get; set; }
 
-        [JsonProperty(PropertyName = "MaintenancePushNotification")]
-        public bool AllowMaintenancePushNotifications { get; set; }
+        public bool MaintenancePushNotification { get; set; }
 
-        [JsonProperty(PropertyName = "TenantPushNotification")]
-        public bool AllowTenantPushNotifications { get; set; }
+        public bool TenantPushNotification { get; set; }
     }
 }

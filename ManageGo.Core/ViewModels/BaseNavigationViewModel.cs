@@ -7,7 +7,21 @@ namespace ManageGo.Core.ViewModels
 {
     public class BaseNavigationViewModel : BaseViewModel
     {
-		public ViewModelType Type { get; set; } = ViewModelType.Default;
+        IAlertService _alertService;
+        protected IAlertService AlertService
+        {
+            get
+            {
+                if (_alertService == null)
+                {
+                    _alertService = ServiceContainer.Resolve<IAlertService>();
+                }
+
+                return _alertService;
+            }
+        }
+
+        public ViewModelType Type { get; set; } = ViewModelType.Default;
 
         INavigationService _navigationService;
 

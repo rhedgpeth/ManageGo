@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
+using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -77,6 +80,36 @@ namespace ManageGo.Core.Managers.ViewModels
             set => SetPropertyChanged(ref _enableTenantsPushNotifications, value);
         }
 
+        ICommand _saveCommand;
+        public ICommand SaveCommand 
+        {
+            get
+            {
+                if (_saveCommand == null)
+                {
+                    _saveCommand = new Command(async () => await Save());
+                }
+
+                return _saveCommand;
+            }
+        }
+
+        ICommand _resetCommand;
+        public ICommand ResetCommand
+        {
+            get
+            {
+                if (_resetCommand == null)
+                {
+                    _resetCommand = new Command(async () => await Reset());
+                }
+
+                return _resetCommand;
+            }
+        }
+
+        AuthenticatedUser User { get; set; }
+
         public SettingsViewModel()
         {
 			Title = "Settings"; 
@@ -84,18 +117,42 @@ namespace ManageGo.Core.Managers.ViewModels
 
 		public override async Task InitAsync()
 		{
-            var user = await CacheService.GetObjectAsync<AuthenticatedUser>("UserSettings");
+            User = await CacheService.GetObjectAsync<AuthenticatedUser>("UserSettings");
+
+            if (User != null)
+            {
+                Name = $"{User.UserFirstName} {User.UserLastName}".Trim();
+                Email = User.UserEmailAddress;
+
+                DisplayName = "Robby H";
+                Password = "******";
+            }
+		}
+
+        async Task Save()
+        {
+            User.UserEmailAddress = Email;
+            User.MaintenancePushNotification = EnableMaintenancePushNotifications;
+            User.PaymentPushNotification = EnablePaymentsPushNotifications;
+            User.TenantPushNotification = EnableTenantsPushNotifications;
 
             /*
-			Name = "Robert Hedgpeth";
-			Email = "rob@hedgpethconsulting.com";
-			*/
+            var result = await UserService.Instance.SaveUserSettings(User);
 
-            Name = $"{user.FirstName} {user.LastName}".Trim();
-            Email = user.EmailAddress;
+            if (result.Status == Enumerations.ResponseStatus.ActionSuccessful)
+            {
+                
+            }*/
 
-			DisplayName = "Robby H";
-			Password = "******";
-		}
+            await AlertService.ShowToast(Core.Enumerations.AlertType.Success, "Success", "Settings updated");
+        }
+
+        async Task Reset()
+        {
+            if (await AlertService.ShowMessage("Reset", "Are you sure you want to reset your changes?", "Yes", "No"))
+            {
+                Email = User.UserEmailAddress;
+            }
+        }
 	}
 }

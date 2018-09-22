@@ -22,5 +22,15 @@ namespace ManageGo.Services
 
             // TODO: Handle result
         }
+
+        public Task ShowMessage(string title, string message, string cancel)
+        {
+            return Application.Current.MainPage.DisplayAlert(title, message, cancel);
+        }
+
+        public Task<bool> ShowMessage(string title, string message, string accept, string cancel)
+        {
+            return Application.Current.MainPage.DisplayAlert(title, message, accept, cancel);
+        }
     }
 }

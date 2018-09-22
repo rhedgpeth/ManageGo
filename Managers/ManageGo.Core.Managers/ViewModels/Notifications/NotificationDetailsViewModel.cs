@@ -5,8 +5,6 @@ using ManageGo.Core.ViewModels;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Enumerations;
 using System.Threading.Tasks;
-using ManageGo.Core.Managers.Services;
-using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Enumerations;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -24,20 +22,6 @@ namespace ManageGo.Core.Managers.ViewModels
                 }
 
                 return _externalAppService;
-            }
-        }
-
-        IAlertService _alertService;
-        IAlertService AlertService
-        {
-            get
-            {
-                if (_alertService == null)
-                {
-                    _alertService = ServiceContainer.Resolve<IAlertService>();
-                }
-
-                return _alertService;
             }
         }
 
