@@ -99,6 +99,8 @@ namespace ManageGo.Core.Managers.ViewModels
         {
             if (!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password))
             {
+                IsBusy = true;
+
                 var response = await AuthenticationService.Instance.Authenticate(Username, Password); //.ConfigureAwait(false);
 
                 if (response?.Status == Enumerations.ResponseStatus.Data)
@@ -121,6 +123,8 @@ namespace ManageGo.Core.Managers.ViewModels
                 {
                     OnFailure?.Invoke("Unknown error has occured. (OnLoginCommand)");
                 }
+
+                IsBusy = false;
             }
             else // Double check on client-side validation
             {

@@ -40,7 +40,6 @@
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />
     <Compile Remove="Controls\ExpandableViewCell.cs" />
-    <Compile Remove="Pages\SettingsPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\MenuPage.xaml.cs">
