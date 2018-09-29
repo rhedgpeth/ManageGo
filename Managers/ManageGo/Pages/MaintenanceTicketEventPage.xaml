@@ -2,12 +2,12 @@
 <local:BasePopupPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
+    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels;assembly=ManageGo.Core.Managers"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:controls="clr-namespace:ManageGo.Controls;"
     xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
     x:Class="ManageGo.Pages.MaintenanceTicketEventPage"
     x:TypeArguments="vm:MaintenanceTicketEventViewModel">
     <pages:PopupPage.Animation>

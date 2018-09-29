@@ -2,29 +2,16 @@
 <local:BaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:ManageGo.UI.Pages"
-    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
+    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels;assembly=ManageGo.Core.Managers"
     xmlns:ptr="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
     x:Class="ManageGo.Pages.DashboardPage"
     x:TypeArguments="vm:DashboardViewModel"
     ControlTemplate="{StaticResource HeaderNoBorderPageTemplate}">
     <ContentPage.Content>
-
-        
-
-        
+    
         <StackLayout Margin="0,5,0,0" Padding="0">
-            
-               
-                
             <Image Source="dashboard_1.jpg" Aspect="AspectFill" Margin="0" HorizontalOptions="FillAndExpand" />
-
-            <!--
-            <ptr:PullToRefreshLayout
-                  IsPullToRefreshEnabled="True"
-                  RefreshCommand="{Binding RefreshCommand}"
-                  IsRefreshing="{Binding IsBusy}">-->
-            
             <ScrollView>
 
                 <StackLayout>

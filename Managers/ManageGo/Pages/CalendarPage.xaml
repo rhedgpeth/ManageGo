@@ -2,9 +2,9 @@
 <local:BaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:ManageGo.UI.Pages"
-    xmlns:controls="clr-namespace:ManageGo.Controls"
-    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
+    xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels;assembly=ManageGo.Core.Managers"
     x:Class="ManageGo.Pages.CalendarPage"
     x:TypeArguments="vm:CalendarViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">

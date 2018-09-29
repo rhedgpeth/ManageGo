@@ -44,10 +44,38 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 if (_takePhotoCommand == null)
                 {
-                    _takePhotoCommand = new Command(async () => await TakePhoto());
+                    _takePhotoCommand = new Command(async () => await TakePhotoAsync());
                 }
 
                 return _takePhotoCommand;
+            }
+        }
+
+        ICommand _takeVideoCommand;
+        public ICommand TakeVideoCommand
+        {
+            get
+            {
+                if (_takeVideoCommand == null)
+                {
+                    _takeVideoCommand = new Command(async () => await TakeVideoAsync());
+                }
+
+                return _takeVideoCommand;
+            }
+        }
+
+        ICommand _pickPhotoCommand;
+        public ICommand PickPhotoCommand
+        {
+            get
+            {
+                if (_pickPhotoCommand == null)
+                {
+                    _pickPhotoCommand = new Command(async () => await PickPhotoAsync());
+                }
+
+                return _pickPhotoCommand;
             }
         }
 
@@ -68,13 +96,33 @@ namespace ManageGo.Core.Managers.ViewModels
         public CreateMaintenanceTicketReplyViewModel()
         { }
 
-        async Task TakePhoto()
+        async Task TakeVideoAsync()
         {
-            var photo = await MediaService.TakePhoto().ConfigureAwait(false);
+            var video = await MediaService.TakeVideoAsync().ConfigureAwait(false);
+
+            if (video != null)
+            {
+                // Test 
+            }
+        }
+
+        async Task TakePhotoAsync()
+        {
+            var photo = await MediaService.TakePhotoAsync().ConfigureAwait(false);
 
             if (photo != null)
             {
                 // Test 
+            }
+        }
+
+        async Task PickPhotoAsync()
+        {
+            var photo = await MediaService.PickVideoAsync().ConfigureAwait(false);
+
+            if (photo != null)
+            {
+
             }
         }
 

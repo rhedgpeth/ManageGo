@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 using ManageGo.Core.Services;
 using Plugin.Media;
@@ -9,7 +8,19 @@ namespace ManageGo.Services
 {
     public class MediaService : IMediaService
     {
-        public async Task<byte[]> TakePhoto()
+        public bool IsCameraAvailable
+        {
+            get => CrossMedia.Current.IsCameraAvailable;
+        }
+
+        public async Task<byte[]> PickPhotoAsync()
+        {
+            var result = await CrossMedia.Current.PickPhotoAsync();
+
+            return result != null ? GetBytesFromStream(result.GetStream()) : null;
+        }
+
+        public async Task<byte[]> TakePhotoAsync()
         {
             var options = new StoreCameraMediaOptions
             {
@@ -18,19 +29,35 @@ namespace ManageGo.Services
 
             var result = await CrossMedia.Current.TakePhotoAsync(options).ConfigureAwait(false);
 
-            if (result != null)
+            return result != null ? GetBytesFromStream(result.GetStream()) : null;
+        }
+
+        public async Task<byte[]> PickVideoAsync()
+        {
+            var result = await CrossMedia.Current.PickVideoAsync();
+
+            return result != null ? GetBytesFromStream(result.GetStream()) : null;
+        }
+
+        public async Task<byte[]> TakeVideoAsync()
+        {
+            var options = new StoreVideoOptions
             {
-                var stream = result.GetStream();
+                CompressionQuality = 75
+            };
 
-                using (var ms = new MemoryStream())
-                {
-                    stream.CopyTo(ms);
+            var result = await CrossMedia.Current.TakeVideoAsync(options).ConfigureAwait(false);
 
-                    return ms.ToArray();
-                }
+            return result != null ? GetBytesFromStream(result.GetStream()) : null;
+        }
+
+        byte[] GetBytesFromStream(Stream stream)
+        {
+            using (var ms = new MemoryStream())
+            {
+                stream.CopyTo(ms);
+                return ms.ToArray();
             }
-
-            return null;
         }
     }
 }

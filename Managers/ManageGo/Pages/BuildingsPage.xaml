@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local:BaseContentPage 
+<local:BaseContentPage
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
-    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels;assembly=ManageGo.Core.Managers"
     x:Class="ManageGo.Pages.BuildingsPage"
     x:TypeArguments="vm:BuildingsViewModel"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
-    <ContentPage.Content>
-
-        <controls:ListView    
-            ItemsSource="{Binding Items}"
+    <local:BaseContentPage.Content>
+        <controls:ListView            
+            ItemsSource="{Binding Items}"     
             ItemTappedCommand="{Binding ItemSelectedCommand}"
             IsPullToRefreshEnabled="true"
             RefreshCommand="{Binding RefreshCommand}"
@@ -19,7 +18,7 @@
             PreloadCount="5"
             LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
             SeparatorVisibility="None" 
-            HasUnevenRows="true"
+            HasUnevenRows="true"   
             BackgroundColor="#F9FAFB">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -92,6 +91,5 @@
                 <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Margin="10"/>    
             </ListView.Footer>
         </controls:ListView>
-        
-    </ContentPage.Content>
+    </local:BaseContentPage.Content> 
 </local:BaseContentPage>

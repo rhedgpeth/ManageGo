@@ -2,70 +2,67 @@
 <local:BaseSearchContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ManageGo.UI.Pages"
+    xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
-    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels"
+    xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels;assembly=ManageGo.Core.Managers"
     x:TypeArguments="vm:BuildingUnitsViewModel,vm:BuildingUnitViewModel"
     x:Class="ManageGo.Pages.BuildingUnitsPage"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
-    <ContentPage.Content>
+    <local:BaseContentPage.Content>
+        <StackLayout>
+            <Grid RowSpacing="15" Padding="0,10,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="1" />
+                </Grid.RowDefinitions>
 
-    <StackLayout>
-        <Grid RowSpacing="15" Padding="0,10,0,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25" />
-                <RowDefinition Height="1" />
-            </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                    <Image Source="building_grey" Aspect="AspectFit" />
+                </StackLayout>
 
-            <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
-                <Image Source="building_grey" Aspect="AspectFit" />
-            </StackLayout>
+                <Label Grid.Row="0" Grid.Column="2" Text="{Binding BuildingName}" FontSize="16" 
+                       FontAttributes="Bold" Margin="10,0,0,0" VerticalOptions="Center" />
 
-            <Label Grid.Row="0" Grid.Column="2" Text="{Binding BuildingName}" FontSize="16" 
-                   FontAttributes="Bold" Margin="10,0,0,0" VerticalOptions="Center" />
+                <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+            </Grid> 
 
-            <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
-        </Grid> 
+            <controls:ListView   
+                ItemsSource="{Binding Items}"
+                ItemTappedCommand="{Binding TenantsSelectedCommand}"
+                SeparatorVisibility="None" 
+                HasUnevenRows="true"
+                Margin="30,0,30,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                                <Grid RowSpacing="10" Margin="0,10,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".25*"/>
+                                        <ColumnDefinition Width=".75*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
 
-        <controls:ListView   
-            ItemsSource="{Binding Items}"
-            ItemTappedCommand="{Binding TenantsSelectedCommand}"
-            SeparatorVisibility="None" 
-            HasUnevenRows="true"
-            Margin="30,0,30,0">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                            <Grid RowSpacing="10" Margin="0,10,0,0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width=".25*"/>
-                                    <ColumnDefinition Width=".75*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="1" />
-                                </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Text="{Binding Number}" FontSize="13" TextColor="#626365"/>
 
-                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding Number}" FontSize="13" TextColor="#626365"/>
+                                    <Label Grid.Column="1" FontSize="13" TextColor="#529DF5"
+                                           Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}}" 
+                                           LineBreakMode="WordWrap" />
 
-                                <Label Grid.Column="1" FontSize="13" TextColor="#529DF5"
-                                       Text="{Binding TenantNames, Converter={StaticResource cnvListToCommaSeparatedString}}" 
-                                       LineBreakMode="WordWrap" />
-
-                                <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" 
-                                         HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
-                            </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </controls:ListView>
-
-    </StackLayout>
-        
-    </ContentPage.Content>
+                                    <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" 
+                                             HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+                                </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </controls:ListView>
+        </StackLayout>
+    </local:BaseContentPage.Content>
 </local:BaseSearchContentPage>

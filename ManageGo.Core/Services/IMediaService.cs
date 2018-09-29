@@ -4,6 +4,10 @@ namespace ManageGo.Core.Services
 {
     public interface IMediaService
     {
-        Task<byte[]> TakePhoto();
+        bool IsCameraAvailable { get; }
+        Task<byte[]> PickPhotoAsync();
+        Task<byte[]> PickVideoAsync();
+        Task<byte[]> TakePhotoAsync();
+        Task<byte[]> TakeVideoAsync();
     }
 }
