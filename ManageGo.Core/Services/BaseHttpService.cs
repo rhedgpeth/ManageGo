@@ -218,7 +218,7 @@ namespace ManageGo.Core.Services
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
                 {
-                    MessageService.Send(MessageType.ApiForbiddenStatus, "Access is forbidden (403).");
+                    MessageService?.Send(MessageType.ApiForbiddenStatus, "Access is forbidden (403).");
                 }
             }
 

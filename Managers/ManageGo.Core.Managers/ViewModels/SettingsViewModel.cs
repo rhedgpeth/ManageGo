@@ -10,18 +10,51 @@ namespace ManageGo.Core.Managers.ViewModels
 {
     public class SettingsViewModel : BaseNavigationViewModel
     {
-		string _name;
-        public string Name 
+        bool _initialValuesLoaded = false;
+
+		string _firstName;
+        public string FirstName 
 		{
-			get => _name;
-			set => SetPropertyChanged(ref _name, value);
+			get => _firstName;
+			set 
+            {
+                SetPropertyChanged(ref _firstName, value);
+
+                if (_initialValuesLoaded)
+                {
+                    User.UserFirstName = _firstName;
+                }
+            }
 		}
 
-		string _email;
+        string _lastName;
+        public string LastName
+        {
+            get => _lastName;
+            set
+            {
+                SetPropertyChanged(ref _lastName, value);
+
+                if (_initialValuesLoaded)
+                {
+                    User.UserLastName = _lastName;
+                }
+            }
+        }
+
+        string _email;
         public string Email
         {
 			get => _email;
-			set => SetPropertyChanged(ref _email, value);
+			set 
+            {
+                SetPropertyChanged(ref _email, value);
+
+                if (_initialValuesLoaded)
+                {
+                    User.UserEmailAddress = _email;
+                }
+            }
         }
 
 		string _displayName;
@@ -53,9 +86,14 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 SetPropertyChanged(ref _enablePushNotifications, value);
 
-                EnablePaymentsPushNotifications = _enablePushNotifications;
-                EnableMaintenancePushNotifications = _enablePushNotifications;
-                EnableTenantsPushNotifications = _enablePushNotifications;
+                if (_initialValuesLoaded)
+                {
+                    User.PaymentPushNotification = EnablePaymentsPushNotifications = _enablePushNotifications;
+                    User.MaintenancePushNotification = EnableMaintenancePushNotifications = _enablePushNotifications;
+                    User.TenantPushNotification = EnableTenantsPushNotifications = _enablePushNotifications;
+
+                    Task.Run(Save);
+                }
             }
         }
 
@@ -63,27 +101,54 @@ namespace ManageGo.Core.Managers.ViewModels
         public bool EnablePaymentsPushNotifications
         {
             get => _enablePaymentsPushNotifications;
-            set => SetPropertyChanged(ref _enablePaymentsPushNotifications, value);
+            set
+            {
+                SetPropertyChanged(ref _enablePaymentsPushNotifications, value);
+
+                if (_initialValuesLoaded)
+                {
+                    User.PaymentPushNotification = _enablePushNotifications;
+                    Task.Run(Save);
+                }
+            }
         }
 
         bool _enableMaintenancePushNotifications;
         public bool EnableMaintenancePushNotifications
         {
             get => _enableMaintenancePushNotifications;
-            set => SetPropertyChanged(ref _enableMaintenancePushNotifications, value);
+            set
+            {
+                SetPropertyChanged(ref _enableMaintenancePushNotifications, value);
+
+                if (_initialValuesLoaded)
+                {
+                    User.MaintenancePushNotification = _enableMaintenancePushNotifications;
+                    Task.Run(Save);
+                }
+            } 
         }
 
         bool _enableTenantsPushNotifications;
         public bool EnableTenantsPushNotifications
         {
             get => _enableTenantsPushNotifications;
-            set => SetPropertyChanged(ref _enableTenantsPushNotifications, value);
+            set 
+            {
+                SetPropertyChanged(ref _enableTenantsPushNotifications, value);
+
+                if (_initialValuesLoaded)
+                {
+                    User.TenantPushNotification = _enableTenantsPushNotifications;
+                    Task.Run(Save);
+                }
+            }
         }
 
         ICommand _saveCommand;
-        public ICommand SaveCommand 
+        public ICommand SaveCommand
         {
-            get
+            get 
             {
                 if (_saveCommand == null)
                 {
@@ -91,20 +156,6 @@ namespace ManageGo.Core.Managers.ViewModels
                 }
 
                 return _saveCommand;
-            }
-        }
-
-        ICommand _resetCommand;
-        public ICommand ResetCommand
-        {
-            get
-            {
-                if (_resetCommand == null)
-                {
-                    _resetCommand = new Command(async () => await Reset());
-                }
-
-                return _resetCommand;
             }
         }
 
@@ -121,37 +172,35 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (User != null)
             {
-                Name = $"{User.UserFirstName} {User.UserLastName}".Trim();
+                FirstName = User.UserFirstName;
+                LastName = User.UserLastName;
                 Email = User.UserEmailAddress;
-
                 DisplayName = "Robby H";
                 Password = "******";
+
+                /*
+                EnableTenantsPushNotifications = User.TenantPushNotification;
+                EnableMaintenancePushNotifications = User.MaintenancePushNotification;
+                EnablePaymentsPushNotifications = User.PaymentPushNotification;
+
+                EnablePushNotifications = EnableTenantsPushNotifications &&
+                                          EnableMaintenancePushNotifications &&
+                                          EnablePaymentsPushNotifications;
+                */
             }
+
+            _initialValuesLoaded = true;
 		}
 
         async Task Save()
         {
-            User.UserEmailAddress = Email;
-            User.MaintenancePushNotification = EnableMaintenancePushNotifications;
-            User.PaymentPushNotification = EnablePaymentsPushNotifications;
-            User.TenantPushNotification = EnableTenantsPushNotifications;
-
-            /*
             var result = await UserService.Instance.SaveUserSettings(User);
 
-            if (result.Status == Enumerations.ResponseStatus.ActionSuccessful)
+            if (result?.Status == Enumerations.ResponseStatus.ActionSuccessful)
             {
-                
-            }*/
+                await CacheService.InsertObjectAsync("UserSettings", User, new TimeSpan(30,0,0,0));
 
-            await AlertService.ShowToast(Core.Enumerations.AlertType.Success, "Success", "Settings updated");
-        }
-
-        async Task Reset()
-        {
-            if (await AlertService.ShowMessage("Reset", "Are you sure you want to reset your changes?", "Yes", "No"))
-            {
-                Email = User.UserEmailAddress;
+                //await AlertService.ShowToast(Core.Enumerations.AlertType.Success, "Success", "Settings updated");
             }
         }
 	}

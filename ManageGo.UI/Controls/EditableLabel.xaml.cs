@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ManageGo.UI.Controls
@@ -44,6 +45,23 @@ namespace ManageGo.UI.Controls
 			editableLabel.imageEditIcon.Source = (string)newValue;
         }
 
+        public static readonly BindableProperty ValueChangedCommandProperty =
+            BindableProperty.Create(nameof(ValueChangedCommand), typeof(ICommand), typeof(EditableLabel));
+
+        public ICommand ValueChangedCommand
+        {
+            get { return (ICommand)GetValue(ValueChangedCommandProperty); }
+            set { SetValue(ValueChangedCommandProperty, value); }
+        }
+
+        public static readonly BindableProperty ValueChangedCommandParameterProperty =
+            BindableProperty.Create("CommandParameter", typeof(object), typeof(EditableLabel), null);
+
+        public object ValueChangedCommandParameter
+        {
+            get { return GetValue(ValueChangedCommandParameterProperty); }
+            set { SetValue(ValueChangedCommandParameterProperty, value); }
+        }
 
         public EditableLabel()
         {
@@ -60,7 +78,12 @@ namespace ManageGo.UI.Controls
 			}
 			else
 			{
-                label.Text = entry.Text;
+                if (label.Text != entry.Text)
+                {
+                    Value = label.Text = entry.Text;
+                    ValueChangedCommand?.Execute(ValueChangedCommandParameter);
+                }
+
 				label.IsVisible = true;
                 entry.IsVisible = false;
 			}
