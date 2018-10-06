@@ -19,7 +19,7 @@
             LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
             SeparatorVisibility="None" 
             HasUnevenRows="true"   
-            BackgroundColor="#F9FAFB">
+            BackgroundColor="{StaticResource Off-White}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

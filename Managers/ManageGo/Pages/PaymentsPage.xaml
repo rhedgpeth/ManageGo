@@ -16,7 +16,7 @@
 
         <StackLayout Margin="0" BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="{Binding SelectedDatesDescription}" LeftFilterIcon="calendar_blue" 
+            <controls:FilterView LeftFilterText="{Binding SelectedDateDescription}" LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue"
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}"> 
 

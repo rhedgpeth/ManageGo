@@ -11,9 +11,9 @@
     x:TypeArguments="vm:MaintenanceTicketsViewModel,sys:object"
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#F9FAFB">
+        <StackLayout BackgroundColor="{StaticResource Off-White}">
 
-            <controls:FilterView LeftFilterText="All dates" LeftFilterIcon="calendar_blue" 
+            <controls:FilterView LeftFilterText="{Binding SelectedDateDescription}" LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue"
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}">
 
@@ -21,8 +21,11 @@
 
                     <StackLayout Margin="0,15,0,0">
                         
-                        <controls:CalendarView AllowMultipleSelection="true" 
-                                               HeightRequest="275" WidthRequest="400" HorizontalOptions="Center" />
+                        <controls:CalendarView SelectedDates="{Binding SelectedDates}"
+                                               AllowMultipleSelection="true" 
+                                               HeightRequest="275" 
+                                               WidthRequest="400" 
+                                               HorizontalOptions="Center" />
 
                     </StackLayout>
 
@@ -124,7 +127,7 @@
                 LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB">
+                BackgroundColor="{StaticResource Off-White}">
                 <ListView.Footer>
                     <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Margin="10"/>    
                 </ListView.Footer>

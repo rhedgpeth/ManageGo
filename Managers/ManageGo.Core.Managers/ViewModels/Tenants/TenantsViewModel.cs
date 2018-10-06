@@ -10,16 +10,6 @@ namespace ManageGo.Core.Managers.ViewModels
 {
     public class TenantsViewModel : BaseFilterViewModel<TenantSectionHeaderViewModel>
     {
-        string _searchTerm;
-        public string SearchTerm
-        {
-            get => _searchTerm;
-            set 
-            {
-                _searchTerm = value;
-            }
-        }
-
         bool _isActive = true;
         public bool IsActive 
         {
@@ -161,14 +151,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (IsActive != IsInActive)
             {
-                if (IsActive)
-                {
-                    status = TenantStatus.Active;
-                }
-                else
-                {
-                    status = TenantStatus.Inactive;
-                }
+                status = IsActive ? TenantStatus.Active : TenantStatus.Inactive;
             }
 
             var request = new TenantRequest
@@ -179,23 +162,11 @@ namespace ManageGo.Core.Managers.ViewModels
                 Status = status
             };
 
-            if (SelectedBuildings?.Count > 0)
-            {
-                request.Buildings = SelectedBuildings.Select(x => x.Id).ToList();
-            }
-            else if (SelectedBuildingId > 0)
-            {
-                request.Buildings = new List<int> { SelectedBuildingId };
-            }
+            request.Buildings = SelectedBuildings?.Count > 0 ? SelectedBuildings.Select(x => x.Id).ToList() 
+                                                                : new List<int> { SelectedBuildingId };
 
-            if (SelectedUnits?.Count > 0)
-            {
-                request.Units = SelectedUnits.Select(x => x.Id).ToList();
-            }
-            else
-            {
-                request.Units = new List<int> { SelectedUnitId };
-            }
+            request.Units = SelectedUnits?.Count > 0 ? SelectedUnits.Select(x => x.Id).ToList() 
+                                                        : new List<int> { SelectedUnitId };
 
             return request;
         }

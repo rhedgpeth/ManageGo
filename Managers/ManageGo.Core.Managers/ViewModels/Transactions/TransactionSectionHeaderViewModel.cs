@@ -25,8 +25,6 @@ namespace ManageGo.Core.Managers.ViewModels
             TransactionDateTime = transaction.TransactionDate;
             TransactionSourceName = transaction.BankAccountInfo;
             TransactionSourceId = transaction.Number;
-
-            //TransactionSourceType = i % 2 == 0 ? Enumerations.TransactionSourceType.Bank : Enumerations.TransactionSourceType.Building;
             TransactionSourceType = TransactionSourceType.Bank;
 
             Children = new List<object>

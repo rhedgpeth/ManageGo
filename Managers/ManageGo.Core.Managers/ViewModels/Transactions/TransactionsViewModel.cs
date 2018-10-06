@@ -2,22 +2,57 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using CustomCalendar;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Managers.Services;
-using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
 	public class TransactionsViewModel : BaseFilterViewModel<TransactionSectionHeaderViewModel>
     {
-        public string SearchTerm { get; set; }
+        ObservableCollection<SelectableItem> _bankAccounts
+            = new ObservableCollection<SelectableItem> { new SelectableItem { Id = -1, Description = "All" } };
+
+        public ObservableCollection<SelectableItem> BankAccounts
+        {
+            get => _bankAccounts;
+            set => SetPropertyChanged(ref _bankAccounts, value);
+        }
+
+        List<SelectableItem> _selectedBankAccounts;
+        public List<SelectableItem> SelectedBankAccounts
+        {
+            get => _selectedBankAccounts;
+            set => SetPropertyChanged(ref _selectedBankAccounts, value);
+        }
+
+        string _selectedBankAccountsDescription = "All";
+        public string SelectedBankAccountsDescription
+        {
+            get => _selectedBankAccountsDescription;
+            set => SetPropertyChanged(ref _selectedBankAccountsDescription, value);
+        }
 
         public TransactionsViewModel()
         {
 			Title = "Bank transactions";
         }
 
-        public override Task InitAsync() => LoadAsync(true);
+        protected override async void LoadFilters()
+        {
+            SelectedDates = new DateRange(DateTime.Now.AddDays(-30).Date, DateTime.Now.Date);
+
+            var bankAccountsResponse = await FinanceService.Instance.GetBankAccounts();
+
+            if (bankAccountsResponse?.Status == Enumerations.ResponseStatus.Data)
+            {
+                foreach (var bankAccount in bankAccountsResponse.Result)
+                {
+                    var item = new SelectableItem { Id = bankAccount.BankAccountId, Description = bankAccount.BankAccountName };
+                    BankAccounts.Add(item);
+                }
+            }
+        }
 
         public override async Task LoadAsync(bool refresh)
         {
@@ -27,8 +62,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
             var request = new BankTransactionRequest
             {
-                DateFrom = new DateTime(2018, 1, 1),
-                DateTo = new DateTime(2018, 6, 30),
+                DateFrom = SelectedDates.StartDate,
+                DateTo = SelectedDates.EndDate,
                 Page = Page,
                 PageSize = 20,
                 Search = SearchTerm

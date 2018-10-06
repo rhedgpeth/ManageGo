@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CustomCalendar;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Managers.Services;
-using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
     public class MaintenanceTicketsViewModel : BaseFilterViewModel<MaintenanceTicketSectionHeaderViewModel>
     {
-        public string SearchTerm { get; set; }
-
         public List<string> StatusOptions => new List<string> { "New", "Assigned", "In progress", "Closed" };
 
         public List<SelectableItem> Priorities { get; set; } = new List<SelectableItem>();
@@ -25,7 +23,10 @@ namespace ManageGo.Core.Managers.ViewModels
             Priorities.Add(new SelectableItem { Id = 2, Description = "High" });
         }
 
-        public override Task InitAsync() => LoadAsync(true);
+        protected override void LoadFilters()
+        {
+            SelectedDates = new DateRange(DateTime.Now.AddDays(-30).Date, DateTime.Now.Date);
+        }
 
         public override async Task LoadAsync(bool refresh)
         {
@@ -35,8 +36,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
             var request = new MaintenanceTicketsRequest
             {
-                DateFrom = new DateTime(2018, 2, 1),
-                DateTo = new DateTime(2018, 2, 5),
+                DateFrom = SelectedDates.StartDate,
+                DateTo = SelectedDates.EndDate,
                 Page = Page,
                 PageSize = 20,
                 Search = SearchTerm

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using ManageGo.Core.Managers.Models;
@@ -10,29 +9,11 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class CalendarViewModel : BaseFilterViewModel<CalendarSectionHeaderViewModel>
     {
-        DateTime _selectedDate = DateTime.Now;
-        public DateTime SelectedDate
-        {
-            get => _selectedDate;
-            set
-            {
-                _selectedDate = value;
-                SelectedDateDescription = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(_selectedDate.Month)} {_selectedDate.Day}, {_selectedDate.Year}";
-            }
-        }
-
         List<DateTime> _highlightedDates;
         public List<DateTime> HighlightedDates 
         {
             get => _highlightedDates;
             set => SetPropertyChanged(ref _highlightedDates, value);
-        }
-
-        string _selectedDateDescription;
-        public string SelectedDateDescription
-        {
-            get => _selectedDateDescription;
-            set => SetPropertyChanged(ref _selectedDateDescription, value);
         }
 
         public CalendarViewModel()
