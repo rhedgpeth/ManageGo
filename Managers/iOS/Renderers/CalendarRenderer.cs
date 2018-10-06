@@ -64,9 +64,11 @@ namespace ManageGo.iOS.Renderers
 
             ResetNativeView();
 
-			_calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight), 
-                                                                Element.AllowMultipleSelection, Element.SelectedDates, Element.HighlightedDates);
+            //Element.HighlightedDates = new List<DateTime> { new DateTime(2018, 10, 10), new DateTime(2018, 10, 21), new DateTime(2018, 10, 27) };
 
+            _calendarView = new CustomCalendar.iOS.CalendarView(new CGRect(0, 0, elementWidth, elementHeight), 
+                                                                Element.AllowMultipleSelection, Element.SelectedDates, Element.HighlightedDates);
+                                                                
             _calendarView.OnCurrentMonthYearChange += Element.OnCurrentMonthYearChanged;
             _calendarView.OnSelectedDatesChange += Element.OnDatesChanged;
 

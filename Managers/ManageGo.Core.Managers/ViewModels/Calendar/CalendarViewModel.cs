@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using CustomCalendar;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.Managers.Services;
 
@@ -23,7 +22,7 @@ namespace ManageGo.Core.Managers.ViewModels
         }
 
         List<DateTime> _highlightedDates;
-        List<DateTime> HighlightedDates 
+        public List<DateTime> HighlightedDates 
         {
             get => _highlightedDates;
             set => SetPropertyChanged(ref _highlightedDates, value);
@@ -43,7 +42,29 @@ namespace ManageGo.Core.Managers.ViewModels
 
         protected override async void LoadFilters()
         {
-            
+            var request = new DateRangeRequest
+            {
+                DateFrom = DateTime.Now.AddYears(-1),
+                DateTo = DateTime.Now.AddYears(1)
+            };
+
+            HighlightedDates = new List<DateTime>
+            {
+                new DateTime(2018,9,3),
+                new DateTime(2018,8,31),
+                new DateTime(2018,8,22),
+                new DateTime(2018,8,21),
+                new DateTime(2018,6,25)
+            };
+
+            /*
+            var eventDatesResponse = await MaintenanceService.Instance.GetEventDates(request);
+
+            if (eventDatesResponse?.Status == Enumerations.ResponseStatus.Data)
+            {
+                HighlightedDates = eventDatesResponse.Result?.Dates;
+            }
+            */
         }
 
         public override async Task LoadAsync(bool refresh)

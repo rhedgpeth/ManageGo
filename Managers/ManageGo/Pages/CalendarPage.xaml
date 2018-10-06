@@ -21,6 +21,7 @@
                     <StackLayout HeightRequest="265" Margin="0,10,0,0">
 
                         <controls:CalendarView SelectedDate="{Binding SelectedDate}"
+                                               HighlightedDates="{Binding HighlightedDates}"
                                                AllowMultipleSelection="false" 
                                                HeightRequest="265" 
                                                WidthRequest="500" 

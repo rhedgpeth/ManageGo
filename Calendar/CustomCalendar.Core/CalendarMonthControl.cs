@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Linq;
 using SkiaSharp;
@@ -65,11 +66,13 @@ namespace CustomCalendar
             if (HighlightedDates != null)
             {
                 var highlightedDates = HighlightedDates?.Where(hd => hd.Year == Date.Year && hd.Month == Date.Month)
+                                                        .Where(hd => !SelectedDates.GetDateRangeDates().Any(sd => sd.Day == hd.Day))
                                                         .Select(d => new HighlightedDay
-                                                            {
-                                                                Type = HighlightType.Light,
-                                                                Day = d.Day
-                                                            }).ToList();
+                                                        {
+                                                            Type = HighlightType.Light,
+                                                            Day = d.Day
+                                                        })
+                                                        .ToList();
 
                 calendarDates.AddRange(highlightedDates);
             }

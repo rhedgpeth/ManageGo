@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
 using ManageGo.DataTemplates.Selectors;

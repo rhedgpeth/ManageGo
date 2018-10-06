@@ -1,6 +1,7 @@
 using Android.Views;
 using SkiaSharp;
 using System;
+using System.Collections.Generic;
 
 namespace CustomCalendar.Droid
 {
@@ -24,7 +25,9 @@ namespace CustomCalendar.Droid
             set => _selectedDates = value;
         }
 
-		bool IsDragging { get; set; }
+        public List<DateTime> HighlightedDates { get; set; }
+
+        bool IsDragging { get; set; }
 
 		DateTime NextMonth { get; set; }
 		DateTime CurrentMonth { get; set; }
@@ -34,7 +37,7 @@ namespace CustomCalendar.Droid
         public DrawableControlView<CalendarMonthControl> Item1 { get; set; }
         public DrawableControlView<CalendarMonthControl> Item2 { get; set; }
 
-		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection, DateRange selectedDates) : base(context)
+		public CalendarViewPager(Android.Content.Context context, bool allowMultipleSelection, DateRange selectedDates, List<DateTime> highlightedDates) : base(context)
 		{
 			AllowMultipleSelection = allowMultipleSelection;
             
@@ -46,11 +49,9 @@ namespace CustomCalendar.Droid
 			Item1 = new DrawableControlView<CalendarMonthControl>(context, new CalendarMonthControl());
 			Item2 = new DrawableControlView<CalendarMonthControl>(context, new CalendarMonthControl());
 
-			Item1.ControlDelegate.DatesInteracted += UpdateSelectedDates;
+			Item1.ControlDelegate.DatesInteracted += UpdateSelectedDate;
 
-			SelectedDates = selectedDates;
-            
-			if (SelectedDates.EndDate.HasValue)
+            if (SelectedDates.EndDate.HasValue)
             {
                 SetMonth(SelectedDates.EndDate.Value);
             }
@@ -58,7 +59,27 @@ namespace CustomCalendar.Droid
             {
                 SetMonth(SelectedDates.StartDate);
             }
+
+            SelectedDates = selectedDates;
+            HighlightedDates = highlightedDates;
+
+            UpdateCalendars();
 		}
+
+        void UpdateCalendars()
+        {
+            Item0.ControlDelegate.HighlightedDates = HighlightedDates;
+            Item1.ControlDelegate.HighlightedDates = HighlightedDates;
+            Item2.ControlDelegate.HighlightedDates = HighlightedDates;
+
+            Item0.ControlDelegate.SelectedDates = SelectedDates;
+            Item1.ControlDelegate.SelectedDates = SelectedDates;
+            Item2.ControlDelegate.SelectedDates = SelectedDates;
+
+            Item0.Invalidate();
+            Item1.Invalidate();
+            Item2.Invalidate();
+        }
 
         public void UpdateSelectedDates(DateRange dates)
         {
@@ -69,8 +90,13 @@ namespace CustomCalendar.Droid
 
 		public override bool DispatchTouchEvent(MotionEvent e)
 		{
-			// We need to reset the current item when the user is about to start dragging.
-			if (e.Action == MotionEventActions.Down)
+            if (e == null)
+            {
+                throw new ArgumentNullException(nameof(e));
+            }
+
+            // We need to reset the current item when the user is about to start dragging.
+            if (e.Action == MotionEventActions.Down)
 			{
 				var pager = this;
 
@@ -101,25 +127,26 @@ namespace CustomCalendar.Droid
 
 			return base.DispatchTouchEvent(e);
 		}
-              
-		void UpdateSelectedDates(DateTime selectedDate)
-        {
-			if (SelectedDates == null || !AllowMultipleSelection)
-			{
-				SelectedDates = new DateRange(selectedDate);
-			}
-			else if (AllowMultipleSelection)
-			{
-				SelectedDates.AddDate(selectedDate);
-			}
 
-            Item0.ControlDelegate.SelectedDates = SelectedDates;
-            Item1.ControlDelegate.SelectedDates = SelectedDates;
-            Item2.ControlDelegate.SelectedDates = SelectedDates;
-            
-			Item0.Invalidate();
-            Item1.Invalidate();
-            Item2.Invalidate();
+        void UpdateSelectedDate(DateTime selectedDate)
+        {
+            if (SelectedDates == null || !AllowMultipleSelection)
+            {
+                SelectedDates = new DateRange(selectedDate);
+            }
+            else if (AllowMultipleSelection)
+            {
+                SelectedDates.AddDate(selectedDate);
+            }
+
+            UpdateSelectedDates();
+        }
+              
+		void UpdateSelectedDates()
+        {
+            UpdateCalendars();
+
+            OnSelectedDatesChange?.Invoke(SelectedDates);
         }
 
         void SetMonth(DateTime dateTime)
@@ -151,9 +178,7 @@ namespace CustomCalendar.Droid
 
             public void OnPageScrolled(int position, float positionOffset, int positionOffsetPixels)
             {
-                CalendarViewPager pager = null;
-
-                if (_weakPager.TryGetTarget(out pager))
+                if (_weakPager.TryGetTarget(out CalendarViewPager pager))
                 {
                     var shouldUpdate = false;
 
@@ -198,9 +223,7 @@ namespace CustomCalendar.Droid
 
             public void OnPageScrollStateChanged(int state)
             {
-                CalendarViewPager pager = null;
-
-                if (_weakPager.TryGetTarget(out pager))
+                if (_weakPager.TryGetTarget(out CalendarViewPager pager))
                 {
                     pager.IsDragging = state == 1;
                 }

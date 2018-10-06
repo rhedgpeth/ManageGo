@@ -89,25 +89,16 @@ namespace ManageGo.UI.Droid.Renderers
             
             ResetNativeView();
 
-            _calendarView = new CalendarViewPager(Context, Element.AllowMultipleSelection, Element.SelectedDates);
-			_calendarView.OnCurrentMonthYearChange += CurrentMonthYearChanged;
-            _calendarView.OnSelectedDatesChange += DatesSelected;
-         
-            var layoutParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
+            _calendarView = new CalendarViewPager(Context, Element.AllowMultipleSelection, Element.SelectedDates, Element.HighlightedDates);
+
+			_calendarView.OnCurrentMonthYearChange += Element.OnCurrentMonthYearChanged;
+            _calendarView.OnSelectedDatesChange += Element.OnDatesChanged;
+
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
           
             _calendarView.LayoutParameters = layoutParams;
 
             SetNativeControl(_calendarView);
-        }
-
-        void CurrentMonthYearChanged(DateTime date)
-		{
-			Element.CurrentMonthYear = date;
-		}
-
-        void DatesSelected(DateRange dates)
-        {
-            Element.SelectedDates = dates;
         }
 
         void ResetNativeView()
@@ -120,8 +111,8 @@ namespace ManageGo.UI.Droid.Renderers
             if (_calendarView != null)
             {
                 _calendarView.RemoveFromParent();
-				_calendarView.OnCurrentMonthYearChange -= CurrentMonthYearChanged;
-                _calendarView.OnSelectedDatesChange -= DatesSelected;
+				_calendarView.OnCurrentMonthYearChange -= Element.OnCurrentMonthYearChanged;
+                _calendarView.OnSelectedDatesChange -= Element.OnDatesChanged;
                 _calendarView.Adapter = null;
                 _calendarView = null;
             }
@@ -142,8 +133,9 @@ namespace ManageGo.UI.Droid.Renderers
 
 				if (_calendarView != null)
 				{
-					_calendarView.OnCurrentMonthYearChange -= CurrentMonthYearChanged;
-				}
+					_calendarView.OnCurrentMonthYearChange -= Element.OnCurrentMonthYearChanged;
+                    _calendarView.OnSelectedDatesChange -= Element.OnDatesChanged;
+                }
             }
 
             base.Dispose(disposing);

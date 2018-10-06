@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using CustomCalendar;
 using Xamarin.Forms;
@@ -73,9 +74,35 @@ namespace ManageGo.Controls
             }
         }
 
+        public static readonly BindableProperty HighlightedDatesProperty
+            = BindableProperty.Create(nameof(HighlightedDates),
+                                      typeof(List<DateTime>),
+                                      typeof(CalendarView),
+                                      new List<DateTime>(),
+                                      BindingMode.TwoWay,
+                                      propertyChanged: HandleHighlightedDatesPropertyChanged);
+
+        public List<DateTime> HighlightedDates
+        {
+            get => (List<DateTime>)GetValue(HighlightedDatesProperty);
+            set => SetValue(HighlightedDatesProperty, value);
+        }
+
+        static void HandleHighlightedDatesPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var calendarView = bindable as CalendarView;
+
+            if (newValue != null)
+            {
+                calendarView.calendar.HighlightedDates = newValue as List<DateTime>;
+            }
+        }
+
         public CalendarView()
         {
             InitializeComponent();
+
+            titleLabel.Text = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(DateTime.Now.Month)}, {DateTime.Now.Year}";
 
             past7DaysButton.Tapped += Past7DaysButton_Tapped;
             past30DaysButton.Tapped += Past30DaysButton_Tapped;
