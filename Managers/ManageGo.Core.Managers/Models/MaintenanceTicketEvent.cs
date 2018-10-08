@@ -14,7 +14,7 @@ namespace ManageGo.Core.Managers.Models
         public string TimeTo { get; set; }
         public List<User> SendToUsers { get; set; }
         public List<Tenant> SendToTenant { get; set; }
-        public List<int> SendToExternalContacts { get; set; }
+        public List<string> SendToExternalContacts { get; set; }
         public string SendToEmail { get; set; }
         public Unit Unit { get; set; }
         public Building Building { get; set; }

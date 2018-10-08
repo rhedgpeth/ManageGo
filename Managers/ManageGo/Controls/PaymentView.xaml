@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ManageGo.Controls.PaymentView">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="AmountLabel" Text="$1050.00" Style="{StaticResource Dark-Grey-Small}" />
+            <Label x:Name="DateTimeLabel" Text=" • May 3 - 10:32 AM • T002011" Style="{StaticResource Light-Grey-Small}" />
+            <Label x:Name="TransactionNumberLabel" Text="  • T002011" Style="{StaticResource Light-Grey-Small}" />
+        </StackLayout>
+        <Label x:Name="AddressLabel" Text="Bruce Wayne, 327 S Batcave Ave, #1-A" Style="{StaticResource Dark-Grey-Small}" />
+    </StackLayout>
+    
+    <BoxView x:Name="SeparatorBoxView" HeightRequest="1" VerticalOptions="Center" BackgroundColor="#DFDFE0" 
+             HorizontalOptions="FillAndExpand" />
+</StackLayout>

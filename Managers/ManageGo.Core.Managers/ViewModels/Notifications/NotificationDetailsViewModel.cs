@@ -6,6 +6,8 @@ using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Enumerations;
 using System.Threading.Tasks;
 using ManageGo.Core.Enumerations;
+using ManageGo.Core.Managers.Services;
+using ManageGo.Core.Managers.Models;
 
 namespace ManageGo.Core.Managers.ViewModels
 {
@@ -109,36 +111,33 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public async Task UpdatePendingLeaseApproval(bool isApproved)
         {
-            /*
-            var response = await PMCService.Instance.UpdatePendingLeaseApproval(new PendingLeaseApprovalAction
+            var request = new PendingLeaseApprovalAction
             {
                 LeaseId = LeaseId,
                 IsApproved = isApproved
-            });
+            };
 
-            if (response.Status == ResponseStatus.ActionSuccessful)
+            //var response = await PMCService.Instance.UpdatePendingLeaseApproval(request);
+
+            if (true) //response.Status == ResponseStatus.ActionSuccessful)
             {
-                // Success toast
-                // TODO: Add IAlertService (for Toast in this situation)
+                if (isApproved)
+                {
+                    await AlertService.ShowToast(AlertType.Success, "Lease Approved", $"{LeaseName} has been approved.");
+                }
+                else
+                {
+                    await AlertService.ShowToast(AlertType.Failure, "Lease Declined", $"{LeaseName} has been declined.");
+                }
             }
             else
             {
                 // Report error
             }
-            */
 
             // TODO: Send message (pub-sub) to refresh the list.
 
             MessageService.Send(this, "RefreshList");
-
-            if (isApproved)
-            {
-                await AlertService.ShowToast(AlertType.Success, "Lease Approved", $"{LeaseName} has been approved.");
-            }
-            else
-            {
-                await AlertService.ShowToast(AlertType.Failure, "Lease Declined", $"{LeaseName} has been declined.");
-            }
         }
 
 		void CallPhoneNumber(string phoneNumber) => ExternalAppService.CallPhoneNumber(phoneNumber);

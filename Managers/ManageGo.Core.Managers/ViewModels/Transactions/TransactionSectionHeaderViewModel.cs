@@ -29,10 +29,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
             Children = new List<object>
             {
-                new TransactionDetailsViewModel
-                { 
-                    //Description = $"This is a description for transaction {i}." 
-                }
+                new TransactionDetailsViewModel(transaction.Payments)
             };
         }
     }

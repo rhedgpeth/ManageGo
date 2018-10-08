@@ -18,6 +18,8 @@
     <PackageReference Include="Xamarin.RangeSlider" Version="0.7.36" />
     <PackageReference Include="akavache" Version="6.0.20" />
     <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.9.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.9.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ManageGo.Core\ManageGo.Core.csproj" />

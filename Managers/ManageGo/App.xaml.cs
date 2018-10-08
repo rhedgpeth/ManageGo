@@ -33,9 +33,18 @@ namespace ManageGo
 
             RegisterServices();
 
+            StartAnalyticsService();
+
             SubscribeToGlobalMessages();
 
             SetRootPage();
+        }
+
+        void StartAnalyticsService()
+        {
+            var analyticsService = ServiceContainer.Resolve<IAnalyticsService>();
+
+            analyticsService.Start();
         }
 
         void SubscribeToGlobalMessages()
@@ -97,6 +106,7 @@ namespace ManageGo
             ServiceContainer.Register<IAlertService>(() => new AlertService());
             ServiceContainer.Register<ICacheService>(() => new CacheService("ManageGo"));
             ServiceContainer.Register<IMediaService>(() => new MediaService());
+            ServiceContainer.Register<IAnalyticsService>(() => new AnalyticsService());
         }
     }
 }

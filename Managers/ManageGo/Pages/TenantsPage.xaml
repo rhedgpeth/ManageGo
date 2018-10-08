@@ -33,12 +33,13 @@
                             </controls:ExpandablePicker>
                             
                             <controls:ExpandablePicker x:Name="UnitsPicker" Descriptor="Unit" 
-                                                       SelectedText="All" IsVisible="{Binding ShowUnitsFilterOption}">
+                                                       SelectedText="{Binding SelectedUnitsDescription}" IsVisible="{Binding ShowUnitsFilterOption}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
-                                        <Label Text="This is a filter option." />
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Units}" 
+                                                               ItemTypeDescription="Units" 
+                                                               SelectedItems="{Binding SelectedUnits}"
+                                                               SelectedItemsDescription="{Binding SelectedUnitsDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>

@@ -29,23 +29,12 @@ namespace ManageGo.Core.Managers.ViewModels
                 DateTo = DateTime.Now.AddYears(1)
             };
 
-            HighlightedDates = new List<DateTime>
-            {
-                new DateTime(2018,9,3),
-                new DateTime(2018,8,31),
-                new DateTime(2018,8,22),
-                new DateTime(2018,8,21),
-                new DateTime(2018,6,25)
-            };
-
-            /*
             var eventDatesResponse = await MaintenanceService.Instance.GetEventDates(request);
 
             if (eventDatesResponse?.Status == Enumerations.ResponseStatus.Data)
             {
                 HighlightedDates = eventDatesResponse.Result?.Dates;
             }
-            */
         }
 
         public override async Task LoadAsync(bool refresh)

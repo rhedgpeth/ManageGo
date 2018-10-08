@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Services;
@@ -124,7 +125,7 @@ namespace ManageGo.Core.Managers.ViewModels
             };
         }   
 
-        void OnMenuItemSelected(string item)
+        async void OnMenuItemSelected(string item)
         {
 
 
@@ -161,20 +162,25 @@ namespace ManageGo.Core.Managers.ViewModels
 					SetDetailViewModel(new FeedbackViewModel());
                     break;
                 case "Logout":
-                    Logout();
+                    await Logout();
                     break;
             }
         }
 
         void SetDetailViewModel(BaseNavigationViewModel vm) => Navigation.SetDetailView(vm);
 
-        void Logout()
+        async Task Logout()
         {
-            AppInstance.ApiAccessToken = null;
+            var result = await AlertService.ShowMessage("Confirmation", "Are you sure you want to log out?", "Yes", "No");
 
-            SecureStorageService.Remove(Constants.SecureStorageKeys.AccessToken);
-         
-            Navigation.SetRootView(new LoginViewModel());
+            if (result)
+            {
+                AppInstance.ApiAccessToken = null;
+
+                SecureStorageService.Remove(Constants.SecureStorageKeys.AccessToken);
+
+                Navigation.SetRootView(new LoginViewModel());
+            }
         }
 
 		void CallPhoneNumber() => ExternalAppService.CallPhoneNumber(PhoneNumber);

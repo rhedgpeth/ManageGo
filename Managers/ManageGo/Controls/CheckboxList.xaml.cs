@@ -12,15 +12,31 @@ namespace ManageGo.Controls
 
         public static readonly BindableProperty SelectedItemsProperty 
                 = BindableProperty.Create(nameof(SelectedItems),
-                                        typeof(IList<SelectableItem>),
-                                          typeof(CheckboxList), default(List<SelectableItem>), BindingMode.TwoWay); //,
-                                                                                                                    //propertyChanged: HandleItemSourcePropertyChanged);
+                                        typeof(List<SelectableItem>),
+                                          typeof(CheckboxList), 
+                                          new List<SelectableItem>(), BindingMode.TwoWay,
+                                        propertyChanged: HandleSelectedItemsPropertyChanged);
 
         List<SelectableItem> _selectedItems = new List<SelectableItem>();
-        public IList<SelectableItem> SelectedItems
+        public List<SelectableItem> SelectedItems
         {
-            get { return (IList<SelectableItem>)GetValue(SelectedItemsProperty); }
+            get { return (List<SelectableItem>)GetValue(SelectedItemsProperty); }
             set { SetValue(SelectedItemsProperty, value); }
+        }
+
+        static void HandleSelectedItemsPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var checkboxList = bindable as CheckboxList;
+
+            if (newValue != null)
+            {
+                var item = newValue as List<SelectableItem>;
+
+                if (item.Count > 0)
+                {
+                    checkboxList.UpdateSelectedItemsDescription(item[0].Description);
+                }
+            }
         }
 
         public static readonly BindableProperty SelectedItemsDescriptionProperty
@@ -42,7 +58,7 @@ namespace ManageGo.Controls
 
         void UpdateSelectedItemsDescription(string singleDescription)
         {
-            if (_selectedItems.Count == 0 || _selectedItems.Count == _totalItemCount)
+            if (SelectedItems.Count == 0 || SelectedItems.Count == _totalItemCount)
             {
                 SelectedItemsDescription = "All";
             }
@@ -52,7 +68,7 @@ namespace ManageGo.Controls
             }
             else
             {
-                SelectedItemsDescription = $"{_selectedItems.Count} {ItemTypeDescription}";
+                SelectedItemsDescription = $"{SelectedItems.Count} {ItemTypeDescription}";
             }
         }
 
@@ -125,8 +141,11 @@ namespace ManageGo.Controls
                         }
                     }
 
-                    UpdateSelectedItemsDescription(item.Description);
+                    // Force the update
+                    SelectedItems = null;
                     SelectedItems = _selectedItems;
+
+                    UpdateSelectedItemsDescription(item.Description);
 
                     if (rootItem != null)
                     {

@@ -78,7 +78,7 @@ namespace ManageGo.Core.Managers.ViewModels
             set => SetPropertyChanged(ref _enableBiometrics, value);
         }
 
-        bool _enablePushNotifications;
+        bool _enablePushNotifications = true;
         public bool EnablePushNotifications
         {
             get => _enablePushNotifications;
@@ -97,7 +97,7 @@ namespace ManageGo.Core.Managers.ViewModels
             }
         }
 
-        bool _enablePaymentsPushNotifications;
+        bool _enablePaymentsPushNotifications = true;
         public bool EnablePaymentsPushNotifications
         {
             get => _enablePaymentsPushNotifications;
@@ -107,13 +107,13 @@ namespace ManageGo.Core.Managers.ViewModels
 
                 if (_initialValuesLoaded)
                 {
-                    User.PaymentPushNotification = _enablePushNotifications;
+                    User.PaymentPushNotification = _enablePaymentsPushNotifications;
                     Task.Run(Save);
                 }
             }
         }
 
-        bool _enableMaintenancePushNotifications;
+        bool _enableMaintenancePushNotifications = true;
         public bool EnableMaintenancePushNotifications
         {
             get => _enableMaintenancePushNotifications;
@@ -129,7 +129,7 @@ namespace ManageGo.Core.Managers.ViewModels
             } 
         }
 
-        bool _enableTenantsPushNotifications;
+        bool _enableTenantsPushNotifications = true;
         public bool EnableTenantsPushNotifications
         {
             get => _enableTenantsPushNotifications;
@@ -178,15 +178,14 @@ namespace ManageGo.Core.Managers.ViewModels
                 DisplayName = "Robby H";
                 Password = "******";
 
-                /*
                 EnableTenantsPushNotifications = User.TenantPushNotification;
                 EnableMaintenancePushNotifications = User.MaintenancePushNotification;
                 EnablePaymentsPushNotifications = User.PaymentPushNotification;
 
-                EnablePushNotifications = EnableTenantsPushNotifications &&
-                                          EnableMaintenancePushNotifications &&
-                                          EnablePaymentsPushNotifications;
-                */
+                if (!EnableTenantsPushNotifications && !EnableMaintenancePushNotifications &&  !EnablePaymentsPushNotifications)
+                {
+                    EnablePushNotifications = false;
+                }
             }
 
             _initialValuesLoaded = true;
@@ -198,9 +197,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (result?.Status == Enumerations.ResponseStatus.ActionSuccessful)
             {
+                await CacheService.InvalidateObjectAsync<User>("UserSettings");
                 await CacheService.InsertObjectAsync("UserSettings", User, new TimeSpan(30,0,0,0));
-
-                //await AlertService.ShowToast(Core.Enumerations.AlertType.Success, "Success", "Settings updated");
             }
         }
 	}

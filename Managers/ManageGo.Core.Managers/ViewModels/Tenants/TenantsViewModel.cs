@@ -39,9 +39,7 @@ namespace ManageGo.Core.Managers.ViewModels
             set => SetPropertyChanged(ref _status, value);
         }
 
-        ObservableCollection<SelectableItem> _buildings
-            = new ObservableCollection<SelectableItem> { new SelectableItem { Id = -1, Description = "All" } };
-
+        ObservableCollection<SelectableItem> _buildings;
         public ObservableCollection<SelectableItem> Buildings 
         {
             get => _buildings;
@@ -62,7 +60,16 @@ namespace ManageGo.Core.Managers.ViewModels
             set
             {
                 SetPropertyChanged(ref _selectedBuildings, value);
-                ShowUnitsFilterOption = _selectedBuildings?.Count == 1;
+
+                if (_selectedBuildings?.Count == 1)
+                {
+                    ShowUnitsFilterOption = true;
+                    LoadUnits(_selectedBuildings[0].Id);
+                }
+                else
+                {
+                    ShowUnitsFilterOption = false;
+                }
             }
         }
 
@@ -73,6 +80,13 @@ namespace ManageGo.Core.Managers.ViewModels
             set => SetPropertyChanged(ref _showUnitsFilterOption, value);
         }
 
+        ObservableCollection<SelectableItem> _units;
+        public ObservableCollection<SelectableItem> Units
+        {
+            get => _units;
+            set => SetPropertyChanged(ref _units, value);
+        }
+
         List<SelectableItem> _selectedUnits;
         public List<SelectableItem> SelectedUnits
         {
@@ -80,12 +94,18 @@ namespace ManageGo.Core.Managers.ViewModels
             set
             {
                 SetPropertyChanged(ref _selectedUnits, value);
-                ShowUnitsFilterOption = _selectedUnits?.Count == 1;
             }
         }
 
-        int SelectedBuildingId { get; set; }
-        int SelectedUnitId { get; set; }
+        string _selectedUnitsDescription = "All";
+        public string SelectedUnitsDescription
+        {
+            get => _selectedUnitsDescription;
+            set => SetPropertyChanged(ref _selectedUnitsDescription, value);
+        }
+
+        int? SelectedBuildingId { get; set; }
+        int? SelectedUnitId { get; set; }
 
         public TenantsViewModel()
         {
@@ -109,18 +129,56 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (buildings?.Status == ResponseStatus.Data)
             {
-                foreach (var building in buildings.Result)
-                {
-                    var item = new SelectableItem { Id = building.BuildingId, Description = building.BuildingName };
+                var items = buildings.Result.Select(b =>new SelectableItem
+                                                            { Id = b.BuildingId, Description = b.BuildingName }).ToList();
 
-                    if (item.Id == SelectedBuildingId)
+                if (items != null)
+                {
+                    items.Insert(0, new SelectableItem { Id = -1, Description = "All" });
+
+                    if (SelectedBuildingId.HasValue)
                     {
-                        item.IsSelected = true;
-                        SelectedBuildingsDescription = item.Description;
+                        var item = items.SingleOrDefault(i => i.Id == SelectedBuildingId.Value);
+
+                        if (item != null)
+                        {
+                            item.IsSelected = true;
+
+                            SelectedBuildings = new List<SelectableItem> { item };
+
+                            LoadUnits(SelectedBuildingId.Value);
+                        }
                     }
 
-                    Buildings.Add(item);
+                    Buildings = new ObservableCollection<SelectableItem>(items);
                 }
+            }
+        }
+
+        async void LoadUnits(int buildingId)
+        {
+            var unitsResponse = await BuildingService.Instance.GetBuildingDetails(new Building { PropertyId = buildingId });
+
+            if (unitsResponse?.Status == ResponseStatus.Data)
+            {
+                var items = unitsResponse.Result?.Units?.Select(u => new SelectableItem
+                    { Id = u.UnitId, Description = u.UnitName }).ToList();
+
+                items.Insert(0, new SelectableItem { Id = -1, Description = "All" });
+
+                if (SelectedUnitId.HasValue)
+                {
+                    var item = items.SingleOrDefault(i => i.Id == SelectedUnitId.Value);
+
+                    if (item != null)
+                    {
+                        item.IsSelected = true;
+
+                        SelectedUnits = new List<SelectableItem> { item };
+                    }
+                }
+
+                Units = new ObservableCollection<SelectableItem>(items);
             }
         }
 
@@ -162,11 +220,23 @@ namespace ManageGo.Core.Managers.ViewModels
                 Status = status
             };
 
-            request.Buildings = SelectedBuildings?.Count > 0 ? SelectedBuildings.Select(x => x.Id).ToList() 
-                                                                : new List<int> { SelectedBuildingId };
+            if (SelectedBuildingId.HasValue)
+            {
+                request.Buildings = new List<int> { SelectedBuildingId.Value };
+            }
+            else if (SelectedBuildings?.Count > 0)
+            {
+                request.Buildings = SelectedBuildings.Select(x => x.Id).ToList();
+            }
 
-            request.Units = SelectedUnits?.Count > 0 ? SelectedUnits.Select(x => x.Id).ToList() 
-                                                        : new List<int> { SelectedUnitId };
+            if (SelectedUnitId.HasValue)
+            {
+                request.Units = new List<int> { SelectedUnitId.Value };
+            }
+            else if (SelectedUnits?.Count > 0)
+            {
+                request.Units = SelectedUnits.Select(x => x.Id).ToList();
+            }
 
             return request;
         }

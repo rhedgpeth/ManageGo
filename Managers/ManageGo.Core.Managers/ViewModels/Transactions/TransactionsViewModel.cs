@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -46,11 +47,13 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (bankAccountsResponse?.Status == Enumerations.ResponseStatus.Data)
             {
-                foreach (var bankAccount in bankAccountsResponse.Result)
-                {
-                    var item = new SelectableItem { Id = bankAccount.BankAccountId, Description = bankAccount.BankAccountName };
-                    BankAccounts.Add(item);
-                }
+                var items = bankAccountsResponse.Result.Select(ba =>
+                                                               new SelectableItem
+                                                               { Id = ba.BankAccountId, Description = ba.BankAccountName }).ToList();
+
+                items.Insert(0, new SelectableItem { Id = -1, Description = "All" });
+
+                BankAccounts = new ObservableCollection<SelectableItem>(items);
             }
         }
 
@@ -69,7 +72,7 @@ namespace ManageGo.Core.Managers.ViewModels
                 Search = SearchTerm
             };
 
-            var bankTransactionsResponse = await FinanceService.Instance.GetBankTransactions(request).ConfigureAwait(false);
+            var bankTransactionsResponse = await FinanceService.Instance.GetBankTransactions(request); //.ConfigureAwait(false);
 
             if (bankTransactionsResponse?.Status == Enumerations.ResponseStatus.Data ||
                 bankTransactionsResponse?.Status == Enumerations.ResponseStatus.NoData)

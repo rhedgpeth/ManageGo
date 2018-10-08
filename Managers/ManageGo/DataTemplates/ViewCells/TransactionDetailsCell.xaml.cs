@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ManageGo.Core.Managers.Models;
 using Xamarin.Forms;
 
 namespace ManageGo.DataTemplates.ViewCells

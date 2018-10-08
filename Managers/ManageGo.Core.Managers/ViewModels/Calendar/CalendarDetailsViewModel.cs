@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Input;
 using ManageGo.Core.Input;
@@ -56,9 +57,31 @@ namespace ManageGo.Core.Managers.ViewModels
 			Event = evt;
 
 			Description = evt.Note;
-			Participants = new List<string> { "John Doe", "Jim Doe", "Jake Doe" };
+            Participants = GetParticipants(evt);
             EventTimeDescription = $"{evt.TimeFrom} to {evt.TimeTo}";
 			EventDateDescription = evt.Date.ToShortDateString();         
+        }
+
+        List<string> GetParticipants(MaintenanceTicketEvent evt)
+        {
+            var participants = new List<string>();
+
+            if (evt.SendToExternalContacts?.Count >0)
+            {
+                participants.AddRange(evt.SendToExternalContacts);
+            }
+
+            if (evt.SendToEmail?.Length > 0)
+            {
+                participants.AddRange(evt.SendToUsers.Select(x => $"{x.UserFirstName} {x.UserLastName}"));
+            }
+
+            if (evt.SendToTenant?.Count > 0)
+            {
+                participants.AddRange(evt.SendToTenant.Select(x => $"{x.TenantFirstName} {x.TenantLastName}"));
+            }
+
+            return participants;
         }
     }
 }
