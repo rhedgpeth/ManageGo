@@ -6,7 +6,6 @@
     x:Class="ManageGo.Controls.SearchView">
 
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="30" />
         <ColumnDefinition Width="Auto" />
         <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
@@ -15,12 +14,12 @@
         <RowDefinition Height="1" />
     </Grid.RowDefinitions>
 
-    <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+    <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center">
         <Image Source="search_grey" Aspect="AspectFit" />
     </StackLayout>
     
-    <Editor Grid.Row="0" Grid.Column="2" TextChanged="OnTextChanged" />
+    <Editor Grid.Row="0" Grid.Column="1" TextChanged="OnTextChanged" />
 
-    <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
+    <BoxView Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
     
 </Grid>

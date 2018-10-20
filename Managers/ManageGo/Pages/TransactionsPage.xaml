@@ -12,7 +12,7 @@
     ControlTemplate="{StaticResource HeaderPageTemplate}">
     <ContentPage.Content>
 
-        <StackLayout BackgroundColor="#F9FAFB">
+        <StackLayout BackgroundColor="{StaticResource Off-White}">
 
             <controls:FilterView x:Name="filterView"
                                  LeftFilterText="{Binding SelectedDateDescription}" 
@@ -32,7 +32,7 @@
                 </controls:FilterView.LeftExpandableLayout>
                 <controls:FilterView.RightExpandableLayout>
                     <StackLayout>
-                        <controls:SearchView Text="{Binding SearchTerm}" />
+                        <controls:SearchView Text="{Binding SearchTerm}" Style="{StaticResource SearchView}" />
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                             <controls:ExpandablePicker Descriptor="Accounts" SelectedText="{Binding SelectedBankAccountsDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>

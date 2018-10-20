@@ -14,8 +14,11 @@
         <StackLayout BackgroundColor="{StaticResource Off-White}">
 
             <controls:FilterView x:Name="filterView"
-                                 LeftFilterText="{Binding SelectedDateDescription}" LeftFilterIcon="calendar_blue" 
-                                 RightFilterText="Filter" RightFilterIcon="filter_blue"
+                                 LeftFilterText="{Binding SelectedDateDescription}" 
+                                 LeftFilterIcon="calendar_blue" 
+                                 RightFilterText="Filter" 
+                                 RightFilterIcon="filter_blue"
+                                 RightFilterSuperscriptText="{Binding FilterCount}"
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}">
 
                 <controls:FilterView.LeftExpandableLayout>
@@ -41,53 +44,66 @@
                     
                     <StackLayout>
 
-                        <controls:SearchView Text="{Binding SearchTerm}" />
+                        <controls:SearchView Text="{Binding SearchTerm}" Style="{StaticResource SearchView}" />
 
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                             
-                            <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
+                            <controls:ExpandablePicker Descriptor="Buildings" 
+                                                       SelectedText="{Binding SelectedBuildingsDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <!-- List of buildings -->
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Buildings}" 
+                                                               ItemTypeDescription="Buildings" 
+                                                               SelectedItems="{Binding SelectedBuildings}"
+                                                               SelectedItemsDescription="{Binding SelectedBuildingsDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Priority" SelectedText="All">
+                            <controls:ExpandablePicker Descriptor="Priorities" 
+                                                       SelectedText="{Binding SelectedPrioritiesDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        
-                                       <controls:CheckboxList ItemsSource="{Binding Priorities}" />
-                                        
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Priorities}" 
+                                                               ItemTypeDescription="Priorities" 
+                                                               SelectedItems="{Binding SelectedPriorities}"
+                                                               SelectedItemsDescription="{Binding SelectedPrioritiesDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Category" SelectedText="Electricity">
+                            <controls:ExpandablePicker Descriptor="Categories" 
+                                                       SelectedText="{Binding SelectedCategoriesDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <!-- List of categories -->
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Categories}" 
+                                                               ItemTypeDescription="Categories" 
+                                                               SelectedItems="{Binding SelectedCategories}"
+                                                               SelectedItemsDescription="{Binding SelectedCategoriesDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Tags" SelectedText="Access Granted, Forward to Super">
+                            <controls:ExpandablePicker Descriptor="Tags" 
+                                                       SelectedText="{Binding SelectedTagsDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <!-- List of tags -->
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Tags}" 
+                                                               ItemTypeDescription="Tags" 
+                                                               SelectedItems="{Binding SelectedTags}"
+                                                               SelectedItemsDescription="{Binding SelectedTagsDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Status" SelectedText="Open">
+                            <controls:ExpandablePicker Descriptor="Statuses" 
+                                                       SelectedText="{Binding SelectedStatusesDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-
-                                        <!-- List of statuses -->
-                                        
-                                        <!--
-                                        <controls:RadioGroup ItemsSource="{Binding StatusOptions}" 
-                                                             VerticalOptions="Start" />-->
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Statuses}" 
+                                                               ItemTypeDescription="Statuses" 
+                                                               SelectedItems="{Binding SelectedStatuses}"
+                                                               SelectedItemsDescription="{Binding SelectedStatusesDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
@@ -100,10 +116,14 @@
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Assigned" SelectedText="Boris Gursky">
+                            <controls:ExpandablePicker Descriptor="Assigned" 
+                                                       SelectedText="{Binding SelectedUsersDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
-                                    <StackLayout>
-                                        <!-- List of users(?) -->
+                                    <StackLayout HeightRequest="100">
+                                        <controls:CheckboxList ItemsSource="{Binding Users}" 
+                                                               ItemTypeDescription="Users" 
+                                                               SelectedItems="{Binding SelectedUsers}"
+                                                               SelectedItemsDescription="{Binding SelectedUsersDescription}" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>

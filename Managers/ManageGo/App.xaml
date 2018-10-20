@@ -258,6 +258,10 @@
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
             
+            <Style x:Key="SearchView" TargetType="Grid">
+                <Setter Property="Margin" Value="30,0,30,0" />
+            </Style>
+            
             <ControlTemplate x:Key="HeaderPageTemplate">
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
                     <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Margin="0,15,0,0"

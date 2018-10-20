@@ -7,6 +7,20 @@ namespace ManageGo.Core.ViewModels
 {
     public abstract class BaseViewModel : BaseNotify
     {
+        IAnalyticsService _analyticsService;
+        protected IAnalyticsService AnalyticsService
+        {
+            get
+            {
+                if (_analyticsService == null)
+                {
+                    _analyticsService = ServiceContainer.Resolve<IAnalyticsService>();
+                }
+
+                return _analyticsService;
+            }
+        }
+
         ICacheService _cacheService;
         protected ICacheService CacheService
         {

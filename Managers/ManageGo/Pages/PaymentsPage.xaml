@@ -41,7 +41,7 @@
 
                     <StackLayout>
 
-                        <controls:SearchView Text="{Binding SearchTerm}" />
+                        <controls:SearchView Text="{Binding SearchTerm}" Style="{StaticResource SearchView}" />
 
                         <ScrollView>
                         
@@ -114,7 +114,7 @@
                     </StackLayout>
                 </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
-            
+
             <controls:EmptyView IsVisible="{Binding IsEmpty}" 
                                 HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
             
@@ -129,7 +129,8 @@
                 LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB" />
+                BackgroundColor="{StaticResource Off-White}">
+            </global-controls:ListView>
 
             <!-- CachingStrategy="RecycleElementAndDataTemplate" -->
            

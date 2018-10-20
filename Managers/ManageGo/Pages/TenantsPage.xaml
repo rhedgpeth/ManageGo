@@ -21,7 +21,7 @@
                 <controls:FilterView.LeftExpandableLayout>
                     <StackLayout>
                         
-                        <controls:SearchView Text="{Binding SearchTerm}" />
+                        <controls:SearchView Text="{Binding SearchTerm}" Style="{StaticResource SearchView}" />
   
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
                             <controls:ExpandablePicker Descriptor="Buildings" 

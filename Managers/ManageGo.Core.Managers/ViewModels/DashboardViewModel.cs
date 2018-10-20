@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Services;
@@ -72,10 +71,11 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public override async Task InitAsync()
         {
-            // We do not want to wait for these results - fire and forget
-            LoadUserSettings();
-
             await LoadDashboard();
+
+            // We do not want to wait for these results - fire and forget
+            LoadUsers();
+            LoadUserSettings();
         }
 
         async Task LoadDashboard()
@@ -94,19 +94,25 @@ namespace ManageGo.Core.Managers.ViewModels
                 OpenTicketCount = dashboard.Result.OpenTicketCount;
                 NoReplyTicketCount = dashboard.Result.NoReplyTicketCount;
             }
-            else
-            {
-                // TODO: Handle no data?
-            }
         }
 
         async void LoadUserSettings()
         {
-            var maintenanceUserSettings = await MaintenanceService.Instance.GetUserSettings();
+            var maintenanceUserSettings = await MaintenanceService.Instance.GetUserSettings().ConfigureAwait(false);
 
             if (maintenanceUserSettings?.Status == Enumerations.ResponseStatus.Data)
             {
                 AppInstance.Maintenance.Settings = maintenanceUserSettings.Result;
+            }
+        }
+
+        async void LoadUsers()
+        {
+            var usersResponse = await UserService.Instance.GetUsers().ConfigureAwait(false);
+
+            if (usersResponse?.Status == Enumerations.ResponseStatus.Data)
+            {
+                AppInstance.Users = usersResponse.Result;
             }
         }
     }

@@ -48,7 +48,7 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 if (_ticketsCommand == null)
                 {
-                    _ticketsCommand = new Command(async () => await Navigation.PushAsync(new MaintenanceTicketsViewModel()));
+                    _ticketsCommand = new Command(async () => await Navigation.PushAsync(new MaintenanceTicketsViewModel(BuildingId)));
                 }
 
                 return _ticketsCommand;
