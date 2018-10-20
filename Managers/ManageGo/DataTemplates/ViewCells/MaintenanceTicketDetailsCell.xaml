@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ManageGo.UI.Controls;assembly=ManageGo.UI"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="ManageGo.DataTemplates.ViewCells.MaintenanceTicketDetailsCell">
 
     <Frame Style="{StaticResource ListItem-Detail}">
@@ -17,7 +18,7 @@
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>   
 
-            <Image Grid.Row="0" Grid.Column="0" Source="chat_grey" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start" />
+            <ff:CachedImage Grid.Row="0" Grid.Column="0" Source="chat_grey" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start" />
             
             <Label Grid.Row="0" Grid.Column="1" Text="{Binding Description}" Style="{StaticResource Dark-Grey-Small}" />
             

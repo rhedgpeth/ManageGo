@@ -11,6 +11,7 @@
     <Folder Include="Enumerations\" />
     <Folder Include="Validation\" />
     <Folder Include="Events\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

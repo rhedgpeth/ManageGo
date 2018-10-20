@@ -35,5 +35,7 @@ namespace ManageGo.Pages
                 viewModel?.OnSectionHeaderSelected(section);
             }
         }
+
+        void Handle_OnPresetRangeUpdate(object sender, System.EventArgs e) => filterView.ApplyFilter();
     }
 }

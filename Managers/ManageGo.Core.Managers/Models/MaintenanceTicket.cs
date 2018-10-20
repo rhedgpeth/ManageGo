@@ -14,13 +14,13 @@ namespace ManageGo.Core.Managers.Models
         public Unit Unit { get; set; }
         public Building Building { get; set; }
         public string FirstComment { get; set; }
-        public IList<MaintenanceCategory> Categories { get; set; }
+        public List<MaintenanceCategory> Categories { get; set; }
         public DateTime? DueDate { get; set; }
         public int NumberOfReplies { get; set; }
         public bool HasWorkorder { get; set; }
         public bool HasEvent { get; set; }
         public bool HasPet { get; set; }
         public bool HasAccess { get; set; }
-        public IList<MaintenanceTicketComment> Comments { get; set; }
+        public List<MaintenanceTicketComment> Comments { get; set; }
     }
 }

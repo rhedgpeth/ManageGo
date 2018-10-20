@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Windows.Input;
 using CustomCalendar;
 using Xamarin.Forms;
 
@@ -8,7 +9,9 @@ namespace ManageGo.Controls
 {
     public partial class CalendarView : Grid
     {
-		public static readonly BindableProperty AllowMultipleSelectionProperty = BindableProperty.Create(nameof(AllowMultipleSelection),
+        public event EventHandler OnPresetRangeUpdate;
+
+        public static readonly BindableProperty AllowMultipleSelectionProperty = BindableProperty.Create(nameof(AllowMultipleSelection),
                                                                                         typeof(bool),
                                                                                         typeof(CalendarView),
                                                                                                          false,
@@ -111,15 +114,17 @@ namespace ManageGo.Controls
         void Past7DaysButton_Tapped(object sender, EventArgs e)
         {
             calendar.SelectedDates = new DateRange(DateTime.Now.AddDays(-7), DateTime.Now);
-
             SelectedDates = new DateRange(DateTime.Now.AddDays(-7), DateTime.Now);
+
+            OnPresetRangeUpdate?.Invoke(sender, e);
         }
 
         void Past30DaysButton_Tapped(object sender, EventArgs e)
         {
             calendar.SelectedDates = new DateRange(DateTime.Now.AddDays(-30), DateTime.Now);
-
             SelectedDates = new DateRange(DateTime.Now.AddDays(-30), DateTime.Now);
+
+            OnPresetRangeUpdate?.Invoke(sender, e);
         }
 
         void Handle_OnSelectedDatesChanged(DateRange dates)

@@ -62,7 +62,7 @@ namespace ManageGo.Controls
             {
                 SelectedItemsDescription = "All";
             }
-            else if (_selectedItems.Count == 1)
+            else if (SelectedItems.Count == 1)
             {
                 SelectedItemsDescription = singleDescription;
             }

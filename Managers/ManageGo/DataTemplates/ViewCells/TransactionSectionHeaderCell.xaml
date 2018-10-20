@@ -2,6 +2,7 @@
 <ViewCell 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="ManageGo.DataTemplates.ViewCells.TransactionSectionHeaderCell">
 
     <Frame Style="{StaticResource ListItem-Header}">
@@ -19,7 +20,7 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
-              <Image Source="dot_red" Aspect="AspectFit" />
+              <ff:CachedImage Source="dot_red" Aspect="AspectFit" />
             </StackLayout>
 
             <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
@@ -27,13 +28,13 @@
                 <Label Text="{Binding TransactionDateTime}" Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>
 
-            <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
+            <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="chevron_down" Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
 
             <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource Separator-Line}" />
 
             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Image Source="{Binding TransactionSourceType, Converter={StaticResource cnvTransactionSourceTypeToImage}}" 
+                <ff:CachedImage Source="{Binding TransactionSourceType, Converter={StaticResource cnvTransactionSourceTypeToImage}}" 
                        Aspect="AspectFit" VerticalOptions="Center" />
                 <Label Text="{Binding TransactionSourceName}" Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
                 <BoxView WidthRequest="1" BackgroundColor="#878889" VerticalOptions="FillAndExpand" />

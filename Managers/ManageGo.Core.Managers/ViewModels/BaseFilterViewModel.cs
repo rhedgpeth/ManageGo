@@ -12,6 +12,13 @@ namespace ManageGo.Core.Managers.ViewModels
     {
         public string SearchTerm { get; set; }
 
+        int? _filterCount;
+        public int? FilterCount
+        {
+            get => _filterCount;
+            set => SetPropertyChanged(ref _filterCount, value);
+        }
+
         DateTime _selectedDate = DateTime.Now;
         public DateTime SelectedDate
         {

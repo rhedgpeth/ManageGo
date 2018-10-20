@@ -20,37 +20,31 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!-- Buttons -->
-
-        <StackLayout x:Name="LeftFilterOption" Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-
+        <StackLayout x:Name="LeftFilterOption" Grid.Row="0" Grid.Column="0">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Handle_LeftFilterOption_Tapped" NumberOfTapsRequired="1" />
             </StackLayout.GestureRecognizers>   
-        
-            <Image x:Name="LeftFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
-        
-            <Label x:Name="LeftFilterLabel" Style="{StaticResource entryDescriptionLabelCentered}" 
-                   FontSize="14" HorizontalOptions="StartAndExpand" />
-        
+            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Image x:Name="LeftFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
+                <Label x:Name="LeftFilterLabel" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" Margin="5,0,0,0" />
+                <Label x:Name="LeftFilterSuperscriptLabel" Style="{StaticResource superscriptLabel}" />
+            </StackLayout>
         </StackLayout>
     
         <BoxView Grid.Row="0" Grid.Column="1" x:Name="SeparatorBoxView" HeightRequest="75" WidthRequest="1" BackgroundColor="#DFDFE0" />
 
-        <StackLayout x:Name="RightFilterOption" Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
-
+        <StackLayout x:Name="RightFilterOption" Grid.Row="0" Grid.Column="2">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Handle_RightFilterOption_Tapped" NumberOfTapsRequired="1" />
             </StackLayout.GestureRecognizers>  
-        
-            <Image x:Name="RightFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
-        
-            <Label x:Name="RightFilterLabel" HorizontalOptions="StartAndExpand"
-                   Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" /> 
-        
+            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Image x:Name="RightFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
+                <Label x:Name="RightFilterLabel" Style="{StaticResource entryDescriptionLabelCentered}" FontSize="14" Margin="5,0,0,0" /> 
+                <Label x:Name="RightFilterSuperscriptLabel" Style="{StaticResource superscriptLabel}" />
+            </StackLayout>
         </StackLayout>
     
         <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#DFDFE0" />
@@ -58,9 +52,21 @@
         <StackLayout Grid.Row="2" Grid.ColumnSpan="3" x:Name="TitleLayoutRegion" />
     
         <!-- Expand/collapse panels -->
+        
+        <ScrollView Grid.Row="3" Grid.ColumnSpan="3" x:Name="scrollView">
+            <ScrollView.Content>
+                <StackLayout>
+                    <StackLayout x:Name="LeftExpandableLayoutRegion" IsVisible="false" />
+                    <StackLayout x:Name="RightExpandableLayoutRegion" IsVisible="false" />
+                </StackLayout>
+            </ScrollView.Content>
+        </ScrollView>
+    
+        <!--
         <StackLayout Grid.Row="3" Grid.ColumnSpan="3" x:Name="LeftExpandableLayoutRegion" IsVisible="false" />
-        <StackLayout Grid.Row="4" Grid.ColumnSpan="3" x:Name="RightExpandableLayoutRegion" IsVisible="false" />
+        <StackLayout Grid.Row="3" Grid.ColumnSpan="3" x:Name="RightExpandableLayoutRegion" IsVisible="false" />
+        -->
 
-        <Button x:Name="filterButton" Text="Apply" Grid.Row="5" Grid.ColumnSpan="3" Clicked="Handle_Clicked"
+        <Button x:Name="filterButton" Text="Apply" Grid.Row="4" Grid.ColumnSpan="3" Clicked="Handle_Clicked"
                 Style="{StaticResource filterButton}" IsVisible="false" />
 </Grid>

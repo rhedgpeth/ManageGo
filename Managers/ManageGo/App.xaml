@@ -170,7 +170,15 @@
                 <Setter Property="TextColor" Value="{StaticResource Grey-Light-1}"/>
                 <Setter Property="FontSize" Value="13" />
             </Style>
-
+            
+            <Style x:Key="superscriptLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+                <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Margin" Value="3,0,0,0" />
+            </Style>
+            
             <Style x:Key="lightGreyEntryDescriptionLabelCentered" TargetType="Label" BasedOn="{StaticResource lightGreyEntryDescriptionLabel}">
                 <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
@@ -244,7 +252,12 @@
                 <Setter Property="Margin" Value="35,0,35,10" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
-
+            
+            <Style x:Key="Dot" TargetType="Label" BasedOn="{StaticResource Mid-Grey-Small}">
+                <Setter Property="Text" Value="•" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+            
             <ControlTemplate x:Key="HeaderPageTemplate">
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
                     <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Margin="0,15,0,0"

@@ -2,6 +2,7 @@
 <ViewCell 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="ManageGo.DataTemplates.ViewCells.TenantSectionHeaderCell">
 
     <Frame Style="{StaticResource ListItem-Header}">
@@ -19,12 +20,13 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
-              <Image Source="profile_grey" Aspect="AspectFit" />
+              <ff:CachedImage Source="profile_grey" Aspect="AspectFit" />
             </StackLayout>
             
-            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" Style="{StaticResource Header-Text}" FontAttributes="Bold" VerticalTextAlignment="Center" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" Style="{StaticResource Header-Text}" 
+                   FontAttributes="Bold" VerticalTextAlignment="Center" LineBreakMode="TailTruncation" />
             
-            <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
+            <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="chevron_down" Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
 
             <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource Separator-Line}" />

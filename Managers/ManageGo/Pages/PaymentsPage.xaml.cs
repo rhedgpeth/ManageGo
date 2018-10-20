@@ -6,7 +6,7 @@ using ManageGo.UI.Pages;
 namespace ManageGo.Pages
 {
     public partial class PaymentsPage : BaseSearchContentPage<PaymentsViewModel,object>
-    {      
+    {
         public PaymentsPage()
         {
             InitializeComponent();   
@@ -35,5 +35,7 @@ namespace ManageGo.Pages
                 viewModel?.OnSectionHeaderSelected(section);
 			}
 		}
-	}
+
+        void Handle_OnPresetRangeUpdate(object sender, System.EventArgs e) => filterView.ApplyFilter();
+    }
 }

@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:sys="clr-namespace:System;assembly=mscorlib"  
     xmlns:local="clr-namespace:ManageGo.UI.Pages;assembly=ManageGo.UI"
+    xmlns:controls="clr-namespace:ManageGo.Controls"
     xmlns:vm="clr-namespace:ManageGo.Core.Managers.ViewModels;assembly=ManageGo.Core.Managers"
     x:Class="ManageGo.Pages.NotificationsPage"
     x:TypeArguments="vm:NotificationsViewModel"
@@ -20,9 +21,13 @@
                 <BoxView HeightRequest="1" BackgroundColor="#D5D5D7" HorizontalOptions="FillAndExpand" Margin="0" />
                 
             </StackLayout>
-
+            
+            <controls:EmptyView IsVisible="{Binding IsEmpty}" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
             <ListView   
                     x:Name="listView"
+                    IsVisible="{Binding IsNotEmpty}"
                     ItemsSource="{Binding Items}"
                     IsPullToRefreshEnabled="true"
                     RefreshCommand="{Binding RefreshCommand}"

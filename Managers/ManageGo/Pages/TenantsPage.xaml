@@ -13,7 +13,10 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="Filter" LeftFilterIcon="filter_blue" ShowRightFilter="false" 
+            <controls:FilterView LeftFilterText="Filter" 
+                                 LeftFilterIcon="filter_blue" 
+                                 LeftFilterSuperscriptText="{Binding FilterCount}"
+                                 ShowRightFilter="false" 
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}">
                 <controls:FilterView.LeftExpandableLayout>
                     <StackLayout>
@@ -21,7 +24,8 @@
                         <controls:SearchView Text="{Binding SearchTerm}" />
   
                         <StackLayout Margin="35,0,35,0" Padding="0,0,0,15">
-                            <controls:ExpandablePicker Descriptor="Building" SelectedText="{Binding SelectedBuildingsDescription}">
+                            <controls:ExpandablePicker Descriptor="Buildings" 
+                                                       SelectedText="{Binding SelectedBuildingsDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout HeightRequest="100">
                                         <controls:CheckboxList ItemsSource="{Binding Buildings}" 
@@ -32,8 +36,10 @@
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
                             
-                            <controls:ExpandablePicker x:Name="UnitsPicker" Descriptor="Unit" 
-                                                       SelectedText="{Binding SelectedUnitsDescription}" IsVisible="{Binding ShowUnitsFilterOption}">
+                            <controls:ExpandablePicker x:Name="UnitsPicker" 
+                                                       Descriptor="Units" 
+                                                       SelectedText="{Binding SelectedUnitsDescription}" 
+                                                       IsVisible="{Binding ShowUnitsFilterOption}">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout HeightRequest="100">
                                         <controls:CheckboxList ItemsSource="{Binding Units}" 
@@ -59,9 +65,13 @@
 
                 </controls:FilterView.LeftExpandableLayout>
             </controls:FilterView>
-
+            
+            <controls:EmptyView IsVisible="{Binding IsEmpty}" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
             <global-controls:ListView   
                 x:Name="listView"
+                IsVisible="{Binding IsNotEmpty}"
                 ItemsSource="{Binding Items}"
                 IsPullToRefreshEnabled="true"
                 RefreshCommand="{Binding RefreshCommand}"
@@ -70,7 +80,7 @@
                 LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB">
+                BackgroundColor="{StaticResource Off-White}">
                 <!--
                 <global-controls:ListView.Header>
                     <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />    

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Input;
-using ManageGo.UI.Controls;
 using Xamarin.Forms;
 
 namespace ManageGo.Controls
@@ -138,8 +137,8 @@ namespace ManageGo.Controls
 
         public bool LeftFilterText
         {
-            get { return (bool)GetValue(ShowRightFilterProperty); }
-            set { SetValue(ShowRightFilterProperty, value); }
+            get { return (bool)GetValue(LeftFilterTextProperty); }
+            set { SetValue(LeftFilterTextProperty, value); }
         }
 
         static void HandleLeftFilterTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
@@ -147,10 +146,59 @@ namespace ManageGo.Controls
             var filter = bindable as FilterView;
             filter.LeftFilterLabel.Text = (string)newValue;
         }
-      
+
+        public static readonly BindableProperty LeftFilterSuperscriptTextProperty = BindableProperty.Create(nameof(LeftFilterSuperscriptText),
+                                                                                        typeof(string),
+                                                                                        typeof(FilterView),
+                                                                                        string.Empty,
+                                                                                        propertyChanged: HandleLeftFilterSuperscriptTextPropertyChanged);
+
+
+        public bool LeftFilterSuperscriptText
+        {
+            get { return (bool)GetValue(LeftFilterSuperscriptTextProperty); }
+            set { SetValue(LeftFilterSuperscriptTextProperty, value); }
+        }
+
+        static void HandleLeftFilterSuperscriptTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var filter = bindable as FilterView;
+            filter.LeftFilterSuperscriptLabel.Text = (string)newValue;
+        }
+
+        public static readonly BindableProperty RightFilterSuperscriptTextProperty = BindableProperty.Create(nameof(RightFilterSuperscriptText),
+                                                                                        typeof(string),
+                                                                                        typeof(FilterView),
+                                                                                        string.Empty,
+                                                                                        propertyChanged: HandleRightFilterSuperscriptTextPropertyChanged);
+
+
+        public bool RightFilterSuperscriptText
+        {
+            get { return (bool)GetValue(RightFilterSuperscriptTextProperty); }
+            set { SetValue(RightFilterSuperscriptTextProperty, value); }
+        }
+
+        static void HandleRightFilterSuperscriptTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var filter = bindable as FilterView;
+            filter.RightFilterSuperscriptLabel.Text = (string)newValue;
+        }
+
         public FilterView()
         {
             InitializeComponent();
+
+            RightExpandableLayoutRegion.SizeChanged += RightExpandableLayoutRegion_SizeChanged;
+        }
+
+        void RightExpandableLayoutRegion_SizeChanged(object sender, EventArgs e)
+        {
+            //scrollView.HeightRequest = RightExpandableLayoutRegion.Height;
+            //scrollView.Measure(RightExpandableLayoutRegion.Width, 300);
+
+            //scrollView.Content.HeightRequest = RightExpandableLayoutRegion.Height;
+            //scrollView.Content.WidthRequest = 500;
         }
 
 		void Handle_LeftFilterOption_Tapped(object sender, EventArgs e) => ToggleLayouts(LeftExpandableLayoutRegion, RightExpandableLayoutRegion, LeftFilterOption, RightFilterOption);
@@ -182,7 +230,9 @@ namespace ManageGo.Controls
             set { SetValue(ApplyFilterCommandProperty, value); }
         }
 
-        void Handle_Clicked(object sender, EventArgs e)
+        void Handle_Clicked(object sender, EventArgs e) => ApplyFilter();
+
+        public void ApplyFilter()
         {
             LeftExpandableLayoutRegion.IsVisible = false;
             LeftFilterOption.Opacity = 1;

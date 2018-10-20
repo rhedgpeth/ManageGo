@@ -29,20 +29,16 @@ namespace ManageGo.Core.Managers.ViewModels
         void LoadMaintenanceTicket(MaintenanceTicket ticket)
 		{
             Ticket = ticket;
-
 			Title = ticket.TicketSubject;
-			
-            CreatedDateTime = ticket.TicketCreateTime.ToShortDateString();
-
+            CreatedDateTime = ticket.TicketCreateTime.ToShortDateTimeString();
             ReplyCount = ticket.NumberOfReplies;
 
             if (ticket.Categories?.Count > 0)
             {
-                Categories = string.Join(", ", ticket.Categories.Select(x => x.CategoryName));
+                Categories = $"• {string.Join(", ", ticket.Categories.Select(x => x.CategoryName))}";
             }
 
             TenantName = $"{ticket.Tenant?.TenantFirstName} {ticket.Tenant?.TenantLastName}".Trim();
-			
             TenantAddress = ticket.Building?.BuildingShortAddress;
 
             HasPet = ticket.HasPet;

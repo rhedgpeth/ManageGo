@@ -205,10 +205,13 @@ namespace ManageGo.Core.Managers.ViewModels
 
         TenantRequest GetRequest()
         {
+            int filterCount = 0;
+
             var status = TenantStatus.All;
 
             if (IsActive != IsInActive)
             {
+                filterCount++;
                 status = IsActive ? TenantStatus.Active : TenantStatus.Inactive;
             }
 
@@ -220,23 +223,34 @@ namespace ManageGo.Core.Managers.ViewModels
                 Status = status
             };
 
+            if (!string.IsNullOrEmpty(SearchTerm))
+            {
+                filterCount++;
+            }
+
             if (SelectedBuildingId.HasValue)
             {
+                filterCount++;
                 request.Buildings = new List<int> { SelectedBuildingId.Value };
             }
             else if (SelectedBuildings?.Count > 0)
             {
+                filterCount++;
                 request.Buildings = SelectedBuildings.Select(x => x.Id).ToList();
             }
 
             if (SelectedUnitId.HasValue)
             {
+                filterCount++;
                 request.Units = new List<int> { SelectedUnitId.Value };
             }
-            else if (SelectedUnits?.Count > 0)
+            else if (SelectedBuildings?.Count == 1 && SelectedUnits?.Count > 0)
             {
+                filterCount++;
                 request.Units = SelectedUnits.Select(x => x.Id).ToList();
             }
+
+            FilterCount = filterCount > 0 ? filterCount : (int?)null;
 
             return request;
         }

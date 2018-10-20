@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>ManageGo</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.managego.managers</string>
+	<string>com.managego.pmc</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -46,9 +46,13 @@
 		<string>Roboto-Thin.ttf</string>
 		<string>Roboto-Regular.ttf</string>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>4</string>
 	<key>NSCameraUsageDescription</key>
 	<string>ManageGo needs to access the camera to take photos.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>ManageGo needs to access the calendar.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>ManageGo needs to access you photo library.</string>
+	<key>CFBundleVersion</key>
+	<string>7</string>
 </dict>
 </plist>

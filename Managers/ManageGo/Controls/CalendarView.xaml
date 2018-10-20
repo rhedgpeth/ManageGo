@@ -20,9 +20,9 @@
 
     <Grid Grid.Row="0" Grid.ColumnSpan="3">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width=".3*" />
+            <ColumnDefinition Width=".4*" />
+            <ColumnDefinition Width=".3*" />
         </Grid.ColumnDefinitions>
 
         <global-controls:TappableLabel Grid.Column="0" 
@@ -38,7 +38,7 @@
             <Image Source="chevron_left" VerticalOptions="Center" />
             
             <Label x:Name="titleLabel" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                    FontSize="14" FontAttributes="Bold" />
+                    FontSize="Micro" FontAttributes="Bold" />
 
             <Image Source="chevron_right" VerticalOptions="Center" />
 

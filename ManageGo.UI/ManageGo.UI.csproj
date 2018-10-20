@@ -15,6 +15,7 @@
     <Folder Include="Validation\" />
     <Folder Include="Validation\" />
     <Folder Include="Effects\" />
+    <Folder Include="Behaviors\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo.Core\ManageGo.Core.csproj" />

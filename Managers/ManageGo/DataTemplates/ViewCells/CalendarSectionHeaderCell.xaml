@@ -2,6 +2,7 @@
 <ViewCell 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="ManageGo.DataTemplates.ViewCells.CalendarSectionHeaderCell">
 
     <Frame Style="{StaticResource ListItem-Header}">
@@ -24,7 +25,7 @@
                 <Label Text="{Binding DateDescription}" Style="{StaticResource Light-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>
 
-            <Image Grid.Row="0" Grid.Column="1" Source="chevron_down" 
+            <ff:CachedImage Grid.Row="0" Grid.Column="1" Source="chevron_down" 
                    Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
 
@@ -32,7 +33,7 @@
                    Style="{StaticResource Header-Text}" FontAttributes="Bold" VerticalTextAlignment="Center" />
 
             <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <Image Source="building_grey" Aspect="AspectFit" VerticalOptions="Center" />
+                <ff:CachedImage Source="building_grey" Aspect="AspectFit" VerticalOptions="Center" />
                 <Label Text="{Binding Location}" Style="{StaticResource Mid-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>
 

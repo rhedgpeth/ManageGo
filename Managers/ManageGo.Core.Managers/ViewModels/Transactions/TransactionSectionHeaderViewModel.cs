@@ -9,7 +9,7 @@ namespace ManageGo.Core.Managers.ViewModels
 	public class TransactionSectionHeaderViewModel : BaseCollectionSectionViewModel
     {
 		public string TransactionAmount { get; set; }
-		public DateTime TransactionDateTime { get; set; }
+		public string TransactionDateTime { get; set; }
 		public string TransactionSourceName { get; set; }
 		public string TransactionSourceId { get; set; }
 		public TransactionSourceType TransactionSourceType { get; set; }
@@ -22,7 +22,7 @@ namespace ManageGo.Core.Managers.ViewModels
         void LoadTransaction(BankTransaction transaction)
         {
             TransactionAmount = string.Format("${0:n}", transaction.Amount);
-            TransactionDateTime = transaction.TransactionDate;
+            TransactionDateTime = transaction.TransactionDate.ToShortDateTimeString();
             TransactionSourceName = transaction.BankAccountInfo;
             TransactionSourceId = transaction.Number;
             TransactionSourceType = TransactionSourceType.Bank;

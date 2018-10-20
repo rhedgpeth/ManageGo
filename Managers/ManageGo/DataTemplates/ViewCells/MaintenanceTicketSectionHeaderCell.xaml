@@ -2,6 +2,7 @@
 <ViewCell 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="ManageGo.DataTemplates.ViewCells.MaintenanceTicketSectionHeaderCell">
 
     <Frame Style="{StaticResource ListItem-Header}">
@@ -20,18 +21,19 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.Row="0">
-                <Image Source="{Binding ReplyCount, Converter={StaticResource cnvReplyCountToImage}}" 
+                <ff:CachedImage Source="{Binding ReplyCount, Converter={StaticResource cnvReplyCountToImage}}" 
                        Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,3,0,0" />
                 <Label Text="{Binding ReplyCount}" TextColor="White" FontSize="Micro" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
             </Grid>
 
-            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" Style="{Binding Header-Text}" FontAttributes="Bold" VerticalTextAlignment="Center" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" Style="{Binding Header-Text}" 
+                   FontAttributes="Bold" VerticalTextAlignment="Center" LineBreakMode="TailTruncation" />
 
             <StackLayout Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
-                <Image IsVisible="{Binding HasPet}" Source="pet_blue" Aspect="AspectFit" HorizontalOptions="Center" />
-                <Image IsVisible="{Binding HasAccess}" Source="key_blue" Aspect="AspectFit" HorizontalOptions="Center" />
-                <Image IsVisible="{Binding HasEvent}" Source="calendar_blue_sm" Aspect="AspectFit" HorizontalOptions="Center" />
-                <Image IsVisible="{Binding HasWorkorder}" Source="wrench_blue" Aspect="AspectFit" HorizontalOptions="Center" />
+                <ff:CachedImage IsVisible="{Binding HasPet}" Source="pet_blue" Aspect="AspectFit" HorizontalOptions="Center" />
+                <ff:CachedImage IsVisible="{Binding HasAccess}" Source="key_blue" Aspect="AspectFit" HorizontalOptions="Center" />
+                <ff:CachedImage IsVisible="{Binding HasEvent}" Source="calendar_blue_sm" Aspect="AspectFit" HorizontalOptions="Center" />
+                <ff:CachedImage IsVisible="{Binding HasWorkorder}" Source="wrench_blue" Aspect="AspectFit" HorizontalOptions="Center" />
             </StackLayout>
             
             <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
@@ -39,20 +41,14 @@
                 <Label Text="{Binding Categories}" Style="{StaticResource Light-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>
                 
-            <Image Grid.Row="0" Grid.Column="2" Source="chevron_down" 
+            <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="chevron_down" 
                    Rotation="{Binding IsExpanded, Converter={StaticResource cnvExpandedRotation}}"
-                   HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                <!--
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="OnSectionHeaderSelected" NumberOfTapsRequired="1" />
-                </Image.GestureRecognizers>
-                -->
-            </Image>
+                   HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
 
             <BoxView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource Separator-Line}" />
 
             <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Image Source="profile_grey" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
+                <ff:CachedImage Source="profile_grey" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
                 <Label Text="{Binding TenantName}" Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
                 <Label Text="{Binding TenantAddress}" Style="{StaticResource Main-Grey-Small}" VerticalTextAlignment="Center" />
             </StackLayout>

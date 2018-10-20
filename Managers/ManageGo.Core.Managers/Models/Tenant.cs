@@ -4,6 +4,7 @@ namespace ManageGo.Core.Managers.Models
 {
     public class Tenant
     {
+        public int TenantId { get; set; }
 		public string TenantFirstName { get; set; }
         public string TenantLastName { get; set; }
         public string TenantHomePhone { get; set; }

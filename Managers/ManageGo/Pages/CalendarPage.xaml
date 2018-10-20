@@ -29,13 +29,17 @@
                     </StackLayout>
                 </controls:FilterView.LeftExpandableLayout>
             </controls:FilterView>
-
+            
+            <controls:EmptyView IsVisible="{Binding IsEmpty}" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
             <ListView   
                 x:Name="listView"
                 ItemsSource="{Binding Items}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB" />
+                BackgroundColor="#F9FAFB"
+                IsVisible="{Binding IsNotEmpty}" />
             
         </StackLayout>
 

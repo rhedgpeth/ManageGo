@@ -16,8 +16,11 @@
 
         <StackLayout Margin="0" BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="{Binding SelectedDateDescription}" LeftFilterIcon="calendar_blue" 
+            <controls:FilterView x:Name="filterView"
+                                 LeftFilterText="{Binding SelectedDateDescription}" 
+                                 LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue"
+                                 RightFilterSuperscriptText="{Binding FilterCount}"
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}"> 
 
                  <controls:FilterView.LeftExpandableLayout>
@@ -26,6 +29,7 @@
                         
                         <controls:CalendarView AllowMultipleSelection="true" 
                                                SelectedDates="{Binding SelectedDates}"
+                                               OnPresetRangeUpdate="Handle_OnPresetRangeUpdate"
                                                HeightRequest="275" WidthRequest="400" 
                                                HorizontalOptions="Center" />
 
@@ -43,70 +47,80 @@
                         
                             <StackLayout Margin="35,0,35,0" Padding="0,0,0,15" Orientation="Vertical">
                                 
-                                <controls:ExpandablePicker Descriptor="Building" SelectedText="All buildings">
+                                <controls:ExpandablePicker Descriptor="Buildings" 
+                                                           SelectedText="{Binding SelectedBuildingsDescription}">
                                     <controls:ExpandablePicker.ExpandableLayout>
-                                        <StackLayout>
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
+                                        <StackLayout HeightRequest="100">
+                                            <controls:CheckboxList ItemsSource="{Binding Buildings}" 
+                                                                   ItemTypeDescription="Buildings" 
+                                                                   SelectedItems="{Binding SelectedBuildings}"
+                                                                   SelectedItemsDescription="{Binding SelectedBuildingsDescription}" />
+                                        </StackLayout>
+                                    </controls:ExpandablePicker.ExpandableLayout>
+                                </controls:ExpandablePicker>
+                                
+                                <controls:ExpandablePicker x:Name="UnitsPicker" 
+                                                           Descriptor="Units" 
+                                                           SelectedText="{Binding SelectedUnitsDescription}" 
+                                                           IsVisible="{Binding ShowUnitsFilterOption}">
+                                    <controls:ExpandablePicker.ExpandableLayout>
+                                        <StackLayout HeightRequest="100">
+                                            <controls:CheckboxList ItemsSource="{Binding Units}" 
+                                                                   ItemTypeDescription="Units" 
+                                                                   SelectedItems="{Binding SelectedUnits}"
+                                                                   SelectedItemsDescription="{Binding SelectedUnitsDescription}" />
                                         </StackLayout>
                                     </controls:ExpandablePicker.ExpandableLayout>
                                 </controls:ExpandablePicker>
 
-                                <controls:ExpandablePicker Descriptor="Units" SelectedText="All">
+                                <controls:ExpandablePicker x:Name="TenantsPicker" 
+                                                           Descriptor="Tenants" 
+                                                           SelectedText="{Binding SelectedTenantsDescription}" 
+                                                           IsVisible="{Binding ShowTenantsFilterOption}">
                                     <controls:ExpandablePicker.ExpandableLayout>
-                                        <StackLayout>
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
+                                        <StackLayout HeightRequest="100">
+                                            <controls:CheckboxList ItemsSource="{Binding Tenants}" 
+                                                                   ItemTypeDescription="Tenants" 
+                                                                   SelectedItems="{Binding SelectedTenants}"
+                                                                   SelectedItemsDescription="{Binding SelectedTenantsDescription}" />
                                         </StackLayout>
                                     </controls:ExpandablePicker.ExpandableLayout>
                                 </controls:ExpandablePicker>
 
-                                <controls:ExpandablePicker Descriptor="Tenants" SelectedText="All">
+                                <controls:ExpandablePicker Descriptor="Statuses" 
+                                                           SelectedText="{Binding SelectedStatusesDescription}">
                                     <controls:ExpandablePicker.ExpandableLayout>
-                                        <StackLayout>
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
+                                        <StackLayout HeightRequest="100">
+                                            <controls:CheckboxList ItemsSource="{Binding Statuses}" 
+                                                                   ItemTypeDescription="Statuses" 
+                                                                   SelectedItems="{Binding SelectedStatuses}"
+                                                                   SelectedItemsDescription="{Binding SelectedStatusesDescription}" />
                                         </StackLayout>
                                     </controls:ExpandablePicker.ExpandableLayout>
                                 </controls:ExpandablePicker>
 
-                                <controls:ExpandablePicker Descriptor="Status" SelectedText="Received">
+                                <controls:ExpandablePicker Descriptor="Amount" SelectedText="{Binding AmountDescription}">
                                     <controls:ExpandablePicker.ExpandableLayout>
                                         <StackLayout>
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
-                                            <Label Text="This is a filter option." />
-                                        </StackLayout>
-                                    </controls:ExpandablePicker.ExpandableLayout>
-                                </controls:ExpandablePicker>
-
-                                <controls:ExpandablePicker Descriptor="Amount" SelectedText="All">
-                                    <controls:ExpandablePicker.ExpandableLayout>
-                                        <StackLayout>
-                                            <Label Text="$0 - $500" />
-                                            <slider:RangeSlider x:Name="RangeSlider" 
-                                                                MinimumValue="1" MaximumValue="10000" 
-                                                                LowerValue="0" UpperValue="500" 
-                                                                StepValue="500" StepValueContinuously="False" 
-                                                                VerticalOptions="Center" TextSize="15" />
+                                            <controls:NumericRangeView Margin="0,0,0,10" 
+                                                                       FromAmount="{Binding FromAmount}"
+                                                                       ToAmount="{Binding ToAmount}" />
                                         </StackLayout>
                                     </controls:ExpandablePicker.ExpandableLayout>
                                 </controls:ExpandablePicker>
                                 
                             </StackLayout>
-
                         </ScrollView>
-                            
                     </StackLayout>
-                        
                 </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
-
+            
+            <controls:EmptyView IsVisible="{Binding IsEmpty}" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
             <global-controls:ListView   
                 x:Name="listView"
+                IsVisible="{Binding IsNotEmpty}"
                 ItemsSource="{Binding Items}"
                 IsPullToRefreshEnabled="true"
                 RefreshCommand="{Binding RefreshCommand}"

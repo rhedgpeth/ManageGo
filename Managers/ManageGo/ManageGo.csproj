@@ -38,6 +38,7 @@
     <Folder Include="TouchTracking\" />
     <Folder Include="Extensions\" />
     <Folder Include="Services\" />
+    <Folder Include="Triggers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\SettingsPage.cs" />

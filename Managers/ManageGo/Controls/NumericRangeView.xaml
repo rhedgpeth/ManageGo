@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:behaviors="clr-namespace:ManageGo.UI.Behaviors;assembly=ManageGo.UI"
+    xmlns:triggers="clr-namespace:ManageGo.Triggers;"
+    x:Class="ManageGo.Controls.NumericRangeView">
+   
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    
+    <Label Grid.Row="0" Grid.Column="0" Text="From:" Style="{StaticResource descriptionLabel}" />
+    <Label Grid.Row="0" Grid.Column="1" Text="To:" Style="{StaticResource descriptionLabel}" />
+    
+    <Entry Grid.Row="1" Grid.Column="0" x:Name="FromAmountEntry" Keyboard="Numeric" TextChanged="Handle_FromText_Changed">
+        <!--
+        <Entry.Behaviors>
+            <behaviors:CurrencyFormatterBehavior />
+        </Entry.Behaviors>
+        <Entry.Triggers>
+            <EventTrigger Event="TextChanged">
+                <triggers:NumericLimitValidationTrigger DefaultValue="0" MaxValue="10000" />
+            </EventTrigger>
+        </Entry.Triggers>
+        -->
+    </Entry>
+    
+    <Entry Grid.Row="1" Grid.Column="1" x:Name="ToAmountEntry" Keyboard="Numeric" TextChanged="Handle_ToText_Changed">
+        <!--
+        <Entry.Behaviors>
+            <behaviors:CurrencyFormatterBehavior />
+        </Entry.Behaviors>
+        <Entry.Triggers>
+            <EventTrigger Event="TextChanged">
+                <triggers:NumericLimitValidationTrigger DefaultValue="0" MaxValue="10000" />
+            </EventTrigger>
+        </Entry.Triggers>
+        -->
+    </Entry>
+    
+</Grid>

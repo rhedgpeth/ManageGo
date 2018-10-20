@@ -14,13 +14,17 @@
 
         <StackLayout BackgroundColor="#F9FAFB">
 
-            <controls:FilterView LeftFilterText="{Binding SelectedDateDescription}" LeftFilterIcon="calendar_blue" 
+            <controls:FilterView x:Name="filterView"
+                                 LeftFilterText="{Binding SelectedDateDescription}" 
+                                 LeftFilterIcon="calendar_blue" 
                                  RightFilterText="Filter" RightFilterIcon="filter_blue"
+                                 RightFilterSuperscriptText="{Binding FilterCount}"
                                  ApplyFilterCommand="{Binding ApplyFilterCommand}"> 
                 <controls:FilterView.LeftExpandableLayout>
                     <StackLayout Margin="0,15,0,0">
                         <controls:CalendarView SelectedDates="{Binding SelectedDates}"
                                                AllowMultipleSelection="true" 
+                                               OnPresetRangeUpdate="Handle_OnPresetRangeUpdate"
                                                HeightRequest="275" 
                                                WidthRequest="400" 
                                                HorizontalOptions="Center" />
@@ -40,13 +44,26 @@
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
+                            <controls:ExpandablePicker Descriptor="Amount" SelectedText="{Binding AmountDescription}">
+                                <controls:ExpandablePicker.ExpandableLayout>
+                                    <StackLayout>
+                                        <controls:NumericRangeView Margin="0,0,0,10" 
+                                                                   FromAmount="{Binding FromAmount}"
+                                                                   ToAmount="{Binding ToAmount}" />
+                                    </StackLayout>
+                                </controls:ExpandablePicker.ExpandableLayout>
+                            </controls:ExpandablePicker>
                         </StackLayout>
                     </StackLayout>
                 </controls:FilterView.RightExpandableLayout>
             </controls:FilterView>
-
+            
+            <controls:EmptyView IsVisible="{Binding IsEmpty}" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
             <global-controls:ListView   
                 x:Name="listView"
+                IsVisible="{Binding IsNotEmpty}"
                 ItemsSource="{Binding Items}"
                 IsPullToRefreshEnabled="true"
                 RefreshCommand="{Binding RefreshCommand}"
@@ -55,7 +72,7 @@
                 LoadMoreItemsCommand="{Binding LoadMoreItemsCommand}"
                 SeparatorVisibility="None" 
                 HasUnevenRows="true"
-                BackgroundColor="#F9FAFB" />
+                BackgroundColor="{StaticResource Off-White}" />
            
         </StackLayout>
 
