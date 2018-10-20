@@ -108,10 +108,15 @@
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>
 
-                            <controls:ExpandablePicker Descriptor="Due date" SelectedText="1/10/2018">
+                            <controls:ExpandablePicker Descriptor="Due date" SelectedText="{Binding DueDateDescription}">
                                 <controls:ExpandablePicker.ExpandableLayout>
                                     <StackLayout>
-                                        <!-- Calendar (single select) -->
+                                        <controls:CalendarView 
+                                               SelectedDate="{Binding DueDate}"
+                                               AllowMultipleSelection="false" 
+                                               HeightRequest="150" 
+                                               WidthRequest="200" 
+                                               HorizontalOptions="Center" />
                                     </StackLayout>
                                 </controls:ExpandablePicker.ExpandableLayout>
                             </controls:ExpandablePicker>

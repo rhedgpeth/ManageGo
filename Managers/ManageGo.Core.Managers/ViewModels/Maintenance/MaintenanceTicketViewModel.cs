@@ -4,23 +4,23 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
+using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
-{   
+{
     public class MaintenanceTicketViewModel : BaseNavigationViewModel
     {
-		MaintenanceTicket _maintenanceTicket;
-        public MaintenanceTicket MaintenanceTicket
-        {
-            get => _maintenanceTicket;
-            set
-            {
-				_maintenanceTicket = value;
-            }
-        }
+        public MaintenanceTicket MaintenanceTicket { get; set; }
 
-		ICommand _replyCommand;
+        public string Subject { get; private set; }
+        public string BuildingUnitAddress { get; set; }
+        public bool HasPet { get; private set; }
+        public bool HasEvent { get; private set; }
+        public bool HasWorkorder { get; private set; }
+        public bool HasAccess { get; private set; }
+
+        ICommand _replyCommand;
 		public ICommand ReplyCommand
 		{
 			get
@@ -74,9 +74,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public MaintenanceTicketViewModel(MaintenanceTicket ticket)
         {
-			MaintenanceTicket = ticket;
-
-			Title = $"Ticket #{_maintenanceTicket.TicketId}"; 
+			Title = $"Ticket #{ticket.TicketId}";
+            LoadMaintenanceTicket(ticket);
 		}
 
         public MaintenanceTicketViewModel(int ticketId)
@@ -84,66 +83,93 @@ namespace ManageGo.Core.Managers.ViewModels
             // TODO:
         }
 
+        void LoadMaintenanceTicket(MaintenanceTicket ticket)
+        {
+            if (ticket != null)
+            {
+                MaintenanceTicket = ticket;
+
+                Subject = ticket.TicketSubject;
+
+                BuildingUnitAddress = $"{ticket.Building?.BuildingShortAddress} #{ticket.Unit?.UnitName}";
+
+                HasPet = ticket.HasPet;
+                HasEvent = ticket.HasEvent;
+                HasAccess = ticket.HasAccess;
+                HasWorkorder = ticket.HasWorkorder;
+            }
+        }
+
 		public override async Task InitAsync()
 		{
-			var items = new List<object>();
+            var ticketDetailsResponse = await MaintenanceService.Instance.GetTicketDetails(MaintenanceTicket);
 
-			items.Add(new MaintenanceTicketCommentViewModel
-			{
-				FirstColor = "#FFFFFF",
-				SecondColor = "#4E9AF5",
-				Name = "Bruce Wayne",
-				CreateDateTimeDescription =  "Dec 15 - 8:00 AM",
-				Comment = "I have a question about my roommate. He signed on to the lease at the beginning of November.",
-				IsAccessGranted = false
-			});
-
-			items.Add(new MaintenanceTicketCommentViewModel
+            if (ticketDetailsResponse.Status == Enumerations.ResponseStatus.Data)
             {
-				FirstColor = "#4E9AF5",
-				SecondColor = "#E13D40",
-                Name = "Clark Kent",
-				CreateDateTimeDescription = "Dec 15 - 8:00 AM",
-                Comment = "I have a question about my roommate. He signed on to the lease at the beginning of November.",
-                IsAccessGranted = true,
-                AccessDescription = "This is a note on access, we have this field by the tenant side and it shows here.",
-				AccessGrantedDateTime = "Dec 15 - 7:32 AM",
-				AccessGrantedTimeSpan = "3/1/2018 - 10:30 AM to 3:15 PM"
-            });
+                MaintenanceTicket = ticketDetailsResponse.Result;
 
-			items.Add(new MaintenanceTicketActionViewModel
+                string test = "";
+            }
+
+            var items = new List<object>
             {
-				FirstColor = "#E13D40",
-				SecondColor = "#55C433",
-                Title = "Event created",
-				ScheduledDateTimeSpan = "3/1/2018 - 10:30 AM to 3:15 PM",
-                Description = "Fix the tiles in the kitchen.",
-				ViewDescription = "View in calendar"
-            });
+                new MaintenanceTicketCommentViewModel
+                {
+                    FirstColor = "#FFFFFF",
+                    SecondColor = "#4E9AF5",
+                    Name = "Bruce Wayne",
+                    CreateDateTimeDescription = "Dec 15 - 8:00 AM",
+                    Comment = "I have a question about my roommate. He signed on to the lease at the beginning of November.",
+                    IsAccessGranted = false
+                },
 
-			items.Add(new MaintenanceTicketCommentViewModel
-            {
-				FirstColor = "#55C433",
-				SecondColor = "#4E9AF5",
-                Name = "Diana Prince",
-				CreateDateTimeDescription = "Dec 15 - 8:00 AM",
-                Comment = "I have a question about my roommate. He signed on to the lease at the beginning of November.",
-                HasImage = true,
-                ImageName = "img_attach_1.jpg"
+                new MaintenanceTicketCommentViewModel
+                {
+                    FirstColor = "#4E9AF5",
+                    SecondColor = "#E13D40",
+                    Name = "Clark Kent",
+                    CreateDateTimeDescription = "Dec 15 - 8:00 AM",
+                    Comment = "I have a question about my roommate. He signed on to the lease at the beginning of November.",
+                    IsAccessGranted = true,
+                    AccessDescription = "This is a note on access, we have this field by the tenant side and it shows here.",
+                    AccessGrantedDateTime = "Dec 15 - 7:32 AM",
+                    AccessGrantedTimeSpan = "3/1/2018 - 10:30 AM to 3:15 PM"
+                },
 
-            });
+                new MaintenanceTicketActionViewModel
+                {
+                    FirstColor = "#E13D40",
+                    SecondColor = "#55C433",
+                    Title = "Event created",
+                    ScheduledDateTimeSpan = "3/1/2018 - 10:30 AM to 3:15 PM",
+                    Description = "Fix the tiles in the kitchen.",
+                    ViewDescription = "View in calendar"
+                },
 
-			items.Add(new MaintenanceTicketActionViewModel
-            {
-				FirstColor = "#4E9AF5",
-				SecondColor = "#E13D40",
-                Title = "Work order created",
-				ScheduledDateTimeSpan = "3 / 1 / 2018 - 10:30 AM to 3:15 PM",
-                Description = "Fix the tiles in the kitchen.",
-                ViewDescription = "View work order"					
-            });
+                new MaintenanceTicketCommentViewModel
+                {
+                    FirstColor = "#55C433",
+                    SecondColor = "#4E9AF5",
+                    Name = "Diana Prince",
+                    CreateDateTimeDescription = "Dec 15 - 8:00 AM",
+                    Comment = "I have a question about my roommate. He signed on to the lease at the beginning of November.",
+                    HasImage = true,
+                    ImageName = "img_attach_1.jpg"
 
-			Items = new ObservableCollection<object>(items);
+                },
+
+                new MaintenanceTicketActionViewModel
+                {
+                    FirstColor = "#4E9AF5",
+                    SecondColor = "#E13D40",
+                    Title = "Work order created",
+                    ScheduledDateTimeSpan = "3 / 1 / 2018 - 10:30 AM to 3:15 PM",
+                    Description = "Fix the tiles in the kitchen.",
+                    ViewDescription = "View work order"
+                }
+            };
+
+            Items = new ObservableCollection<object>(items);
 		}
 	}
 }

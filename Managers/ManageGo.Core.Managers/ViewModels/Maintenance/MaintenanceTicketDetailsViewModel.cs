@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
 using ManageGo.Core.ViewModels;
@@ -8,7 +7,7 @@ namespace ManageGo.Core.Managers.ViewModels
 {
 	public class MaintenanceTicketDetailsViewModel : BaseNavigationViewModel
     {
-		MaintenanceTicket MaintenanceTicket { get; set; }
+        MaintenanceTicket MaintenanceTicket { get; set; }
         
 		public string Description { get; set; }
 

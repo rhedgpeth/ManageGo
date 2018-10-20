@@ -130,6 +130,20 @@ namespace ManageGo.Core.Managers.ViewModels
             set => SetPropertyChanged(ref _selectedUsersDescription, value);
         }
 
+        // Due Date
+        DateTime? _dueDate;
+        public DateTime? DueDate
+        {
+            get => _dueDate;
+            set
+            {
+                SetPropertyChanged(ref _dueDate, value);
+                SetPropertyChanged(nameof(DueDateDescription));
+            }
+        }
+
+        public string DueDateDescription => DueDate.HasValue ? DueDate.Value.ToShortDateString() : "All";
+
         public MaintenanceTicketsViewModel()
         {
 			Title = "Tickets";
@@ -308,6 +322,12 @@ namespace ManageGo.Core.Managers.ViewModels
             {
                 filterCount++;
                 request.Priorites = SelectedTags.Select(x => x.Id).ToList();
+            }
+
+            if (SelectedUsers?.Count > 0 && SelectedUsers?.Count < Users.Count)
+            {
+                filterCount++;
+                // Assigned
             }
 
             FilterCount = filterCount > 0 ? filterCount : (int?)null;
