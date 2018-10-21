@@ -1,5 +1,4 @@
-﻿using CoreGraphics;
-using ManageGo.Controls;
+﻿using ManageGo.Controls;
 using ManageGo.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;

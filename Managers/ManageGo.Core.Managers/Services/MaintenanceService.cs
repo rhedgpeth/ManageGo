@@ -39,5 +39,41 @@ namespace ManageGo.Core.Managers.Services
                                                                         request,
                                                                         default(CancellationToken),
                                                                         AddAccessToken);
+
+        public Task<BaseResponse<MaintenanceTicketWorkOrder>> SaveWorkOrder(MaintenanceTicketWorkOrder workOrder)
+        {
+            if (workOrder.WorkOrderId.HasValue)
+            {
+                return PostAsync<BaseResponse<MaintenanceTicketWorkOrder>, MaintenanceTicketWorkOrder>("UpdateWorkOrder",
+                                                                                                       workOrder,
+                                                                                                       default(CancellationToken),
+                                                                                                       AddAccessToken);
+            }
+            else
+            {
+                return PostAsync<BaseResponse<MaintenanceTicketWorkOrder>, MaintenanceTicketWorkOrder>("CreateWorkOrder",
+                                                                                                       workOrder,
+                                                                                                       default(CancellationToken),
+                                                                                                       AddAccessToken);
+            }
+        }
+
+        public Task<BaseResponse<MaintenanceTicketEvent>> SaveEvent(MaintenanceTicketEvent evt)
+        {
+            if (evt.EventId.HasValue)
+            {
+                return PostAsync<BaseResponse<MaintenanceTicketEvent>, MaintenanceTicketEvent>("UpdateEvent",
+                                                                                                       evt,
+                                                                                                       default(CancellationToken),
+                                                                                                       AddAccessToken);
+            }
+            else
+            {
+                return PostAsync<BaseResponse<MaintenanceTicketEvent>, MaintenanceTicketEvent>("CreateEvent",
+                                                                                                       evt,
+                                                                                                       default(CancellationToken),
+                                                                                                       AddAccessToken);
+            }
+        }
     }
 }

@@ -262,6 +262,11 @@
                 <Setter Property="Margin" Value="30,0,30,0" />
             </Style>
             
+            <Style x:Key="ErrorMessageLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            
             <ControlTemplate x:Key="HeaderPageTemplate">
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
                     <Label Text="{TemplateBinding BindingContext.Title}" TextColor="Black" Margin="0,15,0,0"

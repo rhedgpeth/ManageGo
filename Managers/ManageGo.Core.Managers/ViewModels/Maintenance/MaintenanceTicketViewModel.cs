@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Managers.Models;
-using ManageGo.Core.Managers.Services;
 using ManageGo.Core.ViewModels;
 
 namespace ManageGo.Core.Managers.ViewModels
@@ -43,7 +42,7 @@ namespace ManageGo.Core.Managers.ViewModels
 				if (_createEventCommand == null)
 				{
 					_createEventCommand = new Command(async () 
-					                                  => await Navigation.PushPopupAsync(new MaintenanceTicketEventViewModel()));
+					                                  => await Navigation.PushPopupAsync(new MaintenanceTicketEventViewModel(MaintenanceTicket.TicketId)));
 				}
 
 				return _createEventCommand;
@@ -58,7 +57,7 @@ namespace ManageGo.Core.Managers.ViewModels
                 if (_createWorkOrderCommand == null)
                 {
 					_createWorkOrderCommand = new Command(async () 
-					                                      => await Navigation.PushPopupAsync(new CreateWorkOrderViewModel()));
+					                                      => await Navigation.PushPopupAsync(new CreateWorkOrderViewModel(MaintenanceTicket.TicketId)));
                 }
 
 				return _createWorkOrderCommand;
@@ -80,7 +79,8 @@ namespace ManageGo.Core.Managers.ViewModels
 
         public MaintenanceTicketViewModel(int ticketId)
         {
-            // TODO:
+            MaintenanceTicket = new MaintenanceTicket { TicketId = ticketId };
+            // TODO: Retrieve the rest of the maintenance ticket
         }
 
         void LoadMaintenanceTicket(MaintenanceTicket ticket)
@@ -102,14 +102,13 @@ namespace ManageGo.Core.Managers.ViewModels
 
 		public override async Task InitAsync()
 		{
+            /*
             var ticketDetailsResponse = await MaintenanceService.Instance.GetTicketDetails(MaintenanceTicket);
 
             if (ticketDetailsResponse.Status == Enumerations.ResponseStatus.Data)
             {
                 MaintenanceTicket = ticketDetailsResponse.Result;
-
-                string test = "";
-            }
+            }*/
 
             var items = new List<object>
             {

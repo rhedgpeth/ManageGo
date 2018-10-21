@@ -8,43 +8,38 @@ namespace ManageGo.Core.Validation
 {
 	public class ValidatableBase : BaseNotify, IValidatableBase
     {
-        readonly Validator validator;
-
         public bool IsValidationEnabled
         {
-            get { return validator.IsValidationEnabled; }
-            set { validator.IsValidationEnabled = value; }
+            get { return Errors.IsValidationEnabled; }
+            set { Errors.IsValidationEnabled = value; }
         }
 
-        public Validator Errors
-        {
-            get { return validator; }
-        }
+        public Validator Errors { get; }
 
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged
         {
-            add { validator.ErrorsChanged += value; }
-            remove { validator.ErrorsChanged -= value; }
+            add { Errors.ErrorsChanged += value; }
+            remove { Errors.ErrorsChanged -= value; }
         }
 
         public ValidatableBase()
         {
-            validator = new Validator(this);
+            Errors = new Validator(this);
         }
 
         public ReadOnlyDictionary<string, ReadOnlyCollection<string>> GetAllErrors()
         {
-            return validator.GetAllErrors();
+            return Errors.GetAllErrors();
         }
 
         public bool ValidateProperties()
         {
-            return validator.ValidateProperties();
+            return Errors.ValidateProperties();
         }
 
         public void SetAllErrors(IDictionary<string, ReadOnlyCollection<string>> entityErrors)
         {
-            validator.SetAllErrors(entityErrors);
+            Errors.SetAllErrors(entityErrors);
         }
 
         protected override bool SetPropertyChanged<T>(ref T currentValue, T newValue, [CallerMemberName] string propertyName = null)
@@ -53,9 +48,9 @@ namespace ManageGo.Core.Validation
 
             if (result && !string.IsNullOrWhiteSpace(propertyName))
             {
-                if (validator.IsValidationEnabled)
+                if (Errors.IsValidationEnabled)
                 {
-                    validator.ValidateProperty(propertyName);
+                    Errors.ValidateProperty(propertyName);
                 }
             }
 

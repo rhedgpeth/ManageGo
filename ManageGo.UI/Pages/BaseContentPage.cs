@@ -18,9 +18,6 @@ namespace ManageGo.UI.Pages
         {
             get
             {
-				//if (_viewModel == null)
-					//_viewModel = Activator.CreateInstance<T>();
-
                 return _viewModel;
             }
             set
@@ -33,7 +30,6 @@ namespace ManageGo.UI.Pages
 					{
 						try
 						{
-							//await Task.Delay(5000);
 							await _viewModel.InitAsync();
 						}
 						catch (Exception ex)
@@ -62,9 +58,6 @@ namespace ManageGo.UI.Pages
             BackgroundColor = backgroundColor;
 		}
 
-        async void Init()
-        {
-            await ViewModel.InitAsync();
-        }
+        async void Init() => await ViewModel.InitAsync();
     }
 }

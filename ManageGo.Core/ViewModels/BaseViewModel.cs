@@ -2,10 +2,11 @@
 using System.Windows.Input;
 using ManageGo.Core.Input;
 using ManageGo.Core.Services;
+using ManageGo.Core.Validation;
 
 namespace ManageGo.Core.ViewModels
 {
-    public abstract class BaseViewModel : BaseNotify
+    public abstract class BaseViewModel : ValidatableBase //BaseNotify
     {
         IAnalyticsService _analyticsService;
         protected IAnalyticsService AnalyticsService

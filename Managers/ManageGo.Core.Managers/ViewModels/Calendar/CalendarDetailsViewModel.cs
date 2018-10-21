@@ -68,7 +68,7 @@ namespace ManageGo.Core.Managers.ViewModels
 
             if (evt.SendToExternalContacts?.Count >0)
             {
-                participants.AddRange(evt.SendToExternalContacts);
+                participants.AddRange(evt.SendToExternalContacts.Select(x => x.Name));
             }
 
             if (evt.SendToEmail?.Length > 0)

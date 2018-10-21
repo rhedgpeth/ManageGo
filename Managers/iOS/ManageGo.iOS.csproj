@@ -299,6 +299,7 @@
     <Compile Include="Renderers\RadioButtonRenderer.cs" />
     <Compile Include="Controls\RadioButtonView.cs" />
     <Compile Include="AkavacheSqliteLinkerOverride.cs" />
+    <Compile Include="Renderers\BorderedEditorRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageGo\ManageGo.csproj">

@@ -1,4 +1,5 @@
-﻿using ManageGo.Core.Managers.ViewModels;
+﻿using System;
+using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
 
 namespace ManageGo.Pages
@@ -8,13 +9,18 @@ namespace ManageGo.Pages
         public MaintenanceTicketEventPage()
         {
             InitializeComponent();
-
-            var cb = new Plugin.InputKit.Shared.Controls.CheckBox();
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        void Handle_Users_Clicked(object sender, EventArgs e)
         {
-            participantsLayout.IsVisible = !participantsLayout.IsVisible;
+            SendToUsersLayout.IsVisible = !SendToUsersLayout.IsVisible;
+            SendToContactsLayout.IsVisible = false;
         }
-	}
+
+        void Handle_Contacts_Clicked(object sender, EventArgs e)
+        {
+            SendToContactsLayout.IsVisible = !SendToContactsLayout.IsVisible;
+            SendToUsersLayout.IsVisible = false;
+        }
+    }
 }

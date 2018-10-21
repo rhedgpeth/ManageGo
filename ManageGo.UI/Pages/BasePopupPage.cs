@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using ManageGo.Core.ViewModels;
 using ManageGo.UI.Navigation;
 using Rg.Plugins.Popup.Pages;
 
 namespace ManageGo.UI.Pages
 {
-	public abstract class BasePopupPage<T> : PopupPage, IViewFor<T> where T : BaseNavigationViewModel, new()
+	public abstract class BasePopupPage<T> : PopupPage, IViewFor<T> where T : BaseNavigationViewModel //, new()
 	{
 		T _viewModel;
 
@@ -13,14 +15,26 @@ namespace ManageGo.UI.Pages
         {
             get
             {
-                if (_viewModel == null)
-                    _viewModel = Activator.CreateInstance<T>();
-
                 return _viewModel;
             }
             set
             {
-                _viewModel = value;
+                BindingContext = _viewModel = value;
+
+                if (_viewModel != null)
+                {
+                    Task.Run(async () =>
+                    {
+                        try
+                        {
+                            await _viewModel.InitAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine(ex.Message);
+                        }
+                    });
+                }
             }
         }
 
@@ -33,7 +47,7 @@ namespace ManageGo.UI.Pages
             }
         }
 
-        public BasePopupPage()
+        protected BasePopupPage()
         {
 			BindingContext = ViewModel;
         }

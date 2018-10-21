@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using ManageGo.Core.Managers.ViewModels;
 using ManageGo.UI.Pages;
-using Xamarin.Forms;
 
 namespace ManageGo.Pages
 {
@@ -11,6 +9,18 @@ namespace ManageGo.Pages
         public CreateWorkOrderPage()
         {
             InitializeComponent();
+        }
+
+        void Handle_Users_Clicked(object sender, EventArgs e)
+        {
+            SendToUsersLayout.IsVisible = !SendToUsersLayout.IsVisible;
+            SendToContactsLayout.IsVisible = false;
+        }
+
+        void Handle_Contacts_Clicked(object sender, EventArgs e)
+        {
+            SendToContactsLayout.IsVisible = !SendToContactsLayout.IsVisible;
+            SendToUsersLayout.IsVisible = false;
         }
     }
 }

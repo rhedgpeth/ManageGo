@@ -13,7 +13,8 @@
     <ListView.ItemTemplate>
         <DataTemplate>
             <ViewCell>
-                <controls:Checkbox Text="{Binding Description}" IsChecked="{Binding IsSelected}" IsEnabled="false" />
+                <controls:Checkbox Text="{Binding Description}" IsChecked="{Binding IsSelected}" 
+                                   IsEnabled="false" Margin="0,0,0,3" />
             </ViewCell>
         </DataTemplate>
     </ListView.ItemTemplate>

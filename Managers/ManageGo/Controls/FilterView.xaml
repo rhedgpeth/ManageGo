@@ -27,7 +27,8 @@
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Handle_LeftFilterOption_Tapped" NumberOfTapsRequired="1" />
             </StackLayout.GestureRecognizers>   
-            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" Spacing="0" Margin="10,0,0,0"
+                         HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                 <Image x:Name="LeftFilterImage" Aspect="AspectFit" HorizontalOptions="EndAndExpand" />
                 <Label x:Name="LeftFilterLabel" Style="{StaticResource entryDescriptionLabelCentered}" 
                        FontSize="14" Margin="5,0,0,0" LineBreakMode="MiddleTruncation" />
