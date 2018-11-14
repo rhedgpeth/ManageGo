@@ -1,5 +1,7 @@
 # ManageGo
 
+Want to make a plaform like this? Feel free to use this code as a template.
+
 ManageGo | Online Rent Payments and Maintenance
 
 https://managego.com
